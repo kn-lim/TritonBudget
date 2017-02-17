@@ -1,9 +1,10 @@
-package com.example.xuanruzhu.statistics;
+//package com.example.xuanruzhu.statistics;
+package teammemes.tritonbudget;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity_Aaron2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
