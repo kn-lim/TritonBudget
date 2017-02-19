@@ -1,10 +1,6 @@
 [
     {
-        "merged": "C:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
-        "source": "C:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "F:\\TritonBudget2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
-        "source": "F:\\TritonBudget2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "/Users/knlim/Desktop/MyProjects/TritonBudget/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/Users/knlim/Desktop/MyProjects/TritonBudget/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     }
 ]

@@ -1,18 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+        "merged": "/Users/knlim/Desktop/MyProjects/TritonBudget/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/knlim/Desktop/MyProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/anim-v21/design_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "F:\\TritonBudget2\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "F:\\TritonBudget2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
-    },
-    {
-        "merged": "F:\\TritonBudget2\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "F:\\TritonBudget2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
-    },
-    {
-        "merged": "C:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.0\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+        "merged": "/Users/knlim/Desktop/MyProjects/TritonBudget/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/knlim/Desktop/MyProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/anim-v21/design_bottom_sheet_slide_in.xml"
     }
 ]
