@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86"
+    api-level="21"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.3"
+    timestamp="205621939408205"
+    token="-7064796706115373646"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="2964" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="1660" />
+    <task
+        name="verifier"
+        duration="1243" />
+
+    <artifact
+        location="F:\TritonBudget2\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="205621939408205"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="F:\TritonBudget2\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>
