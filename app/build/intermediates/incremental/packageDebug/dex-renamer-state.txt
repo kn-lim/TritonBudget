@@ -1,7 +1,7 @@
-#Mon Feb 20 00:52:39 PST 2017
-base.0=C\:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_6dea8ed929fcb6b89e3db1e98c170a9e0cda7953
+#Mon Feb 20 13:58:33 PST 2017
+base.0=/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_0bd2ba1414b0b7433418dfa2b090d7786d3ce27e
 renamed.1=classes2.dex
 renamed.0=classes.dex
-file.1=C\:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_670d42e11bdd114025ea2e714b36a076cdc4f17d\\classes.dex
-base.1=C\:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_670d42e11bdd114025ea2e714b36a076cdc4f17d
-file.0=C\:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_6dea8ed929fcb6b89e3db1e98c170a9e0cda7953\\classes.dex
+file.1=/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_adb8b5d3e5bb1f22b9972107ec2862dd27f96464/classes.dex
+base.1=/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_adb8b5d3e5bb1f22b9972107ec2862dd27f96464
+file.0=/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_0bd2ba1414b0b7433418dfa2b090d7786d3ce27e/classes.dex

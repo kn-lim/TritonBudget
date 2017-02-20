@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Triton Budget</string>
+
+    <string name="app_name">TritonBudget</string>
+    <string name="dining_halls">Dining Halls</string>
+    <string name="food_trucks_and_speciality_restaurants">
+        Food Trucks &amp; Speciality Restaurants
+    </string>
 </resources>

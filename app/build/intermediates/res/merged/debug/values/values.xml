@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
+    <string-array name="Dining_Halls_Array">
+        <item name="_64_degrees">64 Degrees\n<sup>Revelle College</sup></item>
+        <item name="cafe_v">Cafe Ventanas\nEleanor Roosevelt College</item>
+        <item name="canyon_v">Canyon Vista\nWarren College</item>
+        <item name="foodworx">FoodWorx\nSixth College</item>
+        <item name="ovt">Oceanview\nMarshall College</item>
+        <item name="pines">Pines\nMuir College</item>
+
+        <item name="bistro">The Bistro\nThe Village East</item>
+        <item name="clubmed">Club Med\nSchool of Medicine</item>
+        <item name="flavorsft">Flavors of the World\nVaries</item>
+        <item name="goodys">Goody\'s\nMarshall Activity Center</item>
+        <item name="goodysft">Goody\'s To-go Truck\nVaries</item>
+        <item name="roots">Roots\nMuir College</item>
+        <item name="_64_north">64 North\nRevelle College</item>
+    </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -585,10 +601,14 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="app_name">Triton Budget</string>
+    <string name="app_name">TritonBudget</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="dining_halls">Dining Halls</string>
+    <string name="food_trucks_and_speciality_restaurants">
+        Food Trucks &amp; Speciality Restaurants
+    </string>
     <string name="password_toggle_content_description">Toggle password visibility</string>
     <string name="path_password_eye">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
     <string name="path_password_eye_mask_strike_through">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
