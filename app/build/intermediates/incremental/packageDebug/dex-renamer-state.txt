@@ -1,7 +1,7 @@
-#Sun Feb 19 15:05:26 PST 2017
-base.0=/Users/knlim/Desktop/MyProjects/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_d2801c597d3d6bee003bd7f75872de378d937256
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/knlim/Desktop/MyProjects/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c286833ead27ac7c789a563fa1b75bfe0efccb94/classes.dex
-base.1=/Users/knlim/Desktop/MyProjects/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c286833ead27ac7c789a563fa1b75bfe0efccb94
-file.0=/Users/knlim/Desktop/MyProjects/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_d2801c597d3d6bee003bd7f75872de378d937256/classes.dex
+#Mon Feb 20 00:52:39 PST 2017
+base.0=C\:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_6dea8ed929fcb6b89e3db1e98c170a9e0cda7953
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_670d42e11bdd114025ea2e714b36a076cdc4f17d\\classes.dex
+base.1=C\:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_670d42e11bdd114025ea2e714b36a076cdc4f17d
+file.0=C\:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_6dea8ed929fcb6b89e3db1e98c170a9e0cda7953\\classes.dex
