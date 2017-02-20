@@ -76,12 +76,12 @@
         "source": "C:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "F:\\TritonBudget2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "F:\\TritonBudget2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout\\abc_list_menu_item_icon.xml"
-    },
-    {
         "merged": "C:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
         "source": "C:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "F:\\TritonBudget2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "F:\\TritonBudget2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
         "merged": "C:\\Users\\Kevin Lim\\Documents\\MyProjects\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
