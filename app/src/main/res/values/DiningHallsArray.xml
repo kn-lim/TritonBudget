@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name = "Dining_Halls_Array">
+        <item name="_64_degrees">64 Degrees\n<sup>Revelle College</sup></item>
+        <item name="cafe_v">Cafe Ventanas\nEleanor Roosevelt College</item>
+        <item name="canyon_v">Canyon Vista\nWarren College</item>
+        <item name="foodworx">FoodWorx\nSixth College</item>
+        <item name="ovt">Oceanview\nMarshall College</item>
+        <item name="pines">Pines\nMuir College</item>
+
+        <item name="bistro">The Bistro\nThe Village East</item>
+        <item name="clubmed">Club Med\nSchool of Medicine</item>
+        <item name="flavorsft">Flavors of the World\nVaries</item>
+        <item name="goodys">Goody\'s\nMarshall Activity Center</item>
+        <item name="goodysft">Goody\'s To-go Truck\nVaries</item>
+        <item name="roots">Roots\nMuir College</item>
+        <item name="_64_north">64 North\nRevelle College</item>
+    </string-array>
+
+</resources>
