@@ -28,7 +28,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         mToolbar = (Toolbar) findViewById(R.id.nav_action);
         setSupportActionBar(mToolbar);
 
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_home_layout);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
 
         mDrawerLayout.addDrawerListener(mToggle);
@@ -65,16 +65,14 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_home_layout);
 
         if (id == R.id.nav_home) {
             drawer.closeDrawer(GravityCompat.START);
             return true;
         } else if (id == R.id.nav_history) {
             drawer.closeDrawer(GravityCompat.START);
-            //Intent intent = new Intent(this, History.class);
-            //intent.putExtra(EXTRA_MESSAGE, "From Home");
-            //startActivity(intent);
+
         } else if (id == R.id.nav_statistics) {
             drawer.closeDrawer(GravityCompat.START);
             Intent intent = new Intent(this, Statistics.class);
