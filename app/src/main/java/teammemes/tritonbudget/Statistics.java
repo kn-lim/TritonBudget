@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,21 +26,26 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_statistics);
 
+        //Creates the toolbar to the one defined in nav_action
         mToolbar = (Toolbar) findViewById(R.id.nav_action);
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
+        //Create the Drawer layout and the toggle
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_statistics_layout);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
 
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        //Create the navigationView and add a listener to listen for menu selections
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    //This method is used to listen for the user clicking the menu button, and opens
+    //the drawer up
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (mToggle.onOptionsItemSelected(item)) {
@@ -48,6 +54,8 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         return super.onOptionsItemSelected(item);
     }
 
+    //This method is used to see if the back button was pressed while the drawer was open.
+    //If it is open and the back button is pressed, then close the drawer.
     @Override
     public void onBackPressed() {
         if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -57,35 +65,40 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         }
     }
 
+    // This method is used to react when the user presses one of the options in the drawer
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+        // Gets the id of the item that was selected
         int id = item.getItemId();
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_statistics_layout);
 
-        if (id == R.id.nav_home) {
-            drawer.closeDrawer(GravityCompat.START);
-            Intent intent = new Intent(this, HomeScreen.class);
-            intent.putExtra(EXTRA_MESSAGE, "From Stats");
-            startActivity(intent);
-            return true;
-        } else if (id == R.id.nav_history) {
-            drawer.closeDrawer(GravityCompat.START);
+        //Reacts to the item selected depending on which was pressed
+        //Creates a new Intent for the new page and starts that activity
+        switch (id) {
+            case R.id.nav_statistics:
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                return true;
+            case R.id.nav_history:
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                return false;
+            case R.id.nav_home:
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                Intent intent = new Intent(this, HomeScreen.class);
+                intent.putExtra(EXTRA_MESSAGE, "From Stats");
+                startActivity(intent);
+                return true;
+            case R.id.nav_menus:
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                return false;
+            /* Cases for future options
+            case R.id.nav_settings:
+                return false;
+            case R.id.nav_help:
+                return false:
+            */
+            default:
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                return false;
+        }
 
-        } else if (id == R.id.nav_statistics) {
-            drawer.closeDrawer(GravityCompat.START);
-
-
-            return true;
-        } else if (id == R.id.nav_menus) {
-
-        } /*else if (id == R.id.nav_settings) {
-
-        } else if (id == R.id.nav_help) {
-
-        }*/
-
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
     }
 }
