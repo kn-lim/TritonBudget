@@ -1,12 +1,12 @@
 package teammemes.tritonbudget;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
@@ -48,8 +48,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
     //the drawer up
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (mToggle.onOptionsItemSelected(item))
-        {
+        if (mToggle.onOptionsItemSelected(item)) {
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -60,12 +59,9 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
     //If it is open and the back button is pressed, then close the drawer.
     @Override
     public void onBackPressed() {
-        if (mDrawerLayout.isDrawerOpen(GravityCompat.START))
-        {
+        if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
             mDrawerLayout.closeDrawer(GravityCompat.START);
-        }
-        else
-        {
+        } else {
             super.onBackPressed();
         }
     }
@@ -78,8 +74,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
 
         //Reacts to the item selected depending on which was pressed
         //Creates a new Intent for the new page and starts that activity
-        switch (id)
-        {
+        switch (id) {
             case R.id.nav_home:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return true;

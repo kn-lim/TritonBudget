@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
+    <string-array name="BL">
+        <item>Chipotle Black Bean Burger  ($5.25)</item>
+        <item>Gardein Burger  ($5.25)</item>
+        <item>Hamburger  ($5.25)</item>
+        <item>Herbed Chicken Sandwich  ($5.25)</item>
+        <item>Turkey Burger  ($5.25)</item>
+        <item>French Fries  ($1.75)</item>
+    </string-array>
     <string-array name="Dining_Halls_Array">
         <item name="_64_degrees">64 Degrees\n<sup>Revelle College</sup></item>
         <item name="cafe_v">Cafe Ventanas\nEleanor Roosevelt College</item>
@@ -15,6 +23,40 @@
         <item name="goodysft">Goody\'s To-go Truck\nVaries</item>
         <item name="roots">Roots\nMuir College</item>
         <item name="_64_north">64 North\nRevelle College</item>
+    </string-array>
+    <string-array name="MT">
+        <item>Potato w/ Bacon Soup  ($3.50)</item>
+        <item>Vegetarian Chili  ($3.50)</item>
+        <item>Buffalo Blue Chicken Salad  ($8.50)</item>
+    </string-array>
+    <string-array name="NT">
+        <item>nutrition info</item>
+
+    </string-array>
+    <string-array name="RC">
+        <item>Smoked Tri Tip Churrasco  ($6.75)</item>
+        <item>Tandoori Chicken  ($4.75)</item>
+        <item>Black Rice Napa Cabbage Salad  ($2.00)</item>
+        <item>Butternut Asparagus Sautee  ($2.00)</item>
+        <item>Eggplant Caponatta  ($2.00)</item>
+        <item>House Side Salad  ($2.00)</item>
+        <item>Roasted Beets  ($2.00)</item>
+        <item>Roasted Red Potatoes  ($2.00)</item>
+    </string-array>
+    <string-array name="VCD">
+        <item>Fresh Deli Station  ($6.75)</item>
+    </string-array>
+    <string-array name="WK">
+        <item>Pork Potstickers</item>
+        <item>Crunchy Orange Chicken  ($6.95)</item>
+        <item>Spicy Dragon Shrimp  ($6.95)</item>
+    </string-array>
+    <string-array name="items_array_expandable_level_one">
+        <item>Burger Lounge</item>
+        <item>Revelle Cuisine</item>
+        <item>Market 64</item>
+        <item>Vertically Crafted Deli</item>
+        <item>Wok</item>
     </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -519,6 +561,7 @@
     <dimen name="design_tab_text_size_2line">12sp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="fab_margin">16dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
@@ -632,6 +675,12 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>

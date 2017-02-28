@@ -10,6 +10,8 @@ import android.text.style.RelativeSizeSpan;
 import android.view.View;
 import android.widget.TextView;
 
+/* Author: Andy Lum */
+
 public class DiningHallSelection extends AppCompatActivity {
 
     //Subtext Size (colleges)
@@ -61,20 +63,20 @@ public class DiningHallSelection extends AppCompatActivity {
         TextView roots = (TextView) findViewById(R.id.DH_TextView_Roots);
         TextView sixtyfournorth = (TextView) findViewById(R.id.DH_TextView_64North);
 
-        TextView [] dtv = {sixtyfour, cafev, canyonv, foodworx, ovt, pines, bistro, clubmed,
+        TextView[] dtv = {sixtyfour, cafev, canyonv, foodworx, ovt, pines, bistro, clubmed,
                 flavorstruck, goodys, goodysFT, roots, sixtyfournorth};
-        String [] diningHalls = getResources().getStringArray(R.array.Dining_Halls_Array);
-        int [] dnamelenghts = {SIXFOUR,CAFEV,CV,FOODWORX,OVT,PINES,BISTRO,CLUBMED,FLAVOR,GOODYS,
-                GOODYS2,ROOTS,SIXFOURNO};
+        String[] diningHalls = getResources().getStringArray(R.array.Dining_Halls_Array);
+        int[] dnamelenghts = {SIXFOUR, CAFEV, CV, FOODWORX, OVT, PINES, BISTRO, CLUBMED, FLAVOR, GOODYS,
+                GOODYS2, ROOTS, SIXFOURNO};
 
         /*Set Text for TextView Objects*/
         String text;
         SpannableString format;
-        for(int i = 0; i<13; i++){
+        for (int i = 0; i < 13; i++) {
             text = diningHalls[i];
             format = new SpannableString(text);
-            format.setSpan(relsubsize,dnamelenghts[i],text.length(),0);
-            format.setSpan(relcolor,dnamelenghts[i],text.length(),0);
+            format.setSpan(relsubsize, dnamelenghts[i], text.length(), 0);
+            format.setSpan(relcolor, dnamelenghts[i], text.length(), 0);
             dtv[i].setText(format);
         }
 

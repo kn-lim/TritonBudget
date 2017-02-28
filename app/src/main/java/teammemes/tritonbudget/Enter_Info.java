@@ -1,7 +1,6 @@
 package teammemes.tritonbudget;
 
 import android.app.AlertDialog;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -9,14 +8,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.provider.Settings.Secure;
 
-import java.io.InputStream;
 import java.util.Calendar;
 import java.util.List;
 
 
 public class Enter_Info extends AppCompatActivity {
+    // backend
+    Database mydb;
+    MenuDataSource menuDS;
     // frontend
     private EditText name;
     private EditText money;
@@ -27,9 +27,6 @@ public class Enter_Info extends AppCompatActivity {
     private Button btnDelete;
     private Button btnUpdate;
     private Button btnBuy;
-    // backend
-    Database mydb;
-    MenuDataSource menuDS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

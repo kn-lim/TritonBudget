@@ -10,21 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
-import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
-
-
 /**
  * Created by andrewli on 2/25/17.
  */
@@ -34,7 +19,7 @@ public class MenuDataSource {
     // Database fields
     private SQLiteDatabase database;
     private Database dbHelper;
-    private String[] allColumns = { MenuDB.IDCOL,MenuDB.NAMECOL,
+    private String[] allColumns = {MenuDB.IDCOL, MenuDB.NAMECOL,
             MenuDB.LOCATIONCOL, MenuDB.TYPECOL, MenuDB.CATEGORYCOL,
             MenuDB.VEGETARIANCOL, MenuDB.VEGANCOL, MenuDB.COSTCOL};
 
@@ -57,7 +42,7 @@ public class MenuDataSource {
         values.put(MenuDB.CATEGORYCOL, menu.getCategory());
         values.put(MenuDB.TYPECOL, menu.getType());
         values.put(MenuDB.VEGETARIANCOL, menu.isVegeterian());
-        values.put(MenuDB.VEGANCOL,menu.isVegan());
+        values.put(MenuDB.VEGANCOL, menu.isVegan());
         values.put(MenuDB.COSTCOL, menu.getCost());
         long insertId = database.insert(MenuDB.Table_Menu, null,
                 values);
@@ -95,7 +80,7 @@ public class MenuDataSource {
     public List<Menu> getMenusByLocation(String location) {
         List<Menu> menus = new ArrayList<Menu>();
         Cursor cursor = database.query(MenuDB.Table_Menu,
-                allColumns, MenuDB.LOCATIONCOL + "= '" + location+ "'", null,
+                allColumns, MenuDB.LOCATIONCOL + "= '" + location + "'", null,
                 null, null, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
@@ -111,7 +96,7 @@ public class MenuDataSource {
     public List<Menu> getMenusByType(String type) {
         List<Menu> menus = new ArrayList<Menu>();
         Cursor cursor = database.query(MenuDB.Table_Menu,
-                allColumns, MenuDB.TYPECOL + "= '" + type+ "'", null,
+                allColumns, MenuDB.TYPECOL + "= '" + type + "'", null,
                 null, null, null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
@@ -139,6 +124,7 @@ public class MenuDataSource {
         cursor.close();
         return menus;
     }
+
     public List<Menu> getMenusByVegan() {
         List<Menu> menus = new ArrayList<Menu>();
         Cursor cursor = database.query(MenuDB.Table_Menu,
@@ -168,8 +154,7 @@ public class MenuDataSource {
             boolean vegan = (cursor.getInt(cursor.getColumnIndex(MenuDB.VEGANCOL)) == 1);
             menu.setVegan(vegan);
             menu.setCost(cursor.getDouble(cursor.getColumnIndex(MenuDB.COSTCOL)));
-        }
-        catch(Exception e){
+        } catch (Exception e) {
 
         }
         return menu;

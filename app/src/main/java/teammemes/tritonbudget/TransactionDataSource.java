@@ -19,6 +19,7 @@ public class TransactionDataSource {
     public TransactionDataSource(Context context) {
         dbHelper = new Database(context);
     }
+
     public Transaction createTransaction(Transaction trans) {
         ContentValues values = new ContentValues();
         values.put(TransactionDB.MENUID, trans.getMenuId());
@@ -36,6 +37,7 @@ public class TransactionDataSource {
         cursor.close();
         return newComment;
     }
+
     private Transaction cursorToTransaction(Cursor cursor) {
         Transaction transaction = new Transaction();
         try {
@@ -45,8 +47,7 @@ public class TransactionDataSource {
             SimpleDateFormat dformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             transaction.settDate(dformat.parse(cursor.getString(cursor.getColumnIndex(TransactionDB.TDATE))));
             transaction.setCost(cursor.getDouble(cursor.getColumnIndex(MenuDB.COSTCOL)));
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return transaction;

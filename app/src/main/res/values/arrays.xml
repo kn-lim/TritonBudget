@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="items_array_expandable_level_one">
+        <item>Burger Lounge</item>
+        <item>Revelle Cuisine</item>
+        <item>Market 64</item>
+        <item>Vertically Crafted Deli</item>
+        <item>Wok</item>
+    </string-array>
+    <string-array name="BL">
+        <item>Chipotle Black Bean Burger  ($5.25)</item>
+        <item>Gardein Burger  ($5.25)</item>
+        <item>Hamburger  ($5.25)</item>
+        <item>Herbed Chicken Sandwich  ($5.25)</item>
+        <item>Turkey Burger  ($5.25)</item>
+        <item>French Fries  ($1.75)</item>
+    </string-array>
+    <string-array name="RC">
+        <item>Smoked Tri Tip Churrasco  ($6.75)</item>
+        <item>Tandoori Chicken  ($4.75)</item>
+        <item>Black Rice Napa Cabbage Salad  ($2.00)</item>
+        <item>Butternut Asparagus Sautee  ($2.00)</item>
+        <item>Eggplant Caponatta  ($2.00)</item>
+        <item>House Side Salad  ($2.00)</item>
+        <item>Roasted Beets  ($2.00)</item>
+        <item>Roasted Red Potatoes  ($2.00)</item>
+    </string-array>
+    <string-array name="MT">
+        <item>Potato w/ Bacon Soup  ($3.50)</item>
+        <item>Vegetarian Chili  ($3.50)</item>
+        <item>Buffalo Blue Chicken Salad  ($8.50)</item>
+    </string-array>
+    <string-array name="VCD">
+        <item>Fresh Deli Station  ($6.75)</item>
+    </string-array>
+    <string-array name="WK">
+        <item>Pork Potstickers</item>
+        <item>Crunchy Orange Chicken  ($6.95)</item>
+        <item>Spicy Dragon Shrimp  ($6.95)</item>
+    </string-array>
+    <string-array name="NT">
+        <item>nutrition info</item>
+
+    </string-array>
+</resources>

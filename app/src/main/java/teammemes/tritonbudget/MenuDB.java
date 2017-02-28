@@ -3,7 +3,6 @@ package teammemes.tritonbudget;
 /**
  * Created by andrewli on 2/26/17.
  * Interface used to store constants
- *
  */
 
 public interface MenuDB {
@@ -18,7 +17,7 @@ public interface MenuDB {
     public static final String VEGETARIANCOL = "VEGETARIAN";
     //public static final String DAYCOL = "DAY"; // TODO: add days to table
     public static final String COSTCOL = "COST";
-    static final String CREATE_DB_TABLE =  "CREATE TABLE " + Table_Menu  + " (ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+    static final String CREATE_DB_TABLE = "CREATE TABLE " + Table_Menu + " (ID INTEGER PRIMARY KEY AUTOINCREMENT," +
             " NAME TEXT, LOCATION TEXT, TYPE TEXT, CATEGORY TEXT, VEGETARIAN INTEGER DEFAULT 0," +
             " VEGAN INTEGER DEFAULT 0, COST DOUBLE)";
 }

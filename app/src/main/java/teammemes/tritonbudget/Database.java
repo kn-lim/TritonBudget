@@ -34,7 +34,7 @@ public class Database extends SQLiteOpenHelper {
 
 
     public Database(Context context) {
-        super(context, DataBaseName, null,1);
+        super(context, DataBaseName, null, 1);
         localContext = context;
     }
 
@@ -42,7 +42,7 @@ public class Database extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("create table "+ Table_Name +" (ID INTEGER PRIMARY KEY,NAME TEXT, BUDGET INTEGER)");
+        db.execSQL("create table " + Table_Name + " (ID INTEGER PRIMARY KEY,NAME TEXT, BUDGET INTEGER)");
         // menu db
         db.execSQL(MenuDB.CREATE_DB_TABLE);
         // transaction table
@@ -57,6 +57,7 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + MenuDB.Table_Menu);
         onCreate(db);
     }
+
     @Override
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + Table_Name);
@@ -64,46 +65,46 @@ public class Database extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertData(String name, String money){
+    public boolean insertData(String name, String money) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL1, 1);
         contentValues.put(COL2, name);
         contentValues.put(COL3, money);
 
-        long result = db.insert(Table_Name,null,contentValues);
-        if(result == -1){
+        long result = db.insert(Table_Name, null, contentValues);
+        if (result == -1) {
             return false;
-        }
-        else{
+        } else {
             return true;
         }
     }
 
-    public Cursor getAllData(){
+    public Cursor getAllData() {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select ID,Category, Type, Name, Vegetarian, Vegan Cost from "+MenuDB.Table_Menu,null);
+        Cursor res = db.rawQuery("select ID,Category, Type, Name, Vegetarian, Vegan Cost from " + MenuDB.Table_Menu, null);
         return res;
     }
-    public boolean updateData(String id,String name,String money) {
+
+    public boolean updateData(String id, String name, String money) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(COL1,id);
-        contentValues.put(COL2,name);
+        contentValues.put(COL1, id);
+        contentValues.put(COL2, name);
         contentValues.put(COL3, money);
-        long result = db.update(Table_Name, contentValues, "ID = ?",new String[] { id });
-        if(result == -1){
+        long result = db.update(Table_Name, contentValues, "ID = ?", new String[]{id});
+        if (result == -1) {
             return false;
-        }
-        else{
+        } else {
             return true;
         }
     }
 
-    public Integer deleteData (String id) {
+    public Integer deleteData(String id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete(Table_Name, "ID = ?",new String[] {id});
+        return db.delete(Table_Name, "ID = ?", new String[]{id});
     }
+
     public void populateMenu(InputStream inputStream, SQLiteDatabase db) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
         try {
@@ -117,24 +118,21 @@ public class Database extends SQLiteOpenHelper {
                 contentValues.put(MenuDB.CATEGORYCOL, fields[2]);
                 contentValues.put(MenuDB.NAMECOL, fields[3]);
                 contentValues.put(MenuDB.COSTCOL, Double.parseDouble(fields[4]));
-                int vegetarian =  "true".equals(fields[5])?1:0;
+                int vegetarian = "true".equals(fields[5]) ? 1 : 0;
                 contentValues.put(MenuDB.VEGETARIANCOL, vegetarian);
-                int vegan =  "true".equals(fields[6])?1:0;
+                int vegan = "true".equals(fields[6]) ? 1 : 0;
                 contentValues.put(MenuDB.VEGANCOL, vegan);
 
-                db.insert(MenuDB.Table_Menu,null,contentValues);
+                db.insert(MenuDB.Table_Menu, null, contentValues);
             }
 
-        }
-        catch (IOException ex) {
-            throw new RuntimeException("Error in reading CSV file: "+ex);
-        }
-        finally {
+        } catch (IOException ex) {
+            throw new RuntimeException("Error in reading CSV file: " + ex);
+        } finally {
             try {
                 inputStream.close();
-            }
-            catch (IOException e) {
-                throw new RuntimeException("Error while closing input stream: "+e);
+            } catch (IOException e) {
+                throw new RuntimeException("Error while closing input stream: " + e);
             }
         }
     }

@@ -24,9 +24,11 @@ public class Menu {
     //private boolean glutenFree;
     private double cost;
 
-    public Menu(){}
+    public Menu() {
+    }
+
     // Normal food
-    public Menu(String name, String category, String location, double cost){
+    public Menu(String name, String category, String location, double cost) {
         daily = true;
         this.name = name;
         this.location = location;
@@ -35,7 +37,7 @@ public class Menu {
     }
 
     // special food
-    public Menu(String name, String category, String location, double cost, int day){
+    public Menu(String name, String category, String location, double cost, int day) {
         daily = false;
         this.name = name;
         this.location = location;
@@ -44,89 +46,93 @@ public class Menu {
         this.day = day;
     }
 
-    public String getType(){
+    public String getType() {
 
         return type;
     }
-    public void setType(String type){ this.type = type;}
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public String getName() {
         return name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public boolean isDaily() {
-        return daily;
-    }
-
-    public int getDay() {
-        return day;
-    }
-
-//    public int getFreq() {
-//        return freq;
-//    }
-
-    public boolean isVegeterian() {
-        return vegeterian;
-    }
-
-    public boolean isVegan() {
-        return vegan;
-    }
-
-//    public boolean isGlutenFree() {
-//        return glutenFree;
-//    }
-
-    public double getCost() {
-        return cost;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getLocation() {
+        return location;
     }
 
     public void setLocation(String location) {
         this.location = location;
     }
 
+//    public int getFreq() {
+//        return freq;
+//    }
+
+    public String getCategory() {
+        return category;
+    }
+
     public void setCategory(String category) {
         this.category = category;
     }
 
-    public void setDaily(boolean daily)
-    {
+//    public boolean isGlutenFree() {
+//        return glutenFree;
+//    }
+
+    public boolean isDaily() {
+        return daily;
+    }
+
+    public void setDaily(boolean daily) {
         this.daily = daily;
     }
+
+    public int getDay() {
+        return day;
+    }
+
     public void setDay(int day) {
         this.day = day;
+    }
+
+    public boolean isVegeterian() {
+        return vegeterian;
+    }
+
+    public void setVegeterian(boolean vegeterian) {
+        this.vegeterian = vegeterian;
+    }
+
+    public boolean isVegan() {
+        return vegan;
     }
 
 //    public void setFreq(int freq) {
 //        this.freq = freq;
 //    }
 
-    public void setVegeterian(boolean vegeterian) {
-        this.vegeterian = vegeterian;
-    }
-
     public void setVegan(boolean vegan) {
         this.vegan = vegan;
+    }
+
+    public double getCost() {
+        return cost;
     }
 
 //    public void setGlutenFree(boolean glutenFree) {
