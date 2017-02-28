@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+
+    <item android:id="@+id/nav_history"
+        android:icon="@drawable/ic_collections_bookmark_black_24dp"
+        android:title="History" />
+
+    <item android:id="@+id/nav_statistics"
+        android:icon="@drawable/ic_assessment_black_24dp"
+        android:title="Statistics" />
+
+    <item android:id="@+id/nav_menus"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"
+        android:title="HDH Menus" />
+</menu>

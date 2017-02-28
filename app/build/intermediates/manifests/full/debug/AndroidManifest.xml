@@ -14,14 +14,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="teammemes.tritonbudget.HomeScreen" >
+        <activity android:name="teammemes.tritonbudget.Enter_Info" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.Enter_Info" />
+        <activity android:name="teammemes.tritonbudget.HomeScreen" />
         <activity android:name="teammemes.tritonbudget.Statistics" />
         <activity android:name="teammemes.tritonbudget.DiningHallSelection" />
         <activity android:name="teammemes.tritonbudget.testClick" />

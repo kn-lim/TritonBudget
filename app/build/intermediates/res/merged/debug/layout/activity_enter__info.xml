@@ -16,7 +16,7 @@
         android:inputType="none"
         android:text="Please enter your Name"
         android:ems="10"
-        android:layout_below="@+id/textView"
+
         android:layout_alignEnd="@+id/EnterName"
         android:layout_marginTop="14dp"
         android:id="@+id/PutNameHere"
@@ -37,16 +37,6 @@
         tools:text="$000"
         android:hint="$000" />
 
-    <Button
-        android:text="Done!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="57dp"
-        android:id="@+id/confirm"
-        android:backgroundTint="@android:color/holo_orange_light"
-        android:layout_below="@+id/PutMoneyHere"
-        android:layout_alignStart="@+id/EnterMoney" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,14 +46,13 @@
         android:id="@+id/EnterName"
         android:elevation="10dp"
         android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse"
-        tools:text="Name"
         android:onClick="onClick"
         android:hint="Name"
         android:layout_below="@+id/PutNameHere"
         android:layout_alignStart="@+id/EnterMoney" />
 
     <TextView
-        android:text="Recommended Daily Spending"
+        android:text="recommended spending"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -99,7 +88,55 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="33dp"
         android:id="@+id/btnViewAll"
-        android:layout_alignBaseline="@+id/confirm"
-        android:layout_alignBottom="@+id/confirm"
+        android:layout_alignBaseline="@+id/btnConfirm"
+        android:layout_alignBottom="@+id/btnConfirm"
         android:layout_alignEnd="@+id/EnterMoney" />
+
+    <Button
+        android:text="update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnConfirm"
+        android:layout_alignStart="@+id/btnConfirm"
+        android:id="@+id/update" />
+
+    <Button
+        android:text="Delete "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewAll"
+        android:layout_alignStart="@+id/btnViewAll"
+        android:id="@+id/delete" />
+
+    <Button
+        android:text="Done!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:id="@+id/btnConfirm"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:layout_below="@+id/PutMoneyHere"
+        android:layout_alignStart="@+id/EnterMoney" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_above="@+id/PutMoneyHere"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="27dp"
+        android:id="@+id/EnterID"
+        android:hint="id"
+        tools:text="id" />
+
+    <Button
+        android:text="Buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/EnterID"
+        android:id="@+id/buy" />
+
 </RelativeLayout>
+
