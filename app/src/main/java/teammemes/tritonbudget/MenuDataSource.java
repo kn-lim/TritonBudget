@@ -92,6 +92,21 @@ public class MenuDataSource {
         cursor.close();
         return menus;
     }
+    public List<Menu> getMenusByCategory(String category) {
+        List<Menu> menus = new ArrayList<Menu>();
+        Cursor cursor = database.query(MenuDB.Table_Menu,
+                allColumns, MenuDB.CATEGORYCOL + "= '" + category+ "'", null,
+                null, null, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Menu menu = cursorToMenu(cursor);
+            menus.add(menu);
+            cursor.moveToNext();
+        }
+        // make sure to close the cursor
+        cursor.close();
+        return menus;
+    }
 
     public List<Menu> getMenusByType(String type) {
         List<Menu> menus = new ArrayList<Menu>();
