@@ -124,6 +124,24 @@ public class MenuDataSource {
         return menus;
     }
 
+    // TODO: finish orgainzing by both location and category
+    public List<Menu> getMenusByLocationAndCategory(String location,String category) {
+        List<Menu> menus = new ArrayList<Menu>();
+        Cursor cursor = database.query(MenuDB.Table_Menu,
+                allColumns, MenuDB.LOCATIONCOL + "= ? and "+ MenuDB.CATEGORYCOL+ " = ? ", new String[] {location, category} ,
+                null, null, MenuDB.NAMECOL+" DESC");
+
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Menu menu = cursorToMenu(cursor);
+            menus.add(menu);
+            cursor.moveToNext();
+        }
+        // make sure to close the cursor
+        cursor.close();
+        return menus;
+    }
     public List<Menu> getMenusByVegetarian() {
         List<Menu> menus = new ArrayList<Menu>();
         Cursor cursor = database.query(MenuDB.Table_Menu,

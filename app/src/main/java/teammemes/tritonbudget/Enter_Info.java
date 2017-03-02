@@ -106,7 +106,8 @@ public class Enter_Info extends AppCompatActivity {
                     public void onClick(View v) {
                         menuDS.open();
                         //List<Menu> menuList = menuDS.getAllMenus();
-                        List<Menu> menuList = menuDS.getMenusByLocation("Pines");
+                        //List<Menu> menuList = menuDS.getMenusByLocation("Pines");
+                        List<Menu> menuList = menuDS.getMenusByLocationAndCategory("Pines", "Standard Breakfast");
                         menuDS.close();
                         showMessage("DATA", menuList.toString());
                     }
