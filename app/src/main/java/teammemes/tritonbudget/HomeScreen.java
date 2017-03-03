@@ -51,6 +51,8 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        /*TODO: Have first time user logic here */
+
         //Gets the ID of TextViews
         TextView totBal = (TextView) findViewById(R.id.HS_TextView_BalanceValue);
         TextView dailyRBal = (TextView) findViewById(R.id.HS_TextView_DailyBudgetValue);
@@ -83,7 +85,8 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
 
         dollars.setSpan(ftsize, 0, dollarStr.length(), 0);
         cents.setSpan(ftsize2, 0, centStr.length(), 0);
-        //Formats the color, gold/yellow = RGB 255 235 59 | HSV 54 77 100 | FFEB3B
+
+        //Formats the color, gold = RGB 255 235 59 | HSV 54 77 100 | FFEB3B
         //Green = 113 197 144 | 142 43 77 | 71C590
         ForegroundColorSpan colorDol = new ForegroundColorSpan(rgb(113, 197, 144));
         ForegroundColorSpan colorCents = new ForegroundColorSpan(rgb(113, 197, 144));
@@ -121,6 +124,8 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         deductbtn.setBackgroundColor(rgb(255, 235, 59));
         purchasebtn.setBackgroundColor(rgb(255, 235, 59));
         /*End Colors the Button to Custom GOLD*/
+
+        /* TODO: ADD ON BUTTON LISTENERS*/
 
     }
 
