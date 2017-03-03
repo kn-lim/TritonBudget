@@ -47,6 +47,8 @@ public class Enter_Info extends AppCompatActivity {
                         editor.putString("balance", money.getText().toString());
                         editor.commit();
                         Toast.makeText(Enter_Info.this,"Thanks",Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
+                        startActivity(intent);
                     }
 
                 }
