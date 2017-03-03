@@ -5925,11 +5925,11 @@
                 "from": {
                     "file": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/values/styles.xml",
                     "position": {
-                        "startLine": 13,
+                        "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 521,
+                        "startOffset": 523,
                         "endColumn": 90,
-                        "endOffset": 607
+                        "endOffset": 609
                     }
                 }
             },
@@ -5945,12 +5945,12 @@
                 "from": {
                     "file": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/values/styles.xml",
                     "position": {
-                        "startLine": 9,
+                        "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 371,
-                        "endLine": 12,
+                        "startOffset": 372,
+                        "endLine": 13,
                         "endColumn": 12,
-                        "endOffset": 516
+                        "endOffset": 517
                     }
                 }
             },
@@ -5965,11 +5965,11 @@
                 "from": {
                     "file": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/values/styles.xml",
                     "position": {
-                        "startLine": 14,
+                        "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 612,
+                        "startOffset": 615,
                         "endColumn": 80,
-                        "endOffset": 688
+                        "endOffset": 691
                     }
                 }
             },

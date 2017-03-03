@@ -20,12 +20,12 @@
         "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/layout/drawer_home_screen.xml"
     },
     {
-        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
-        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
-    },
-    {
         "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_statistics.xml",
         "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/layout/drawer_statistics.xml"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_enter__info.xml",
