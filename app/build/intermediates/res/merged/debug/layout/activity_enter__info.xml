@@ -10,33 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="teammemes.tritonbudget.Enter_Info">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="none"
-        android:text="Please enter your Name"
-        android:ems="10"
-
-        android:layout_alignEnd="@+id/EnterName"
-        android:layout_marginTop="14dp"
-        android:id="@+id/PutNameHere"
-        tools:text="Please enter your Name"
-        style="@android:style/Widget.AutoCompleteTextView"
-        android:textAppearance="@android:style/TextAppearance.Material.Large" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:layout_marginBottom="118dp"
-        android:id="@+id/EnterMoney"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse"
-        tools:text="$000"
-        android:hint="$000" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,63 +24,6 @@
         android:layout_below="@+id/PutNameHere"
         android:layout_alignStart="@+id/EnterMoney" />
 
-    <TextView
-        android:text="recommended spending"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/EnterName"
-        android:layout_alignStart="@+id/day" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/day"
-        tools:text="$"
-        android:text="$"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:layout_below="@+id/textView2"
-        android:layout_alignStart="@+id/EnterName" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Please Enter your Current Budget"
-        android:ems="10"
-        android:id="@+id/PutMoneyHere"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:layout_above="@+id/EnterMoney"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="View All"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="33dp"
-        android:id="@+id/btnViewAll"
-        android:layout_alignBaseline="@+id/btnConfirm"
-        android:layout_alignBottom="@+id/btnConfirm"
-        android:layout_alignEnd="@+id/EnterMoney" />
-
-    <Button
-        android:text="update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnConfirm"
-        android:layout_alignStart="@+id/btnConfirm"
-        android:id="@+id/update" />
-
-    <Button
-        android:text="Delete "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnViewAll"
-        android:layout_alignStart="@+id/btnViewAll"
-        android:id="@+id/delete" />
-
     <Button
         android:text="Done!"
         android:layout_width="wrap_content"
@@ -118,25 +34,44 @@
         android:layout_below="@+id/PutMoneyHere"
         android:layout_alignStart="@+id/EnterMoney" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:text="Please enter your Name"
+        android:ems="10"
+
+        android:layout_marginTop="11dp"
+        android:id="@+id/PutNameHere"
+        tools:text="Please enter your Name"
+        style="@android:style/Widget.AutoCompleteTextView"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/EnterName" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Please Enter your Current Budget"
+        android:ems="10"
+        android:id="@+id/PutMoneyHere"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_below="@+id/EnterName"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="97dp" />
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:ems="10"
-        android:layout_above="@+id/PutMoneyHere"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="27dp"
-        android:id="@+id/EnterID"
-        android:hint="id"
-        tools:text="id" />
-
-    <Button
-        android:text="Buy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/EnterID"
-        android:id="@+id/buy" />
+        android:id="@+id/EnterMoney"
+        android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse"
+        tools:text="$000"
+        android:hint="$000"
+        android:layout_below="@+id/PutMoneyHere"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
 

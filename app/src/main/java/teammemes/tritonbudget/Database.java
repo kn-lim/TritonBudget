@@ -14,18 +14,12 @@ import java.io.InputStreamReader;
 
 /**
  * Created by andrewli on 2/8/17.
+ * edited 3/3/17
  */
 
 public class Database extends SQLiteOpenHelper {
 
-    // user table
     public static final String DataBaseName = "Triton_Budget";
-    public static final String Table_Name = "User";
-    public static final String COL1 = "ID";
-    public static final String COL2 = "NAME";
-    public static final String COL3 = "BUDGET";
-
-
     // nutrition
     public static final String Table_Nutrition = "Nutrition";// prepopulate data
     //
@@ -34,7 +28,7 @@ public class Database extends SQLiteOpenHelper {
 
 
     public Database(Context context) {
-        super(context, DataBaseName, null, 1);
+        super(context, DataBaseName, null,1);
         localContext = context;
     }
 
@@ -42,7 +36,7 @@ public class Database extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("create table " + Table_Name + " (ID INTEGER PRIMARY KEY,NAME TEXT, BUDGET INTEGER)");
+        db.execSQL(UserDB.CREATE_USER_TABLE);
         // menu db
         db.execSQL(MenuDB.CREATE_DB_TABLE);
         // transaction table
@@ -53,58 +47,82 @@ public class Database extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + Table_Name);
+        db.execSQL("DROP TABLE IF EXISTS " + UserDB.Table_User);
         db.execSQL("DROP TABLE IF EXISTS " + MenuDB.Table_Menu);
         onCreate(db);
     }
-
     @Override
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + Table_Name);
+        db.execSQL("DROP TABLE IF EXISTS " + UserDB.Table_User);
         db.execSQL("DROP TABLE IF EXISTS " + MenuDB.Table_Menu);
         onCreate(db);
     }
 
-    public boolean insertData(String name, String money) {
+    /**
+     * inserts user's name and money
+     * @param name
+     * @param money
+     * @return
+     */
+    public boolean insertData(String name, String money){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(COL1, 1);
-        contentValues.put(COL2, name);
-        contentValues.put(COL3, money);
+        contentValues.put(UserDB.COL1, 1);
+        contentValues.put(UserDB.COL2, name);
+        contentValues.put(UserDB.COL3, money);
 
-        long result = db.insert(Table_Name, null, contentValues);
-        if (result == -1) {
+        long result = db.insert(UserDB.Table_User,null,contentValues);
+        if(result == -1){
             return false;
-        } else {
+        }
+        else{
             return true;
         }
     }
 
-    public Cursor getAllData() {
+    public Cursor getUser(){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select ID,Category, Type, Name, Vegetarian, Vegan Cost from " + MenuDB.Table_Menu, null);
+        Cursor res = db.rawQuery("select ID, Name, Budget from "+UserDB.Table_User,null);
         return res;
     }
 
-    public boolean updateData(String id, String name, String money) {
+    /**
+     * update user
+     * @param id
+     * @param name
+     * @param money
+     * @return
+     */
+    public boolean updateData(String id,String name,String money) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(COL1, id);
-        contentValues.put(COL2, name);
-        contentValues.put(COL3, money);
-        long result = db.update(Table_Name, contentValues, "ID = ?", new String[]{id});
-        if (result == -1) {
+        contentValues.put(UserDB.COL1,id);
+        contentValues.put(UserDB.COL2,name);
+        contentValues.put(UserDB.COL3,money);
+        long result = db.update(UserDB.Table_User, contentValues, "ID = 1",new String[] { id });
+        if(result == -1){
             return false;
-        } else {
+        }
+        else{
             return true;
         }
     }
 
-    public Integer deleteData(String id) {
+    /**
+     * delete your user
+     * @param id
+     * @return
+     */
+    public Integer deleteData (String id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete(Table_Name, "ID = ?", new String[]{id});
+        return db.delete(UserDB.Table_User, "ID = ?",new String[] {id});
     }
 
+    /**
+     * populated the menu from a csv file
+     * @param inputStream
+     * @param db
+     */
     public void populateMenu(InputStream inputStream, SQLiteDatabase db) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
         try {
@@ -118,23 +136,27 @@ public class Database extends SQLiteOpenHelper {
                 contentValues.put(MenuDB.CATEGORYCOL, fields[2]);
                 contentValues.put(MenuDB.NAMECOL, fields[3]);
                 contentValues.put(MenuDB.COSTCOL, Double.parseDouble(fields[4]));
-                int vegetarian = "true".equals(fields[5]) ? 1 : 0;
+                int vegetarian =  "true".equals(fields[5])?1:0;
                 contentValues.put(MenuDB.VEGETARIANCOL, vegetarian);
-                int vegan = "true".equals(fields[6]) ? 1 : 0;
+                int vegan =  "true".equals(fields[6])?1:0;
                 contentValues.put(MenuDB.VEGANCOL, vegan);
+                int gluten =  "true".equals(fields[7])?1:0;
+                contentValues.put(MenuDB.GLUTENCOL, gluten);
 
-                db.insert(MenuDB.Table_Menu, null, contentValues);
+                db.insert(MenuDB.Table_Menu,null,contentValues);
             }
 
-        } catch (IOException ex) {
-            throw new RuntimeException("Error in reading CSV file: " + ex);
-        } finally {
+        }
+        catch (IOException ex) {
+            throw new RuntimeException("Error in reading CSV file: "+ex);
+        }
+        finally {
             try {
                 inputStream.close();
-            } catch (IOException e) {
-                throw new RuntimeException("Error while closing input stream: " + e);
+            }
+            catch (IOException e) {
+                throw new RuntimeException("Error while closing input stream: "+e);
             }
         }
     }
 }
-

@@ -10,71 +10,97 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="teammemes.tritonbudget.HomeScreen">
 
-    <TextView
-        android:text="Total Balance"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/HS_LLV_Container"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="21dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="46dp"
-        android:id="@+id/home_total_balance"
-        android:textStyle="normal|bold"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textColor="@android:color/background_dark" />
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_marginTop="18dp"
-        android:id="@+id/home_balance"
-        android:layout_width="200dp"
-        android:layout_below="@+id/home_total_balance"
-        android:layout_centerHorizontal="true"
-        android:layout_height="80dp" />
+        <LinearLayout
+            android:id="@+id/HS_LLV_TopPortion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    <TextView
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="29dp"
-        android:id="@+id/home_daily_budget"
-        android:layout_width="100dp"
-        android:layout_below="@+id/home_balance"
-        android:layout_alignLeft="@+id/home_total_balance"
-        android:layout_alignStart="@+id/home_total_balance" />
+            <TextView
+                android:id="@+id/HS_TextView_TotalBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-50dp"
+                android:text="Total Balance"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="24sp" />
 
-    <TextView
-        android:text="Daily Budget Remaining"
-        android:id="@+id/home_daily_remaining_text"
-        android:layout_alignBaseline="@+id/home_daily_budget"
-        android:layout_alignBottom="@+id/home_daily_budget"
-        android:layout_toRightOf="@+id/home_total_balance"
-        android:layout_toEndOf="@+id/home_total_balance"
-        android:layout_height="50dp"
-        android:layout_width="120dp"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
-        android:textSize="14sp"
-        android:textAllCaps="false" />
+            <TextView
+                android:id="@+id/HS_TextView_BalanceValue"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="-10dp"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                tools:text="$XXXX.XX" />
 
-    <Button
-        android:text="DEDUCT"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/home_daily_budget"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="43dp"
-        android:id="@+id/home_button_deduct" />
+            <LinearLayout
+                android:id="@+id/HS_LLH_DailyBudgetContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-    <Button
-        android:text="PURCHASE"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="40dp"
-        android:id="@+id/home_button_purchase"
-        android:layout_below="@+id/home_button_deduct"
-        android:layout_alignLeft="@+id/home_button_deduct"
-        android:layout_alignStart="@+id/home_button_deduct" />
+                <TextView
+                    android:id="@+id/HS_TextView_DailyBudgetValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:textSize="14sp"
+                    tools:text="$XX.XX" />
+
+                <TextView
+                    android:id="@+id/HS_TextView_DailyBudgetRemain"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="Daily Budget\nRemaining"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/HS_LLV_BottomPortion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="75dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/HS_Button_Deduct"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:fontFamily="sans-serif"
+                android:text="DEDUCT"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/HS_Button_Purchase"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="35dp"
+                android:fontFamily="sans-serif"
+                android:text="PURCHASE"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>
