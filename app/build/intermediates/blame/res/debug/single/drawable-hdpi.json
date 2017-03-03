@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_collections_bookmark_black_24dp.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/drawable-hdpi/ic_collections_bookmark_black_24dp.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_home_black_24dp.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/drawable-hdpi/ic_home_black_24dp.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_feedback_black_24dp.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/drawable-hdpi/ic_feedback_black_24dp.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_settings_black_24dp.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/drawable-hdpi/ic_settings_black_24dp.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_shopping_cart_black_24dp.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/drawable-hdpi/ic_shopping_cart_black_24dp.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_assessment_black_24dp.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/drawable-hdpi/ic_assessment_black_24dp.png"
+    }
+]

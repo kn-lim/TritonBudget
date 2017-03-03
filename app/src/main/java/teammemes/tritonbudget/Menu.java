@@ -1,149 +1,159 @@
 package teammemes.tritonbudget;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ExpandableListView;
-import android.widget.ExpandableListView.OnChildClickListener;
-import android.widget.ExpandableListView.OnGroupClickListener;
-import android.widget.ExpandableListView.OnGroupCollapseListener;
-import android.widget.ExpandableListView.OnGroupExpandListener;
-import android.widget.Toast;
+/**
+ * Created by andrewli on 2/16/17.
+ */
 
-public class Menu extends Activity {
+public class Menu {
+    private String name;
+    private int id;
 
 
-    ExpandableListAdapter listAdapter;
-    ExpandableListView expListView;
-    List<String> listDataHeader;
-    HashMap<String, List<String>> listDataChild;
+    private String location;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+    // breakfast, lunch, dinner
+    private String type;
+    // pizza, burger
+    private String category;
+    //true: available everyday. false: only available on certain days
+    private boolean daily;
+    private int day;//day on which the food is available
+    //private int freq;
+    private boolean vegeterian;
+    private boolean vegan;
+    //private boolean glutenFree;
+    private double cost;
 
-        // get the listview
-        expListView = (ExpandableListView) findViewById(R.id.info);
-
-        // preparing list data
-        prepareListData();
-
-        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
-
-        // setting list adapter
-        expListView.setAdapter(listAdapter);
-
-        // Listview Group click listener
-        expListView.setOnGroupClickListener(new OnGroupClickListener() {
-
-            @Override
-            public boolean onGroupClick(ExpandableListView parent, View v,
-                                        int groupPosition, long id) {
-                // Toast.makeText(getApplicationContext(),
-                // "Group Clicked " + listDataHeader.get(groupPosition),
-                // Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
-
-        // Listview Group expanded listener
-        expListView.setOnGroupExpandListener(new OnGroupExpandListener() {
-
-            @Override
-            public void onGroupExpand(int groupPosition) {
-                Toast.makeText(getApplicationContext(),
-                        listDataHeader.get(groupPosition) + " Expanded",
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        // Listview Group collasped listener
-        expListView.setOnGroupCollapseListener(new OnGroupCollapseListener() {
-
-            @Override
-            public void onGroupCollapse(int groupPosition) {
-                Toast.makeText(getApplicationContext(),
-                        listDataHeader.get(groupPosition) + " Collapsed",
-                        Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-        // Listview on child click listener
-        expListView.setOnChildClickListener(new OnChildClickListener() {
-
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v,
-                                        int groupPosition, int childPosition, long id) {
-                // TODO Auto-generated method stub
-                Toast.makeText(
-                        getApplicationContext(),
-                        listDataHeader.get(groupPosition)
-                                + " : "
-                                + listDataChild.get(
-                                listDataHeader.get(groupPosition)).get(
-                                childPosition), Toast.LENGTH_SHORT)
-                        .show();
-                return false;
-            }
-        });
+    public Menu() {
     }
 
-    /*
-     * Preparing the list data
-     */
-    private void prepareListData() {
-        listDataHeader = new ArrayList<String>();
-        listDataChild = new HashMap<String, List<String>>();
+    // Normal food
+    public Menu(String name, String category, String location, double cost) {
+        daily = true;
+        this.name = name;
+        this.location = location;
+        this.category = category;
+        this.cost = cost;
+    }
 
-        // Adding child data
-        listDataHeader.add("Burger Lounge");
-        listDataHeader.add("Revelle Cuisine");
-        listDataHeader.add("Market 64");
-        listDataHeader.add("Vertically Crafted Deli");
-        listDataHeader.add("Wok");
-        // Adding child data
-        List<String> BL = new ArrayList<String>();
-        BL.add("Chipotle Black Bean Burger  ($5.25)");
-        BL.add("Gardein Burger  ($5.25)");
-        BL.add("Hamburger  ($5.25)");
-        BL.add("Herbed Chicken Sandwich  ($5.25)");
-        BL.add("Turkey Burger  ($5.25)");
-        BL.add("French Fries  ($1.75)");
-        BL.add("Sweet Potato Fries  ($2.75)");
-        BL.add("Buffalo Chicken Oozer  ($6.64)");
+    // special food
+    public Menu(String name, String category, String location, double cost, int day) {
+        daily = false;
+        this.name = name;
+        this.location = location;
+        this.category = category;
+        this.cost = cost;
+        this.day = day;
+    }
 
-        List<String> RC = new ArrayList<String>();
-        RC.add("Smoked Tri Tip Churrasco  ($6.75)");
-        RC.add("Tandoori Chicken  ($4.75)");
-        RC.add("Black Rice Napa Cabbage Salad  ($2.00)");
-        RC.add("Butternut Asparagus Sautee  ($2.00)");
-        RC.add("Eggplant Caponatta  ($2.00)");
-        RC.add("House Side Salad  ($2.00)");
-        RC.add("Roasted Beets  ($2.00)");
-        RC.add("Roasted Red Potatoes  ($2.00)");
+    public String getType() {
 
-        List<String> MT = new ArrayList<String>();
-        MT.add("Potato w/ Bacon Soup  ($3.50)");
-        MT.add("Vegetarian Chili  ($3.50)");
-        MT.add("Buffalo Blue Chicken Salad  ($8.50)");
+        return type;
+    }
 
-        List<String> VCD = new ArrayList<String>();
-        VCD.add("Fresh Deli Station  ($6.75)");
+    public void setType(String type) {
+        this.type = type;
+    }
 
-        List<String> WK = new ArrayList<String>();
-        WK.add("Pork Potstickers");
-        WK.add("Crunchy Orange Chicken  ($6.95)");
-        WK.add("Spicy Dragon Shrimp  ($6.95)");
-        listDataChild.put(listDataHeader.get(0), BL); // Header, Child data
-        listDataChild.put(listDataHeader.get(1), RC);
-        listDataChild.put(listDataHeader.get(2), MT);
-        listDataChild.put(listDataHeader.get(3), VCD);
-        listDataChild.put(listDataHeader.get(4), WK);
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+//    public int getFreq() {
+//        return freq;
+//    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+//    public boolean isGlutenFree() {
+//        return glutenFree;
+//    }
+
+    public boolean isDaily() {
+        return daily;
+    }
+
+    public void setDaily(boolean daily) {
+        this.daily = daily;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public boolean isVegeterian() {
+        return vegeterian;
+    }
+
+    public void setVegeterian(boolean vegeterian) {
+        this.vegeterian = vegeterian;
+    }
+
+    public boolean isVegan() {
+        return vegan;
+    }
+
+//    public void setFreq(int freq) {
+//        this.freq = freq;
+//    }
+
+    public void setVegan(boolean vegan) {
+        this.vegan = vegan;
+    }
+
+    public double getCost() {
+        return cost;
+    }
+
+//    public void setGlutenFree(boolean glutenFree) {
+//        this.glutenFree = glutenFree;
+//    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", location='" + location + '\'' +
+                ", type='" + type + '\'' +
+                ", category='" + category + '\'' +
+                ", vegeterian=" + vegeterian +
+                ", vegan=" + vegan +
+                ", cost=" + cost +
+                '}';
     }
 }

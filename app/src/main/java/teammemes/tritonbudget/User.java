@@ -22,22 +22,27 @@ public class User {
         Id = id;
     }
 
-    public void setName(String name) {
-        Name = name;
-    }
     public String getName() {
         return Name;
     }
-    public void setBalance(double Balance) {
-        this.Balance = Balance;
+
+    public void setName(String name) {
+        Name = name;
     }
+
     public double getBalance() {
         return Balance;
     }
-    public void setId(String id) {
-        Id = id;
+
+    public void setBalance(double Balance) {
+        this.Balance = Balance;
     }
+
     public String getId() {
         return Id;
+    }
+
+    public void setId(String id) {
+        Id = id;
     }
 }
