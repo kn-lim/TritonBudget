@@ -180,7 +180,7 @@ public class MenuDataSource {
      *            whole variety
      * @return list of menus
      */
-    public List<Menu> getMenusByLocationAndType(String location, String type, String category) {
+    public List<Menu> getMenusByLocationAndTypeAndCategory(String location, String type, String category) {
         List<Menu> menus = new ArrayList<Menu>();
 
         // sort the current database by location type and category
