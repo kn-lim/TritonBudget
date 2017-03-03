@@ -36,10 +36,10 @@ MERGED from [com.android.support:support-compat:25.1.1] /home/anlum/AndroidStudi
 		ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:7:9-43
 	android:theme
 		ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:10:9-40
-activity#teammemes.tritonbudget.MenuDisplayPrototype_Main
+activity#teammemes.tritonbudget.HomeScreen
 ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:11:9-17:20
 	android:name
-		ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:11:19-60
+		ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:11:19-45
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:12:13-16:29
 action#android.intent.action.MAIN
@@ -50,7 +50,7 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:15:17-77
 	android:name
 		ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:15:27-74
-activity#teammemes.tritonbudget.HomeScreen
+activity#teammemes.tritonbudget.Enter_Info
 ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:18:9-48
 	android:name
 		ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:18:19-45
@@ -70,10 +70,10 @@ activity#teammemes.tritonbudget.Menu
 ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:22:9-42
 	android:name
 		ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:22:19-39
-activity#teammemes.tritonbudget.Enter_Info
-ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:23:9-48
+activity#teammemes.tritonbudget.MenuDisplayPrototype_Main
+ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:23:9-63
 	android:name
-		ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:23:19-45
+		ADDED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml:23:19-60
 uses-sdk
 INJECTED from /home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:25.1.0] /home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/AndroidManifest.xml:21:5-23:62

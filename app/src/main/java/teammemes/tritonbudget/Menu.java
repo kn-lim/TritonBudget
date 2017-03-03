@@ -1,5 +1,6 @@
 package teammemes.tritonbudget;
 
+
 /**
  * Created by andrewli on 2/16/17.
  */
@@ -7,28 +8,25 @@ package teammemes.tritonbudget;
 public class Menu {
     private String name;
     private int id;
-
-
+    // Pines, Canyon Vista, ...
     private String location;
-
     // breakfast, lunch, dinner
     private String type;
-    // pizza, burger
+    // pizza, burger, breakfast special
     private String category;
     //true: available everyday. false: only available on certain days
     private boolean daily;
-    private int day;//day on which the food is available
+    private int day;  //day on which the food is available
     //private int freq;
     private boolean vegeterian;
     private boolean vegan;
+    private boolean gluten;
     //private boolean glutenFree;
     private double cost;
 
-    public Menu() {
-    }
-
+    public Menu(){}
     // Normal food
-    public Menu(String name, String category, String location, double cost) {
+    public Menu(String name, String category, String location, double cost){
         daily = true;
         this.name = name;
         this.location = location;
@@ -37,7 +35,7 @@ public class Menu {
     }
 
     // special food
-    public Menu(String name, String category, String location, double cost, int day) {
+    public Menu(String name, String category, String location, double cost, int day){
         daily = false;
         this.name = name;
         this.location = location;
@@ -46,93 +44,89 @@ public class Menu {
         this.day = day;
     }
 
-    public String getType() {
+    public String getType(){
 
         return type;
     }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
+    public void setType(String type){ this.type = type;}
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getLocation() {
         return location;
     }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-//    public int getFreq() {
-//        return freq;
-//    }
 
     public String getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-//    public boolean isGlutenFree() {
-//        return glutenFree;
-//    }
-
     public boolean isDaily() {
         return daily;
-    }
-
-    public void setDaily(boolean daily) {
-        this.daily = daily;
     }
 
     public int getDay() {
         return day;
     }
 
-    public void setDay(int day) {
-        this.day = day;
-    }
+//    public int getFreq() {
+//        return freq;
+//    }
 
     public boolean isVegeterian() {
         return vegeterian;
-    }
-
-    public void setVegeterian(boolean vegeterian) {
-        this.vegeterian = vegeterian;
     }
 
     public boolean isVegan() {
         return vegan;
     }
 
+//    public boolean isGlutenFree() {
+//        return glutenFree;
+//    }
+
+    public double getCost() {
+        return cost;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setDaily(boolean daily)
+    {
+        this.daily = daily;
+    }
+    public void setDay(int day) {
+        this.day = day;
+    }
+
 //    public void setFreq(int freq) {
 //        this.freq = freq;
 //    }
 
-    public void setVegan(boolean vegan) {
-        this.vegan = vegan;
+    public void setVegeterian(boolean vegeterian) {
+        this.vegeterian = vegeterian;
     }
 
-    public double getCost() {
-        return cost;
+    public void setVegan(boolean vegan) {
+        this.vegan = vegan;
     }
 
 //    public void setGlutenFree(boolean glutenFree) {
@@ -143,6 +137,7 @@ public class Menu {
         this.cost = cost;
     }
 
+    // testing purposes
     @Override
     public String toString() {
         return "Menu{" +
@@ -155,5 +150,12 @@ public class Menu {
                 ", vegan=" + vegan +
                 ", cost=" + cost +
                 '}';
+    }
+    public void setGluten(boolean gluten){
+        this.gluten = gluten;
+    }
+
+    public boolean isGluten() {
+        return gluten;
     }
 }

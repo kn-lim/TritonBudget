@@ -66,8 +66,8 @@ public class DiningHallSelection extends AppCompatActivity {
         TextView[] dtv = {sixtyfour, cafev, canyonv, foodworx, ovt, pines, bistro, clubmed,
                 flavorstruck, goodys, goodysFT, roots, sixtyfournorth};
         String[] diningHalls = getResources().getStringArray(R.array.Dining_Halls_Array);
-        int[] dnamelenghts = {SIXFOUR, CAFEV, CV, FOODWORX, OVT, PINES, BISTRO, CLUBMED, FLAVOR, GOODYS,
-                GOODYS2, ROOTS, SIXFOURNO};
+        int[] dnamelenghts = {SIXFOUR, CAFEV, CV, FOODWORX, OVT, PINES, BISTRO, CLUBMED, FLAVOR,
+                GOODYS, GOODYS2, ROOTS, SIXFOURNO};
 
         /*Set Text for TextView Objects*/
         String text;
@@ -81,8 +81,9 @@ public class DiningHallSelection extends AppCompatActivity {
         }
 
         /*Listeners*/
-        //This can be optimized with a for-loop. It is currently left like this
-        //for back-end to tinker with
+        /*TODO: This can be optimized with a for-loop. It is currently left like this for back-end
+        to tinker with*/
+
         //Dining Halls
         sixtyfour.setOnClickListener(new View.OnClickListener() {
             @Override
