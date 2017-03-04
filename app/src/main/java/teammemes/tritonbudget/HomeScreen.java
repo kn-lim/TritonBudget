@@ -3,6 +3,7 @@ package teammemes.tritonbudget;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -25,7 +26,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
-
+   
     private Toolbar mToolbar;
 
     @Override
@@ -124,7 +125,12 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         deductbtn.setBackgroundColor(rgb(255, 235, 59));
         purchasebtn.setBackgroundColor(rgb(255, 235, 59));
         /*End Colors the Button to Custom GOLD*/
-
+        User you=User.getInstance(getApplicationContext());
+        if(you.getName().equals("user name not found")) {
+            Intent intent = new Intent(getApplicationContext(), Enter_Info.class);
+            startActivityForResult(intent,0);
+        }
+        totBal.setText(Double.toString(you.getBalance()));
         /* TODO: ADD ON BUTTON LISTENERS*/
 
     }
