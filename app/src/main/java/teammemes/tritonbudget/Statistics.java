@@ -87,6 +87,8 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
                 return true;
             case R.id.nav_menus:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
+                Intent intent1 = new Intent(this, DiningHallSelection.class);
+                startActivity(intent1);
                 return false;
             /* Cases for future options
             case R.id.nav_settings:

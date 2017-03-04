@@ -172,9 +172,14 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                 intent.putExtra(EXTRA_MESSAGE, "From Home");
                 startActivity(intent);
                 return true;
+
+            //TODO below isn't working for some reason
             case R.id.nav_menus:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
-                return false;
+                Intent intent1 = new Intent(this, DiningHallSelection.class);
+                intent1.putExtra(EXTRA_MESSAGE, "From Home");
+                startActivity(intent1);
+                return true;
             /* Cases for future options
             case R.id.nav_settings:
                 return false;
@@ -185,30 +190,5 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return false;
         }
-
-        /*
-        if (id == R.id.nav_home) {
-            mDrawerLayout.closeDrawer(GravityCompat.START);
-            return true;
-        } else if (id == R.id.nav_history) {
-            mDrawerLayout.closeDrawer(GravityCompat.START);
-
-        } else if (id == R.id.nav_statistics) {
-            mDrawerLayout.closeDrawer(GravityCompat.START);
-            Intent intent = new Intent(this, Statistics.class);
-            intent.putExtra(EXTRA_MESSAGE, "From Home");
-            startActivity(intent);
-
-            return true;
-        } else if (id == R.id.nav_menus) {
-
-        } /*else if (id == R.id.nav_settings) {
-
-        } else if (id == R.id.nav_help) {
-
-        }
-
-        mDrawerLayout.closeDrawer(GravityCompat.START);
-        return true;*/
     }
 }
