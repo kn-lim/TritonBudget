@@ -1,12 +1,20 @@
 package teammemes.tritonbudget;
 
 import java.util.Date;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
 /**
  * Created by andrewli on 2/26/17.
  */
 
-public class History {
+public class History extends AppCompatActivity {
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_history);
+    }
 
     private int id;
     private int menuId;
