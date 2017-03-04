@@ -60,7 +60,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         /*TODO: replace user and balance with the local account! This is merely for front end!*/
         //For Front-end Formatting purposes, please remove later
         double balance = 800.00;
-        User usr = new User("User", balance, 0);
+        User usr = User.getInstance();
         String dailyRemain = "$16.00";
         //End TODO
 
@@ -124,12 +124,12 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         deductbtn.setBackgroundColor(rgb(255, 235, 59));
         purchasebtn.setBackgroundColor(rgb(255, 235, 59));
         /*End Colors the Button to Custom GOLD*/
-        User you=User.getInstance(getApplicationContext());
+        /*User you=User.getInstance(getApplicationContext());
         if(you.getName().equals("user name not found")) {
             Intent intent = new Intent(getApplicationContext(), Enter_Info.class);
             startActivityForResult(intent,0);
         }
-        totBal.setText(Double.toString(you.getBalance()));
+        totBal.setText(Double.toString(you.getBalance()));*/
         /* TODO: ADD ON BUTTON LISTENERS*/
 
     }
