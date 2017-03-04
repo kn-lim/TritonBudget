@@ -106,8 +106,8 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         centStr = dailyRemain.substring(decimalIdx, dailyRemain.length());
         dollars = new SpannableString(dollarStr);
         cents = new SpannableString(centStr);
-        ftsize = new RelativeSizeSpan((float) 2.5);
-        ftsize2 = new RelativeSizeSpan((float) 1.0);
+        ftsize = new RelativeSizeSpan((float) 3.00);
+        ftsize2 = new RelativeSizeSpan((float) 1.75);
         colorDol = new ForegroundColorSpan(Color.BLACK);
         colorCents = new ForegroundColorSpan(Color.BLACK);
         dollars.setSpan(ftsize, 0, dollarStr.length(), 0);

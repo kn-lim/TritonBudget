@@ -1,18 +1,18 @@
 package teammemes.tritonbudget;
 
-import android.app.AlertDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.content.Context;
 import android.widget.Button;
-import android.content.Intent;
 import android.widget.EditText;
-import android.content.SharedPreferences;
 import android.widget.Toast;
 
 
 public class Enter_Info extends AppCompatActivity {
+    SharedPreferences sharedpreferences;
     // backend
     //Database mydb;
     //MenuDataSource menuDS;
@@ -21,7 +21,7 @@ public class Enter_Info extends AppCompatActivity {
     private EditText money;
     //private EditText id;
     private Button btnDone;
-    SharedPreferences sharedpreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +30,7 @@ public class Enter_Info extends AppCompatActivity {
         name = (EditText) findViewById(R.id.EnterName);
         money = (EditText) findViewById(R.id.EnterMoney);
         btnDone = (Button) findViewById(R.id.btnConfirm);
-        sharedpreferences= getSharedPreferences("mypref", Context.MODE_PRIVATE);
+        sharedpreferences = getSharedPreferences("mypref", Context.MODE_PRIVATE);
 
         // add data button
         addData();
@@ -46,7 +46,7 @@ public class Enter_Info extends AppCompatActivity {
                         editor.putString("name", name.getText().toString());
                         editor.putString("balance", money.getText().toString());
                         editor.commit();
-                        Toast.makeText(Enter_Info.this,"Thanks",Toast.LENGTH_LONG).show();
+                        Toast.makeText(Enter_Info.this, "Thanks", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
                         startActivity(intent);
                     }
