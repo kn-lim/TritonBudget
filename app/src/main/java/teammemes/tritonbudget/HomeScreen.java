@@ -60,7 +60,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         /*TODO: replace user and balance with the local account! This is merely for front end!*/
         //For Front-end Formatting purposes, please remove later
         double balance = 800.00;
-        User usr = User.getInstance();
+        User usr = User.getInstance(getApplicationContext());
         String dailyRemain = "$16.00";
         //End TODO
 
