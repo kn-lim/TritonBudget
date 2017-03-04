@@ -37,18 +37,17 @@ public class Enter_Info extends AppCompatActivity {
 
     }
 
-    public void addData() {
+   public void addData() {
         btnDone.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        SharedPreferences.Editor editor = sharedpreferences.edit();
-                        editor.putString("name", name.getText().toString());
-                        editor.putString("balance", money.getText().toString());
-                        editor.commit();
-                        Toast.makeText(Enter_Info.this, "Thanks", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
-                        startActivity(intent);
+                        User you=User.getInstance(getApplicationContext());
+                        you.setName( name.getText().toString());
+                        you.setBalance(Double.parseDouble(money.getText().toString()));
+
+                        Toast.makeText(Enter_Info.this,"Thanks",Toast.LENGTH_LONG).show();
+                        finish();
                     }
 
                 }
