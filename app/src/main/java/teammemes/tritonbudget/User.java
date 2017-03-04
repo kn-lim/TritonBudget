@@ -1,4 +1,8 @@
 package teammemes.tritonbudget;
+//package com.example.andrewli.inputinformation;
+
+import android.content.Context;
+import android.content.SharedPreferences;
 
 /**
  * Created by andrewli on 2/12/17.
@@ -7,32 +11,46 @@ package teammemes.tritonbudget;
 public class User {
     private String Name;
     private double Balance;
-    private String Id;
-
-    public User() {}
-
-    public User(String name,double balance,String id) {
-        Name = name;
-        Balance = balance;
-        Id = id;
+    private static User user=null;
+    SharedPreferences prefs ;
+    private User(Context context) {
+        prefs= context.getSharedPreferences("user", Context.MODE_PRIVATE);
+        Name = prefs.getString("name", "user name not found");
+        Balance = Double.parseDouble(prefs.getString("balance","0.0"));
     }
 
-    public void setName(String name) {
-        Name = name;
+
+    public static User getInstance(Context context)
+    {
+        if(user==null)
+        {
+            user=new User(context);
+        }
+        return user;
     }
+
     public String getName() {
         return Name;
     }
-    public void setBalance(double Balance) {
-        this.Balance = Balance;
+
+    public void setName(String name) {
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("name", name);
+        editor.commit();
+        Name = prefs.getString("name", "fail to set name");
     }
+
     public double getBalance() {
         return Balance;
     }
-    public void setId(String id) {
-        Id = id;
+
+    public void setBalance(double Balance) {
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("balance", Double.toString(Balance));
+        editor.commit();
+        this.Balance = Double.parseDouble(prefs.getString("balance", "fail to set balance"));
     }
-    public String getId() {
-        return Id;
-    }
+
 }
