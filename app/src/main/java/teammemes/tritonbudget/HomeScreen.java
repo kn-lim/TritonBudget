@@ -178,7 +178,6 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                 startActivity(intent);
                 return true;
 
-            //TODO below isn't working for some reason
             case R.id.nav_menus:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 Intent intent1 = new Intent(this, DiningHallSelection.class);
