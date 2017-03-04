@@ -7,11 +7,11 @@ package teammemes.tritonbudget;
 public class User {
     private String Name;
     private double Balance;
-    private String Id;
+    private int Id;
 
     public User() {}
 
-    public User(String name,double balance,String id) {
+    public User(String name,double balance,int id) {
         Name = name;
         Balance = balance;
         Id = id;
@@ -29,10 +29,10 @@ public class User {
     public double getBalance() {
         return Balance;
     }
-    public void setId(String id) {
+    public void setId(int id) {
         Id = id;
     }
-    public String getId() {
+    public int getId() {
         return Id;
     }
 }

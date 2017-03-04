@@ -4,7 +4,7 @@ package teammemes.tritonbudget;
  * Created by andrewli on 2/26/17.
  */
 
-public interface TransactionDB {
+public interface HistoryDB {
 
     static String ID = "ID"; // transaction ID
     static String MENUID = "MENUID";

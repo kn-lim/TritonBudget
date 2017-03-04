@@ -16,7 +16,7 @@ public interface MenuDB {
     public static final String CATEGORYCOL = "CATEGORY";
     public static final String VEGANCOL = "VEGAN";
     public static final String VEGETARIANCOL = "VEGETARIAN";
-    public static final String GLUTENCOL = "GLUTENCOL";
+    public static final String GLUTENCOL = "GLUTEN";
     public static final String COSTCOL = "COST";
     static final String CREATE_DB_TABLE =  "CREATE TABLE " + Table_Menu  + " (ID INTEGER PRIMARY KEY AUTOINCREMENT," +
             " NAME TEXT, LOCATION TEXT, TYPE TEXT, CATEGORY TEXT, VEGETARIAN INTEGER DEFAULT 0," +

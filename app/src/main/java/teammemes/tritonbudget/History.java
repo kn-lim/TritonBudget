@@ -6,7 +6,7 @@ import java.util.Date;
  * Created by andrewli on 2/26/17.
  */
 
-public class Transaction {
+public class History {
 
     private int id;
     private int menuId;

@@ -35,12 +35,13 @@ public class Database extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
         db.execSQL(UserDB.CREATE_USER_TABLE);
         // menu db
         db.execSQL(MenuDB.CREATE_DB_TABLE);
         // transaction table
-        db.execSQL(TransactionDB.CREATE_TRANSACTION_TABLE);
+        db.execSQL(HistoryDB.CREATE_TRANSACTION_TABLE);
+
+        // for populating the menu
         InputStream inputStream = localContext.getResources().openRawResource(R.raw.menu);
         populateMenu(inputStream, db);
     }
@@ -67,9 +68,9 @@ public class Database extends SQLiteOpenHelper {
     public boolean insertData(String name, String money){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(UserDB.COL1, 1);
-        contentValues.put(UserDB.COL2, name);
-        contentValues.put(UserDB.COL3, money);
+        contentValues.put(UserDB.IDCOL, 1);
+        contentValues.put(UserDB.NAMECOL, name);
+        contentValues.put(UserDB.BALANCECOL, money);
 
         long result = db.insert(UserDB.Table_User,null,contentValues);
         if(result == -1){
@@ -80,10 +81,17 @@ public class Database extends SQLiteOpenHelper {
         }
     }
 
-    public Cursor getUser(){
+    public User getUser(){
+        User user;
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select ID, Name, Budget from "+UserDB.Table_User,null);
-        return res;
+        // Cursor cursor = db.rawQuery("select ID, Name, Balance from "+UserDB.Table_User,null);
+        Cursor cursor = db.query(UserDB.Table_User, UserDB.allColumns, null, null, null, null, null);
+        cursor.moveToFirst();
+
+        user = cursorToUser(cursor);
+
+
+        return user;
     }
 
     /**
@@ -96,9 +104,9 @@ public class Database extends SQLiteOpenHelper {
     public boolean updateData(String id,String name,String money) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(UserDB.COL1,id);
-        contentValues.put(UserDB.COL2,name);
-        contentValues.put(UserDB.COL3,money);
+        contentValues.put(UserDB.IDCOL, id);
+        contentValues.put(UserDB.NAMECOL,name);
+        contentValues.put(UserDB.BALANCECOL,money);
         long result = db.update(UserDB.Table_User, contentValues, "ID = 1",new String[] { id });
         if(result == -1){
             return false;
@@ -116,6 +124,24 @@ public class Database extends SQLiteOpenHelper {
     public Integer deleteData (String id) {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(UserDB.Table_User, "ID = ?",new String[] {id});
+    }
+
+    /**
+     * Converts cursor object into a User object
+     *
+     * @param cursor
+     * @return user object
+     */
+    private User cursorToUser(Cursor cursor) {
+        User user = new User();
+        try {
+            user.setId(cursor.getInt(cursor.getColumnIndex(UserDB.IDCOL)));
+            user.setName(cursor.getString(cursor.getColumnIndex(UserDB.NAMECOL)));
+            user.setBalance(cursor.getDouble(cursor.getColumnIndex(UserDB.BALANCECOL)));
+        } catch (Exception e) {
+
+        }
+        return user;
     }
 
     /**

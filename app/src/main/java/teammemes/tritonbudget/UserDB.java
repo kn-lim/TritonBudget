@@ -8,10 +8,11 @@ package teammemes.tritonbudget;
 public interface UserDB {
     // user table
     public static final String Table_User = "User";
-    public static final String COL1 = "ID";
-    public static final String COL2 = "NAME";
-    public static final String COL3 = "BUDGET";
+    public static final String IDCOL = "ID";
+    public static final String NAMECOL = "NAME";
+    public static final String BALANCECOL = "BUDGET";
     public static final String CREATE_USER_TABLE = "create table "+ Table_User +
-            " (ID INTEGER PRIMARY KEY,NAME TEXT, BUDGET INTEGER)";
-
+            " (ID INTEGER PRIMARY KEY,NAME TEXT, BALANCE INTEGER)";
+    public static String[] allColumns = { IDCOL, NAMECOL,
+            BALANCECOL};
 }
