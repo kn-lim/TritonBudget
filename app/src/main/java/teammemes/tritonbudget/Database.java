@@ -81,7 +81,7 @@ public class Database extends SQLiteOpenHelper {
         }
     }
 
-    public User getUser(){
+    /*public User getUser(){
         User user;
         SQLiteDatabase db = this.getWritableDatabase();
         // Cursor cursor = db.rawQuery("select ID, Name, Balance from "+UserDB.Table_User,null);
@@ -92,7 +92,7 @@ public class Database extends SQLiteOpenHelper {
 
 
         return user;
-    }
+    }*/
 
     /**
      * update user
@@ -132,7 +132,7 @@ public class Database extends SQLiteOpenHelper {
      * @param cursor
      * @return user object
      */
-    private User cursorToUser(Cursor cursor) {
+    /*private User cursorToUser(Cursor cursor) {
         User user = new User();
         try {
             user.setId(cursor.getInt(cursor.getColumnIndex(UserDB.IDCOL)));
@@ -142,7 +142,7 @@ public class Database extends SQLiteOpenHelper {
 
         }
         return user;
-    }
+    }*/
 
     /**
      * populated the menu from a csv file
