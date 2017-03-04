@@ -7,4 +7,6 @@
     </string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="Date">Date</string>
+    <string name="Item">Item</string>
 </resources>

@@ -3,7 +3,6 @@ package teammemes.tritonbudget;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -61,7 +60,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         /*TODO: replace user and balance with the local account! This is merely for front end!*/
         //For Front-end Formatting purposes, please remove later
         double balance = 800.00;
-        User usr = new User("User", balance, "0");
+        User usr = new User("User", balance, 0);
         String dailyRemain = "$16.00";
         //End TODO
 
