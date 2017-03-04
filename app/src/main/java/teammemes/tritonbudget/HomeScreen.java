@@ -1,7 +1,6 @@
 package teammemes.tritonbudget;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -33,6 +32,12 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_home_screen);
 
+        /*User you=User.getInstance(getApplicationContext());
+        */
+        User usr = User.getInstance(getApplicationContext());
+
+        /*totBal.setText(Double.toString(you.getBalance()));*/
+
         //Creates the toolbar to the one defined in nav_action
         mToolbar = (Toolbar) findViewById(R.id.nav_action);
         setSupportActionBar(mToolbar);
@@ -51,17 +56,12 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        /*TODO: Have first time user logic here */
 
         //Gets the ID of TextViews
         TextView totBal = (TextView) findViewById(R.id.HS_TextView_BalanceValue);
         TextView dailyRBal = (TextView) findViewById(R.id.HS_TextView_DailyBudgetValue);
 
         /*TODO: replace user and balance with the local account! This is merely for front end!*/
-        //For Front-end Formatting purposes, please remove later
-        double balance = 800.00;
-        User usr = User.getInstance(getApplicationContext());
-        String dailyRemain = "$16.00";
         //End TODO
 
         //Gets the balance from the user
@@ -96,7 +96,8 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         totBal.setText(TextUtils.concat(dollars, cents));
         /*End Format the total balance*/
 
-        /*Format the Daily Remaining Budget*/
+        /*
+        Format the Daily Remaining Budget
         decimalIdx = dailyRemain.indexOf('.');
         //Edge case, where balance == $XXX.00, it wrongly displays one instance of 0. This fixes it.
         if (decimalIdx + 1 == usrtotBal.length() - 1) {
@@ -115,8 +116,8 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         dollars.setSpan(colorDol, 0, dollarStr.length(), 0);
         cents.setSpan(colorCents, 0, centStr.length(), 0);
         dailyRBal.setText(TextUtils.concat(dollars, cents));
-        /*End Format the Daily Remaining Budget*/
-
+        End Format the Daily Remaining Budget
+*/
         /*Colors the Button to Custom GOLD*/
         Button deductbtn = (Button) findViewById(R.id.HS_Button_Deduct);
         Button purchasebtn = (Button) findViewById(R.id.HS_Button_Purchase);
@@ -124,12 +125,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         deductbtn.setBackgroundColor(rgb(255, 235, 59));
         purchasebtn.setBackgroundColor(rgb(255, 235, 59));
         /*End Colors the Button to Custom GOLD*/
-        /*User you=User.getInstance(getApplicationContext());
-        if(you.getName().equals("user name not found")) {
-            Intent intent = new Intent(getApplicationContext(), Enter_Info.class);
-            startActivityForResult(intent,0);
-        }
-        totBal.setText(Double.toString(you.getBalance()));*/
+
         /* TODO: ADD ON BUTTON LISTENERS*/
 
     }

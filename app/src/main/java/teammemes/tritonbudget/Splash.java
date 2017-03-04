@@ -10,9 +10,14 @@ public class Splash extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Intent intent = new Intent(this, HomeScreen.class);
-        startActivity(intent);
+        User usr = User.getInstance(getApplicationContext());
+        if (usr.getName().equals("user name not found")) {
+            Intent intent = new Intent(getApplicationContext(), Enter_Info.class);
+            startActivity(intent);
+        } else {
+            Intent intent = new Intent(this, HomeScreen.class);
+            startActivity(intent);
+        }
         finish();
     }
 }
