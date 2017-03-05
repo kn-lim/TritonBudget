@@ -41,6 +41,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     private Toolbar mToolbar;
+    private User usr;
 
     public DiningHallSelection() {
     }
@@ -49,6 +50,9 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_dhselection);
+
+        usr = User.getInstance(getApplicationContext());
+
 
         //Creates the toolbar to the one defined in nav_action
         mToolbar = (Toolbar) findViewById(R.id.nav_action);
@@ -66,6 +70,10 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
         //Create the navigationView and add a listener to listen for menu selections
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        View navHeaderView= navigationView.getHeaderView(0);
+        TextView usrName = (TextView) navHeaderView.findViewById(R.id.header_name);
+        usrName.setText(usr.getName());
 
         //This is meant for the college locations ie subtext
         RelativeSizeSpan relsubsize = new RelativeSizeSpan(SUBSIZE);
@@ -245,28 +253,32 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
     public boolean onNavigationItemSelected(MenuItem item) {
         // Gets the id of the item that was selected
         int id = item.getItemId();
+        Intent nextScreen;
 
         //Reacts to the item selected depending on which was pressed
         //Creates a new Intent for the new page and starts that activity
         switch (id) {
-            case R.id.nav_statistics:
+            case R.id.nav_home:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
-                Intent intent1 = new Intent(this, Statistics.class);
-                intent1.putExtra(EXTRA_MESSAGE, "From DH Selection");
-                startActivity(intent1);
+                nextScreen = new Intent(this, HomeScreen.class);
+                nextScreen.putExtra("FROM", "Menu");
+                startActivity(nextScreen);
                 return true;
             case R.id.nav_history:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
-                return false;
-            case R.id.nav_home:
+                nextScreen = new Intent(this, History.class);
+                nextScreen.putExtra("FROM", "Menu");
+                startActivity(nextScreen);
+                return true;
+            case R.id.nav_statistics:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
-                Intent intent = new Intent(this, HomeScreen.class);
-                intent.putExtra(EXTRA_MESSAGE, "From DH Selection");
-                startActivity(intent);
+                nextScreen = new Intent(this, Statistics.class);
+                nextScreen.putExtra("FROM", "Menu");
+                startActivity(nextScreen);
                 return true;
             case R.id.nav_menus:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
-                return false;
+                return true;
             /* Cases for future options
             case R.id.nav_settings:
                 return false;

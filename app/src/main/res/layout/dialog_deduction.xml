@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:id="@+id/deduction_dialog">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+            android:id="@+id/deduct_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="$"
+            android:imeOptions="actionDone"
+            android:inputType="number" />
+
+    </android.support.design.widget.TextInputLayout>
+</FrameLayout>

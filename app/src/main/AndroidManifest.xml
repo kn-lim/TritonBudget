@@ -27,6 +27,7 @@
         <activity android:name=".Enter_Info" />
         <activity android:name=".Statistics" />
         <activity android:name=".DiningHallSelection" />
+        <activity android:name=".History"/>
         <activity android:name=".testClick" />
         <activity android:name=".Menu" />
         <activity android:name=".MenuDisplayPrototype_Main" />

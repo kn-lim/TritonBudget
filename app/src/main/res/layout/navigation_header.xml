@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
-        android:id="@+id/textView3"
+        android:id="@+id/header_name"
         android:textColor="@android:color/background_light"
         android:textSize="30sp"
         android:layout_alignParentBottom="true"
