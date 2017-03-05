@@ -23,37 +23,62 @@ public class MenuDisplay_ParentLevelAdapter extends BaseExpandableListAdapter {
     private final Map<String, List<String>> mListData_SecondLevel_Map;
     private final Map<String, List<String>> mListData_ThirdLevel_Map;
 
-    public MenuDisplay_ParentLevelAdapter(Context mContext, List<String> mListDataHeader) {
+    public MenuDisplay_ParentLevelAdapter(Context mContext, List<String> mListDataHeader, MenuDataSource DS) {
         this.mContext = mContext;
         this.mListDataHeader = new ArrayList<>();
         this.mListDataHeader.addAll(mListDataHeader);
         // SECOND LEVEL
-        String[] mItemHeaders;
+        /*List<Menu> mItemHeaders;
+
         mListData_SecondLevel_Map = new HashMap<>();
         int parentCount = mListDataHeader.size();
         for (int i = 0; i < parentCount; i++) {
             String content = mListDataHeader.get(i);
             switch (content) {
                 case "Burger Lounge":
-                    mItemHeaders = mContext.getResources().getStringArray(R.array.BL);
+                    mItemHeaders = DS.getMenusByLocationAndCategory("64 Degree", "Burger Lounge");
                     break;
                 case "Revelle Cuisine":
-                    mItemHeaders = mContext.getResources().getStringArray(R.array.RC);
+                    mItemHeaders = DS.getMenusByLocationAndCategory("64 Degree", "Revelle Cuisine");
                     break;
                 case "Market 64":
-                    mItemHeaders = mContext.getResources().getStringArray(R.array.MT);
+                    mItemHeaders = DS.getMenusByLocationAndCategory("64 Degree", "Market 64");
                     break;
                 case "Vertically Crafted Deli":
-                    mItemHeaders = mContext.getResources().getStringArray(R.array.VCD);
+                    mItemHeaders = DS.getMenusByLocationAndCategory("64 Degree", "Vertically Crafted Deli");
                     break;
                 case "Wok":
-                    mItemHeaders = mContext.getResources().getStringArray(R.array.WK);
+                    mItemHeaders = DS.getMenusByLocationAndCategory("64 Degree", "Wok");
                     break;
 
                 default:
-                    mItemHeaders = mContext.getResources().getStringArray(R.array.RC);
+                    mItemHeaders = DS.getMenusByLocationAndCategory("64 Degree", "Burger Lounge");
             }
+            String[] SmItemHeaders = new String[mItemHeaders.size()];
+            for(int j = 0; j < mItemHeaders.size(); j++){
+                SmItemHeaders[j] = mItemHeaders.get(j).getName();
+            }
+
+            mListData_SecondLevel_Map.put(content, Arrays.asList(SmItemHeaders));
+
+            */
+        List<Menu> food = new ArrayList<Menu>();
+
+        mListData_SecondLevel_Map = new HashMap<>();
+        int parentCount = mListDataHeader.size();
+        for (int i = 0; i < parentCount; i++) {
+
+            String content = mListDataHeader.get(i);
+
+            //food = DS.getMenusByLocationAndCategory("64 Degree", content);
+            String[] mItemHeaders= new String[food.size()];
+
+            for(int j = 0; j < food.size(); j++){
+                mItemHeaders[j] = food.get(j).getName();
+            }
+
             mListData_SecondLevel_Map.put(mListDataHeader.get(i), Arrays.asList(mItemHeaders));
+
         }
         // THIRD LEVEL
         String[] mItemChildOfChild;
