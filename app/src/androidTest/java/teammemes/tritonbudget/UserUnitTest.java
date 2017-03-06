@@ -46,4 +46,13 @@ public class UserUnitTest {
             Log.i("USER",cUser.toString());
             assertEquals(cUser.toString(),600.0,cUser.getBalance(),0.01);
     }
+    @Test
+    public void update() throws Exception {
+        User user = new User("Andrew Li",550.0,1);
+
+        ds.updateInsertUser(user);
+        User cUser = ds.getUser(1);
+        Log.i("USER",cUser.toString());
+        assertEquals(cUser.toString(),550.0,cUser.getBalance(),0.01);
+    }
 }

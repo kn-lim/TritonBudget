@@ -14,6 +14,16 @@ public class TranHistory {
     private Date tdate;
     private double cost;
 
+    public TranHistory(){}
+
+    public TranHistory(int id, int menuId, int quantity, Date tdate, double cost){
+        this.id = id;
+        this.menuId = menuId;
+        this.quantity = quantity;
+        this.tdate = tdate;
+        this.cost = cost;
+    }
+
     public int getId() {
         return id;
     }
