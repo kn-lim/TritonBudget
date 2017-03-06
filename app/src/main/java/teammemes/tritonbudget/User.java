@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
- * Created by andrewli on 2/12/17.
+ *
  */
 
 public class User {

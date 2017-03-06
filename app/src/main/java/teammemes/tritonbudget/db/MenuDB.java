@@ -1,4 +1,4 @@
-package teammemes.tritonbudget;
+package teammemes.tritonbudget.db;
 
 /**
  * Created by andrewli on 2/26/17.

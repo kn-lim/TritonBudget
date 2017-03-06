@@ -1,47 +1,27 @@
-package teammemes.tritonbudget;
+package teammemes.tritonbudget.db;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
+
+import teammemes.tritonbudget.Menu;
 
 
 /**
  * Created by andrewli on 2/25/17.
  */
 
-public class MenuDataSource {
 
-    // Database fields
-    private SQLiteDatabase database;
-    private Database dbHelper;
+public class MenuDataSource extends BaseDataSource {
 
     public MenuDataSource(Context context) {
-        dbHelper = new Database(context);
+        super(context);
     }
 
-    public void open() throws SQLException {
-        database = dbHelper.getWritableDatabase();
-    }
-
-    public void close() {
-        dbHelper.close();
-    }
-
-    /**
-     * might not need
-     * @param menu
-     * @return
-     */
     public Menu createMenu(Menu menu) {
         ContentValues values = new ContentValues();
         values.put(MenuDB.NAMECOL, menu.getName());
@@ -283,6 +263,26 @@ public class MenuDataSource {
         cursor.close();
         return menus;
     }
+
+
+    /**
+     * Menu by Id
+     */
+
+    public Menu getMenuById(int id){
+        Cursor cursor = database.query(MenuDB.Table_Menu, MenuDB.allColumns, MenuDB.IDCOL + "= ?", new String[]{""+id}, null, null,
+                null);
+        cursor.moveToFirst();
+        if(!cursor.isAfterLast()) {
+            Menu menu = cursorToMenu(cursor);
+            cursor.close();
+            return menu;
+        }
+        else
+            return null;
+
+
+    }
     /**
      * Converts cursor object into a menu object
      *
@@ -305,7 +305,7 @@ public class MenuDataSource {
             menu.setGluten(gluten);
             menu.setCost(cursor.getDouble(cursor.getColumnIndex(MenuDB.COSTCOL)));
         } catch (Exception e) {
-
+            Log.e("curorToMenu",e.getMessage(),e);
         }
         return menu;
     }

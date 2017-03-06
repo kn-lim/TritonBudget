@@ -16,9 +16,6 @@ import android.widget.TextView;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
-/**
- * Created by andrewli on 2/26/17.
- */
 
 public class History extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -62,7 +59,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
     private int id;
     private int menuId;
     private int quantity;
-    private Date tDate;
+    private Date tdate;
     private double cost;
 
     public int getId() {
@@ -89,12 +86,12 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         this.quantity = quantity;
     }
 
-    public Date gettDate() {
-        return tDate;
+    public Date getTdate() {
+        return tdate;
     }
 
-    public void settDate(Date tDate) {
-        this.tDate = tDate;
+    public void setTdate(Date tdate) {
+        this.tdate = tdate;
     }
 
     public double getCost() {

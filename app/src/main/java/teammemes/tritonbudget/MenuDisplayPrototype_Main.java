@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import teammemes.tritonbudget.db.MenuDataSource;
+
 public class MenuDisplayPrototype_Main extends AppCompatActivity {
     public MenuDataSource DS;
     @Override
