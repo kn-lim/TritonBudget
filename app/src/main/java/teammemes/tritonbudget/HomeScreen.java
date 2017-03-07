@@ -212,8 +212,6 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
     public void onBackPressed() {
         if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
             mDrawerLayout.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
         }
     }
 

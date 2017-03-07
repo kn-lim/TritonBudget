@@ -2,18 +2,21 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/history_screen">
 
     <ScrollView
         android:id="@+id/History_Scrollview_Container"
         android:layout_width="match_parent"
         android:layout_height="656dp">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/page"
             android:orientation="vertical">
-
+            <!--
             <LinearLayout
                 android:id="@+id/DateBorder"
                 android:layout_width="match_parent"
@@ -192,7 +195,7 @@
                     android:text="@string/Item"
                     android:textAppearance="@style/TextAppearance.AppCompat" />
 
-            </LinearLayout>
+            </LinearLayout> -->
 
         </LinearLayout>
     </ScrollView>

@@ -1,8 +1,17 @@
 package teammemes.tritonbudget;
 
+import java.text.DateFormat;
+import java.text.FieldPosition;
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -10,11 +19,20 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
+import teammemes.tritonbudget.db.HistoryDataSource;
+import teammemes.tritonbudget.db.TranHistory;
+
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
+import static android.view.Gravity.CENTER;
 
 
 public class History extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -23,6 +41,10 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
     private ActionBarDrawerToggle mToggle;
     private Toolbar mToolbar;
     private User usr;
+    private HistoryDataSource database;
+    SimpleDateFormat dateFormat;
+    LinearLayout.LayoutParams layoutParams, textParams;
+    LinearLayout page;
 
 
 
@@ -31,12 +53,15 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_history);
 
+
+
         usr = User.getInstance(getApplicationContext());
 
         //Creates the toolbar to the one defined in nav_action
         mToolbar = (Toolbar) findViewById(R.id.nav_action);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("History");
 
 
         //Create the Drawer layout and the toggle
@@ -54,6 +79,92 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         View navHeaderView= navigationView.getHeaderView(0);
         TextView usrName = (TextView) navHeaderView.findViewById(R.id.header_name);
         usrName.setText(usr.getName());
+
+
+
+        layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        textParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+        page = (LinearLayout) findViewById(R.id.page);
+
+
+        /* Used for when database is working
+        database = new HistoryDataSource(this);
+        List<TranHistory> transactions = database.getAllTransaction();
+        */
+
+        List<TranHistory> transactions = new ArrayList<TranHistory>();
+
+        dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+        Calendar date = Calendar.getInstance();
+
+        TranHistory one = new TranHistory(1, 0, 1, date.getTime(), 1.00);
+        TranHistory two = new TranHistory(2, 0, 1,  date.getTime(), 2.00);
+        TranHistory three = new TranHistory(3, 0, 1,  date.getTime(), 3.00);
+        date.add(Calendar.DAY_OF_YEAR, 1);
+        TranHistory four = new TranHistory(4, 0, 1,  date.getTime(), 4.00);
+        TranHistory five = new TranHistory(5, 0, 1,  date.getTime(), 5.00);
+        TranHistory six = new TranHistory(6, 0, 1,  date.getTime(), 6.00);
+        date.add(Calendar.DAY_OF_YEAR, 1);
+        TranHistory seven = new TranHistory(7, 0, 1,  date.getTime(), 7.00);
+        TranHistory eight = new TranHistory(8, 0, 1,  date.getTime(), 8.00);
+        TranHistory nine = new TranHistory(9, 0, 1,  date.getTime(), 9.00);
+        TranHistory ten = new TranHistory(10, 0, 1,  date.getTime(), 10.00);
+        transactions.add(one);
+        transactions.add(two);
+        transactions.add(three);
+        transactions.add(four);
+        transactions.add(five);
+        transactions.add(six);
+        transactions.add(seven);
+        transactions.add(eight);
+        transactions.add(nine);
+        transactions.add(ten);
+
+        renderTransactions(transactions);
+
+    }
+
+    private void renderTransactions(List<TranHistory> transactions) {
+        String prevDate = "";
+        for (int i = transactions.size() - 1; i >= 0; i--){
+            if(!dateFormat.format(transactions.get(i).getTdate()).equals(prevDate)){
+                prevDate = dateFormat.format(transactions.get(i).getTdate());
+
+                LinearLayout DateBorder = new LinearLayout(this);
+                DateBorder.setBackgroundResource(R.drawable.border_set_top);
+                DateBorder.setOrientation(LinearLayout.HORIZONTAL);
+                DateBorder.setLayoutParams(layoutParams);
+
+
+                TextView date_display = new TextView(this);
+                date_display.setGravity(CENTER);
+                date_display.setPaddingRelative(8,8,8,8);
+                date_display.setPadding(8,8,8,8);
+                date_display.setText(prevDate);
+                date_display.setLayoutParams(textParams);
+                DateBorder.addView(date_display);
+                page.addView(DateBorder);
+            }
+
+            LinearLayout DateBorder = new LinearLayout(this);
+            DateBorder.setOrientation(LinearLayout.HORIZONTAL);
+            DateBorder.setLayoutParams(layoutParams);
+            DateBorder.setBackgroundResource(R.drawable.border_set_top);
+
+            TextView date_display = new TextView(this);
+            date_display.setPaddingRelative(8,8,8,8);
+            date_display.setPadding(8,8,8,8);
+            date_display.setText("$" + Double.toString(transactions.get(i).getCost()));
+            date_display.setLayoutParams(textParams);
+            date_display.setLineSpacing((4/getApplicationContext().getResources().getDisplayMetrics().density), 1);
+            DateBorder.addView(date_display);
+
+            if (i == 0)
+                DateBorder.setBackgroundResource(R.drawable.border_set_top_bottom);
+            page.addView(DateBorder);
+
+        }
     }
 
     private int id;
