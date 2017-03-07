@@ -75,4 +75,15 @@ public class HistoryUnitTest {
         TranHistory newTran = ds.createTransaction(tran);
         return newTran;
     }
+    public void testgetTransactionByWeek()
+    {
+        TranHistory menuTran = createMenuTransaction();
+        assertEquals((int)ds.getTransactionByWeek()[0],(int)-900.0);
+    }
+
+    public void testgetTransactionByMonth()
+    {
+        TranHistory menuTran = createMenuTransaction();
+        assertEquals((int)ds.getTransactionByMonth()[0],(int)-900.0);
+    }
 }
