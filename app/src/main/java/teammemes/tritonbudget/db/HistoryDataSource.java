@@ -6,6 +6,8 @@ import android.database.Cursor;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 
@@ -69,31 +71,29 @@ public class HistoryDataSource extends BaseDataSource{
     }
     public double[] getTransactionByMonth() {
         double[] cost = new double[4];
-        List<TranHistory> histories= this.getAllTransaction();
+        List<TranHistory> histories = this.getAllTransaction();
         int currDay = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
-        for(int i=0;i<histories.size();i++)
-        {
+        for (int i = 0; i < histories.size(); i++) {
             Date day = histories.get(i).getTdate();
             Calendar cal = Calendar.getInstance();
             cal.setTime(day);
             int dayOfYear = cal.get(Calendar.DAY_OF_YEAR);
-            if(0<currDay-dayOfYear && currDay-dayOfYear<8)
-            {
-                cost[0]+=histories.get(i).getCost();
+            if (0 < currDay - dayOfYear && currDay - dayOfYear < 8) {
+                cost[0] += histories.get(i).getCost();
             }
-            if(7<currDay-dayOfYear && currDay-dayOfYear<15)
-            {
-                cost[1]+=histories.get(i).getCost();
+            if (7 < currDay - dayOfYear && currDay - dayOfYear < 15) {
+                cost[1] += histories.get(i).getCost();
             }
-            if(14<currDay-dayOfYear && currDay-dayOfYear<22)
-            {
-                cost[2]+=histories.get(i).getCost();
+            if (14 < currDay - dayOfYear && currDay - dayOfYear < 22) {
+                cost[2] += histories.get(i).getCost();
             }
-            if(21<currDay-dayOfYear && currDay-dayOfYear<29)
-            {
-                cost[3]+=histories.get(i).getCost();
+            if (21 < currDay - dayOfYear && currDay - dayOfYear < 29) {
+                cost[3] += histories.get(i).getCost();
             }
         }
+        return cost;
+    }
+
     private TranHistory cursorToTransaction(Cursor cursor) {
         TranHistory transaction = new TranHistory();
         try {

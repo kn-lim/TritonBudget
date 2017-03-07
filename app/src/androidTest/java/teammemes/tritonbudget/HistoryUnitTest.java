@@ -9,6 +9,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import teammemes.tritonbudget.db.HistoryDataSource;
@@ -71,7 +74,8 @@ public class HistoryUnitTest {
         tran.setMenuId(-1);
         tran.setCost(-900.0);
         tran.setQuantity(1);
-        tran.setTdate(new Date());
+        tran.setTdate(new Date(System.currentTimeMillis()-24*60*60*1000));
+
         TranHistory newTran = ds.createTransaction(tran);
         return newTran;
     }
