@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
@@ -126,6 +127,18 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
     }
 
     private void renderTransactions(List<TranHistory> transactions) {
+        if (transactions.size() == 0){
+            TextView textView = new TextView(this);
+            textView.setText("No Transaction History to Display");
+            textView.setGravity(Gravity.CENTER);
+            textView.setTextColor(Color.GRAY);
+            textView.setTextSize(50);
+            textView.setPadding(8, 400, 8, 8);
+            textView.setTextColor(textView.getTextColors().withAlpha(128));
+            textView.setLayoutParams(layoutParams);
+            page.addView(textView);
+        }
+
         String prevDate = "";
         for (int i = transactions.size() - 1; i >= 0; i--){
             if(!dateFormat.format(transactions.get(i).getTdate()).equals(prevDate)){
