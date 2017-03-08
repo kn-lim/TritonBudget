@@ -11,57 +11,64 @@
     tools:context="teammemes.tritonbudget.Statistics">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <TextView
-            android:text="Put The Histogram Here(Unfinished)"
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/item_arrays"
+            android:prompt="@string/spinner_title" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart"
             android:layout_width="match_parent"
-            android:textStyle="normal|bold"
-            android:textColor="@android:color/holo_red_dark"
-            android:textAlignment="center"
-            android:textSize="36sp"
-            android:layout_height="250dp"
-            android:id="@+id/statistics_textview_histogram" />
+            android:layout_height="170dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/spinner"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="47dp"
+            android:layout_weight="1" />
 
         <TextView
-            android:text="this week:"
-            android:layout_width="match_parent"
             android:id="@+id/statistic_text_this_week"
-            android:textColor="@android:color/background_dark"
-            android:layout_height="25dp" />
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="this week:"
+            android:textColor="@android:color/background_dark" />
 
         <TextView
-            android:layout_width="match_parent"
             android:id="@+id/statistics_text_this_week_num"
+            android:layout_width="match_parent"
             android:layout_height="35dp" />
 
         <TextView
-            android:text="last week:"
-            android:layout_width="match_parent"
             android:id="@+id/statistic_text_last_week"
-            android:textColor="@android:color/background_dark"
-            android:layout_height="25dp" />
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="last week:"
+            android:textColor="@android:color/background_dark" />
 
         <TextView
-            android:layout_width="match_parent"
             android:id="@+id/statistic_text_last_week_num"
+            android:layout_width="match_parent"
             android:layout_height="35dp" />
 
         <TextView
-            android:text="average:"
-            android:layout_width="match_parent"
             android:id="@+id/statistic_text_average"
-            android:textColor="@android:color/background_dark"
-            android:layout_height="25dp" />
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="average per day this week:"
+            android:textColor="@android:color/background_dark" />
 
         <TextView
-            android:layout_width="match_parent"
             android:id="@+id/statistic_text_average_num"
+            android:layout_width="match_parent"
             android:layout_height="35dp" />
     </LinearLayout>
 

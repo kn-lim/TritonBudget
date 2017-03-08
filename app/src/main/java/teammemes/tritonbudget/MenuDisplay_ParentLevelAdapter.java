@@ -16,6 +16,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import teammemes.tritonbudget.db.MenuDataSource;
+
 
 public class MenuDisplay_ParentLevelAdapter extends BaseExpandableListAdapter {
     private final Context mContext;
@@ -23,38 +25,35 @@ public class MenuDisplay_ParentLevelAdapter extends BaseExpandableListAdapter {
     private final Map<String, List<String>> mListData_SecondLevel_Map;
     private final Map<String, List<String>> mListData_ThirdLevel_Map;
 
-    public MenuDisplay_ParentLevelAdapter(Context mContext, List<String> mListDataHeader) {
+    public MenuDisplay_ParentLevelAdapter(Context mContext, List<String> mListDataHeader, MenuDataSource DS, String name) {
         this.mContext = mContext;
         this.mListDataHeader = new ArrayList<>();
         this.mListDataHeader.addAll(mListDataHeader);
-        // SECOND LEVEL
-        String[] mItemHeaders;
         mListData_SecondLevel_Map = new HashMap<>();
+        List<Menu> food;
+        String dhname = name;
+        //ArrayList<String> mItemHeaders = new ArrayList<String>();
+        //mListData_SecondLevel_Map = SecondLevel_Map;
         int parentCount = mListDataHeader.size();
-        for (int i = 0; i < parentCount; i++) {
-            String content = mListDataHeader.get(i);
-            switch (content) {
-                case "Burger Lounge":
-                    mItemHeaders = mContext.getResources().getStringArray(R.array.BL);
-                    break;
-                case "Revelle Cuisine":
-                    mItemHeaders = mContext.getResources().getStringArray(R.array.RC);
-                    break;
-                case "Market 64":
-                    mItemHeaders = mContext.getResources().getStringArray(R.array.MT);
-                    break;
-                case "Vertically Crafted Deli":
-                    mItemHeaders = mContext.getResources().getStringArray(R.array.VCD);
-                    break;
-                case "Wok":
-                    mItemHeaders = mContext.getResources().getStringArray(R.array.WK);
-                    break;
 
-                default:
-                    mItemHeaders = mContext.getResources().getStringArray(R.array.RC);
+        for (int i = 1; i < parentCount; i++) {
+
+            String content = mListDataHeader.get(i);
+
+            food = DS.getMenusByLocationAndCategory(dhname, content);
+
+
+            //food = DS.getMenusByLocation("Pines");
+            String mItemHeaders[]= new String[food.size()];
+
+            for(int j = 0; j < food.size(); j++){
+                mItemHeaders[j] = food.get(j).getName();
             }
+
             mListData_SecondLevel_Map.put(mListDataHeader.get(i), Arrays.asList(mItemHeaders));
+
         }
+
         // THIRD LEVEL
         String[] mItemChildOfChild;
         List<String> listChild;
@@ -72,6 +71,7 @@ public class MenuDisplay_ParentLevelAdapter extends BaseExpandableListAdapter {
                 }
             }
         }
+
     }
 
     @Override

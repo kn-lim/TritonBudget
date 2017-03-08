@@ -8,19 +8,48 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeScreen">
+
+        <activity
+            android:name=".Splash"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Enter_Info" />
-        <activity android:name=".Statistics" />
+
+        <activity android:name=".Menu64Degrees_Main">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".HomeScreen"/>
+
+        <activity android:name=".Enter_Info">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Statistics">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".DiningHallSelection" />
+
+        <activity android:name=".History" />
+
         <activity android:name=".testClick" />
-        <activity android:name=".Menu" />
-        <activity android:name=".MenuDisplayPrototype_Main" />
+
+        <activity android:name=".Checkout">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
