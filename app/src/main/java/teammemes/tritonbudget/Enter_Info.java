@@ -37,7 +37,7 @@ public class Enter_Info extends AppCompatActivity {
 
     }
 
-   public void addData() {
+    public void addData() {
         btnDone.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
