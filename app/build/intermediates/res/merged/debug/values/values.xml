@@ -51,6 +51,11 @@
         <item>Crunchy Orange Chicken  ($6.95)</item>
         <item>Spicy Dragon Shrimp  ($6.95)</item>
     </string-array>
+    <string-array name="item_arrays">
+        <item>Week</item>
+        <item>Month</item>
+
+    </string-array>
     <string-array name="items_array_expandable_level_one">
         <item>Burger Lounge</item>
         <item>Revelle Cuisine</item>
@@ -613,6 +618,8 @@
     <integer name="hide_password_duration">320</integer>
     <integer name="show_password_duration">200</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <string name="Date">Date</string>
+    <string name="Item">Item</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -660,6 +667,7 @@
     <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
     <string name="search_menu_title">Search</string>
+    <string name="spinner_title">Choose a graph</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
@@ -1855,6 +1863,9 @@
     <style name="RtlUnderlay.Widget.AppCompat.ActionButton.Overflow" parent="Base.Widget.AppCompat.ActionButton">
         <item name="android:paddingLeft">@dimen/abc_action_bar_overflow_padding_start_material</item>
         <item name="android:paddingRight">@dimen/abc_action_bar_overflow_padding_end_material</item>
+    </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
     </style>
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat"/>
     <style name="TextAppearance.AppCompat.Body1" parent="Base.TextAppearance.AppCompat.Body1"/>

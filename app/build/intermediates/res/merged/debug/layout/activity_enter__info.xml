@@ -19,7 +19,6 @@
         android:id="@+id/EnterName"
         android:elevation="10dp"
         android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse"
-        android:onClick="onClick"
         android:hint="Name"
         android:layout_below="@+id/PutNameHere"
         android:layout_alignStart="@+id/EnterMoney" />
@@ -44,7 +43,6 @@
         android:layout_marginTop="11dp"
         android:id="@+id/PutNameHere"
         tools:text="Please enter your Name"
-        style="@android:style/Widget.AutoCompleteTextView"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/EnterName" />
@@ -52,7 +50,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:text="Please Enter your Current Budget"
         android:ems="10"
         android:id="@+id/PutMoneyHere"

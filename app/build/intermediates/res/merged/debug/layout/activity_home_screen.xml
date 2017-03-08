@@ -4,10 +4,6 @@
     android:id="@+id/activity_home_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="teammemes.tritonbudget.HomeScreen">
 
     <LinearLayout
@@ -21,6 +17,7 @@
             android:id="@+id/HS_LLV_TopPortion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -28,19 +25,20 @@
                 android:id="@+id/HS_TextView_TotalBalance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="-30dp"
                 android:text="Total Balance"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="24sp"
-                android:layout_marginStart="-50dp" />
+                android:textSize="30sp"
+                android:textStyle="normal|bold" />
 
             <TextView
                 android:id="@+id/HS_TextView_BalanceValue"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
+                android:layout_marginTop="-10dp"
                 android:layout_weight="1"
                 android:textSize="14sp"
-                tools:text="$XXXX.XX"
-                android:layout_marginTop="-10dp" />
+                tools:text="$XXXX.XX" />
 
             <LinearLayout
                 android:id="@+id/HS_LLH_DailyBudgetContainer"
@@ -53,20 +51,21 @@
                     android:id="@+id/HS_TextView_DailyBudgetValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
                     android:textSize="14sp"
-                    tools:text="$XX.XX"
-                    android:paddingRight="10dp" />
+                    tools:text="$XX.XX" />
 
                 <TextView
                     android:id="@+id/HS_TextView_DailyBudgetRemain"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:paddingLeft="10dp"
                     android:text="Daily Budget\nRemaining"
                     android:textAlignment="viewStart"
                     android:textColor="@android:color/background_dark"
-                    android:textSize="14sp"
-                    android:paddingLeft="10dp" />
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold" />
 
             </LinearLayout>
         </LinearLayout>
@@ -75,28 +74,28 @@
             android:id="@+id/HS_LLV_BottomPortion"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:layout_marginTop="50dp"
             android:gravity="center"
-            android:layout_marginTop="75dp">
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/HS_Button_Deduct"
-                android:text="DEDUCT"
-                android:layout_height="70dp"
                 android:layout_width="150dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:layout_height="70dp"
                 android:fontFamily="sans-serif"
+                android:text="DEDUCT"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="22sp" />
 
             <Button
                 android:id="@+id/HS_Button_Purchase"
                 android:layout_width="150dp"
-                android:text="PURCHASE"
                 android:layout_height="70dp"
                 android:layout_marginTop="35dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:fontFamily="sans-serif"
+                android:text="PURCHASE"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="22sp" />
         </LinearLayout>

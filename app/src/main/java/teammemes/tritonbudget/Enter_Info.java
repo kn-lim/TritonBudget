@@ -43,12 +43,19 @@ public class Enter_Info extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         User you=User.getInstance(getApplicationContext());
-                        you.setName( name.getText().toString());
-                        you.setBalance(Double.parseDouble(money.getText().toString()));
-
-                        Toast.makeText(Enter_Info.this,"Thanks",Toast.LENGTH_LONG).show();
-                        Intent home = new Intent(getApplicationContext(), HomeScreen.class);
-                        startActivity(home);
+                        String usename = name.getText().toString();
+                        String usemoney = money.getText().toString();
+                        if (usename.length() == 0) {
+                            Toast.makeText(Enter_Info.this, "Please enter user name", Toast.LENGTH_LONG).show();
+                        } else if (usemoney.length() == 0) {
+                            Toast.makeText(Enter_Info.this, "Please enter Balance", Toast.LENGTH_LONG).show();
+                        } else {
+                            you.setBalance(Double.parseDouble(usemoney));
+                            you.setName(usename);
+                            Toast.makeText(Enter_Info.this, "Thanks", Toast.LENGTH_LONG).show();
+                            Intent home = new Intent(getApplicationContext(), HomeScreen.class);
+                            startActivity(home);
+                        }
                     }
 
                 }

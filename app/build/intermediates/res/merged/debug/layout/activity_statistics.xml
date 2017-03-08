@@ -16,17 +16,24 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/item_arrays"
+            android:prompt="@string/spinner_title"/>
 
-        <TextView
-            android:text="Put The Histogram Here(Unfinished)"
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart"
             android:layout_width="match_parent"
-            android:textStyle="normal|bold"
-            android:textColor="@android:color/holo_red_dark"
-            android:textAlignment="center"
-            android:textSize="36sp"
-            android:layout_height="250dp"
-            android:id="@+id/statistics_textview_histogram" />
+            android:layout_height="170dp"
+            android:layout_below="@+id/spinner"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="47dp"
+            android:layout_weight="1" />
 
         <TextView
             android:text="this week:"
@@ -53,7 +60,7 @@
             android:layout_height="35dp" />
 
         <TextView
-            android:text="average:"
+            android:text="average per day this week:"
             android:layout_width="match_parent"
             android:id="@+id/statistic_text_average"
             android:textColor="@android:color/background_dark"
