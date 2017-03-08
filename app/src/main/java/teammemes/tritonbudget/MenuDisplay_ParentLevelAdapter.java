@@ -25,55 +25,26 @@ public class MenuDisplay_ParentLevelAdapter extends BaseExpandableListAdapter {
     private final Map<String, List<String>> mListData_SecondLevel_Map;
     private final Map<String, List<String>> mListData_ThirdLevel_Map;
 
-    public MenuDisplay_ParentLevelAdapter(Context mContext, List<String> mListDataHeader, MenuDataSource DS) {
+    public MenuDisplay_ParentLevelAdapter(Context mContext, List<String> mListDataHeader, MenuDataSource DS, String name) {
         this.mContext = mContext;
         this.mListDataHeader = new ArrayList<>();
         this.mListDataHeader.addAll(mListDataHeader);
-        // SECOND LEVEL
-        /*List<Menu> mItemHeaders;
-
         mListData_SecondLevel_Map = new HashMap<>();
+        List<Menu> food;
+        String dhname = name;
+        //ArrayList<String> mItemHeaders = new ArrayList<String>();
+        //mListData_SecondLevel_Map = SecondLevel_Map;
         int parentCount = mListDataHeader.size();
-        for (int i = 0; i < parentCount; i++) {
-            String content = mListDataHeader.get(i);
-            switch (content) {
-                case "Burger Lounge":
-                    mItemHeaders = DS.getMenusByLocationAndCategory("64 Degree", "Burger Lounge");
-                    break;
-                case "Revelle Cuisine":
-                    mItemHeaders = DS.getMenusByLocationAndCategory("64 Degree", "Revelle Cuisine");
-                    break;
-                case "Market 64":
-                    mItemHeaders = DS.getMenusByLocationAndCategory("64 Degree", "Market 64");
-                    break;
-                case "Vertically Crafted Deli":
-                    mItemHeaders = DS.getMenusByLocationAndCategory("64 Degree", "Vertically Crafted Deli");
-                    break;
-                case "Wok":
-                    mItemHeaders = DS.getMenusByLocationAndCategory("64 Degree", "Wok");
-                    break;
 
-                default:
-                    mItemHeaders = DS.getMenusByLocationAndCategory("64 Degree", "Burger Lounge");
-            }
-            String[] SmItemHeaders = new String[mItemHeaders.size()];
-            for(int j = 0; j < mItemHeaders.size(); j++){
-                SmItemHeaders[j] = mItemHeaders.get(j).getName();
-            }
-
-            mListData_SecondLevel_Map.put(content, Arrays.asList(SmItemHeaders));
-
-            */
-        List<Menu> food = new ArrayList<Menu>();
-
-        mListData_SecondLevel_Map = new HashMap<>();
-        int parentCount = mListDataHeader.size();
-        for (int i = 0; i < parentCount; i++) {
+        for (int i = 1; i < parentCount; i++) {
 
             String content = mListDataHeader.get(i);
 
-            //food = DS.getMenusByLocationAndCategory("64 Degree", content);
-            String[] mItemHeaders= new String[food.size()];
+            food = DS.getMenusByLocationAndCategory(dhname, content);
+
+
+            //food = DS.getMenusByLocation("Pines");
+            String mItemHeaders[]= new String[food.size()];
 
             for(int j = 0; j < food.size(); j++){
                 mItemHeaders[j] = food.get(j).getName();
@@ -82,6 +53,7 @@ public class MenuDisplay_ParentLevelAdapter extends BaseExpandableListAdapter {
             mListData_SecondLevel_Map.put(mListDataHeader.get(i), Arrays.asList(mItemHeaders));
 
         }
+
         // THIRD LEVEL
         String[] mItemChildOfChild;
         List<String> listChild;
@@ -99,6 +71,7 @@ public class MenuDisplay_ParentLevelAdapter extends BaseExpandableListAdapter {
                 }
             }
         }
+
     }
 
     @Override

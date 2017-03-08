@@ -10,8 +10,10 @@ import java.util.List;
 
 import teammemes.tritonbudget.db.MenuDataSource;
 
-public class MenuDisplayPrototype_Main extends AppCompatActivity {
+public class Menu64Degrees_Main extends AppCompatActivity {
     public MenuDataSource DS;
+    String dhname = "64 Degrees";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +22,7 @@ public class MenuDisplayPrototype_Main extends AppCompatActivity {
 
         DS = new MenuDataSource(this);
 
+        //
 
         List<String> listDataHeader = new ArrayList<>();
         String[] mItemHeaders = new String[6];
@@ -31,14 +34,12 @@ public class MenuDisplayPrototype_Main extends AppCompatActivity {
         mItemHeaders[4] = "Vertically Crafted Deli";
         mItemHeaders[5] = "Wok";
 
-        /*
-        List<String> listDataHeader = new ArrayList<>();
-        String[] mItemHeaders = getResources().getStringArray(R.array.items_array_expandable_level_one);
-
-        */Collections.addAll(listDataHeader, mItemHeaders);
+        Collections.addAll(listDataHeader, mItemHeaders);
         final ExpandableListView mExpandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Parent);
         if (mExpandableListView != null) {
-            MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listDataHeader, DS);
+
+            //MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listDataHeader, mListData_SecondLevel_Map);
+            MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listDataHeader, DS,dhname);
             mExpandableListView.setAdapter(parentLevelAdapter);
             // display only one expand item
 //            mExpandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
