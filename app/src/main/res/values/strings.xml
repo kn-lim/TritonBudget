@@ -5,6 +5,12 @@
     <string name="food_trucks_and_speciality_restaurants">
         Food Trucks &amp; Speciality Restaurants
     </string>
+    <string name="spinner_title">Choose a graph</string>
+    <string-array name="item_arrays">
+        <item>Week</item>
+        <item>Month</item>
+
+    </string-array>
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="Date">Date</string>
