@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,6 +31,21 @@ public class Enter_Info extends AppCompatActivity {
         // Frontend inti.
         name = (EditText) findViewById(R.id.EnterName);
         money = (EditText) findViewById(R.id.EnterMoney);
+
+        money.addTextChangedListener(new TextWatcher() {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void afterTextChanged(Editable s) {
+                String temp = s.toString();
+                int posDot = temp.indexOf(".");
+                if (posDot <= 0) {
+                    return;
+                }
+                if (temp.length() - posDot - 1 > 2) {
+                    s.delete(posDot + 3, posDot + 4);
+                }
+            }
+        });
         btnDone = (Button) findViewById(R.id.btnConfirm);
         sharedpreferences = getSharedPreferences("mypref", Context.MODE_PRIVATE);
 

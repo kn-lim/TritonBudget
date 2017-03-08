@@ -1,52 +1,41 @@
 package teammemes.tritonbudget;
 
-import java.text.DateFormat;
-import java.text.FieldPosition;
-import java.text.ParsePosition;
-import java.text.SimpleDateFormat;
-import java.util.AbstractList;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.support.design.widget.CoordinatorLayout;
+import android.os.Bundle;
+import android.support.annotation.DrawableRes;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import teammemes.tritonbudget.db.HistoryDataSource;
+import java.text.SimpleDateFormat;
+import java.util.List;
+
+import teammemes.tritonbudget.db.MenuDataSource;
 import teammemes.tritonbudget.db.TranHistory;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
 import static android.view.Gravity.CENTER;
 
 
-public class History extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class PurchaseMenu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     private Toolbar mToolbar;
     private User usr;
-    private HistoryDataSource database;
+    private MenuDataSource database;
     SimpleDateFormat dateFormat;
-    LinearLayout.LayoutParams layoutParams, textParams;
+    LinearLayout.LayoutParams layoutParams, textParams, btnParams, noWeight;
     LinearLayout mainLayout;
 
 
@@ -54,7 +43,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.drawer_history);
+        setContentView(R.layout.drawer_purchase_menu);
 
         //Gets the user object
         usr = User.getInstance(getApplicationContext());
@@ -63,11 +52,11 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         mToolbar = (Toolbar) findViewById(R.id.nav_action);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("History");
+        getSupportActionBar().setTitle("Purchase Menu");
 
 
         //Create the Drawer layout and the toggle
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_history_layout);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_purchase_menu_layout);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
@@ -85,23 +74,25 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         //The two sets of layout parameters that are used to make the transactions
         layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         textParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
+        noWeight = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
+        btnParams = new LinearLayout.LayoutParams(90, 100, 0);
+
 
         //Fetches the main empty layout
         mainLayout = (LinearLayout) findViewById(R.id.page);
 
-
         //Used for when database is working
-        database = new HistoryDataSource(this);
-        List<TranHistory> transactions = database.getAllTransaction();
+        database = new MenuDataSource(this);
+        List<Menu> transactions = database.getMenusByLocation("Pines");
         dateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
         //Renders all of the transactions on the page
-        renderTransactions(transactions);
+        renderMenu(transactions);
 
     }
 
     /*
-     * Method: renderTransactions
+     * Method: renderMenu
      *
      * Parameters: transactions - The List of Transactions returned by the database
      *
@@ -109,29 +100,17 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
      * If there are no transactions it adds a default message, however if there are
      * transactions it goes through each one putting them in the mainLayout.
      */
-    private void renderTransactions(List<TranHistory> transactions) {
+    private void renderMenu(List<Menu> transactions) {
         //Resets the mainLayout
         mainLayout.removeAllViews();
 
-        //If there are no previous transactions, display the message
-        if (transactions.size() == 0){
-            TextView textView = new TextView(this);
-            textView.setText("No Transaction History to Display");
-            textView.setGravity(Gravity.CENTER);
-            textView.setTextColor(Color.GRAY);
-            textView.setTextSize(50);
-            textView.setPadding(8, 400, 8, 8);
-            textView.setTextColor(textView.getTextColors().withAlpha(64));
-            textView.setLayoutParams(layoutParams);
-            mainLayout.addView(textView);
-        }
 
         //Goes through each of the transactions and puts them on the page
-        String prevDate = "";
+        String prevCategory = "";
         for (int i = transactions.size() - 1; i >= 0; i--){
             //If this is a new date, it creates a new date display
-            if(!dateFormat.format(transactions.get(i).getTdate()).equals(prevDate)){
-                prevDate = dateFormat.format(transactions.get(i).getTdate()); //Saves the date
+            if(!transactions.get(i).getCategory().equals(prevCategory)){
+                prevCategory = transactions.get(i).getCategory(); //Saves the date
 
                 LinearLayout DateBorder = new LinearLayout(this);
                 DateBorder.setBackgroundResource(R.drawable.border_set_top);
@@ -143,7 +122,8 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                 date_display.setGravity(CENTER);
                 date_display.setPaddingRelative(8,8,8,8);
                 date_display.setPadding(8,8,8,8);
-                date_display.setText(prevDate);
+                date_display.setText(prevCategory);
+                date_display.setTextSize(20);
                 date_display.setLayoutParams(layoutParams);
                 DateBorder.addView(date_display);
                 mainLayout.addView(DateBorder);
@@ -164,20 +144,51 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
             cost_display.setPaddingRelative(8,8,8,8);
             cost_display.setPadding(8,8,15,8);
             cost_display.setText("$" + Double.toString(transactions.get(i).getCost()));
-            cost_display.setLayoutParams(textParams);
+            cost_display.setLayoutParams(noWeight);
             cost_display.setGravity(Gravity.RIGHT);     //Aligns it on the right
+
+
+            Button plus = new Button(this);
+            plus.setLayoutParams(btnParams);
+            plus.setText("+");
+            plus.setPadding(0,0,0,0);
+
+
+            final TextView quantity = new TextView(this);
+            quantity.setText("0");
+            quantity.setLayoutParams(btnParams);
+            quantity.setGravity(Gravity.CENTER);
+
+            Button minus = new Button(this);
+            minus.setLayoutParams(btnParams);
+            minus.setText("-");
+            minus.setPadding(0,0,0,0);
+
+            plus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    quantity.setText("" + ((int) Integer.parseInt((String) quantity.getText()) + 1));
+                }
+            });
+
+            minus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (quantity.getText().equals("0"))
+                        return;
+                    quantity.setText("" + ((int) Integer.parseInt((String) quantity.getText()) - 1));
+                }
+            });
+
 
             //Adds the two displays to the transaction line
             TransactionBorder.addView(name_display);
+            TransactionBorder.addView(plus);
+            TransactionBorder.addView(quantity);
+            TransactionBorder.addView(minus);
             TransactionBorder.addView(cost_display);
 
-            TransactionBorder.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    Toast.makeText(v.getContext(),"Do Something",Toast.LENGTH_LONG).show();
-                    return false;
-                }
-            });
+
             //If it is the last transaction it creates the bottom border.
             if (i == 0)
                 TransactionBorder.setBackgroundResource(R.drawable.border_set_top_bottom);

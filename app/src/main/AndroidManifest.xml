@@ -42,7 +42,7 @@
         <activity android:name=".DiningHallSelection" />
 
         <activity android:name=".History" />
-
+        <activity android:name=".PurchaseMenu"/>
         <activity android:name=".testClick" />
 
     </application>

@@ -58,6 +58,8 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
         mToolbar = (Toolbar) findViewById(R.id.nav_action);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Dining Hall Selection");
+
 
 
         //Create the Drawer layout and the toggle

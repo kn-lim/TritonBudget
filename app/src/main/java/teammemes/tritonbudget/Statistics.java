@@ -41,6 +41,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         setContentView(R.layout.drawer_statistics);
 
 
+
         usr = User.getInstance(getApplicationContext());
 
         //NAVIGATION DRAWER//
@@ -48,6 +49,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         mToolbar = (Toolbar) findViewById(R.id.nav_action);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Statistics");
 
 
         //Create the Drawer layout and the toggle
