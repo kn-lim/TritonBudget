@@ -53,7 +53,52 @@ public class TransactionDataSource {
         return transactions;
     }
 
-
+    public double[] getTransactionByWeek() {
+        double[] cost = new double[7];
+        List<TranHistory> histories= this.getAllTransaction();
+        int currDay = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
+        for(int i=0;i<histories.size();i++)
+        {
+            Date day = histories.get(i).getTdate();
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(day);
+            int dayOfYear = cal.get(Calendar.DAY_OF_YEAR);
+            if(0<currDay-dayOfYear && currDay-dayOfYear<8)
+            {
+                cost[currDay-dayOfYear-1]+=histories.get(i).getCost();
+            }
+        }
+        return cost;
+    }
+    public double[] getTransactionByMonth() {
+        double[] cost = new double[4];
+        List<TranHistory> histories= this.getAllTransaction();
+        int currDay = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
+        for(int i=0;i<histories.size();i++)
+        {
+            Date day = histories.get(i).getTdate();
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(day);
+            int dayOfYear = cal.get(Calendar.DAY_OF_YEAR);
+            if(0<currDay-dayOfYear && currDay-dayOfYear<8)
+            {
+                cost[0]+=histories.get(i).getCost();
+            }
+            if(7<currDay-dayOfYear && currDay-dayOfYear<15)
+            {
+                cost[1]+=histories.get(i).getCost();
+            }
+            if(14<currDay-dayOfYear && currDay-dayOfYear<22)
+            {
+                cost[2]+=histories.get(i).getCost();
+            }
+            if(21<currDay-dayOfYear && currDay-dayOfYear<29)
+            {
+                cost[3]+=histories.get(i).getCost();
+            }
+        }
+        return cost;
+    }
     
     private Transaction cursorToTransaction(Cursor cursor) {
         Transaction transaction = new Transaction();
