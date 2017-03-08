@@ -1,0 +1,7 @@
+#Tue Mar 07 19:56:07 PST 2017
+base.0=/Users/andrewli/Documents/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c3a15b7d7e531a231be9e18de781f4bd8570a6ef
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/andrewli/Documents/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_49b204af1f6a66977e8f967c357f89901a549a4c/classes.dex
+base.1=/Users/andrewli/Documents/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_49b204af1f6a66977e8f967c357f89901a549a4c
+file.0=/Users/andrewli/Documents/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c3a15b7d7e531a231be9e18de781f4bd8570a6ef/classes.dex

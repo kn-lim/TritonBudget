@@ -45,10 +45,10 @@ public class HistoryUnitTest {
     @Test
     public void createTransactions() throws Exception {
         TranHistory menuTran = createMenuTransaction();
-        assertEquals("MenuTran",1,menuTran.getMenuId());
+        assertEquals("MenuTran","Breakfast Quesadilla",menuTran.getName());
         assertEquals("MenuTran",0.84,menuTran.getCost(),0.01);
         TranHistory cashTran = createCashTransaction();
-        assertEquals("MenuTran",-1,cashTran.getMenuId());
+        assertEquals("MenuTran","-1",cashTran.getName());
         assertEquals("MenuTran",-900.0,cashTran.getCost(),0.01);
     }
 
@@ -59,10 +59,10 @@ public class HistoryUnitTest {
         dataSource.close();
         TranHistory tran = new TranHistory();
         if (menu != null) {
-            tran.setMenuId(menuId);
+            tran.setName("Breakfast Quesadilla");
             tran.setCost(menu.getCost());
         } else
-            tran.setMenuId(-1);//cash (deposit)
+            tran.setName("fail");//cash (deposit)
         tran.setTdate(new Date());
         tran.setQuantity(tran.getQuantity());
         TranHistory newTran = ds.createTransaction(tran);
@@ -71,7 +71,7 @@ public class HistoryUnitTest {
 
     private TranHistory createCashTransaction() {
         TranHistory tran = new TranHistory();
-        tran.setMenuId(-1);
+        tran.setName("-1");
         tran.setCost(-900.0);
         tran.setQuantity(1);
         tran.setTdate(new Date(System.currentTimeMillis()-24*60*60*1000));

@@ -7,7 +7,7 @@ package teammemes.tritonbudget.db;
 public interface HistoryDB {
 
     static String ID = "ID"; // transaction ID
-    static String MENUID = "MENUID";
+    static String NAME = "NAME";
     static String QUANTITY = "QUANTITY";
     static String TDATE = "TDATE";
     static String COST = "COST";
@@ -15,8 +15,8 @@ public interface HistoryDB {
 
     static final String Table_Transaction = "TranHistory";
     static final String CREATE_TRANSACTION_TABLE = "CREATE TABLE " + Table_Transaction + " (ID INTEGER PRIMARY KEY AUTOINCREMENT," +
-            " MENUID INTEGER, QUANTITY INTEGER, TDATE TEXT, COST DOUBLE)";
-    static String[] allColumns = {ID, MENUID, QUANTITY, TDATE, COST};
+            " NAME TEXT, QUANTITY INTEGER, TDATE TEXT, COST DOUBLE)";
+    static String[] allColumns = {ID, NAME, QUANTITY, TDATE, COST};
 
 
 }

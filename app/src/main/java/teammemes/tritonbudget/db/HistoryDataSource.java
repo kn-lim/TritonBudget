@@ -23,7 +23,7 @@ public class HistoryDataSource extends BaseDataSource{
 
     public TranHistory createTransaction(TranHistory trans) {
         ContentValues values = new ContentValues();
-        values.put(HistoryDB.MENUID, trans.getMenuId());
+        values.put(HistoryDB.NAME, trans.getName());
         values.put(HistoryDB.QUANTITY, trans.getQuantity());
         SimpleDateFormat dformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         values.put(HistoryDB.TDATE, dformat.format(trans.getTdate()));
@@ -52,6 +52,7 @@ public class HistoryDataSource extends BaseDataSource{
         cursor.close();
         return transactions;
     }
+
   public double[] getTransactionByWeek() {
         double[] cost = new double[7];
         List<TranHistory> histories= this.getAllTransaction();
@@ -98,7 +99,7 @@ public class HistoryDataSource extends BaseDataSource{
         TranHistory transaction = new TranHistory();
         try {
             transaction.setId(cursor.getInt(cursor.getColumnIndex(HistoryDB.ID)));
-            transaction.setMenuId(cursor.getInt(cursor.getColumnIndex(HistoryDB.MENUID)));
+            transaction.setName(cursor.getString(cursor.getColumnIndex(HistoryDB.NAME)));
             transaction.setQuantity(cursor.getInt(cursor.getColumnIndex(HistoryDB.QUANTITY)));
             SimpleDateFormat dformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             transaction.setTdate(dformat.parse(cursor.getString(cursor.getColumnIndex(HistoryDB.TDATE))));

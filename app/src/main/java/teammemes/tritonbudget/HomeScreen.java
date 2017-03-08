@@ -212,7 +212,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         if (balance < 0)
             balance = 0;
 
-        TranHistory transaction = new TranHistory(1,1,1,new Date(), deduction);
+        TranHistory transaction = new TranHistory(1,"",1,new Date(), deduction);
         database.createTransaction(transaction);
         usr.setBalance(balance);
     }

@@ -9,16 +9,16 @@ import java.util.Date;
 public class TranHistory {
 
     private int id;
-    private int menuId;
+    private String name;
     private int quantity;
     private Date tdate;
     private double cost;
 
     public TranHistory(){}
 
-    public TranHistory(int id, int menuId, int quantity, Date tdate, double cost){
+    public TranHistory(int id, String name, int quantity, Date tdate, double cost){
         this.id = id;
-        this.menuId = menuId;
+        this.name = name;
         this.quantity = quantity;
         this.tdate = tdate;
         this.cost = cost;
@@ -32,12 +32,12 @@ public class TranHistory {
         this.id = id;
     }
 
-    public int getMenuId() {
-        return menuId;
+    public String getName() {
+        return name;
     }
 
-    public void setMenuId(int menuId) {
-        this.menuId = menuId;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getQuantity() {
