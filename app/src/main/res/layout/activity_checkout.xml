@@ -29,7 +29,7 @@
                     <TextView
                         android:text="Recently Purchased Items"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="match_parent"
                         android:id="@+id/HDHMenu_CO_Title"
                         android:paddingBottom="8dp"
                         android:paddingEnd="8dp"
@@ -38,48 +38,17 @@
                         android:paddingStart="8dp"
                         android:paddingTop="8dp"
                         android:layout_weight="1" />
-                </LinearLayout>
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/HDHMenu_CO_ItemBorder">
-
-                    <TextView
-                        android:id="@+id/COItemName"
-                        android:text="TextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-                    <TextView
-                        android:id="@+id/COItemPrice"
-                        android:text="TextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-                    <TextView
-                        android:id="@+id/COItemTPrice"
-                        android:text="TextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-                    <TextView
-                        android:id="@+id/COItemQuantity"
-                        android:text="TextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                    <ListView
+                        android:text="Recently Purchased Items"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/ItemsContainer"
+                        android:layout_weight="1" />
 
                 </LinearLayout>
-            </LinearLayout>
+
+                </LinearLayout>
         </ScrollView>
 
         <android.support.design.widget.AppBarLayout
@@ -88,7 +57,7 @@
             android:theme="@style/AppTheme.AppBarOverlay">
 
             <include layout="@layout/content_checkout"
-                android:layout_weight="1" />
+                 />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
