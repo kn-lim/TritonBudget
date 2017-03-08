@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.FieldPosition;
 import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
+import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -89,38 +90,10 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         page = (LinearLayout) findViewById(R.id.page);
 
 
-        /* Used for when database is working
+        //Used for when database is working
         database = new HistoryDataSource(this);
         List<TranHistory> transactions = database.getAllTransaction();
-        */
-
-        List<TranHistory> transactions = new ArrayList<TranHistory>();
-
         dateFormat = new SimpleDateFormat("MM/dd/yyyy");
-        Calendar date = Calendar.getInstance();
-
-        TranHistory one = new TranHistory(1, 0, 1, date.getTime(), 1.00);
-        TranHistory two = new TranHistory(2, 0, 1,  date.getTime(), 2.00);
-        TranHistory three = new TranHistory(3, 0, 1,  date.getTime(), 3.00);
-        date.add(Calendar.DAY_OF_YEAR, 1);
-        TranHistory four = new TranHistory(4, 0, 1,  date.getTime(), 4.00);
-        TranHistory five = new TranHistory(5, 0, 1,  date.getTime(), 5.00);
-        TranHistory six = new TranHistory(6, 0, 1,  date.getTime(), 6.00);
-        date.add(Calendar.DAY_OF_YEAR, 1);
-        TranHistory seven = new TranHistory(7, 0, 1,  date.getTime(), 7.00);
-        TranHistory eight = new TranHistory(8, 0, 1,  date.getTime(), 8.00);
-        TranHistory nine = new TranHistory(9, 0, 1,  date.getTime(), 9.00);
-        TranHistory ten = new TranHistory(10, 0, 1,  date.getTime(), 10.00);
-        transactions.add(one);
-        transactions.add(two);
-        transactions.add(three);
-        transactions.add(four);
-        transactions.add(five);
-        transactions.add(six);
-        transactions.add(seven);
-        transactions.add(eight);
-        transactions.add(nine);
-        transactions.add(ten);
 
         renderTransactions(transactions);
 
@@ -134,7 +107,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
             textView.setTextColor(Color.GRAY);
             textView.setTextSize(50);
             textView.setPadding(8, 400, 8, 8);
-            textView.setTextColor(textView.getTextColors().withAlpha(128));
+            textView.setTextColor(textView.getTextColors().withAlpha(64));
             textView.setLayoutParams(layoutParams);
             page.addView(textView);
         }

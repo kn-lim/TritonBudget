@@ -24,6 +24,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Date;
+
+import teammemes.tritonbudget.db.HistoryDataSource;
+import teammemes.tritonbudget.db.TranHistory;
+
 import static android.graphics.Color.rgb;
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
@@ -36,13 +41,16 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
     private User usr;
     private TextView totBal;
     private TextView dailyRBal;
-   
+    private HistoryDataSource database;
+
+
     private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_home_screen);
+        database = new HistoryDataSource(this);
 
         /*User you=User.getInstance(getApplicationContext());
         */
@@ -129,6 +137,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                         String value= input.getText().toString();
                         deductBalance((double) Double.parseDouble(value));
                         updateBalances();
+
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -203,6 +212,8 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         if (balance < 0)
             balance = 0;
 
+        TranHistory transaction = new TranHistory(1,1,1,new Date(), deduction);
+        database.createTransaction(transaction);
         usr.setBalance(balance);
     }
 

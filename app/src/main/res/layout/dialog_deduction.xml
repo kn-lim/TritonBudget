@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:hint="$"
             android:imeOptions="actionDone"
-            android:inputType="number" />
+            android:inputType="numberDecimal" />
 
     </android.support.design.widget.TextInputLayout>
 </FrameLayout>
