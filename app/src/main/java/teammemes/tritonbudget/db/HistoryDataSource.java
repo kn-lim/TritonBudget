@@ -128,7 +128,7 @@ public class HistoryDataSource extends BaseDataSource{
         }
         else if(currDay>268)
         {
-            return cost/(167+365-currDay)
+            return cost/(167+365-currDay);
         }
         else
         {
