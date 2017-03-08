@@ -94,6 +94,47 @@ public class HistoryDataSource extends BaseDataSource{
         }
         return cost;
     }
+    public double getThisWeekTotal() {
+        double cost = 0;
+        List<TranHistory> histories= this.getAllTransaction();
+        int currMonth = Calendar.getInstance().get(Calendar.MONTH);
+        int currWeek = Calendar.getInstance().get(Calendar.WEEK_OF_MONTH);
+        for(int i=0;i<histories.size();i++)
+        {
+            Date day = histories.get(i).getTdate();
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(day);
+            int currmon = cal.get(Calendar.MONTH);
+            int currwek = Calendar.getInstance().get(Calendar.WEEK_OF_MONTH);
+            if(currmon==currMonth&&currWeek==currwek)
+            {
+                cost += histories.get(i).getCost();
+            }
+        }
+        return cost;
+    }
+    public double getDailyAverage() {
+        double cost = 0;
+        List<TranHistory> histories= this.getAllTransaction();
+        int currDay = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
+        for(int i=0;i<histories.size();i++)
+        {
+            cost += histories.get(i).getCost();
+        }
+        Calendar cal = Calendar.getInstance();
+        if(currDay<167)
+        {
+            return cost/(167-currDay);
+        }
+        else if(currDay>268)
+        {
+            return cost/(167+365-currDay)
+        }
+        else
+        {
+            return 999999;
+        }
+    }
 
     private TranHistory cursorToTransaction(Cursor cursor) {
         TranHistory transaction = new TranHistory();
