@@ -28,8 +28,8 @@ public class Checkout_Adapter extends ArrayAdapter<Checkout_Item>{
         //retrieve the data for food_item at certain position
         Checkout_Item item = getItem(position);
 
-        if(conView == null) {
-            conView = LayoutInflater.from(getContext()).inflate(R.layout.activity_checkout, ItemsGrouping, false);
+        if (conView == null) {
+            conView = LayoutInflater.from(getContext()).inflate(R.layout.content_checkout, ItemsGrouping, false);
         }
 
         //go into xml files and change id names
@@ -39,6 +39,7 @@ public class Checkout_Adapter extends ArrayAdapter<Checkout_Item>{
         TextView itemPrice = (TextView) conView.findViewById(R.id.COItemPrice);
         TextView multItemPrice = (TextView) conView.findViewById(R.id.COItemTPrice);
 
+
         itemName.setText(item.food_item);
         itemQuantity.setText(item.quantity);
         itemPrice.setText(String.valueOf(item.price));
@@ -46,5 +47,4 @@ public class Checkout_Adapter extends ArrayAdapter<Checkout_Item>{
 
         return conView;
     }
-
 }
