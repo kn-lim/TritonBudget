@@ -29,7 +29,7 @@ public class MenuGoodys_Main extends AppCompatActivity {
         //
 
         List<String> listDataHeader = new ArrayList<>();
-        String[] mItemHeaders = new String[3];
+        String[] mItemHeaders = new String[4];
 
         mItemHeaders[1] = "Breakfast Specials";
         mItemHeaders[2] = "Latin";

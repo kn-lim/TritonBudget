@@ -27,7 +27,7 @@ public class MenuClubMed_Main extends AppCompatActivity {
         DS = new MenuDataSource(this);
 
         List<String> listDataHeader = new ArrayList<>();
-        String[] mItemHeaders = new String[5];
+        String[] mItemHeaders = new String[6];
 
         mItemHeaders[1] = "Breakfast Specials";
         mItemHeaders[2] = "Flatbreads";
