@@ -62,11 +62,16 @@ public class Enter_Info extends AppCompatActivity {
                         User you=User.getInstance(getApplicationContext());
                         String usename = name.getText().toString();
                         String usemoney = money.getText().toString();
-                        if (usename.length() == 0) {
-                            Toast.makeText(Enter_Info.this, "Please enter user name", Toast.LENGTH_LONG).show();
+                        int decimalIdx = usemoney.indexOf('.');
+                        String dollaramt = usemoney.substring(0,decimalIdx);
+                        if (usename.length() == 0 || usename.length() > 25) {
+                            Toast.makeText(Enter_Info.this, "Please enter your name up to 25 characters", Toast.LENGTH_LONG).show();
                         } else if (usemoney.length() == 0) {
                             Toast.makeText(Enter_Info.this, "Please enter Balance", Toast.LENGTH_LONG).show();
-                        } else {
+                        } else if( dollaramt.length()>4) {
+                            Toast.makeText(Enter_Info.this, "Please enter $ amounts in the format XXXX.XX.\nYou can't possibly have 5 figures in Dining Dollars", Toast.LENGTH_LONG).show();
+                        }
+                        else {
                             you.setBalance(Double.parseDouble(usemoney));
                             you.setName(usename);
                             Toast.makeText(Enter_Info.this, "Thanks", Toast.LENGTH_LONG).show();
