@@ -89,11 +89,6 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
         transactions = database.getMenusByLocation("Pines");
         numberOfPurchase = new int[transactions.size()];
         dateFormat = new SimpleDateFormat("MM/dd/yyyy");
-
-        //Renders all of the transactions on the page
-        renderMenu(transactions);
-
-
         FloatingActionButton myFab = (FloatingActionButton) findViewById(R.id.myFAB);
         myFab.setOnClickListener(new View.OnClickListener() {
             List<TranHistory> trans;
@@ -112,6 +107,9 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        //Renders all of the transactions on the page
+        renderMenu(transactions);
+        mainLayout.addView(myFab);
     }
 
     /*
