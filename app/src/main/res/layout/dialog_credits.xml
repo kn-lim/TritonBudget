@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/team_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Team MEMES"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/team_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Team Maximizing Efficiency, Minimizing Entropy Software"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kevin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kevin Lim - Project Manager"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/aaron"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xuanru Xu - Senior System Analyst"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/andrew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Andrew Li - Database Specialist"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/andy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Andy Lum - Business Analyst"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/chenlin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chenlin Ye - Software Development Lead"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/david"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="David Tallman - Software Development Lead"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/diyang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diyang He - Quality Assurance Lead"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/shengxiang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shengxiang Zhou - Software Architect"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ziying"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ziying Liu - User Interface Specialist"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/bao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bao Pham - Algorithm Specialist"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</RelativeLayout>

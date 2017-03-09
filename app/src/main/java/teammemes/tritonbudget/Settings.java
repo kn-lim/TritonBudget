@@ -18,6 +18,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
+import java.util.Date;
+
+import teammemes.tritonbudget.db.HistoryDataSource;
+import teammemes.tritonbudget.db.TranHistory;
+
 public class Settings extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //Nav Drawers
@@ -26,12 +33,15 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
     final Context context = this;
     private Toolbar mToolbar;
     private User usr;
+    private HistoryDataSource database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_settings);
         usr = User.getInstance(getApplicationContext());
+
+        database = new HistoryDataSource(this);
 
         //Creates the toolbar to the one defined in nav_action
         mToolbar = (Toolbar) findViewById(R.id.nav_action);
@@ -59,6 +69,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
         TextView changeBalance = (TextView) findViewById(R.id.settings_changeBalance);
         TextView addDD = (TextView) findViewById(R.id.settings_addDD);
         TextView test_load = (TextView) findViewById(R.id.settings_test_load);
+        TextView credits = (TextView) findViewById(R.id.settings_credits);
 
         //Listeners
         changeName.setOnClickListener(new View.OnClickListener() {
@@ -81,8 +92,6 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //Gets the input value and then deducts the balance and updates the balances
-                        //on the Home Screen
                         String value= input.getText().toString();
                         usr.setName(value);
                         Toast.makeText(Settings.this, "Changed Name to " + value, Toast.LENGTH_LONG).show();
@@ -105,23 +114,22 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 builder.setTitle("What's Your Balance?");
 
                 LayoutInflater viewInflated = LayoutInflater.from(context);
-                View deductView = viewInflated.inflate(R.layout.dialog_change_name,null);
+                View deductView = viewInflated.inflate(R.layout.dialog_deduction,null);
 
                 // Set up the input
 
                 // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
                 builder.setView(deductView);
 
-                final EditText input = (EditText) deductView.findViewById(R.id.changeName_input);
+                final EditText input = (EditText) deductView.findViewById(R.id.deduct_input);
 
                 // Set up the buttons
                 builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //Gets the input value and then deducts the balance and updates the balances
-                        //on the Home Screen
-                        String value= input.getText().toString();
-                        //usr.setName(value);
+                        double value = Double.parseDouble(input.getText().toString());
+                        usr.setBalance(value);
+                        Toast.makeText(Settings.this, "Changed Balance to $" + value, Toast.LENGTH_LONG).show();
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -141,23 +149,26 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 builder.setTitle("How Much Dining Dollars?");
 
                 LayoutInflater viewInflated = LayoutInflater.from(context);
-                View deductView = viewInflated.inflate(R.layout.dialog_change_name,null);
+                View deductView = viewInflated.inflate(R.layout.dialog_deduction,null);
 
                 // Set up the input
 
                 // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
                 builder.setView(deductView);
 
-                final EditText input = (EditText) deductView.findViewById(R.id.changeName_input);
+                final EditText input = (EditText) deductView.findViewById(R.id.deduct_input);
 
                 // Set up the buttons
                 builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //Gets the input value and then deducts the balance and updates the balances
-                        //on the Home Screen
-                        String value= input.getText().toString();
-                        //usr.setName(value);
+                        double value = Double.parseDouble(input.getText().toString());
+                        usr.setBalance(usr.getBalance() + value);
+
+                        TranHistory transaction = new TranHistory(1,"Added Dining Dollars",1,new Date(), value);
+                        database.createTransaction(transaction);
+
+                        Toast.makeText(Settings.this, "Added $" + value + " Dining Dollars", Toast.LENGTH_LONG).show();
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -167,8 +178,63 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                     }
                 });
                 builder.show();
-                //Toast.makeText(Enter_Info.this, "Thanks", Toast.LENGTH_LONG).show();
-                //Toast.makeTest(this, "Added" );
+            }
+        });
+
+        test_load.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("What's Your Name?");
+
+                LayoutInflater viewInflated = LayoutInflater.from(context);
+                View deductView = viewInflated.inflate(R.layout.dialog_change_name,null); //CHANGE THIS
+
+                // Set up the input
+
+                // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                builder.setView(deductView);
+
+                final EditText input = (EditText) deductView.findViewById(R.id.changeName_input); //CHANGE THIS
+
+                // Set up the buttons
+                builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //CHANGE THIS
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                builder.show();
+            }
+        });
+
+        credits.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("Credits");
+
+                LayoutInflater viewInflated = LayoutInflater.from(context);
+                View deductView = viewInflated.inflate(R.layout.dialog_credits,null);
+
+                // Set up the input
+
+                // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                builder.setView(deductView);
+
+                builder.setNegativeButton("Exit", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                builder.show();
             }
         });
     }
