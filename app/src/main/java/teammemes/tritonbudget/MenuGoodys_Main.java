@@ -16,7 +16,7 @@ import teammemes.tritonbudget.db.MenuDataSource;
 
 public class MenuGoodys_Main extends AppCompatActivity {
     public MenuDataSource DS;
-    String dhname = "Goody's";
+    String dhname = "Goodys";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

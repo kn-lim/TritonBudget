@@ -15,7 +15,7 @@ import teammemes.tritonbudget.db.MenuDataSource;
 
 public class MenuOceanView_Main extends AppCompatActivity{
     public MenuDataSource DS;
-    String dhname = "Ocean View";
+    String dhname = "Oceanview Terrace";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
