@@ -136,6 +136,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
     private void renderTransactions(final List<TranHistory> transactions, final String duration) {
         //Resets the mainLayout
         mainLayout.removeAllViews();
+        historyHashMap = new HashMap<Integer, TranHistory>();
 
         //If there are no previous transactions, display the message
         if (transactions.size() == 0){
@@ -294,6 +295,11 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                             builder.setNeutralButton("Delete",new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
+                                    TranHistory toChange = historyHashMap.get(TransactionBorder.getId());
+                                    double prevCost = toChange.getCost();
+                                    deductBalance(prevCost, 0);
+                                    transactions.remove(toChange);
+                                    renderTransactions(transactions,duration);
                                     dialog.cancel();
                                 }
                             });
