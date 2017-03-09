@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:text="Kevin Lim - Project Manager"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/aaron"
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:text="Xuanru Xu - Senior System Analyst"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/andrew"
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:text="Andrew Li - Database Specialist"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/andy"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:text="Andy Lum - Business Analyst"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/chenlin"
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:text="Chenlin Ye - Software Development Lead"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/david"
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:text="David Tallman - Software Development Lead"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/diyang"
@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:text="Diyang He - Quality Assurance Lead"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/shengxiang"
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:text="Shengxiang Zhou - Software Architect"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/ziying"
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:text="Ziying Liu - User Interface Specialist"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/bao"
@@ -108,7 +108,7 @@
             android:layout_height="wrap_content"
             android:text="Bao Pham - Algorithm Specialist"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
     </LinearLayout>
 </RelativeLayout>

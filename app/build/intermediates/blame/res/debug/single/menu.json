@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/menu/history_menu.xml",
+        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/menu/history_menu.xml"
+    },
+    {
         "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/menu/navigation_menu.xml",
         "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/menu/navigation_menu.xml"
     }
