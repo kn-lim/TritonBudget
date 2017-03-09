@@ -41,6 +41,7 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
     private int[] numberOfPurchase;
     private List<Menu> transactions;
     private int i=0;
+    FloatingActionButton myFab;
 
 
     @Override
@@ -89,7 +90,7 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
         transactions = database.getMenusByLocation("Pines");
         numberOfPurchase = new int[transactions.size()];
         dateFormat = new SimpleDateFormat("MM/dd/yyyy");
-        FloatingActionButton myFab = (FloatingActionButton) findViewById(R.id.myFAB);
+        myFab = (FloatingActionButton) findViewById(R.id.myFAB);
         myFab.setOnClickListener(new View.OnClickListener() {
             List<TranHistory> trans;
             public void onClick(View v) {
@@ -109,7 +110,7 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
 
         //Renders all of the transactions on the page
         renderMenu(transactions);
-        mainLayout.addView(myFab);
+        //mainLayout.addView(myFab);
     }
 
     /*

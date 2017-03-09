@@ -54,6 +54,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
     LinearLayout mainLayout;
     List<TranHistory> transactions;
     Context context;
+    int id = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -198,6 +199,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
             TransactionBorder.setOrientation(LinearLayout.HORIZONTAL);
             TransactionBorder.setLayoutParams(layoutParams);
             TransactionBorder.setBackgroundResource(R.drawable.border_set_top);
+            TransactionBorder.setId(id++);
 
             TextView name_display = new TextView(this);
             name_display.setPaddingRelative(8,8,8,8);
@@ -234,6 +236,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                     edit.setLayoutParams(btnParams);
                     edit.setPadding(0,0,0,0);
                     edit.setTextSize(10);
+
                     edit.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -248,7 +251,6 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                             builder.setView(deductView);
 
                             final EditText input = (EditText) deductView.findViewById(R.id.deduct_input);
-                            //input.setText((String) transaction.getCost());
 
                             //This TextChangedListener is used to stop the user from inputing more than two decimal points
                             input.addTextChangedListener(new TextWatcher() {

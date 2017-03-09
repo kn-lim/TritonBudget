@@ -5,7 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/history_screen">
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/myFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:elevation="40dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="-20dp"
+        />
     <ScrollView
         android:id="@+id/History_Scrollview_Container"
         android:layout_width="match_parent"
@@ -58,15 +70,11 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textView"
                     android:layout_weight="1" />
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/myFAB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:elevation="4dp"
-                 />
+
             </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
+</android.support.design.widget.CoordinatorLayout>
 
 </android.support.design.widget.CoordinatorLayout>
