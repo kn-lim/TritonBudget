@@ -8,6 +8,7 @@ import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import android.content.Context;
@@ -54,6 +55,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
     LinearLayout mainLayout;
     List<TranHistory> transactions;
     Context context;
+    HashMap<Integer ,TranHistory> historyHashMap;
     int id = 100;
 
     @Override
@@ -61,6 +63,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_history);
         context = getBaseContext();
+        historyHashMap = new HashMap<Integer, TranHistory>();
 
         //Gets the user object
         usr = User.getInstance(getApplicationContext());
@@ -130,7 +133,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
      * If there are no transactions it adds a default message, however if there are
      * transactions it goes through each one putting them in the mainLayout.
      */
-    private void renderTransactions(final List<TranHistory> transactions, String duration) {
+    private void renderTransactions(final List<TranHistory> transactions, final String duration) {
         //Resets the mainLayout
         mainLayout.removeAllViews();
 
@@ -200,6 +203,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
             TransactionBorder.setLayoutParams(layoutParams);
             TransactionBorder.setBackgroundResource(R.drawable.border_set_top);
             TransactionBorder.setId(id++);
+            historyHashMap.put(TransactionBorder.getId(),transaction);
 
             TextView name_display = new TextView(this);
             name_display.setPaddingRelative(8,8,8,8);
@@ -251,6 +255,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                             builder.setView(deductView);
 
                             final EditText input = (EditText) deductView.findViewById(R.id.deduct_input);
+                            input.setText(Double.toString(historyHashMap.get(TransactionBorder.getId()).getCost()));
 
                             //This TextChangedListener is used to stop the user from inputing more than two decimal points
                             input.addTextChangedListener(new TextWatcher() {
@@ -278,6 +283,12 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                                     //Gets the input value and then deducts the balance and updates the balances
                                     //on the Home Screen
                                     String value= input.getText().toString();
+                                    TranHistory toChange = historyHashMap.get(TransactionBorder.getId());
+                                    double prevCost = toChange.getCost();
+                                    double newCost = Double.parseDouble(value);
+                                    deductBalance(prevCost, newCost);
+                                    toChange.setCost(Double.parseDouble(value));
+                                    renderTransactions(transactions,duration);
                                 }
                             });
                             builder.setNeutralButton("Delete",new DialogInterface.OnClickListener() {
@@ -393,6 +404,31 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
             default:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return false;
+        }
+    }
+
+    /*
+ * Method: deductBalance
+ *
+ * Parameters: deduction - the amount that wants to be deducted from the users balance
+ *
+ * This method gets the user's balance and subtracts the deduction. If the deduction is more
+ * than the remaining balance, then it shows an error message. Otherwise it creates and adds
+ * a new transaction and sets the user's balance.
+ */
+    public void deductBalance(double prevCost, double newCost){
+        double balance = usr.getBalance();
+        double deduction = prevCost - newCost;
+        balance += deduction;
+
+        if (balance < 0) {
+            Toast.makeText(this, "Cannot deduct more than remaining budget.", Toast.LENGTH_LONG).show();
+            return;
+        }
+        else {
+            Toast.makeText(this,"Edited " + deduction, Toast.LENGTH_LONG).show();
+            //TODO: Edit the transaction in database
+            usr.setBalance(balance);
         }
     }
 }
