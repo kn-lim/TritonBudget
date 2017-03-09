@@ -41,7 +41,27 @@
         </activity>
         <activity android:name="teammemes.tritonbudget.DiningHallSelection" />
         <activity android:name="teammemes.tritonbudget.History" />
+        <activity android:name="teammemes.tritonbudget.PurchaseMenu" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name="teammemes.tritonbudget.testClick" />
+        <activity android:name="teammemes.tritonbudget.Checkout" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="teammemes.tritonbudget.Settings" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="teammemes.tritonbudget.Help" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

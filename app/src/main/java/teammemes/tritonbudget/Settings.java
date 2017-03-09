@@ -157,7 +157,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
             case R.id.nav_help:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 nextScreen = new Intent(this, Help.class);
-                nextScreen.putExtra("FROM", "Help");
+                nextScreen.putExtra("FROM", "Settings");
                 startActivity(nextScreen);
                 return true;
             default:
