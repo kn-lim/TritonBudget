@@ -1,5 +1,6 @@
 package teammemes.tritonbudget;
 
+import teammemes.tritonbudget.db.TranHistory;
 import java.util.ArrayList;
 
 import android.view.View;
@@ -18,15 +19,15 @@ import org.w3c.dom.Text;
  * Custom ArrayAdapter for members of checkout
  */
 
-public class Checkout_Adapter extends ArrayAdapter<Checkout_Item>{
-    public Checkout_Adapter(Context context, ArrayList<Checkout_Item> Item_Object) {
+public class Checkout_Adapter extends ArrayAdapter<TranHistory>{
+    public Checkout_Adapter(Context context, ArrayList<TranHistory> Item_Object) {
         super(context, 0, Item_Object);
     }
 
     public View getView(int position, View conView, ViewGroup ItemsGrouping) {
 
         //retrieve the data for food_item at certain position
-        Checkout_Item item = getItem(position);
+        TranHistory item = getItem(position);
 
         if (conView == null) {
             conView = LayoutInflater.from(getContext()).inflate(R.layout.content_checkout, ItemsGrouping, false);
@@ -40,10 +41,10 @@ public class Checkout_Adapter extends ArrayAdapter<Checkout_Item>{
         TextView multItemPrice = (TextView) conView.findViewById(R.id.COItemTPrice);
 
 
-        itemName.setText(item.food_item);
-        itemQuantity.setText(item.quantity);
-        itemPrice.setText(String.valueOf(item.price));
-        multItemPrice.setText(String.valueOf(item.total_price));
+        itemName.setText(item.getName());
+        itemQuantity.setText(item.getQuantity());
+        itemPrice.setText(String.valueOf(item.getCost()));
+        multItemPrice.setText(String.valueOf(item.getQuantity()*item.getCost()));
 
         return conView;
     }

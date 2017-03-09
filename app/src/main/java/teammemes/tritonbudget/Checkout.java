@@ -1,9 +1,13 @@
 package teammemes.tritonbudget;
 
+import teammemes.tritonbudget.db.TranHistory;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class Checkout extends AppCompatActivity {
 
@@ -20,7 +24,10 @@ public class Checkout extends AppCompatActivity {
 
     private void populateCOList() {
 
-        Checkout_Adapter co_adapter = new Checkout_Adapter(this, Checkout_Item.getFoodItems());
+        Bundle extras = getIntent().getExtras();
+         ArrayList<TranHistory> trans = (ArrayList) extras.getSerializable("Transactions");
+
+        Checkout_Adapter co_adapter = new Checkout_Adapter(this, trans);
         ListView CO_View = (ListView) findViewById(R.id.ItemsContainer);
 
         CO_View.setAdapter(co_adapter);
