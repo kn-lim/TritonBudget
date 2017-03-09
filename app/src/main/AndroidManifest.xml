@@ -42,7 +42,11 @@
         <activity android:name=".DiningHallSelection" />
 
         <activity android:name=".History" />
-        <activity android:name=".PurchaseMenu"/>
+        <activity android:name=".PurchaseMenu">
+        <intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".testClick" />
 
         <activity android:name=".Checkout">
