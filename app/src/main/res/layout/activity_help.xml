@@ -23,14 +23,12 @@
             android:id="@+id/help_contacts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.12"
             android:text="Contact:" />
 
         <TextView
             android:id="@+id/help_kevin_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05"
             android:text="Kevin Lim - Project Manager" />
 
         <TextView

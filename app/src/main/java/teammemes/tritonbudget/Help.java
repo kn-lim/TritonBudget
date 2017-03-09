@@ -35,7 +35,7 @@ public class Help extends AppCompatActivity implements NavigationView.OnNavigati
         getSupportActionBar().setTitle("Need Assistance?");
 
         //Create the Drawer layout and the toggle
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_settings);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_help);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
 
         mDrawerLayout.addDrawerListener(mToggle);
