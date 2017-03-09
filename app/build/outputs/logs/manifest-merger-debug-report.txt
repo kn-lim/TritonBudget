@@ -1,106 +1,124 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:2:1-50:12
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:2:1-53:12
 	package
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:3:5-37
-		INJECTED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:3:5-37
+		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
 application
-ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:5:5-48:19
-MERGED from [com.android.support:design:25.1.0] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:transition:25.1.0] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\AndroidManifest.xml:25:5-20
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:5:5-51:19
+MERGED from [com.android.support:design:25.1.0] /Users/knlim/.android/build-cache/78375d20be4cbab6fc5bea1463aa1b5e1b98fa09/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/knlim/.android/build-cache/b1328c79fc87d3e92c5748b04ee9bf838a507704/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/knlim/.android/build-cache/851bbaba29097236f8de66d32453f1ec266d4c87/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/knlim/.android/build-cache/35cd77573aa769c77f8660ef669a8d002b48d6b0/output/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:transition:25.1.0] /Users/knlim/.android/build-cache/e800d6992351811d48a6d1e635a0699fab36332b/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:25.1.1] /Users/knlim/.android/build-cache/594472f388e8fa364e8d3396e9112010319bfa62/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.1.1] /Users/knlim/.android/build-cache/75753dfb942eb8a66bf784cf17507f870403ff0d/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.1] /Users/knlim/.android/build-cache/1043eb9ea368dca0c18ae839ad95aa489a14a307/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.1] /Users/knlim/.android/build-cache/495be9743bf2e033f6de9da222beac007899873c/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.1] /Users/knlim/.android/build-cache/a6194cdf7e12930a4df87d4022c1ee15c4f8e7bb/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.1.1] /Users/knlim/.android/build-cache/20fab4ced421ab1df5c24883e5877d28e755ecea/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.1] /Users/knlim/.android/build-cache/e7d9d89e29c2d10085840d6fcfb286f40c40d85c/output/AndroidManifest.xml:9:5-20
 	android:label
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:8:9-41
 	android:supportsRtl
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:9:9-35
 	android:allowBackup
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:6:9-35
 	android:icon
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:7:9-43
 	android:theme
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:10:9-40
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:10:9-40
 activity#teammemes.tritonbudget.Splash
-ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:12:9-20:20
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:11:9-19:20
 	android:theme
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:14:13-47
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:13:13-47
 	android:name
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:13:13-35
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:12:13-35
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:15:13-19:29
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:14:13-18:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:16:17-69
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:15:17-69
 	android:name
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:16:25-66
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:15:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:18:17-77
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:17:17-77
 	android:name
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:18:27-74
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:17:27-74
 activity#teammemes.tritonbudget.Menu64Degrees_Main
-ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:22:9-26:20
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:20:9-24:20
 	android:name
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:22:19-53
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:20:19-53
 intent-filter#android.intent.category.LAUNCHER
-ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:23:13-25:29
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:21:13-23:29
 activity#teammemes.tritonbudget.HomeScreen
-ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:28:9-47
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:25:9-48
 	android:name
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:28:19-45
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:25:19-45
 activity#teammemes.tritonbudget.Enter_Info
-ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:30:9-34:20
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:26:9-30:20
 	android:name
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:30:19-45
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:26:19-45
 activity#teammemes.tritonbudget.Statistics
-ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:36:9-40:20
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:31:9-35:20
 	android:name
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:36:19-45
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:31:19-45
 activity#teammemes.tritonbudget.DiningHallSelection
-ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:42:9-57
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:36:9-57
 	android:name
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:42:19-54
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:36:19-54
 activity#teammemes.tritonbudget.History
-ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:44:9-45
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:37:9-45
 	android:name
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:44:19-42
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:37:19-42
+activity#teammemes.tritonbudget.PurchaseMenu
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:38:9-50
+	android:name
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:38:19-47
 activity#teammemes.tritonbudget.testClick
-ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:46:9-47
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:39:9-47
 	android:name
-		ADDED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml:46:19-44
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:39:19-44
+activity#teammemes.tritonbudget.Checkout
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:40:9-44:20
+	android:name
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:40:19-43
+activity#teammemes.tritonbudget.Settings
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:45:9-49:20
+	android:name
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:45:19-43
+activity#teammemes.tritonbudget.Help
+ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:50:9-51
+	android:name
+		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:50:19-39
 uses-sdk
-INJECTED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:design:25.1.0] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:recyclerview-v7:25.1.0] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.1.0] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.1.1] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\AndroidManifest.xml:21:5-23:58
+INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:25.1.0] /Users/knlim/.android/build-cache/78375d20be4cbab6fc5bea1463aa1b5e1b98fa09/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/knlim/.android/build-cache/b1328c79fc87d3e92c5748b04ee9bf838a507704/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/knlim/.android/build-cache/851bbaba29097236f8de66d32453f1ec266d4c87/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/knlim/.android/build-cache/35cd77573aa769c77f8660ef669a8d002b48d6b0/output/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:25.1.0] /Users/knlim/.android/build-cache/24898dea12a174f4edd3ad71b82ff6e22ae6c9e7/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.1.0] /Users/knlim/.android/build-cache/e800d6992351811d48a6d1e635a0699fab36332b/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.1.1] /Users/knlim/.android/build-cache/594472f388e8fa364e8d3396e9112010319bfa62/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.1.1] /Users/knlim/.android/build-cache/75753dfb942eb8a66bf784cf17507f870403ff0d/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.1.1] /Users/knlim/.android/build-cache/1043eb9ea368dca0c18ae839ad95aa489a14a307/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.1.1] /Users/knlim/.android/build-cache/495be9743bf2e033f6de9da222beac007899873c/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.1.1] /Users/knlim/.android/build-cache/a6194cdf7e12930a4df87d4022c1ee15c4f8e7bb/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.1.1] /Users/knlim/.android/build-cache/20fab4ced421ab1df5c24883e5877d28e755ecea/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.1] /Users/knlim/.android/build-cache/e7d9d89e29c2d10085840d6fcfb286f40c40d85c/output/AndroidManifest.xml:5:5-7:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.1.0] C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.1.0] /Users/knlim/.android/build-cache/78375d20be4cbab6fc5bea1463aa1b5e1b98fa09/output/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\andyl\Desktop\AndroidStudio\TritonBudget\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml

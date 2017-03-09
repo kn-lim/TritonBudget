@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 96
                 },
                 "from": {
-                    "file": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\exploded-aar\\com.android.support.test\\rules\\0.5\\res\\values\\values.xml",
+                    "file": "/Users/knlim/.android/build-cache/96ebf77c806a1b9a9daffc845be3571f021bd5e9/output/res/values/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

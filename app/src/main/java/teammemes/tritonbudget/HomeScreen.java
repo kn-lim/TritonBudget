@@ -304,6 +304,18 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                 nextScreen.putExtra("FROM", "Home");
                 startActivity(nextScreen);
                 return true;
+            case R.id.nav_settings:
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Settings.class);
+                nextScreen.putExtra("FROM", "Home");
+                startActivity(nextScreen);
+                return true;
+            case R.id.nav_help:
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Help.class);
+                nextScreen.putExtra("FROM", "Home");
+                startActivity(nextScreen);
+                return true;
             /* Cases for future options
             case R.id.nav_settings:
                 return false;

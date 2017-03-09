@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_action.xml"
+        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/knlim/.android/build-cache/b1328c79fc87d3e92c5748b04ee9bf838a507704/output/res/layout-v21/notification_template_custom_big.xml"
     },
     {
-        "merged": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_action_tombstone.xml"
+        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/knlim/.android/build-cache/b1328c79fc87d3e92c5748b04ee9bf838a507704/output/res/layout-v21/notification_template_icon_group.xml"
     },
     {
-        "merged": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_template_icon_group.xml"
+        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/knlim/.android/build-cache/b1328c79fc87d3e92c5748b04ee9bf838a507704/output/res/layout-v21/notification_action_tombstone.xml"
     },
     {
-        "merged": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_template_custom_big.xml"
+        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/knlim/.android/build-cache/b1328c79fc87d3e92c5748b04ee9bf838a507704/output/res/layout-v21/notification_action.xml"
     }
 ]

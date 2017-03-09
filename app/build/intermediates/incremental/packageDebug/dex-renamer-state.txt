@@ -1,7 +1,7 @@
-#Tue Mar 07 21:21:55 PST 2017
-base.0=C\:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_80d39256c69622acd116f7cbd0f30a2c03cfcf0c
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=C\:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_173fec6484368b7e54e10c0ce1ddd8bad7b6fd2b\\classes.dex
-base.1=C\:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_173fec6484368b7e54e10c0ce1ddd8bad7b6fd2b
-file.0=C\:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_80d39256c69622acd116f7cbd0f30a2c03cfcf0c\\classes.dex
+#Wed Mar 08 17:59:43 PST 2017
+base.0=/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_15999317f0b07a37ee40c8aff370fed4bcb7072e
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_18cbf23611265495cce380c77120006da335f388/classes.dex
+base.1=/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_18cbf23611265495cce380c77120006da335f388
+file.0=/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_15999317f0b07a37ee40c8aff370fed4bcb7072e/classes.dex
