@@ -1,74 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_enter__info"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#03A9F4"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+
     tools:context="teammemes.tritonbudget.Enter_Info">
 
-    <EditText
-        android:id="@+id/EnterName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/EnterMoney"
-        android:layout_below="@+id/PutNameHere"
-        android:layout_marginTop="33dp"
-        android:elevation="10dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="text|textPersonName"
-        android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse" />
-
-    <Button
-        android:id="@+id/btnConfirm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/EnterMoney"
-        android:layout_below="@+id/PutMoneyHere"
-        android:layout_marginTop="57dp"
-        android:backgroundTint="@android:color/holo_orange_light"
-        android:text="Done!" />
-
-    <TextView
-        android:id="@+id/PutNameHere"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/EnterName"
-
-        android:layout_marginTop="11dp"
-        android:ems="10"
-        android:inputType="none"
-        android:text="Please enter your Name"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        tools:text="Please enter your Name" />
-
-    <TextView
-        android:id="@+id/PutMoneyHere"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/EnterName"
-        android:layout_marginTop="97dp"
-        android:ems="10"
-        android:text="Please Enter your Current Budget"
-        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="1">
 
-    <EditText
-        android:id="@+id/EnterMoney"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/PutMoneyHere"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:hint="$000"
-        android:inputType="numberDecimal"
-        android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse"
-        tools:text="$000" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="48dp"
+            android:layout_weight="0.29"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/PutNameHere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_alignStart="@+id/EnterName"
+
+            android:inputType="none"
+            android:shadowColor="@android:color/black"
+            android:text="Enter Your Name"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:textColor="@android:color/background_light"
+            android:textColorLink="#0fffeb3b"
+            tools:text="Enter Your Name" />
+
+        <EditText
+            android:id="@+id/EnterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/EnterMoney"
+            android:layout_below="@+id/PutNameHere"
+            android:elevation="20dp"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="text|textPersonName"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFEB3B" />
+
+        <TextView
+            android:id="@+id/PutMoneyHere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/EnterName"
+            android:layout_marginTop="48dp"
+            android:ems="10"
+            android:text="Enter Your Current Budget"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:textColor="@android:color/background_light" />
+
+        <EditText
+            android:id="@+id/EnterMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PutMoneyHere"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="$XXXX.xx"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFEB3B" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/EnterMoney"
+            android:layout_below="@+id/PutMoneyHere"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:text="Done!" />
+    </LinearLayout>
 
 </RelativeLayout>
 

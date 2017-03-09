@@ -3,6 +3,7 @@ package teammemes.tritonbudget;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -48,6 +49,9 @@ public class Enter_Info extends AppCompatActivity {
         });
         btnDone = (Button) findViewById(R.id.btnConfirm);
         sharedpreferences = getSharedPreferences("mypref", Context.MODE_PRIVATE);
+
+        //name.getBackground().setColorFilter(0xFFFFEB3B, PorterDuff.Mode.SRC_IN);
+        //money.getBackground().setColorFilter(0xFFFFEB3B, PorterDuff.Mode.SRC_IN);
 
         // add data button
         addData();
