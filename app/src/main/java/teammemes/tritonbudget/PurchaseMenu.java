@@ -1,10 +1,9 @@
 package teammemes.tritonbudget;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.DrawableRes;
 import android.support.design.widget.NavigationView;
+import java.util.Date;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -17,7 +16,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.support.design.widget.FloatingActionButton;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
@@ -27,7 +28,7 @@ import teammemes.tritonbudget.db.TranHistory;
 import static android.view.Gravity.CENTER;
 
 
-public class PurchaseMenu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class PurchaseMenu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,Serializable{
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
@@ -37,7 +38,9 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
     SimpleDateFormat dateFormat;
     LinearLayout.LayoutParams layoutParams, textParams, btnParams, noWeight;
     LinearLayout mainLayout;
-
+    private int[] numberOfPurchase;
+    private List<Menu> transactions;
+    private int i=0;
 
 
     @Override
@@ -83,11 +86,31 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
 
         //Used for when database is working
         database = new MenuDataSource(this);
-        List<Menu> transactions = database.getMenusByLocation("Pines");
+        transactions = database.getMenusByLocation("Pines");
+        numberOfPurchase = new int[transactions.size()];
         dateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
         //Renders all of the transactions on the page
         renderMenu(transactions);
+
+
+        FloatingActionButton myFab = (FloatingActionButton) findViewById(R.id.myFAB);
+        myFab.setOnClickListener(new View.OnClickListener() {
+            List<TranHistory> trans;
+            public void onClick(View v) {
+                for(int j=0;j<transactions.size();j++)
+                {
+                    if(numberOfPurchase[j]!=0)
+                    {
+                        Menu men = transactions.get(j);
+                        trans.add(new TranHistory(men.getId(),men.getName(),numberOfPurchase[j],new Date(),men.getCost()));
+                    }
+                }
+                Intent checkout = new Intent(getApplicationContext(),Checkout.class);
+                checkout.putExtra("Transactions",(Serializable)trans);
+                startActivity(checkout);
+            }
+        });
 
     }
 
@@ -107,7 +130,7 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
 
         //Goes through each of the transactions and puts them on the page
         String prevCategory = "";
-        for (int i = transactions.size() - 1; i >= 0; i--){
+        for (i = transactions.size() - 1; i >= 0; i--){
             //If this is a new date, it creates a new date display
             if(!transactions.get(i).getCategory().equals(prevCategory)){
                 prevCategory = transactions.get(i).getCategory(); //Saves the date
@@ -168,6 +191,7 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
                 @Override
                 public void onClick(View v) {
                     quantity.setText("" + ((int) Integer.parseInt((String) quantity.getText()) + 1));
+                    numberOfPurchase[i]++;
                 }
             });
 
@@ -177,6 +201,7 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
                     if (quantity.getText().equals("0"))
                         return;
                     quantity.setText("" + ((int) Integer.parseInt((String) quantity.getText()) - 1));
+                    numberOfPurchase[i]--;
                 }
             });
 
