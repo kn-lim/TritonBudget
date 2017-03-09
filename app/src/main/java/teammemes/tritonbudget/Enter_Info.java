@@ -3,7 +3,6 @@ package teammemes.tritonbudget;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -67,7 +66,13 @@ public class Enter_Info extends AppCompatActivity {
                         String usename = name.getText().toString();
                         String usemoney = money.getText().toString();
                         int decimalIdx = usemoney.indexOf('.');
-                        String dollaramt = usemoney.substring(0,decimalIdx);
+
+                        String dollaramt;
+                        if (decimalIdx != -1) {
+                            dollaramt = usemoney.substring(0, decimalIdx);
+                        } else {
+                            dollaramt = usemoney;
+                        }
                         if (usename.length() == 0 || usename.length() > 25) {
                             Toast.makeText(Enter_Info.this, "Please enter your name up to 25 characters", Toast.LENGTH_LONG).show();
                         } else if (usemoney.length() == 0) {

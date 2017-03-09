@@ -87,7 +87,7 @@
             android:textAlignment="center"
             android:textAppearance="@android:style/TextAppearance.Material.Large.Inverse"
             android:textColor="#FFFFFF"
-            android:textColorLink="#FFFFEB3B" />
+            android:textColorLink="@color/AppPrimaryAccent" />
 
         <Button
             android:id="@+id/btnConfirm"
