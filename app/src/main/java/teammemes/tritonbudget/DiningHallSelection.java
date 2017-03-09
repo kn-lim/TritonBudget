@@ -125,7 +125,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
             @Override
             public void onClick(View view) {
                 //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, testClick.class);
+                Intent intent = new Intent(DiningHallSelection.this, Menu64Degrees_Main.class);
                 startActivity(intent);
             }
         });
@@ -133,7 +133,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
             @Override
             public void onClick(View view) {
                 //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, testClick.class);
+                Intent intent = new Intent(DiningHallSelection.this, MenuCafeVentanas_Main.class);
                 startActivity(intent);
             }
         });
@@ -141,7 +141,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
             @Override
             public void onClick(View view) {
                 //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, testClick.class);
+                Intent intent = new Intent(DiningHallSelection.this, MenuCanyonVista_Main.class);
                 startActivity(intent);
             }
         });
@@ -149,7 +149,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
             @Override
             public void onClick(View view) {
                 //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, testClick.class);
+                Intent intent = new Intent(DiningHallSelection.this, MenuFoodworx_Main.class);
                 startActivity(intent);
             }
         });
@@ -157,7 +157,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
             @Override
             public void onClick(View view) {
                 //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, testClick.class);
+                Intent intent = new Intent(DiningHallSelection.this, MenuOceanView_Main.class);
                 startActivity(intent);
             }
         });
@@ -165,7 +165,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
             @Override
             public void onClick(View view) {
                 //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, testClick.class);
+                Intent intent = new Intent(DiningHallSelection.this, MenuPines_Main.class);
                 startActivity(intent);
             }
         });
@@ -175,7 +175,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
             @Override
             public void onClick(View view) {
                 //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, testClick.class);
+                Intent intent = new Intent(DiningHallSelection.this, MenuBistro_Main.class);
                 startActivity(intent);
             }
         });
@@ -183,7 +183,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
             @Override
             public void onClick(View view) {
                 //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, testClick.class);
+                Intent intent = new Intent(DiningHallSelection.this, MenuClubMed_Main.class);
                 startActivity(intent);
             }
         });
@@ -199,7 +199,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
             @Override
             public void onClick(View view) {
                 //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, testClick.class);
+                Intent intent = new Intent(DiningHallSelection.this, MenuGoodys_Main.class);
                 startActivity(intent);
             }
         });
@@ -215,7 +215,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
             @Override
             public void onClick(View view) {
                 //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, testClick.class);
+                Intent intent = new Intent(DiningHallSelection.this, MenuRoots_Main.class);
                 startActivity(intent);
             }
         });
