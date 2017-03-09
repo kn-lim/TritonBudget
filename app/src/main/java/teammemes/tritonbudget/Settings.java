@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Settings extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -64,7 +65,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("Change Name");
+                builder.setTitle("What's Your Name?");
 
                 LayoutInflater viewInflated = LayoutInflater.from(context);
                 View deductView = viewInflated.inflate(R.layout.dialog_change_name,null);
@@ -84,6 +85,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                         //on the Home Screen
                         String value= input.getText().toString();
                         usr.setName(value);
+                        Toast.makeText(Settings.this, "Changed Name to " + value, Toast.LENGTH_LONG).show();
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -93,6 +95,80 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                     }
                 });
                 builder.show();
+            }
+        });
+
+        changeBalance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("What's Your Balance?");
+
+                LayoutInflater viewInflated = LayoutInflater.from(context);
+                View deductView = viewInflated.inflate(R.layout.dialog_change_name,null);
+
+                // Set up the input
+
+                // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                builder.setView(deductView);
+
+                final EditText input = (EditText) deductView.findViewById(R.id.changeName_input);
+
+                // Set up the buttons
+                builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //Gets the input value and then deducts the balance and updates the balances
+                        //on the Home Screen
+                        String value= input.getText().toString();
+                        //usr.setName(value);
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                builder.show();
+            }
+        });
+
+        addDD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("How Much Dining Dollars?");
+
+                LayoutInflater viewInflated = LayoutInflater.from(context);
+                View deductView = viewInflated.inflate(R.layout.dialog_change_name,null);
+
+                // Set up the input
+
+                // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                builder.setView(deductView);
+
+                final EditText input = (EditText) deductView.findViewById(R.id.changeName_input);
+
+                // Set up the buttons
+                builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //Gets the input value and then deducts the balance and updates the balances
+                        //on the Home Screen
+                        String value= input.getText().toString();
+                        //usr.setName(value);
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                builder.show();
+                //Toast.makeText(Enter_Info.this, "Thanks", Toast.LENGTH_LONG).show();
+                //Toast.makeTest(this, "Added" );
             }
         });
     }
