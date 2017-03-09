@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/help_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Need Some Assistance with Triton Budget?"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/help_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.12"
+            android:text="Contact:" />
+
+        <TextView
+            android:id="@+id/help_kevin_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:text="Kevin Lim - Project Manager" />
+
+        <TextView
+            android:id="@+id/help_kevin_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="7143665055" />
+
+        <TextView
+            android:id="@+id/help_andy_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Andy Lum - Deputy Project Manager" />
+
+        <TextView
+            android:id="@+id/help_andy_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6266251628" />
+
+    </LinearLayout>
+</RelativeLayout>
