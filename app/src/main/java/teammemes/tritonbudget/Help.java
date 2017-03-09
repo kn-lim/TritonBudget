@@ -25,7 +25,8 @@ public class Help extends AppCompatActivity implements NavigationView.OnNavigati
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_help);
+        setContentView(R.layout.drawer_help);
+        usr = User.getInstance(getApplicationContext());
 
         //Creates the toolbar to the one defined in nav_action
         mToolbar = (Toolbar) findViewById(R.id.nav_action);

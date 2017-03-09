@@ -51,7 +51,6 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Statistics");
 
-
         //Create the Drawer layout and the toggle
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_statistics_layout);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);

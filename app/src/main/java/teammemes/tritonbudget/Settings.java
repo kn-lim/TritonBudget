@@ -29,7 +29,8 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.drawer_settings);
+        usr = User.getInstance(getApplicationContext());
 
         //Creates the toolbar to the one defined in nav_action
         mToolbar = (Toolbar) findViewById(R.id.nav_action);
