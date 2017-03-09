@@ -24,6 +24,7 @@ public class Checkout_Adapter extends ArrayAdapter<TranHistory>{
         super(context, 0, Item_Object);
     }
 
+    @Override
     public View getView(int position, View conView, ViewGroup ItemsGrouping) {
 
         //retrieve the data for food_item at certain position
