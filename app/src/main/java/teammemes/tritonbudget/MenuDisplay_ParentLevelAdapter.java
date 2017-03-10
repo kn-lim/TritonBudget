@@ -45,7 +45,7 @@ public class MenuDisplay_ParentLevelAdapter extends BaseExpandableListAdapter {
         //mListData_SecondLevel_Map = SecondLevel_Map;
         int parentCount = mListDataHeader.size();
 
-        for (int i = 1; i < parentCount; i++) {
+        for (int i = 0; i < parentCount; i++) {
 
             String content = mListDataHeader.get(i);
 
