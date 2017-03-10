@@ -199,23 +199,38 @@ public class HistoryDataSource extends BaseDataSource{
             cost += histories.get(i).getCost();
             Calendar cal=Calendar.getInstance();
             cal.setTime(histories.get(i).getTdate());
-            if(cal.get(Calendar.DAY_OF_YEAR)<smallestday)
+            int day = cal.get(Calendar.DAY_OF_YEAR);
+            if(smallestday<167 && day<167)
             {
-                smallestday=cal.get(Calendar.DAY_OF_YEAR);
+                if(day<smallestday)
+                {
+                    smallestday=day;
+                }
+            }
+            else if(smallestday<167&&day>268)
+            {
+                smallestday=day;
+            }
+            else if(smallestday>268&&currDay>268)
+            {
+                if(day<smallestday)
+                {
+                    smallestday=day;
+                }
             }
         }
-        Calendar cal = Calendar.getInstance();
-        if(currDay<167)
+
+        if(smallestday>268&&currDay>268)
         {
-            return cost/(167-currDay);
+            return cost/(currDay-smallestday);
         }
-        else if(currDay>268)
+        else if(smallestday>268&&currDay<167)
         {
-            return cost/(167+365-currDay);
+            return cost/(365-smallestday+currDay);
         }
         else
         {
-            return 999999;
+            return cost/(currDay-smallestday);
         }
     }
 
