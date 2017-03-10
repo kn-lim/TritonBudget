@@ -231,6 +231,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                     //If the edit button is already visible do nothing
                     if (TransactionBorder.getChildCount() == 3)
                         return false;
+                    removeAllButtons();
 
                     //Create the edit button
                     TextView edit = new TextView(v.getContext());
@@ -505,6 +506,22 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         } else {
             Toast.makeText(this, "Edited " + deduction, Toast.LENGTH_LONG).show();
             usr.setBalance(balance);
+        }
+    }
+
+    /*
+     * Method: removeAllButtons
+     *
+     * This method goes through the main layout looking at each transaction and if the transaction
+     * has the button, it removes it. This helps make sure there is only one button present.
+     */
+    public void removeAllButtons(){
+        int numTrans = mainLayout.getChildCount();
+        for (int j = 0; j < numTrans; j++){
+            LinearLayout tran = (LinearLayout) mainLayout.getChildAt(j);
+            if (tran.getChildCount() == 3){
+                tran.removeViewAt(2);
+            }
         }
     }
 }
