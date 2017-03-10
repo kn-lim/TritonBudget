@@ -70,9 +70,10 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (change_balance(total)) {
                     Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
                     startActivity(intent);
+                }
                 Toast.makeText(getApplicationContext(),"not enough balance!",Toast.LENGTH_LONG).show();
 
             }
