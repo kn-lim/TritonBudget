@@ -139,9 +139,9 @@ public class HistoryDataSource extends BaseDataSource{
             Calendar cal = Calendar.getInstance();
             cal.setTime(day);
             int dayOfYear = cal.get(Calendar.DAY_OF_YEAR);
-            if(0<currDay-dayOfYear && currDay-dayOfYear<8)
+            if(0<=currDay-dayOfYear && currDay-dayOfYear<7)
             {
-                cost[currDay-dayOfYear-1]+=histories.get(i).getCost();
+                cost[currDay-dayOfYear]+=histories.get(i).getCost();
             }
         }
         return cost;
@@ -155,16 +155,16 @@ public class HistoryDataSource extends BaseDataSource{
             Calendar cal = Calendar.getInstance();
             cal.setTime(day);
             int dayOfYear = cal.get(Calendar.DAY_OF_YEAR);
-            if (0 < currDay - dayOfYear && currDay - dayOfYear < 8) {
+            if (0 <= currDay - dayOfYear && currDay - dayOfYear < 7) {
                 cost[0] += histories.get(i).getCost();
             }
-            if (7 < currDay - dayOfYear && currDay - dayOfYear < 15) {
+            if (7 <= currDay - dayOfYear && currDay - dayOfYear < 14) {
                 cost[1] += histories.get(i).getCost();
             }
-            if (14 < currDay - dayOfYear && currDay - dayOfYear < 22) {
+            if (14 <= currDay - dayOfYear && currDay - dayOfYear < 21) {
                 cost[2] += histories.get(i).getCost();
             }
-            if (21 < currDay - dayOfYear && currDay - dayOfYear < 29) {
+            if (21 <= currDay - dayOfYear && currDay - dayOfYear < 28) {
                 cost[3] += histories.get(i).getCost();
             }
         }

@@ -21,6 +21,8 @@ import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 import teammemes.tritonbudget.db.HistoryDataSource;
 
@@ -87,8 +89,15 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         TextView average = (TextView)findViewById(R.id.statistic_text_average_num);
         HistoryDataSource hist = new HistoryDataSource(getApplicationContext());
 
-        weekTotal.setText(Double.toString(hist.getThisWeekTotal()));
-        average.setText(Double.toString(hist.getDailyAverage()));
+        double weektotal=hist.getThisWeekTotal();
+        weektotal=weektotal*100;
+        weektotal=Math.round(weektotal);
+        weektotal=weektotal/100;
+        weekTotal.setText(Double.toString(weektotal));
+        double daily = 100*hist.getDailyAverage();
+        daily=Math.round(daily);
+        daily=daily/100;
+        average.setText(Double.toString(daily));
 
         //For Last week, this week,
     }
@@ -226,13 +235,17 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
 
     private ArrayList<String> getXAxisValues() {
         ArrayList<String> xAxis = new ArrayList<>();
-        xAxis.add("Sun");
-        xAxis.add("Mon");
-        xAxis.add("Tue");
-        xAxis.add("Wed");
-        xAxis.add("Thu");
-        xAxis.add("Fri");
-        xAxis.add("Sat");
+        Calendar cal = Calendar.getInstance();
+        cal.setTime((new Date()));
+        for(int i=0;i<7;i++)
+        {
+            cal.setTime(new Date(System.currentTimeMillis()-24L*60L*60L*1000L*i/2));
+            //cal.add(Calendar.DATE, -1);
+            int month = cal.get(Calendar.MONTH)+1;
+            int day = cal.get(Calendar.DAY_OF_MONTH);
+            String date = month + "." + day;
+            xAxis.add(date);
+        }
         return xAxis;
     }
 
