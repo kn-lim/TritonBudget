@@ -175,7 +175,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         purchasebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), PurchaseMenu.class);
+                Intent intent = new Intent(v.getContext(), DiningHallSelection.class);
                 intent.putExtra("FROM", "PURCHASE");
                 startActivity(intent);
             }
