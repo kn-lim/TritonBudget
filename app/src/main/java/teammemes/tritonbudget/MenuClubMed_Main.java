@@ -25,7 +25,7 @@ public class MenuClubMed_Main extends AppCompatActivity {
         // Init top level data
 
         DS = new MenuDataSource(this);
-
+        /*
         List<String> listDataHeader = new ArrayList<>();
         String[] mItemHeaders = new String[6];
 
@@ -36,9 +36,13 @@ public class MenuClubMed_Main extends AppCompatActivity {
         mItemHeaders[5] = "Soups";
 
         Collections.addAll(listDataHeader, mItemHeaders);
+        */
+        List<String> listCategories ;
+        listCategories = DS.getCategoriesByLocation(dhname);
+
         final ExpandableListView mExpandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Parent);
         if(mExpandableListView!=null) {
-            MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listDataHeader, DS, dhname);
+            MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listCategories, DS, dhname);
             mExpandableListView.setAdapter(parentLevelAdapter);
         }
 

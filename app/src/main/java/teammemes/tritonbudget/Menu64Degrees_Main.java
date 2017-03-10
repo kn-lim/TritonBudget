@@ -2,6 +2,7 @@ package teammemes.tritonbudget;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.*;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
@@ -22,9 +23,13 @@ public class Menu64Degrees_Main extends AppCompatActivity {
 
         DS = new MenuDataSource(this);
 
-        //
 
-        List<String> listDataHeader = new ArrayList<>();
+
+        //List<String> listDataHeader = new ArrayList<>();
+        List<String> listCategories ;
+        listCategories = DS.getCategoriesByLocation(dhname);
+
+        /*
         String[] mItemHeaders = new String[6];
         //String[] mItemHeaders = getResources().getStringArray(R.array.items_array_expandable_level_one);
 
@@ -35,11 +40,12 @@ public class Menu64Degrees_Main extends AppCompatActivity {
         mItemHeaders[5] = "Wok";
 
         Collections.addAll(listDataHeader, mItemHeaders);
+        */
         final ExpandableListView mExpandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Parent);
         if (mExpandableListView != null) {
 
             //MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listDataHeader, mListData_SecondLevel_Map);
-            MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listDataHeader, DS,dhname);
+            MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listCategories, DS,dhname);
             mExpandableListView.setAdapter(parentLevelAdapter);
             // display only one expand item
 //            mExpandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
