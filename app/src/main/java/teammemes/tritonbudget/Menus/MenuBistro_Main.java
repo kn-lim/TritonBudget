@@ -1,18 +1,21 @@
-package teammemes.tritonbudget;
+package teammemes.tritonbudget.Menus;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ExpandableListView;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
+import teammemes.tritonbudget.R;
 import teammemes.tritonbudget.db.MenuDataSource;
 
-public class MenuRoots_Main extends AppCompatActivity {
+/**
+ * Created by Bao on 3/8/2017.
+ */
+
+public class MenuBistro_Main extends AppCompatActivity {
     public MenuDataSource DS;
-    String dhname = "Roots";
+    String dhname = "The Bistro";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,25 +25,21 @@ public class MenuRoots_Main extends AppCompatActivity {
 
         DS = new MenuDataSource(this);
 
-        //
-        /*
-        List<String> listDataHeader = new ArrayList<>();
-        String[] mItemHeaders = new String[8];
-        //String[] mItemHeaders = getResources().getStringArray(R.array.items_array_expandable_level_one);
 
-        mItemHeaders[1] = "Root Sum";
-        mItemHeaders[2] = "Root Slab";
-        mItemHeaders[3] = "Field and Farm";
-        mItemHeaders[4] = "Soup and Chili";
-        mItemHeaders[5] = "Sides";
-        mItemHeaders[6] = "Smoothies";
-        mItemHeaders[7] = "Dessert";
-
-        Collections.addAll(listDataHeader, mItemHeaders);
-        */
         List<String> listCategories ;
         listCategories = DS.getCategoriesByLocation(dhname);
 
+        //List<String> listDataHeader = new ArrayList<>();
+        /*String[] mItemHeaders = new String[5];
+        //String[] mItemHeaders = getResources().getStringArray(R.array.items_array_expandable_level_one);
+
+        mItemHeaders[1] = "Small Plates";
+        mItemHeaders[2] = "Entrees";
+        mItemHeaders[3] = "Sushi";
+        mItemHeaders[4] = "Dessert";
+
+        Collections.addAll(listDataHeader, mItemHeaders);
+        */
         final ExpandableListView mExpandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Parent);
         if (mExpandableListView != null) {
 

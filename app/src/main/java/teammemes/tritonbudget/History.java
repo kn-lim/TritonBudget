@@ -355,6 +355,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
             meme.setAdjustViewBounds(true);
             meme.setScaleType(ImageView.ScaleType.FIT_END);
             meme.setPadding(0,200,0,0);
+            meme.setAlpha((float) 0.75);
             mainLayout.addView(meme);
 
             //meme.setScaleType(fitEnd);

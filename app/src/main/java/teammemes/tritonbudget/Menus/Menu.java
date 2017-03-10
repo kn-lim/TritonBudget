@@ -1,4 +1,4 @@
-package teammemes.tritonbudget;
+package teammemes.tritonbudget.Menus;
 
 
 /**

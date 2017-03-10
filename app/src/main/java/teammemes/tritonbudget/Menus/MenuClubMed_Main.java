@@ -1,22 +1,21 @@
-package teammemes.tritonbudget;
-
-/**
- * Created by Ziying on 3/8/17.
- */
+package teammemes.tritonbudget.Menus;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ExpandableListView;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
+import teammemes.tritonbudget.R;
 import teammemes.tritonbudget.db.MenuDataSource;
 
-public class MenuGoodys_Main extends AppCompatActivity {
+/**
+ * Created by Ziying on 3/8/17.
+ */
+
+public class MenuClubMed_Main extends AppCompatActivity {
     public MenuDataSource DS;
-    String dhname = "Goodys";
+    String dhname = "Club Med";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,15 +24,15 @@ public class MenuGoodys_Main extends AppCompatActivity {
         // Init top level data
 
         DS = new MenuDataSource(this);
-
-        //
         /*
         List<String> listDataHeader = new ArrayList<>();
-        String[] mItemHeaders = new String[4];
+        String[] mItemHeaders = new String[6];
 
         mItemHeaders[1] = "Breakfast Specials";
-        mItemHeaders[2] = "Latin";
-        mItemHeaders[3] = "Sides";
+        mItemHeaders[2] = "Flatbreads";
+        mItemHeaders[3] = "Signature Salads";
+        mItemHeaders[4] = "Turbo Salads";
+        mItemHeaders[5] = "Soups";
 
         Collections.addAll(listDataHeader, mItemHeaders);
         */
@@ -46,6 +45,5 @@ public class MenuGoodys_Main extends AppCompatActivity {
             mExpandableListView.setAdapter(parentLevelAdapter);
         }
 
-}
-
+    }
 }

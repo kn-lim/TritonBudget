@@ -1,19 +1,17 @@
-package teammemes.tritonbudget;
+package teammemes.tritonbudget.Menus;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.*;
 import android.widget.ExpandableListView;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
+import teammemes.tritonbudget.R;
 import teammemes.tritonbudget.db.MenuDataSource;
 
-public class Menu64Degrees_Main extends AppCompatActivity {
+public class MenuFoodworx_Main extends AppCompatActivity {
     public MenuDataSource DS;
-    String dhname = "64 Degrees";
+    String dhname = "Foodworx";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,25 +21,24 @@ public class Menu64Degrees_Main extends AppCompatActivity {
 
         DS = new MenuDataSource(this);
 
-
-
-        //List<String> listDataHeader = new ArrayList<>();
-        List<String> listCategories ;
-
-        listCategories = DS.getCategoriesByLocation(dhname);
-
+        //
         /*
-        String[] mItemHeaders = new String[6];
+        List<String> listDataHeader = new ArrayList<>();
+        String[] mItemHeaders = new String[7];
         //String[] mItemHeaders = getResources().getStringArray(R.array.items_array_expandable_level_one);
 
-        mItemHeaders[1] = "Burger Lounge";
-        mItemHeaders[2] = "Revelle Cuisine";
-        mItemHeaders[3] = "Market 64";
-        mItemHeaders[4] = "Vertically Crafted Deli";
-        mItemHeaders[5] = "Wok";
+        mItemHeaders[1] = "Standard Breakfast";
+        mItemHeaders[2] = "Deli";
+        mItemHeaders[3] = "Standard Grill";
+        mItemHeaders[4] = "Picnic Basket";
+        mItemHeaders[5] = "Pizzeria";
+        mItemHeaders[6] = "Soups";
 
         Collections.addAll(listDataHeader, mItemHeaders);
         */
+        List<String> listCategories ;
+        listCategories = DS.getCategoriesByLocation(dhname);
+
         final ExpandableListView mExpandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Parent);
         if (mExpandableListView != null) {
 

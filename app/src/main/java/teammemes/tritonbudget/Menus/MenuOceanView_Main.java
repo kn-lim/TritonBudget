@@ -1,18 +1,21 @@
-package teammemes.tritonbudget;
+package teammemes.tritonbudget.Menus;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ExpandableListView;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
+import teammemes.tritonbudget.R;
 import teammemes.tritonbudget.db.MenuDataSource;
 
-public class MenuPines_Main extends AppCompatActivity {
+/**
+ * Created by Bao on 3/8/2017.
+ */
+
+public class MenuOceanView_Main extends AppCompatActivity{
     public MenuDataSource DS;
-    String dhname = "Pines";
+    String dhname = "Oceanview Terrace";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,24 +28,14 @@ public class MenuPines_Main extends AppCompatActivity {
         //
         /*
         List<String> listDataHeader = new ArrayList<>();
-        String[] mItemHeaders = new String[16];
+        String[] mItemHeaders = new String[5];
         //String[] mItemHeaders = getResources().getStringArray(R.array.items_array_expandable_level_one);
 
-        mItemHeaders[1] = "Breakfast Special";
-        mItemHeaders[2] = "Standard Breakfast";
-        mItemHeaders[3] = "Value 4 U";
-        mItemHeaders[4] = "Breakfast A La Carte";
-        mItemHeaders[5] = "Fruit Bar";
-        mItemHeaders[6] = "Parfait Bar";
-        mItemHeaders[7] = "Cantina Entrees";
-        mItemHeaders[8] = "Cantina Sides";
-        mItemHeaders[9] = "Pizza";
-        mItemHeaders[10] = "Trattoria";
-        mItemHeaders[11] = "Sides";
-        mItemHeaders[12] = "Chili";
-        mItemHeaders[13] = "Build Your Own Salad / Fruit / Parfait";
-        mItemHeaders[14] = "Stirfry";
-        mItemHeaders[15] = "Sushi";
+        mItemHeaders[1] = "Spice Station";
+        mItemHeaders[2] = "Sliceria by Scholars";
+        mItemHeaders[3] = "40/40/20";
+        mItemHeaders[4] = "Scholars Pizza";
+
         Collections.addAll(listDataHeader, mItemHeaders);
         */
         List<String> listCategories ;

@@ -8,7 +8,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.util.Log;
 
-import teammemes.tritonbudget.Menu;
+import teammemes.tritonbudget.Menus.Menu;
 
 
 /**

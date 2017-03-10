@@ -1,4 +1,4 @@
-package teammemes.tritonbudget;
+package teammemes.tritonbudget.Menus;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -16,6 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import teammemes.tritonbudget.R;
 import teammemes.tritonbudget.db.MenuDataSource;
 
 
@@ -45,7 +46,7 @@ public class MenuDisplay_ParentLevelAdapter extends BaseExpandableListAdapter {
         //mListData_SecondLevel_Map = SecondLevel_Map;
         int parentCount = mListDataHeader.size();
 
-        for (int i = 1; i < parentCount; i++) {
+        for (int i = 0; i < parentCount; i++) {
 
             String content = mListDataHeader.get(i);
 

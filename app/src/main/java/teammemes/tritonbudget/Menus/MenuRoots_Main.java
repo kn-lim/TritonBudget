@@ -1,21 +1,17 @@
-package teammemes.tritonbudget;
+package teammemes.tritonbudget.Menus;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ExpandableListView;
-import java.util.ArrayList;
-import java.util.Collections;
+
 import java.util.List;
 
+import teammemes.tritonbudget.R;
 import teammemes.tritonbudget.db.MenuDataSource;
 
-/**
- * Created by Bao on 3/8/2017.
- */
-
-public class MenuOceanView_Main extends AppCompatActivity{
+public class MenuRoots_Main extends AppCompatActivity {
     public MenuDataSource DS;
-    String dhname = "Oceanview Terrace";
+    String dhname = "Roots";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +24,16 @@ public class MenuOceanView_Main extends AppCompatActivity{
         //
         /*
         List<String> listDataHeader = new ArrayList<>();
-        String[] mItemHeaders = new String[5];
+        String[] mItemHeaders = new String[8];
         //String[] mItemHeaders = getResources().getStringArray(R.array.items_array_expandable_level_one);
 
-        mItemHeaders[1] = "Spice Station";
-        mItemHeaders[2] = "Sliceria by Scholars";
-        mItemHeaders[3] = "40/40/20";
-        mItemHeaders[4] = "Scholars Pizza";
+        mItemHeaders[1] = "Root Sum";
+        mItemHeaders[2] = "Root Slab";
+        mItemHeaders[3] = "Field and Farm";
+        mItemHeaders[4] = "Soup and Chili";
+        mItemHeaders[5] = "Sides";
+        mItemHeaders[6] = "Smoothies";
+        mItemHeaders[7] = "Dessert";
 
         Collections.addAll(listDataHeader, mItemHeaders);
         */

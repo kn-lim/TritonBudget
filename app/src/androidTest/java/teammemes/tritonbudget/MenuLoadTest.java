@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
 
 import java.util.List;
 
+import teammemes.tritonbudget.Menus.Menu;
 import teammemes.tritonbudget.db.MenuDataSource;
 
 import static org.junit.Assert.assertEquals;
