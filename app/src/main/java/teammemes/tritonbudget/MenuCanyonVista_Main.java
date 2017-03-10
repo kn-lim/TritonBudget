@@ -27,7 +27,7 @@ public class MenuCanyonVista_Main extends AppCompatActivity {
         DS = new MenuDataSource(this);
 
         //
-
+        /*
         List<String> listDataHeader = new ArrayList<>();
         String[] mItemHeaders = new String[17];
         //String[] mItemHeaders = getResources().getStringArray(R.array.items_array_expandable_level_one);
@@ -50,11 +50,15 @@ public class MenuCanyonVista_Main extends AppCompatActivity {
 
 
         Collections.addAll(listDataHeader, mItemHeaders);
+        */
+        List<String> listCategories ;
+        listCategories = DS.getCategoriesByLocation(dhname);
+
         final ExpandableListView mExpandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Parent);
         if (mExpandableListView != null) {
 
             //MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listDataHeader, mListData_SecondLevel_Map);
-            MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listDataHeader, DS,dhname);
+            MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listCategories, DS,dhname);
             mExpandableListView.setAdapter(parentLevelAdapter);
             // display only one expand item
 //            mExpandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {

@@ -37,15 +37,11 @@ public class Checkout_Adapter extends ArrayAdapter<TranHistory>{
         //go into xml files and change id names
 
         TextView itemName = (TextView) conView.findViewById(R.id.COItemName);
-        TextView itemQuantity = (TextView) conView.findViewById(R.id.COItemQuantity);
         TextView itemPrice = (TextView) conView.findViewById(R.id.COItemPrice);
-        TextView multItemPrice = (TextView) conView.findViewById(R.id.COItemTPrice);
 
 
         itemName.setText(item.getName());
-        itemQuantity.setText(item.getQuantity());
         itemPrice.setText(String.valueOf(item.getCost()));
-        multItemPrice.setText(String.valueOf(item.getQuantity()*item.getCost()));
 
         return conView;
     }

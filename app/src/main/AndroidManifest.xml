@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Enter_Info">
+        <activity android:name=".Enter_Info"
+            android:theme="@style/EnterInfoTheme">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -39,7 +40,11 @@
 
         <activity android:name=".DiningHallSelection" />
 
-        <activity android:name=".History" />
+        <activity android:name=".History">
+        <intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
 
         <activity android:name=".PurchaseMenu">
             <intent-filter>

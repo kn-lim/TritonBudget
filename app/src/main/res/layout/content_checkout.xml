@@ -14,35 +14,34 @@
     tools:showIn="@layout/activity_checkout">
 
 
-<TextView
-    android:id="@+id/COItemName"
-    android:text="TextView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:textAppearance="?android:attr/textAppearanceSmall" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/COItemName_Border">
 
-<TextView
-    android:id="@+id/COItemPrice"
-    android:text="TextView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:textAppearance="?android:attr/textAppearanceSmall" />
+        <TextView
+        android:id="@+id/COItemName"
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
 
-<TextView
-    android:id="@+id/COItemTPrice"
-    android:text="TextView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:textAppearance="?android:attr/textAppearanceSmall" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/COItemPrice_Border">
 
-<TextView
-    android:id="@+id/COItemQuantity"
-    android:text="TextView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:textAppearance="?android:attr/textAppearanceSmall" />
+        <TextView
+        android:id="@+id/COItemPrice"
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
 </RelativeLayout>

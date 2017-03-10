@@ -11,6 +11,8 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -123,6 +125,25 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
 
                 final EditText input = (EditText) deductView.findViewById(R.id.deduct_input);
 
+                //This TextChangedListener is used to stop the user from inputing more than two decimal points
+                input.addTextChangedListener(new TextWatcher() {
+                    //Two methods needed to create new TextWatcher
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {}
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+                    //After the text is changed this method removes the extra characters if any
+                    public void afterTextChanged(Editable s) {
+                        String temp = s.toString();
+                        int posDot = temp.indexOf(".");
+                        if (posDot <= 0) {
+                            return;
+                        }
+                        if (temp.length() - posDot - 1 > 2) {
+                            s.delete(posDot + 3, s.length()-1);
+                        }
+                    }
+                });
+
                 // Set up the buttons
                 builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                     @Override
@@ -158,6 +179,25 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
 
                 final EditText input = (EditText) deductView.findViewById(R.id.deduct_input);
 
+                //This TextChangedListener is used to stop the user from inputing more than two decimal points
+                input.addTextChangedListener(new TextWatcher() {
+                    //Two methods needed to create new TextWatcher
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {}
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+                    //After the text is changed this method removes the extra characters if any
+                    public void afterTextChanged(Editable s) {
+                        String temp = s.toString();
+                        int posDot = temp.indexOf(".");
+                        if (posDot <= 0) {
+                            return;
+                        }
+                        if (temp.length() - posDot - 1 > 2) {
+                            s.delete(posDot + 3, s.length()-1);
+                        }
+                    }
+                });
+
                 // Set up the buttons
                 builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                     @Override
@@ -165,7 +205,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                         double value = Double.parseDouble(input.getText().toString());
                         usr.setBalance(usr.getBalance() + value);
 
-                        TranHistory transaction = new TranHistory(1,"Added Dining Dollars",1,new Date(), value);
+                        TranHistory transaction = new TranHistory(1,"Added Dining Dollars",1,new Date(), 0 - value);
                         database.createTransaction(transaction);
 
                         Toast.makeText(Settings.this, "Added $" + value + " Dining Dollars", Toast.LENGTH_LONG).show();
@@ -201,7 +241,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //CHANGE THIS
+                        //TODO: CHANGE THIS
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

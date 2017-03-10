@@ -39,34 +39,34 @@
                         android:paddingTop="8dp"
                         android:layout_weight="1" />
 
-                    <ListView
-                        android:text="Recently Purchased Items"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/ItemsContainer"
-                        android:layout_weight="1" />
-
                 </LinearLayout>
 
                 </LinearLayout>
         </ScrollView>
 
-        <android.support.design.widget.AppBarLayout
+        <ListView
+            android:text="Recently Purchased Items"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/AppTheme.AppBarOverlay">
+            android:layout_height="match_parent"
+            android:id="@+id/ItemsContainer"
+            android:layout_weight="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="103dp" />
 
-            <include layout="@layout/content_checkout"
-                 />
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="New Button"
+            android:id="@+id/ConfirmPurchaseBtn"
+            android:src="@drawable/checkmark"
+            android:background="@drawable/circle"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"/>
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-        </android.support.design.widget.AppBarLayout>
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

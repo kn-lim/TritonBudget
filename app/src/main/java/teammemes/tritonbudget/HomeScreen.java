@@ -219,8 +219,9 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
 
         //Formats the color, gold = RGB 255 235 59 | HSV 54 77 100 | FFEB3B
         //Green = 113 197 144 | 142 43 77 | 71C590
-        ForegroundColorSpan colorDol = new ForegroundColorSpan(rgb(113, 197, 144));
-        ForegroundColorSpan colorCents = new ForegroundColorSpan(rgb(113, 197, 144));
+        //BLU = 2 136 209
+        ForegroundColorSpan colorDol = new ForegroundColorSpan(rgb(3,169,244));
+        ForegroundColorSpan colorCents = new ForegroundColorSpan(rgb(3,169,244));
 
         dollars.setSpan(colorDol, 0, dollarStr.length(), 0);
         cents.setSpan(colorCents, 0, centStr.length(), 0);
@@ -258,7 +259,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
             TranHistory transaction = new TranHistory(1,"Deduction",1,new Date(), deduction);
             database.createTransaction(transaction);
 
-            Toast.makeText(this,"Deducted " + deduction, Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Deducted $" + deduction, Toast.LENGTH_LONG).show();
 
             usr.setBalance(balance);
             renderBalances();
