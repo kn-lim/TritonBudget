@@ -3,12 +3,17 @@ package teammemes.tritonbudget.db;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+
+import teammemes.tritonbudget.History;
 
 
 /**
@@ -39,9 +44,68 @@ public class HistoryDataSource extends BaseDataSource{
         return newTran;
     }
 
+    public TranHistory getTransaction(int id)  {
+        try {
+            SQLiteDatabase db = dbHelper.getReadableDatabase();
+            Cursor cursor = db.query(HistoryDB.Table_Transaction, HistoryDB.allColumns, HistoryDB.ID + " = " +
+                    id, null, null, null, null);
+            cursor.moveToFirst();
+            TranHistory tran = null;
+            if (!cursor.isAfterLast()) {
+                SimpleDateFormat dformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                tran = new TranHistory(id, cursor.getString(cursor.getColumnIndex(HistoryDB.NAME)),
+                        cursor.getInt(cursor.getColumnIndex(HistoryDB.QUANTITY)),
+                        dformat.parse(cursor.getString(cursor.getColumnIndex(HistoryDB.TDATE))),
+                        cursor.getDouble(cursor.getColumnIndex(HistoryDB.COST)));
+            }
+            // make sure to close the cursor
+            cursor.close();
+            return tran;
+
+        }
+        catch (Exception e) {
+            Log.e("get transaction", "failed", e);
+        }
+        return null;
+
+    }
+
+    /**
+     * Update if exists otherwise insert
+     * @param trans
+     * @return
+     */
+    public boolean updateTranHistory(TranHistory trans){
+        TranHistory tHistory = getTransaction(trans.getId());
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(HistoryDB.NAME,trans.getName());
+        contentValues.put(HistoryDB.QUANTITY,trans.getQuantity());
+        SimpleDateFormat dformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        contentValues.put(HistoryDB.TDATE, dformat.format(trans.getTdate()));
+        contentValues.put(HistoryDB.COST, trans.getCost());
+
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        long result = 0;
+        if(tHistory == null){
+            result = db.insert(HistoryDB.Table_Transaction,null,contentValues);
+        }else{
+            result = db.update(HistoryDB.Table_Transaction, contentValues, "ID = "+ trans.getId(),null);
+        }
+
+        if(result == -1){
+            return false;
+        }
+        else{
+            return true;
+        }
+
+    }
+
     public List<TranHistory> getAllTransaction() {
         List<TranHistory> transactions = new ArrayList<TranHistory>();
-        Cursor cursor = database.query(HistoryDB.Table_Transaction, HistoryDB.allColumns, null, null, null, null, null);
+        // order by TDate
+        Cursor cursor = database.query(HistoryDB.Table_Transaction, HistoryDB.allColumns, null, null, null, null, "Tdate ");
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             TranHistory transaction = cursorToTransaction(cursor);
