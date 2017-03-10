@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
-            android:background="#ffffff"
+            android:background="@drawable/border_set_top_bottom"
             android:requiresFadingEdge="horizontal">
 
             <TextView
