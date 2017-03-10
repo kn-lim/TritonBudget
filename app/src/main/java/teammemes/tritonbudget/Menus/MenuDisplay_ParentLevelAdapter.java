@@ -1,4 +1,4 @@
-package teammemes.tritonbudget;
+package teammemes.tritonbudget.Menus;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -16,6 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import teammemes.tritonbudget.R;
 import teammemes.tritonbudget.db.MenuDataSource;
 
 

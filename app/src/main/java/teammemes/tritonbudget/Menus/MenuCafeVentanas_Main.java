@@ -1,22 +1,17 @@
-package teammemes.tritonbudget;
-
-/**
- * Created by Danny on 3/8/17.
- */
+package teammemes.tritonbudget.Menus;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ExpandableListView;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
+import teammemes.tritonbudget.R;
 import teammemes.tritonbudget.db.MenuDataSource;
 
-public class MenuCanyonVista_Main extends AppCompatActivity {
+public class MenuCafeVentanas_Main extends AppCompatActivity {
     public MenuDataSource DS;
-    String dhname = "Canyon Vista";
+    String dhname = "Cafe Ventanas";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,33 +22,30 @@ public class MenuCanyonVista_Main extends AppCompatActivity {
         DS = new MenuDataSource(this);
 
         //
-        /*
-        List<String> listDataHeader = new ArrayList<>();
-        String[] mItemHeaders = new String[17];
-        //String[] mItemHeaders = getResources().getStringArray(R.array.items_array_expandable_level_one);
-        mItemHeaders[1] = "Value4u";
-        mItemHeaders[2] = "Breakfast Special";
-        mItemHeaders[3] = "Daily Hot Breakfast";
-        mItemHeaders[4] = "Cold Breakfast";
-        mItemHeaders[5] = "Breakfast Sides";
-        mItemHeaders[6] = "Daily Cold Breakfast";
-        mItemHeaders[7] = "Mediterranean";
-        mItemHeaders[8] = "Canyon Noodles";
-        mItemHeaders[9] = "Tecolote Grill";
-        mItemHeaders[10] = "Grill Sides";
-        mItemHeaders[11] = "Cliff Hanger Deli";
-        mItemHeaders[12] = "Pizza";
-        mItemHeaders[13] = "Salad Bar";
-        mItemHeaders[14] = "Soup";
-        mItemHeaders[15] = "Chopping Block";
-        mItemHeaders[16] = "Chopping Block Sides";
-
-
-        Collections.addAll(listDataHeader, mItemHeaders);
-        */
         List<String> listCategories ;
         listCategories = DS.getCategoriesByLocation(dhname);
+        /*
+        List<String> listDataHeader = new ArrayList<>();
+        String[] mItemHeaders = new String[16];
+        //String[] mItemHeaders = getResources().getStringArray(R.array.items_array_expandable_level_one);
 
+        mItemHeaders[1] = "Breakfast Special";
+        mItemHeaders[2] = "Daily Hot Breakfast";
+        mItemHeaders[3] = "Cold Breakfast";
+        mItemHeaders[4] = "Value4u";
+        mItemHeaders[5] = "Windows of the World";
+        mItemHeaders[6] = "Windows Sides";
+        mItemHeaders[7] = "City Dish Entrees";
+        mItemHeaders[8] = "City Dish Sides";
+        mItemHeaders[9] = "Deli";
+        mItemHeaders[10] = "Grill";
+        mItemHeaders[11] = "Grill Sides";
+        mItemHeaders[12] = "Pizza Oven";
+        mItemHeaders[13] = "Soup";
+        mItemHeaders[14] = "Pasta";
+        mItemHeaders[15] = "Pasta Sides";
+        Collections.addAll(listDataHeader, mItemHeaders);
+        */
         final ExpandableListView mExpandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Parent);
         if (mExpandableListView != null) {
 

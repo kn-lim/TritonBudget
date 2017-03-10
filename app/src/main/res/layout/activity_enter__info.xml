@@ -29,7 +29,7 @@
             android:layout_marginBottom="-220dp"
             android:layout_marginTop="-20dp"
             android:layout_weight="0.29"
-            app:srcCompat="@raw/logo" />
+            app:srcCompat="@drawable/logo" />
 
         <TextView
             android:id="@+id/PutNameHere"

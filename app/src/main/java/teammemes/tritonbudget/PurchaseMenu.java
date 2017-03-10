@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 
 import java.util.ArrayList;
-import java.util.Date;
+
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -24,8 +24,8 @@ import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
+import teammemes.tritonbudget.Menus.Menu;
 import teammemes.tritonbudget.db.MenuDataSource;
-import teammemes.tritonbudget.db.TranHistory;
 
 import static android.view.Gravity.CENTER;
 

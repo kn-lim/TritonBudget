@@ -1,4 +1,4 @@
-package teammemes.tritonbudget;
+package teammemes.tritonbudget.Menus;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import java.util.List;
 import java.util.Map;
+
+import teammemes.tritonbudget.R;
 
 public class MenuDisplay_SecondLevelAdapter extends BaseExpandableListAdapter {
     private final Context mContext;

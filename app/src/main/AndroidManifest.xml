@@ -72,61 +72,61 @@
 
         <activity android:name=".testClick" />
 
-        <activity android:name=".Menu64Degrees_Main">
+        <activity android:name=".Menus.Menu64Degrees_Main">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".MenuOceanView_Main">
+        <activity android:name=".Menus.MenuOceanView_Main">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".MenuBistro_Main">
+        <activity android:name=".Menus.MenuBistro_Main">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".MenuCafeVentanas_Main">
+        <activity android:name=".Menus.MenuCafeVentanas_Main">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".MenuCanyonVista_Main">
+        <activity android:name=".Menus.MenuCanyonVista_Main">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".MenuClubMed_Main">
+        <activity android:name=".Menus.MenuClubMed_Main">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".MenuFoodworx_Main">
+        <activity android:name=".Menus.MenuFoodworx_Main">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".MenuGoodys_Main">
+        <activity android:name=".Menus.MenuGoodys_Main">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".MenuPines_Main">
+        <activity android:name=".Menus.MenuPines_Main">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".MenuRoots_Main">
+        <activity android:name=".Menus.MenuRoots_Main">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
