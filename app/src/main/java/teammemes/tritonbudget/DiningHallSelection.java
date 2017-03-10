@@ -51,6 +51,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
     private ActionBarDrawerToggle mToggle;
     private Toolbar mToolbar;
     private User usr;
+    String  source;
 
     public DiningHallSelection() {
     }
@@ -124,7 +125,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
             format.setSpan(relcolor, dnamelenghts[i], text.length(), 0);
             dtv[i].setText(format);
         }
-
+        source=getIntent().getExtras().getString("FROM");
         /*Listeners*/
         /*TODO: This can be optimized with a for-loop. It is currently left like this for back-end
         to tinker with*/
@@ -133,49 +134,91 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
         sixtyfour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, Menu64Degrees_Main.class);
-                startActivity(intent);
+                if(source.equals("PURCHASE"))
+                {
+                    Intent intent = new Intent(DiningHallSelection.this,PurchaseMenu.class);
+                    intent.putExtra("FROM","64 DEGREES");
+                }
+                else {
+                    //Attempt to open another activity (Dining Hall Menu)
+                    Intent intent = new Intent(DiningHallSelection.this, Menu64Degrees_Main.class);
+                    startActivity(intent);
+                }
             }
         });
         cafev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, MenuCafeVentanas_Main.class);
-                startActivity(intent);
+                if(source.equals("PURCHASE"))
+                {
+                    Intent intent = new Intent(DiningHallSelection.this,PurchaseMenu.class);
+                    intent.putExtra("FROM","Cafe Ventanas");
+                }
+                else {
+                    //Attempt to open another activity (Dining Hall Menu)
+                    Intent intent = new Intent(DiningHallSelection.this, MenuCafeVentanas_Main.class);
+                    startActivity(intent);
+                }
             }
         });
         canyonv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, MenuCanyonVista_Main.class);
-                startActivity(intent);
+                if(source.equals("PURCHASE"))
+                {
+                    Intent intent = new Intent(DiningHallSelection.this,PurchaseMenu.class);
+                    intent.putExtra("FROM","Canyon Vista");
+                }
+                else {
+                    //Attempt to open another activity (Dining Hall Menu)
+                    Intent intent = new Intent(DiningHallSelection.this, MenuCanyonVista_Main.class);
+                    startActivity(intent);
+                }
             }
         });
         foodworx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, MenuFoodworx_Main.class);
-                startActivity(intent);
+                if(source.equals("PURCHASE"))
+                {
+                    Intent intent = new Intent(DiningHallSelection.this,PurchaseMenu.class);
+                    intent.putExtra("FROM","FOOD WORX");
+                }
+                else {
+                    //Attempt to open another activity (Dining Hall Menu)
+                    Intent intent = new Intent(DiningHallSelection.this, MenuFoodworx_Main.class);
+                    startActivity(intent);
+                }
             }
         });
         ovt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, MenuOceanView_Main.class);
-                startActivity(intent);
+                if(source.equals("PURCHASE"))
+                {
+                    Intent intent = new Intent(DiningHallSelection.this,PurchaseMenu.class);
+                    intent.putExtra("FROM","OCIEAN VIEW");
+                }
+                else {
+                    //Attempt to open another activity (Dining Hall Menu)
+                    Intent intent = new Intent(DiningHallSelection.this, MenuOceanView_Main.class);
+                    startActivity(intent);
+                }
             }
         });
         pines.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Attempt to open another activity (Dining Hall Menu)
-                Intent intent = new Intent(DiningHallSelection.this, MenuPines_Main.class);
-                startActivity(intent);
+                if(source.equals("PURCHASE"))
+                {
+                    Intent intent = new Intent(DiningHallSelection.this,PurchaseMenu.class);
+                    intent.putExtra("FROM","Pines");
+                }
+                else {
+                    //Attempt to open another activity (Dining Hall Menu)
+                    Intent intent = new Intent(DiningHallSelection.this, MenuPines_Main.class);
+                    startActivity(intent);
+                }
             }
         });
 

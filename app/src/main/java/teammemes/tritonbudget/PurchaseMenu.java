@@ -89,7 +89,7 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
 
         //Used for when database is working
         database = new MenuDataSource(this);
-        transactions = database.getMenusByLocation("Pines");
+        transactions = database.getMenusByLocation(getIntent().getExtras().getString("FROM"));
         numberOfPurchase = new int[transactions.size()];
         dateFormat = new SimpleDateFormat("MM/dd/yyyy");
         myFab = (FloatingActionButton) findViewById(R.id.myFAB);
