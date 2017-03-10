@@ -255,7 +255,9 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
         if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
             mDrawerLayout.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            Intent back = new Intent(this, HomeScreen.class);
+            startActivity(back);
+            //super.onBackPressed();
         }
     }
 
