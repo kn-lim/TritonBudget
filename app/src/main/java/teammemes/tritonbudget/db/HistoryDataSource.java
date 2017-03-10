@@ -117,6 +117,18 @@ public class HistoryDataSource extends BaseDataSource{
         return transactions;
     }
 
+    public boolean deleteTransaction (int id) {
+
+        String Id = String.valueOf(id);
+        long result = database.delete(HistoryDB.Table_Transaction, "ID = ?",new String[] {Id});
+        if(result == -1){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
   public double[] getTransactionByWeek() {
         double[] cost = new double[7];
         List<TranHistory> histories= this.getAllTransaction();
