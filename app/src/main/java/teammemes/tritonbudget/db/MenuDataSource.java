@@ -80,6 +80,23 @@ public class MenuDataSource extends BaseDataSource {
         cursor.close();
         return menus;
     }
+    public List<String> getCategoriesByLocation(String location) {
+        List<String> menus = new ArrayList<String>();
+        Cursor cursor = database.query(MenuDB.Table_Menu, MenuDB.allColumns,
+                MenuDB.LOCATIONCOL + "= '" + location + "'", null, null, null, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Menu menu = cursorToMenu(cursor);
+            if((menus.size() == 0) || (!menus.get(menus.size()-1).equals(menu.getCategory()))) {
+                menus.add(menu.getCategory());
+            }
+            cursor.moveToNext();
+        }
+        // make sure to close the cursor
+        cursor.close();
+        return menus;
+    }
+
 
     public List<Menu> getMenusByCategory(String category) {
         List<Menu> menus = new ArrayList<Menu>();
