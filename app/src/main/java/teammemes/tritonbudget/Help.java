@@ -101,7 +101,7 @@ public class Help extends AppCompatActivity implements NavigationView.OnNavigati
                 return true;
             case R.id.nav_menus:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
-                nextScreen = new Intent(this, Menu.class);
+                nextScreen = new Intent(this, DiningHallSelection.class);
                 nextScreen.putExtra("FROM", "Help");
                 startActivity(nextScreen);
                 return true;

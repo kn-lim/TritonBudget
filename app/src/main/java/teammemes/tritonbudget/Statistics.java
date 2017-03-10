@@ -145,12 +145,18 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
                 nextScreen.putExtra("FROM", "Statistics");
                 startActivity(nextScreen);
                 return true;
-            /* Cases for future options
             case R.id.nav_settings:
-                return false;
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Settings.class);
+                nextScreen.putExtra("FROM", "Statistics");
+                startActivity(nextScreen);
+                return true;
             case R.id.nav_help:
-                return false:
-            */
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Help.class);
+                nextScreen.putExtra("FROM", "Statistics");
+                startActivity(nextScreen);
+                return true;
             default:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return false;
