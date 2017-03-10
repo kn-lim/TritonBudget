@@ -190,60 +190,9 @@ public class HistoryDataSource extends BaseDataSource{
         return cost;
     }
     public double getDailyAverage() {
-        double cost = 0;
-        List<TranHistory> histories= this.getAllTransaction();
-        int currDay = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
-        int smallestday=9999;
-        for(int i=0;i<histories.size();i++)
-        {
-            cost += histories.get(i).getCost();
-            Calendar cal=Calendar.getInstance();
-            cal.setTime(histories.get(i).getTdate());
-            int day = cal.get(Calendar.DAY_OF_YEAR);
-            if(smallestday<167 && day<167)
-            {
-                if(day<smallestday)
-                {
-                    smallestday=day;
-                }
-            }
-            else if(smallestday<167&&day>268)
-            {
-                smallestday=day;
-            }
-            else if(smallestday>268&&currDay>268)
-            {
-                if(day<smallestday)
-                {
-                    smallestday=day;
-                }
-            }
-        }
 
-        if(smallestday>268&&currDay>268)
-        {
-<<<<<<< HEAD
-            return cost/(currDay-smallestday);
-        }
-        else if(smallestday>268&&currDay<167)
-        {
-            return cost/(365-smallestday+currDay);
-        }
-        else
-        {
-            return cost/(currDay-smallestday);
-=======
-            return cost/(currDay-smallestday+1);
-        }
-        else if(smallestday>268&&currDay<167)
-        {
-            return cost/(365-smallestday+currDay+1);
-        }
-        else
-        {
-            return cost/(currDay-smallestday+1);
->>>>>>> 302faa7c1a89cfd88a104ae015a8ac26dd6ae885
-        }
+        int curDay=Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
+        return getThisWeekTotal()/curDay;
     }
 
     private TranHistory cursorToTransaction(Cursor cursor) {

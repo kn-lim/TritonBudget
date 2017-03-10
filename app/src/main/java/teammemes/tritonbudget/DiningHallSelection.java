@@ -16,7 +16,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
+import teammemes.tritonbudget.Menus.Menu64Degrees_Main;
+import teammemes.tritonbudget.Menus.MenuBistro_Main;
+import teammemes.tritonbudget.Menus.MenuCafeVentanas_Main;
+import teammemes.tritonbudget.Menus.MenuCanyonVista_Main;
+import teammemes.tritonbudget.Menus.MenuClubMed_Main;
+import teammemes.tritonbudget.Menus.MenuFoodworx_Main;
+import teammemes.tritonbudget.Menus.MenuGoodys_Main;
+import teammemes.tritonbudget.Menus.MenuOceanView_Main;
+import teammemes.tritonbudget.Menus.MenuPines_Main;
+import teammemes.tritonbudget.Menus.MenuRoots_Main;
 
 /* Author: Andy Lum */
 
@@ -246,7 +255,9 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
         if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
             mDrawerLayout.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            Intent back = new Intent(this, HomeScreen.class);
+            startActivity(back);
+            //super.onBackPressed();
         }
     }
 

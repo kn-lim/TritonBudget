@@ -9,11 +9,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
+import teammemes.tritonbudget.Menus.Menu;
 import teammemes.tritonbudget.db.HistoryDataSource;
 import teammemes.tritonbudget.db.MenuDataSource;
 import teammemes.tritonbudget.db.TranHistory;
