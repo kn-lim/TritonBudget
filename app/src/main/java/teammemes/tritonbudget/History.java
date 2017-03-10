@@ -128,29 +128,20 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
      * Method: renderTransactions
      *
      * Parameters: transactions - The List of Transactions returned by the database
+     *             duration - this is the variable that specifies which transactions to show
      *
      * This method is used to render all of the transactions onto the history page.
      * If there are no transactions it adds a default message, however if there are
      * transactions it goes through each one putting them in the mainLayout.
      */
     private void renderTransactions(final List<TranHistory> transactions, final String duration) {
+        int transactionsShown = 0;
+
         //Resets the mainLayout
         mainLayout.removeAllViews();
         historyHashMap = new HashMap<Integer, TranHistory>();
 
-        //If there are no previous transactions, display the message
-        if (transactions.size() == 0){
-            TextView textView = new TextView(this);
-            textView.setText("No Transaction History to Display");
-            textView.setGravity(Gravity.CENTER);
-            textView.setTextColor(Color.GRAY);
-            textView.setTextSize(50);
-            textView.setPadding(8, 400, 8, 8);
-            textView.setTextColor(textView.getTextColors().withAlpha(64));
-            textView.setLayoutParams(layoutParams);
-            mainLayout.addView(textView);
-        }
-
+        //Creates the date that it will stop showing transactions at.
         Calendar endDate = (Calendar) Calendar.getInstance().clone();
         if (duration.equals("week")){
             endDate.add(Calendar.DATE, -7);
@@ -176,9 +167,11 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
             transCal.setTime(transactions.get(i).getTdate());
             Date transDate = transCal.getTime();
 
+            //If the date is befor the last date to show skip it.
             if (transDate.before(comparison))
                 continue;
 
+            //If this is a new date, it creates a new date display
             if(!dateFormat.format(transactions.get(i).getTdate()).equals(prevDate)){
                 prevDate = dateFormat.format(transactions.get(i).getTdate()); //Saves the date
 
@@ -199,13 +192,17 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                 mainLayout.addView(DateBorder);
             }
 
+            //Creates the linear layout to hold the transaction
             final LinearLayout TransactionBorder = new LinearLayout(this);
             TransactionBorder.setOrientation(LinearLayout.HORIZONTAL);
             TransactionBorder.setLayoutParams(layoutParams);
             TransactionBorder.setBackgroundResource(R.drawable.border_set_top);
             TransactionBorder.setId(id++);
+
+            //puts the transaction into the hashmap to be accessible later
             historyHashMap.put(TransactionBorder.getId(),transaction);
 
+            //Creates the name of the transaction
             TextView name_display = new TextView(this);
             name_display.setPaddingRelative(8,8,8,8);
             name_display.setPadding(8,8,8,8);
@@ -213,35 +210,47 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
             name_display.setTextSize(20);
             name_display.setLayoutParams(textParams);
 
+            //Creates the cost of the transaction
             TextView cost_display = new TextView(this);
             cost_display.setPaddingRelative(8,8,8,8);
             cost_display.setPadding(8,8,15,8);
+            cost_display.setText("$" + Double.toString(transactions.get(i).getCost()));
+            cost_display.setTextSize(20);
+            cost_display.setLayoutParams(textParams);
+            cost_display.setGravity(Gravity.RIGHT);     //Aligns it on the right
+
+            //Changes the color depending on whether it was added or subtracted
             if (!transactions.get(i).getName().equals("Added Dining Dollars")) {
                 cost_display.setTextColor(Color.RED);
             }
             else {
                 cost_display.setTextColor(Color.GREEN);
             }
-            cost_display.setText("$" + Double.toString(transactions.get(i).getCost()));
-            cost_display.setTextSize(20);
-            cost_display.setLayoutParams(textParams);
-            cost_display.setGravity(Gravity.RIGHT);     //Aligns it on the right
+
 
             //Adds the two displays to the transaction line
             TransactionBorder.addView(name_display);
             TransactionBorder.addView(cost_display);
 
+            //Creates the onLongClickListener for the transaction:
+            //      If the transaction is held an edit button appears
             TransactionBorder.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
+                    //If the edit button is already visible do nothing
                     if (TransactionBorder.getChildCount() == 3)
                         return false;
+
+                    //Create the edit button
                     Button edit = new Button(v.getContext());
                     edit.setText("Edit");
                     edit.setLayoutParams(btnParams);
                     edit.setPadding(0,0,0,0);
                     edit.setTextSize(10);
 
+                    //Set the onClickListener for the button:
+                    //      If the edit button is clicked, it brings up a dialog allowing the user
+                    //      to edit the transaction
                     edit.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -281,17 +290,18 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                             builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    //Gets the input value and then deducts the balance and updates the balances
-                                    //on the Home Screen
+                                    //Gets the input value and then updates the transaction
                                     String value= input.getText().toString();
                                     TranHistory toChange = historyHashMap.get(TransactionBorder.getId());
                                     double prevCost = toChange.getCost();
                                     double newCost = Double.parseDouble(value);
                                     deductBalance(prevCost, newCost);
                                     toChange.setCost(Double.parseDouble(value));
+                                    database.updateTranHistory(toChange);
                                     renderTransactions(transactions,duration);
                                 }
                             });
+                            //Removes the transaction
                             builder.setNeutralButton("Delete",new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
@@ -299,6 +309,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                                     double prevCost = toChange.getCost();
                                     deductBalance(prevCost, 0);
                                     transactions.remove(toChange);
+                                    database.deleteTransaction(toChange.getId());
                                     renderTransactions(transactions,duration);
                                     dialog.cancel();
                                 }
@@ -307,6 +318,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     dialog.cancel();
+                                    renderTransactions(transactions,duration);
                                 }
                             });
                             builder.show();
@@ -322,21 +334,43 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
 
             //Adds the transaction to the main page
             mainLayout.addView(TransactionBorder);
+            transactionsShown++;
+        }
 
+        //If there are no previous transactions, display the message
+        if (transactionsShown == 0){
+            TextView textView = new TextView(this);
+            textView.setText("No Transaction History to Display");
+            textView.setGravity(Gravity.CENTER);
+            textView.setTextColor(Color.GRAY);
+            textView.setTextSize(50);
+            textView.setPadding(8, 400, 8, 8);
+            textView.setTextColor(textView.getTextColors().withAlpha(64));
+            textView.setLayoutParams(layoutParams);
+            mainLayout.addView(textView);
+            System.out.println("Here");
+            return;
         }
     }
 
-    //This method is used to listen for the user clicking the menu button, and opens
-    //the drawer up
+    /*
+     * Method: onOptionsItemSelected
+     *
+     * Parameters: item - the item on the toolbar selected
+     *
+     * This method listens for options being selected from the toolbar and responds accordingly.
+     * If a selection is made on which history items to show then it calls the renderTransaction
+     * method passing in the new selection to show the correct transactions.
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (mToggle.onOptionsItemSelected(item)) {
             return true;
         }
 
-        int id = item.getItemId();
+        int id = item.getItemId();  //Gets the id of the item selected
 
-        //noinspection SimplifiableIfStatement
+        // Checks which option is selected and renders the appropriate transactions on the page
         if (id == R.id.show_week) {
             renderTransactions(transactions,"week");
             return true;
@@ -353,8 +387,12 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         return super.onOptionsItemSelected(item);
     }
 
-    //This method is used to see if the back button was pressed while the drawer was open.
-    //If it is open and the back button is pressed, then close the drawer.
+    /*
+     * Method: onBackPressed
+     *
+     * This method is called when the user presses the back button. If the drawer is open it closes
+     * it and otherwise it calls the super method
+     */
     @Override
     public void onBackPressed() {
         if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -364,7 +402,14 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         }
     }
 
-    // This method is used to react when the user presses one of the options in the drawer
+    /*
+     * Method: onNavigationItemSelected
+     *
+     * Parameters: item - the navigation item selected
+     *
+     * This method chechks which item in the navigation menu was selected and creates the intent
+     * that then starts the selected activity
+     */
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Gets the id of the item that was selected
@@ -398,13 +443,13 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
             case R.id.nav_settings:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 nextScreen = new Intent(this, Settings.class);
-                nextScreen.putExtra("FROM", "Home");
+                nextScreen.putExtra("FROM", "History");
                 startActivity(nextScreen);
                 return true;
             case R.id.nav_help:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 nextScreen = new Intent(this, Help.class);
-                nextScreen.putExtra("FROM", "Home");
+                nextScreen.putExtra("FROM", "History");
                 startActivity(nextScreen);
                 return true;
             default:
@@ -414,26 +459,35 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
     }
 
     /*
- * Method: deductBalance
- *
- * Parameters: deduction - the amount that wants to be deducted from the users balance
- *
- * This method gets the user's balance and subtracts the deduction. If the deduction is more
- * than the remaining balance, then it shows an error message. Otherwise it creates and adds
- * a new transaction and sets the user's balance.
- */
+     * Method: deductBalance
+     *
+     * Parameters: prevCost - the previous cost of the transaction
+     *             newCost - the new cost of the transaction
+     *
+     * This method gets the user's balance and subtracts the deduction. If the deduction is more
+     * than the remaining balance, then it shows an error message. Otherwise it creates and adds
+     * a new transaction and sets the user's balance.
+     */
     public void deductBalance(double prevCost, double newCost){
+        //Gets the balance and calculates the deduction
         double balance = usr.getBalance();
         double deduction = prevCost - newCost;
+
+        // Calculates the new balance
         balance += deduction;
 
+        //If it is an invalid balance show an error message and return
         if (balance < 0) {
             Toast.makeText(this, "Cannot deduct more than remaining budget.", Toast.LENGTH_LONG).show();
             return;
         }
-        else {
+        //Otherwise show that it was edited and update the users balance.
+        else if (newCost == 0){
+            Toast.makeText(this,"Deleted " + deduction, Toast.LENGTH_LONG).show();
+            usr.setBalance(balance);
+        }
+        else{
             Toast.makeText(this,"Edited " + deduction, Toast.LENGTH_LONG).show();
-            //TODO: Edit the transaction in database
             usr.setBalance(balance);
         }
     }
