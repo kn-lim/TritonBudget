@@ -25,6 +25,8 @@ public class Checkout extends AppCompatActivity {
         populateCOList();
     }
     private void populateCOList() {
+        LinearLayout ll = (LinearLayout) findViewById(R.id.Checkout);
+
         Intent it=getIntent();
         ArrayList<String> transtring =  it.getStringArrayListExtra("Transactions");
         ArrayList<TranHistory> trans = new ArrayList<>();
@@ -36,15 +38,22 @@ public class Checkout extends AppCompatActivity {
             Menu men = data.getMenuById(Integer.parseInt(transtring.get(i)));
             trans.add(new TranHistory(men.getId(),men.getName(),Integer.parseInt(num.get(i)),new Date(),men.getCost()));
             total += (trans.get(i).getCost() * trans.get(i).getQuantity());
+            TextView t = makeTV(trans.get(i).getName(), String.valueOf(trans.get(i).getCost()));
+            ll.addView(t);
         }
-        Checkout_Adapter co_adapter = new Checkout_Adapter(this, trans);
-        ListView CO_View = (ListView) findViewById(R.id.ItemsContainer);
-        CO_View.setAdapter(co_adapter);
 
         change_balance(total);
-        
+
         Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
-        startActivity(intent);
+        //startActivity(intent);
+    }
+
+    private TextView makeTV(String name, String cost) {
+        TextView tv = new TextView(this);
+        tv.setLayoutParams(new LinearLayoutCompat.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        tv.setText(name + " " + cost);
+        tv.setTextSize(20);
+        return tv;
     }
 
     // add button then call this in listener

@@ -92,10 +92,11 @@ public class MenuDataSource extends BaseDataSource {
             }
             cursor.moveToNext();
         }
-        Menu menu1 = cursorToMenu(cursor);
+        /*Menu menu1 = cursorToMenu(cursor);
         if((menus.size() == 0) || (!menus.get(menus.size()-1).equals(menu1.getCategory()))) {
             menus.add(menu1.getCategory());
         }
+        */
         // make sure to close the cursor
         cursor.close();
         return menus;

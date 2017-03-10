@@ -222,6 +222,7 @@ public class HistoryDataSource extends BaseDataSource{
 
         if(smallestday>268&&currDay>268)
         {
+<<<<<<< HEAD
             return cost/(currDay-smallestday);
         }
         else if(smallestday>268&&currDay<167)
@@ -231,6 +232,17 @@ public class HistoryDataSource extends BaseDataSource{
         else
         {
             return cost/(currDay-smallestday);
+=======
+            return cost/(currDay-smallestday+1);
+        }
+        else if(smallestday>268&&currDay<167)
+        {
+            return cost/(365-smallestday+currDay+1);
+        }
+        else
+        {
+            return cost/(currDay-smallestday+1);
+>>>>>>> 302faa7c1a89cfd88a104ae015a8ac26dd6ae885
         }
     }
 

@@ -330,7 +330,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 return true;
             case R.id.nav_menus:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
-                nextScreen = new Intent(this, Menu.class);
+                nextScreen = new Intent(this, DiningHallSelection.class);
                 nextScreen.putExtra("FROM", "Settings");
                 startActivity(nextScreen);
                 return true;
