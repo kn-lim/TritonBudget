@@ -77,7 +77,7 @@ public class MenuDisplay_ParentLevelAdapter extends BaseExpandableListAdapter {
                 for (int i = 0; i < stringList.size(); i++) {
                     mItemChildOfChild = mContext.getResources().getStringArray(R.array.NT);
                     listChild = Arrays.asList(mItemChildOfChild);
-                    mListData_ThirdLevel_Map.put(stringList.get(i), listChild);
+                   // mListData_ThirdLevel_Map.put(stringList.get(i), listChild);
                 }
             }
         }
