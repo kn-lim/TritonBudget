@@ -1,64 +1,56 @@
 package teammemes.tritonbudget;
 
-import java.text.DateFormat;
-import java.text.FieldPosition;
-import java.text.ParsePosition;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import java.text.SimpleDateFormat;
-import java.util.AbstractList;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.*;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import teammemes.tritonbudget.db.HistoryDataSource;
 import teammemes.tritonbudget.db.TranHistory;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
 import static android.view.Gravity.CENTER;
-import static android.widget.ImageView.ScaleType.FIT_END;
 
 
-public class History extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class History extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private DrawerLayout mDrawerLayout;
-    private ActionBarDrawerToggle mToggle;
-    private Toolbar mToolbar;
-    private User usr;
-    private HistoryDataSource database;
     SimpleDateFormat dateFormat;
     LinearLayout.LayoutParams layoutParams, textParams, btnParams;
     LinearLayout mainLayout;
     List<TranHistory> transactions;
     Context context;
-    HashMap<Integer ,TranHistory> historyHashMap;
+    HashMap<Integer, TranHistory> historyHashMap;
     int id = 100;
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mToggle;
+    private Toolbar mToolbar;
+    private User usr;
+    private HistoryDataSource database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +81,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         navigationView.setNavigationItemSelectedListener(this);
 
         //Get the navigation drawer header and set's the name to user's name
-        View navHeaderView= navigationView.getHeaderView(0);
+        View navHeaderView = navigationView.getHeaderView(0);
         TextView usrName = (TextView) navHeaderView.findViewById(R.id.header_name);
         usrName.setText(usr.getName());
 
@@ -97,7 +89,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         textParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
         btnParams = new LinearLayout.LayoutParams(200, ViewGroup.LayoutParams.MATCH_PARENT);  //was (200,100)
-        btnParams.setMargins(0,0,0,0); //was (0,0,0,40)
+        btnParams.setMargins(0, 0, 0, 0); //was (0,0,0,40)
 
         //Fetches the main empty layout
         mainLayout = (LinearLayout) findViewById(R.id.page);
@@ -145,15 +137,13 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
 
         //Creates the date that it will stop showing transactions at.
         Calendar endDate = (Calendar) Calendar.getInstance().clone();
-        if (duration.equals("week")){
+        if (duration.equals("week")) {
             endDate.add(Calendar.DATE, -7);
             System.out.println(endDate.getTime());
-        }
-        else if (duration.equals("month")){
+        } else if (duration.equals("month")) {
             endDate.add(Calendar.MONTH, -1);
-        }
-        else if (duration.equals("quarter")){
-            endDate.set(2017,0,1);
+        } else if (duration.equals("quarter")) {
+            endDate.set(2017, 0, 1);
             System.out.println(endDate.getTime().toString());
         }
 
@@ -162,7 +152,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         //Goes through each of the transactions and puts them on the page
         String prevDate = "";
         Calendar transCal = (Calendar) Calendar.getInstance().clone();
-        for (int i = transactions.size() - 1; i >= 0; i--){
+        for (int i = transactions.size() - 1; i >= 0; i--) {
             //If this is a new date, it creates a new date display
             TranHistory transaction = transactions.get(i);
             transCal = (Calendar) Calendar.getInstance().clone();
@@ -174,7 +164,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                 continue;
 
             //If this is a new date, it creates a new date display
-            if(!dateFormat.format(transactions.get(i).getTdate()).equals(prevDate)){
+            if (!dateFormat.format(transactions.get(i).getTdate()).equals(prevDate)) {
                 prevDate = dateFormat.format(transactions.get(i).getTdate()); //Saves the date
 
                 LinearLayout DateBorder = new LinearLayout(this);
@@ -185,8 +175,8 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                 //Creates the date_display and adds it to the page
                 TextView date_display = new TextView(this);
                 date_display.setGravity(CENTER);
-                date_display.setPaddingRelative(8,8,8,8);
-                date_display.setPadding(8,8,8,8);
+                date_display.setPaddingRelative(8, 8, 8, 8);
+                date_display.setPadding(8, 8, 8, 8);
                 date_display.setText(prevDate);
                 date_display.setTextSize(20);
                 date_display.setLayoutParams(layoutParams);
@@ -202,20 +192,20 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
             TransactionBorder.setId(id++);
 
             //puts the transaction into the hashmap to be accessible later
-            historyHashMap.put(TransactionBorder.getId(),transaction);
+            historyHashMap.put(TransactionBorder.getId(), transaction);
 
             //Creates the name of the transaction
             TextView name_display = new TextView(this);
-            name_display.setPaddingRelative(8,8,8,8);
-            name_display.setPadding(8,8,8,8);
+            name_display.setPaddingRelative(8, 8, 8, 8);
+            name_display.setPadding(8, 8, 8, 8);
             name_display.setText(transactions.get(i).getName());
             name_display.setTextSize(20);
             name_display.setLayoutParams(textParams);
 
             //Creates the cost of the transaction
             TextView cost_display = new TextView(this);
-            cost_display.setPaddingRelative(8,8,8,8);
-            cost_display.setPadding(8,8,15,8);
+            cost_display.setPaddingRelative(8, 8, 8, 8);
+            cost_display.setPadding(8, 8, 15, 8);
             cost_display.setText("$" + Double.toString(Math.abs(transactions.get(i).getCost())));
             cost_display.setTextSize(20);
             cost_display.setLayoutParams(textParams);
@@ -224,8 +214,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
             //Changes the color depending on whether it was added or subtracted
             if (!transactions.get(i).getName().equals("Added Dining Dollars")) {
                 cost_display.setTextColor(Color.RED);
-            }
-            else {
+            } else {
                 cost_display.setTextColor(Color.GREEN);
             }
 
@@ -249,7 +238,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                     edit.setBackgroundColor(Color.RED);
                     edit.setTextColor(Color.WHITE);
                     edit.setLayoutParams(btnParams);
-                    edit.setPadding(0,0,0,0);
+                    edit.setPadding(0, 0, 0, 0);
                     edit.setTextSize(20);
                     edit.setGravity(Gravity.CENTER);
 
@@ -263,7 +252,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                             builder.setTitle("Change Transaction Amount");
 
                             LayoutInflater viewInflated = LayoutInflater.from(context);
-                            View deductView = viewInflated.inflate(R.layout.dialog_deduction,null);
+                            View deductView = viewInflated.inflate(R.layout.dialog_deduction, null);
                             // Set up the input
 
                             // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
@@ -275,8 +264,11 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                             //This TextChangedListener is used to stop the user from inputing more than two decimal points
                             input.addTextChangedListener(new TextWatcher() {
                                 //Two methods needed to create new TextWatcher
-                                public void onTextChanged(CharSequence s, int start, int before, int count) {}
-                                public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+                                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                                }
+
+                                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                                }
 
                                 //After the text is changed this method removes the extra characters if any
                                 public void afterTextChanged(Editable s) {
@@ -296,24 +288,23 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     //Gets the input value and then updates the transaction
-                                    String value= input.getText().toString();
+                                    String value = input.getText().toString();
                                     TranHistory toChange = historyHashMap.get(TransactionBorder.getId());
                                     double prevCost = toChange.getCost();
                                     double newCost;
                                     if (prevCost < 0) {
                                         newCost = 0 - Double.parseDouble(value);
-                                    }
-                                    else {
+                                    } else {
                                         newCost = Double.parseDouble(value);
                                     }
                                     deductBalance(prevCost, newCost);
                                     toChange.setCost(newCost);
                                     database.updateTranHistory(toChange);
-                                    renderTransactions(transactions,duration);
+                                    renderTransactions(transactions, duration);
                                 }
                             });
                             //Removes the transaction
-                            builder.setNeutralButton("Delete",new DialogInterface.OnClickListener() {
+                            builder.setNeutralButton("Delete", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     TranHistory toChange = historyHashMap.get(TransactionBorder.getId());
@@ -321,7 +312,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                                     deductBalance(prevCost, 0);
                                     transactions.remove(toChange);
                                     database.deleteTransaction(toChange.getId());
-                                    renderTransactions(transactions,duration);
+                                    renderTransactions(transactions, duration);
                                     dialog.cancel();
                                 }
                             });
@@ -329,7 +320,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     dialog.cancel();
-                                    renderTransactions(transactions,duration);
+                                    renderTransactions(transactions, duration);
                                 }
                             });
                             builder.show();
@@ -349,12 +340,12 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         }
 
         //If there are no previous transactions, display the message
-        if (transactionsShown == 0){
+        if (transactionsShown == 0) {
             ImageView meme = new ImageView(this);
             meme.setImageResource(R.drawable.roll_safe);
             meme.setAdjustViewBounds(true);
             meme.setScaleType(ImageView.ScaleType.FIT_END);
-            meme.setPadding(0,200,0,0);
+            meme.setPadding(0, 200, 0, 0);
             meme.setAlpha((float) 0.75);
             mainLayout.addView(meme);
 
@@ -394,14 +385,12 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
 
         // Checks which option is selected and renders the appropriate transactions on the page
         if (id == R.id.show_week) {
-            renderTransactions(transactions,"week");
+            renderTransactions(transactions, "week");
             return true;
-        }
-        else if (id == R.id.show_month){
-            renderTransactions(transactions,"month");
+        } else if (id == R.id.show_month) {
+            renderTransactions(transactions, "month");
             return true;
-        }
-        else if (id == R.id.show_quarter){
+        } else if (id == R.id.show_quarter) {
             renderTransactions(transactions, "quarter");
             return true;
         }
@@ -490,7 +479,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
      * than the remaining balance, then it shows an error message. Otherwise it creates and adds
      * a new transaction and sets the user's balance.
      */
-    public void deductBalance(double prevCost, double newCost){
+    public void deductBalance(double prevCost, double newCost) {
         //Gets the balance and calculates the deduction
         double balance = usr.getBalance();
         double deduction = prevCost - newCost;
@@ -502,22 +491,19 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         if (balance < 0) {
             Toast.makeText(this, "Cannot deduct more than remaining budget.", Toast.LENGTH_LONG).show();
             return;
-        }
-        else if (prevCost < 0 && newCost == 0){
+        } else if (prevCost < 0 && newCost == 0) {
             Toast.makeText(this, "Removed addition of Dining Dollars", Toast.LENGTH_LONG).show();
             usr.setBalance(balance);
-        }
-        else if (prevCost < 0){
+        } else if (prevCost < 0) {
             Toast.makeText(this, "Changed Added Dining dollars amount to " + Math.abs(newCost), Toast.LENGTH_LONG).show();
             usr.setBalance(balance);
         }
         //Otherwise show that it was edited and update the users balance.
-        else if (newCost == 0){
-            Toast.makeText(this,"Deleted " + deduction, Toast.LENGTH_LONG).show();
+        else if (newCost == 0) {
+            Toast.makeText(this, "Deleted " + deduction, Toast.LENGTH_LONG).show();
             usr.setBalance(balance);
-        }
-        else{
-            Toast.makeText(this,"Edited " + deduction, Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "Edited " + deduction, Toast.LENGTH_LONG).show();
             usr.setBalance(balance);
         }
     }

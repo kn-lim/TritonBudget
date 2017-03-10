@@ -1,4 +1,6 @@
 package teammemes.tritonbudget;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -11,24 +13,24 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Date;
 
 import teammemes.tritonbudget.Menus.Menu;
-import teammemes.tritonbudget.db.*;
-
-import android.content.Intent;
-import android.widget.TextView;
-import android.widget.Toast;
+import teammemes.tritonbudget.db.HistoryDataSource;
+import teammemes.tritonbudget.db.MenuDataSource;
+import teammemes.tritonbudget.db.TranHistory;
 
 public class Checkout extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private DrawerLayout mDrawerLayout;
     LinearLayout mainLayout;
     double total = 0;
+    private DrawerLayout mDrawerLayout;
     private ArrayList<TranHistory> trans;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Toolbar mToolbar;
@@ -57,7 +59,7 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         navigationView.setNavigationItemSelectedListener(this);
 
         //Get the navigation drawer header and set's the name to user's name
-        View navHeaderView= navigationView.getHeaderView(0);
+        View navHeaderView = navigationView.getHeaderView(0);
         TextView usrName = (TextView) navHeaderView.findViewById(R.id.header_name);
         usrName.setText(usr.getName());
 
@@ -74,23 +76,23 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
                     Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
                     startActivity(intent);
                 }
-                Toast.makeText(getApplicationContext(),"not enough balance!",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "not enough balance!", Toast.LENGTH_LONG).show();
 
             }
         });
     }
+
     private void populateCOList() {
         LinearLayout ll = (LinearLayout) findViewById(R.id.Checkout);
 
-        Intent it=getIntent();
-        ArrayList<String> transtring =  it.getStringArrayListExtra("Transactions");
+        Intent it = getIntent();
+        ArrayList<String> transtring = it.getStringArrayListExtra("Transactions");
         trans = new ArrayList<>();
         ArrayList<String> num = it.getStringArrayListExtra("number");
         MenuDataSource data = new MenuDataSource(getApplicationContext());
-        for(int i=0;i<transtring.size();i++)
-        {
+        for (int i = 0; i < transtring.size(); i++) {
             Menu men = data.getMenuById(Integer.parseInt(transtring.get(i)));
-            trans.add(new TranHistory(men.getId(),men.getName(),Integer.parseInt(num.get(i)),new Date(),men.getCost()));
+            trans.add(new TranHistory(men.getId(), men.getName(), Integer.parseInt(num.get(i)), new Date(), men.getCost()));
             String cost = Double.toString(trans.get(i).getCost());
             String quantity = Integer.toString(trans.get(i).getQuantity());
             total += (trans.get(i).getCost() * trans.get(i).getQuantity());
@@ -111,17 +113,17 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
     // add button then call this in listener
     private boolean change_balance(double bal) {
         User usr = User.getInstance(getApplicationContext());
-        if(usr.getBalance()<bal)
-        {
+        if (usr.getBalance() < bal) {
             return false;
         }
         usr.setBalance(usr.getBalance() - bal);
-        HistoryDataSource data=new HistoryDataSource(getApplicationContext());
-        for(int i=0;i<trans.size();i++) {
+        HistoryDataSource data = new HistoryDataSource(getApplicationContext());
+        for (int i = 0; i < trans.size(); i++) {
             data.createTransaction(trans.get(i));
         }
         return true;
     }
+
     public boolean onNavigationItemSelected(MenuItem item) {
         // Gets the id of the item that was selected
         int id = item.getItemId();

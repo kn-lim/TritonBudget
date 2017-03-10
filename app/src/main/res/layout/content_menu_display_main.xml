@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menus.Menu64Degrees_Main"
-    tools:showIn="@layout/activity_menu_display_main">
+    tools:context=".Menus.Menu64Degrees_Main">
 
     <ExpandableListView
         android:id="@+id/expandableListView_Parent"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:groupIndicator="@null" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:childIndicatorStart="0sp"
+        android:groupIndicator="@null"/>
 </RelativeLayout>
