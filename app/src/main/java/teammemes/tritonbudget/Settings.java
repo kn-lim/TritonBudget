@@ -228,14 +228,14 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 builder.setTitle("What's Your Name?");
 
                 LayoutInflater viewInflated = LayoutInflater.from(context);
-                View deductView = viewInflated.inflate(R.layout.dialog_change_name,null); //CHANGE THIS
+                View deductView = viewInflated.inflate(R.layout.dialog_change_name,null); //TODO: CHANGE THIS
 
                 // Set up the input
 
                 // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
                 builder.setView(deductView);
 
-                final EditText input = (EditText) deductView.findViewById(R.id.changeName_input); //CHANGE THIS
+                final EditText input = (EditText) deductView.findViewById(R.id.changeName_input); //TODO: CHANGE THIS
 
                 // Set up the buttons
                 builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
