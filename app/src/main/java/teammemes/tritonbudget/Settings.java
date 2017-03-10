@@ -165,7 +165,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                         double value = Double.parseDouble(input.getText().toString());
                         usr.setBalance(usr.getBalance() + value);
 
-                        TranHistory transaction = new TranHistory(1,"Added Dining Dollars",1,new Date(), value);
+                        TranHistory transaction = new TranHistory(1,"Added Dining Dollars",1,new Date(), 0 - value);
                         database.createTransaction(transaction);
 
                         Toast.makeText(Settings.this, "Added $" + value + " Dining Dollars", Toast.LENGTH_LONG).show();
@@ -201,7 +201,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //CHANGE THIS
+                        //TODO: CHANGE THIS
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
