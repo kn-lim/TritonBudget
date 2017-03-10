@@ -27,18 +27,18 @@ public class MenuDisplay_ParentLevelAdapter extends BaseExpandableListAdapter {
     private final Map<String, List<String>> mListData_ThirdLevel_Map;
 
     public MenuDisplay_ParentLevelAdapter(Context mContext, List<String> mListDataHeader, MenuDataSource DS, String name) {
-        List<String> list2 = new ArrayList<>();
+        /*List<String> list2 = new ArrayList<>();
         List<String> listCategories = mListDataHeader ;
         list2.add(listCategories.get(0));
         for(int i=0;i<listCategories.size();i++)
         {
             list2.add(listCategories.get(i));
         }
-
+        */
         this.mContext = mContext;
         this.mListDataHeader = new ArrayList<>();
 
-        this.mListDataHeader.addAll(list2);
+        this.mListDataHeader.addAll(mListDataHeader);
         mListData_SecondLevel_Map = new HashMap<>();
         List<Menu> food;
         String dhname = name;
