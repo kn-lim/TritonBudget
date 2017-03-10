@@ -94,8 +94,8 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         //The two sets of layout parameters that are used to make the transactions
         layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         textParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
-        btnParams = new LinearLayout.LayoutParams(200, 100);
-        btnParams.setMargins(0,0,0,40);
+        btnParams = new LinearLayout.LayoutParams(200, ViewGroup.LayoutParams.MATCH_PARENT);  //was (200,100)
+        btnParams.setMargins(0,0,0,0); //was (0,0,0,40)
 
         //Fetches the main empty layout
         mainLayout = (LinearLayout) findViewById(R.id.page);
@@ -242,11 +242,14 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                         return false;
 
                     //Create the edit button
-                    Button edit = new Button(v.getContext());
+                    TextView edit = new TextView(v.getContext());
                     edit.setText("Edit");
+                    edit.setBackgroundColor(Color.RED);
+                    edit.setTextColor(Color.WHITE);
                     edit.setLayoutParams(btnParams);
                     edit.setPadding(0,0,0,0);
-                    edit.setTextSize(10);
+                    edit.setTextSize(20);
+                    edit.setGravity(Gravity.CENTER);
 
                     //Set the onClickListener for the button:
                     //      If the edit button is clicked, it brings up a dialog allowing the user
