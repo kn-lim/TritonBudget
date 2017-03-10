@@ -31,6 +31,7 @@ import android.text.TextWatcher;
 import android.view.*;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -41,6 +42,7 @@ import teammemes.tritonbudget.db.TranHistory;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 import static android.view.Gravity.CENTER;
+import static android.widget.ImageView.ScaleType.FIT_END;
 
 
 public class History extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -348,8 +350,17 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
 
         //If there are no previous transactions, display the message
         if (transactionsShown == 0){
+            ImageView meme = new ImageView(this);
+            meme.setImageResource(R.drawable.roll_safe);
+            meme.setAdjustViewBounds(true);
+            meme.setScaleType(ImageView.ScaleType.FIT_END);
+            meme.setPadding(0,200,0,0);
+            mainLayout.addView(meme);
+
+            //meme.setScaleType(fitEnd);
+            /*
             TextView textView = new TextView(this);
-            textView.setText("No Transaction History to Display");
+            textView.setText("No TransactionHistory\nto Display");
             textView.setGravity(Gravity.CENTER);
             textView.setTextColor(Color.GRAY);
             textView.setTextSize(50);
@@ -358,6 +369,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
             textView.setLayoutParams(layoutParams);
             mainLayout.addView(textView);
             System.out.println("Here");
+            */
             return;
         }
     }
