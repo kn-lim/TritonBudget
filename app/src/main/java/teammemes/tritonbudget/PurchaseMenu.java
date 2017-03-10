@@ -94,18 +94,22 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
         dateFormat = new SimpleDateFormat("MM/dd/yyyy");
         myFab = (FloatingActionButton) findViewById(R.id.myFAB);
         myFab.setOnClickListener(new View.OnClickListener() {
-            List<TranHistory> trans=new ArrayList<TranHistory>();
             public void onClick(View v) {
+                ArrayList<String> trans=new ArrayList<String>();
+                ArrayList<String> numofpur = new ArrayList<String>();
                 for(int j=0;j<transactions.size();j++)
                 {
                     if(numberOfPurchase[j]!=0)
                     {
                         Menu men = transactions.get(j);
-                        trans.add(new TranHistory(men.getId(),men.getName(),numberOfPurchase[j],new Date(),men.getCost()));
+                        //trans.add(new TranHistory(men.getId(),men.getName(),numberOfPurchase[j],new Date(),men.getCost()));
+                        trans.add(""+men.getId());
+                        numofpur.add(numberOfPurchase[j]+"");
                     }
                 }
                 Intent checkout = new Intent(getApplicationContext(),Checkout.class);
-                checkout.putExtra("Transactions",(Serializable)trans);
+                checkout.putStringArrayListExtra("Transactions",trans);
+                checkout.putStringArrayListExtra("number",numofpur);
                 startActivity(checkout);
             }
         });
@@ -289,4 +293,3 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
         }
     }
 }
-
