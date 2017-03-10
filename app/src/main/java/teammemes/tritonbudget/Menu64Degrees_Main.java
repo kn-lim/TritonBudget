@@ -27,6 +27,7 @@ public class Menu64Degrees_Main extends AppCompatActivity {
 
         //List<String> listDataHeader = new ArrayList<>();
         List<String> listCategories ;
+
         listCategories = DS.getCategoriesByLocation(dhname);
 
         /*
