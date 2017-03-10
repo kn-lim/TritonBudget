@@ -3,7 +3,7 @@ package teammemes.tritonbudget;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
+import java.math.RoundingMode;
 /**
  *
  */
@@ -42,11 +42,17 @@ public class User {
     }
 
     public double getBalance() {
+
+        Balance=Balance*100;
+        Balance=Math.round(Balance);
+        Balance=Balance/100;
         return Balance;
     }
 
     public void setBalance(double Balance) {
-
+        Balance=Balance*100;
+        Balance=Math.round(Balance);
+        Balance=Balance/100;
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString("balance", Double.toString(Balance));
         editor.commit();

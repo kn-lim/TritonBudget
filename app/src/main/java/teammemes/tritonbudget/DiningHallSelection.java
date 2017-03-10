@@ -170,6 +170,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
                 {
                     Intent intent = new Intent(DiningHallSelection.this,PurchaseMenu.class);
                     intent.putExtra("FROM","Canyon Vista");
+                    startActivity(intent);
                 }
                 else {
                     //Attempt to open another activity (Dining Hall Menu)

@@ -75,9 +75,11 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
                 if (change_balance(total)) {
                     Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
                     startActivity(intent);
+                    Toast.makeText(getApplicationContext(), "purchase successfully!", Toast.LENGTH_LONG).show();
                 }
-                Toast.makeText(getApplicationContext(), "not enough balance!", Toast.LENGTH_LONG).show();
-
+                else {
+                    Toast.makeText(getApplicationContext(), "not enough balance!", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
