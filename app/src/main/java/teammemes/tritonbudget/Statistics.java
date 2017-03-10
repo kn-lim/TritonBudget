@@ -88,7 +88,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         HistoryDataSource hist = new HistoryDataSource(getApplicationContext());
 
         weekTotal.setText(Double.toString(hist.getThisWeekTotal()));
-        average.setText(Double.toString(hist.getThisWeekTotal()));
+        average.setText(Double.toString(hist.getDailyAverage()));
 
         //For Last week, this week,
     }
@@ -185,6 +185,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         ArrayList<BarEntry> valueSet1 = new ArrayList<>();
         for (int i = 0; i < data.length; i++) {
             BarEntry vl = new BarEntry((float) data[i], i);
+            valueSet1.add(vl);
         }
 
         BarDataSet barDataSet1 = new BarDataSet(valueSet1, "Brand 1");
@@ -204,6 +205,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         ArrayList<BarEntry> valueSet1 = new ArrayList<>();
         for (int i = 0; i < data.length; i++) {
             BarEntry vl = new BarEntry((float) data[i], i);
+            valueSet1.add(vl);
         }
 
         BarDataSet barDataSet1 = new BarDataSet(valueSet1, "Brand 1");
