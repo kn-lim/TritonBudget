@@ -181,9 +181,16 @@ public class HistoryDataSource extends BaseDataSource{
         double cost = 0;
         List<TranHistory> histories= this.getAllTransaction();
         int currDay = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
+        int smallestday=9999;
         for(int i=0;i<histories.size();i++)
         {
             cost += histories.get(i).getCost();
+            Calendar cal=Calendar.getInstance();
+            cal.setTime(histories.get(i).getTdate());
+            if(cal.get(Calendar.DAY_OF_YEAR)<smallestday)
+            {
+                smallestday=cal.get(Calendar.DAY_OF_YEAR);
+            }
         }
         Calendar cal = Calendar.getInstance();
         if(currDay<167)

@@ -180,7 +180,7 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
             quantity.setText("0");
             quantity.setLayoutParams(btnParams);
             quantity.setGravity(Gravity.CENTER);
-
+            quantity.setId(i);
             Button minus = new Button(this);
             minus.setLayoutParams(btnParams);
             minus.setText("-");
@@ -190,7 +190,7 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
                 @Override
                 public void onClick(View v) {
                     quantity.setText("" + ((int) Integer.parseInt((String) quantity.getText()) + 1));
-                    numberOfPurchase[i]++;
+                    numberOfPurchase[quantity.getId()]++;
                 }
             });
 
@@ -200,7 +200,7 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
                     if (quantity.getText().equals("0"))
                         return;
                     quantity.setText("" + ((int) Integer.parseInt((String) quantity.getText()) - 1));
-                    numberOfPurchase[i]--;
+                    numberOfPurchase[quantity.getId()]--;
                 }
             });
 
