@@ -189,6 +189,27 @@ public class HistoryDataSource extends BaseDataSource{
         }
         return cost;
     }
+    public double getLastWeekTotal() {
+        double cost = 0;
+        List<TranHistory> histories= this.getAllTransaction();
+        Calendar cal2 = Calendar.getInstance();
+        cal2.setTime(new Date(System.currentTimeMillis()-60*60*24*1000*7));
+        int currMonth = cal2.get(Calendar.MONTH);
+        int currWeek = cal2.get(Calendar.WEEK_OF_MONTH);
+        for(int i=0;i<histories.size();i++)
+        {
+            Date day = histories.get(i).getTdate();
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(day);
+            int currmon = cal.get(Calendar.MONTH);
+            int currwek = Calendar.getInstance().get(Calendar.WEEK_OF_MONTH);
+            if(currmon==currMonth&&currWeek==currwek)
+            {
+                cost += histories.get(i).getCost();
+            }
+        }
+        return cost;
+    }
     public double getDailyAverage() {
 
         int curDay=Calendar.getInstance().get(Calendar.DAY_OF_WEEK);

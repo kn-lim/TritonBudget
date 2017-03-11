@@ -87,6 +87,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         });
         TextView weekTotal = (TextView)findViewById(R.id.statistics_text_this_week_num);
         TextView average = (TextView)findViewById(R.id.statistic_text_average_num);
+        TextView weekLast = (TextView)findViewById(R.id.statistic_text_last_week_num);
         HistoryDataSource hist = new HistoryDataSource(getApplicationContext());
 
         double weektotal=hist.getThisWeekTotal();
@@ -98,6 +99,10 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         daily=Math.round(daily);
         daily=daily/100;
         average.setText(Double.toString(daily));
+        double lastweek=100*hist.getLastWeekTotal();
+        lastweek=Math.round(lastweek);
+        lastweek=lastweek/100;
+        weekLast.setText(Double.toString(lastweek));
 
         //For Last week, this week,
     }
