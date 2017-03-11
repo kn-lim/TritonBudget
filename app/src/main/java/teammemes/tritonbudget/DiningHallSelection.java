@@ -101,17 +101,17 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
         //FT & Specialities
         TextView bistro = (TextView) findViewById(R.id.DH_TextView_Bistro);
         TextView clubmed = (TextView) findViewById(R.id.DH_TextView_ClubMed);
-        TextView flavorstruck = (TextView) findViewById(R.id.DH_TextView_FlavorFT);
+//        TextView flavorstruck = (TextView) findViewById(R.id.DH_TextView_FlavorFT);
         TextView goodys = (TextView) findViewById(R.id.DH_TextView_Goodys);
-        TextView goodysFT = (TextView) findViewById(R.id.DH_TextView_GoodysFT);
+//        TextView goodysFT = (TextView) findViewById(R.id.DH_TextView_GoodysFT);
         TextView roots = (TextView) findViewById(R.id.DH_TextView_Roots);
         TextView sixtyfournorth = (TextView) findViewById(R.id.DH_TextView_64North);
 
         TextView[] dtv = {sixtyfour, cafev, canyonv, foodworx, ovt, pines, bistro, clubmed,
-                flavorstruck, goodys, goodysFT, roots, sixtyfournorth};
+                goodys, roots, sixtyfournorth};
         String[] diningHalls = getResources().getStringArray(R.array.Dining_Halls_Array);
-        int[] dnamelenghts = {SIXFOUR, CAFEV, CV, FOODWORX, OVT, PINES, BISTRO, CLUBMED, FLAVOR,
-                GOODYS, GOODYS2, ROOTS, SIXFOURNO};
+        int[] dnamelenghts = {SIXFOUR, CAFEV, CV, FOODWORX, OVT, PINES, BISTRO, CLUBMED,
+                GOODYS, ROOTS, SIXFOURNO};
 
         /*Set Text for TextView Objects*/
         String text;
