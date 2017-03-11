@@ -1,6 +1,7 @@
 # Team Maximizing Efficiency, Minimizing Entropy Software
 ## Project Name:
 **Triton Budget**
+
 ![TritonBudget](https://i.imgur.com/x0T4BsH.png "TritonBudget")
 
 ## Team Members:
