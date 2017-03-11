@@ -201,7 +201,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
             TextView cost_display = new TextView(this);
             cost_display.setPaddingRelative(8, 8, 8, 8);
             cost_display.setPadding(8, 8, 15, 8);
-            cost_display.setText("$" + Double.toString(Math.abs(transactions.get(i).getCost())));
+            cost_display.setText("$" + double_to_string(Math.abs(transactions.get(i).getCost())));
             cost_display.setTextSize(20);
             cost_display.setLayoutParams(costParams);
             cost_display.setGravity(Gravity.RIGHT);     //Aligns it on the right
@@ -255,12 +255,12 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                             builder.setView(deductView);
 
                             final EditText input = (EditText) deductView.findViewById(R.id.deduct_input);
-                            input.setText(Double.toString(Math.abs((historyHashMap.get(TransactionBorder.getId()).getCost()))));
+                            input.setText(double_to_string(Math.abs((historyHashMap.get(TransactionBorder.getId()).getCost()))));
 
                             //This TextChangedListener is used to stop the user from inputing more than two decimal points
                             input.addTextChangedListener(new TextWatcher() {
                                 //Two methods needed to create new TextWatcher
-                                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                                public void onTextChanged (CharSequence s, int start, int before, int count) {
                                 }
 
                                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -293,7 +293,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                                     } else {
                                         newCost = Double.parseDouble(value);
                                     }
-                                    deductBalance(prevCost, newCost);
+                                    updateBalance(prevCost, newCost);
                                     toChange.setCost(newCost);
                                     database.updateTranHistory(toChange);
                                     renderTransactions(transactions, duration);
@@ -305,7 +305,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                                 public void onClick(DialogInterface dialog, int which) {
                                     TranHistory toChange = historyHashMap.get(TransactionBorder.getId());
                                     double prevCost = toChange.getCost();
-                                    deductBalance(prevCost, 0);
+                                    updateBalance(prevCost, 0);
                                     transactions.remove(toChange);
                                     database.deleteTransaction(toChange.getId());
                                     renderTransactions(transactions, duration);
@@ -466,7 +466,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
     }
 
     /*
-     * Method: deductBalance
+     * Method: updateBalance
      *
      * Parameters: prevCost - the previous cost of the transaction
      *             newCost - the new cost of the transaction
@@ -475,7 +475,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
      * than the remaining balance, then it shows an error message. Otherwise it creates and adds
      * a new transaction and sets the user's balance.
      */
-    public void deductBalance(double prevCost, double newCost) {
+    public void updateBalance(double prevCost, double newCost) {
         //Gets the balance and calculates the deduction
         double balance = usr.getBalance();
         double deduction = prevCost - newCost;
@@ -491,15 +491,15 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
             Toast.makeText(this, "Removed addition of Dining Dollars", Toast.LENGTH_LONG).show();
             usr.setBalance(balance);
         } else if (prevCost < 0) {
-            Toast.makeText(this, "Changed Added Dining dollars amount to " + Math.abs(newCost), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Changed Added Dining dollars amount to $" + double_to_string(Math.abs(newCost)), Toast.LENGTH_LONG).show();
             usr.setBalance(balance);
         }
         //Otherwise show that it was edited and update the users balance.
         else if (newCost == 0) {
-            Toast.makeText(this, "Deleted " + deduction, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Deleted transaction of $" + double_to_string(deduction), Toast.LENGTH_LONG).show();
             usr.setBalance(balance);
         } else {
-            Toast.makeText(this, "Edited " + deduction, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Edited transaction from $" + double_to_string(prevCost) + " to $" + double_to_string(newCost), Toast.LENGTH_LONG).show();
             usr.setBalance(balance);
         }
     }
@@ -518,6 +518,17 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                 tran.removeViewAt(2);
             }
         }
+    }
+
+    private String double_to_string(double number) {
+        //Gets the balance from the user
+        String str = "" + number;
+        int decimalIdx = str.indexOf('.');
+        //Edge case, where balance == $XXX.00, it wrongly displays one instance of 0. This fixes it.
+        if (decimalIdx + 1 == str.length() - 1) {
+            str = str + "0";
+        }
+        return str;
     }
 }
 
