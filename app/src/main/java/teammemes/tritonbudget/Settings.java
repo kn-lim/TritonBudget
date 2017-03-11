@@ -12,6 +12,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -128,6 +129,10 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 builder.setView(deductView);
 
                 final EditText input = (EditText) deductView.findViewById(R.id.deduct_input);
+                final int LENGTH = 7;
+                InputFilter[] FilterArray = new InputFilter[1];
+                FilterArray[0] = new InputFilter.LengthFilter(LENGTH);
+                input.setFilters(FilterArray);
 
                 //This TextChangedListener is used to stop the user from inputing more than two decimal points
                 input.addTextChangedListener(new TextWatcher() {
@@ -186,6 +191,10 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 builder.setView(deductView);
 
                 final EditText input = (EditText) deductView.findViewById(R.id.deduct_input);
+                final int LENGTH = 7;
+                InputFilter[] FilterArray = new InputFilter[1];
+                FilterArray[0] = new InputFilter.LengthFilter(LENGTH);
+                input.setFilters(FilterArray);
 
                 //This TextChangedListener is used to stop the user from inputing more than two decimal points
                 input.addTextChangedListener(new TextWatcher() {

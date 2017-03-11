@@ -12,6 +12,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -107,6 +108,10 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                 builder.setView(deductView);
 
                 final EditText input = (EditText) deductView.findViewById(R.id.deduct_input);
+                int length = Double.toString(usr.getBalance()).length();
+                InputFilter[] FilterArray = new InputFilter[1];
+                FilterArray[0] = new InputFilter.LengthFilter(length);
+                input.setFilters(FilterArray);
 
                 //This TextChangedListener is used to stop the user from inputing more than two decimal points
                 input.addTextChangedListener(new TextWatcher() {
