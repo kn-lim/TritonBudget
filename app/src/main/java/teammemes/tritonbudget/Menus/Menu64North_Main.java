@@ -1,10 +1,5 @@
 package teammemes.tritonbudget.Menus;
 
-/**
- * Created by Danny on 3/8/17.
- */
-
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -30,10 +25,11 @@ import teammemes.tritonbudget.Statistics;
 import teammemes.tritonbudget.User;
 import teammemes.tritonbudget.db.MenuDataSource;
 
-public class MenuCanyonVista_Main extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+public class Menu64North_Main extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     /*For the Menu*/
     public MenuDataSource DS;
-    String dhname = "Canyon Vista";
+    String dhname = "Sixty-Four North";
     /*For the Navigation Drawer*/
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
@@ -52,7 +48,7 @@ public class MenuCanyonVista_Main extends AppCompatActivity implements Navigatio
         mToolbar = (Toolbar) findViewById(R.id.nav_action);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Canyon Vista");
+        getSupportActionBar().setTitle("64North");
 
         //Create the Drawer layout and the toggle
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_menu);
@@ -70,10 +66,12 @@ public class MenuCanyonVista_Main extends AppCompatActivity implements Navigatio
         usrName.setText(usr.getName());
         /*End setting up navigation drawers*/
 
+
         // Init top level data
         DS = new MenuDataSource(this);
 
         List<String> listCategories;
+
         listCategories = DS.getCategoriesByLocation(dhname);
 
         final ExpandableListView mExpandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Parent);
@@ -83,7 +81,7 @@ public class MenuCanyonVista_Main extends AppCompatActivity implements Navigatio
             MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listCategories, DS, dhname);
             mExpandableListView.setAdapter(parentLevelAdapter);
         }
-    }
+    } //End of onCreate()
 
     //This method is used to listen for the user clicking the menu button, and opens
     //the drawer up
