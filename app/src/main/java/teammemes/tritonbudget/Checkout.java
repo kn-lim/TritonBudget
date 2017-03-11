@@ -121,16 +121,21 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         MenuDataSource data = new MenuDataSource(getApplicationContext());
         for (int i = 0; i < transtring.size(); i++) {
             Menu men = data.getMenuById(Integer.parseInt(transtring.get(i)));
-            trans.add(new TranHistory(men.getId(), men.getName(), Integer.parseInt(num.get(i)), new Date(), men.getCost()));
+
+            String menuName = men.getName();
+            int numItems = Integer.parseInt(num.get(i));
+            if (numItems > 1){
+                menuName += " x"+numItems;
+            }
+
+            trans.add(new TranHistory(men.getId(), menuName, numItems, new Date(), men.getCost()*numItems));
 
             String cost = "$" + double_to_string(trans.get(i).getCost());
-            String quantity = "x" + Integer.toString(trans.get(i).getQuantity());
-
-            total += (trans.get(i).getCost() * trans.get(i).getQuantity());
+            
+            total += (trans.get(i).getCost());
             total *= 100;
             total = Math.round(total);
             total /= 100;
-
 
             LinearLayout borderll = makeLL();
             LinearLayout quantityll = makeLL();
@@ -144,7 +149,7 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
             String itemName = trans.get(i).getName();
             item.setText(itemName);
 
-            TextView t = makeTV(cost, quantity);
+            TextView t = makeTV(cost); //, quantity);
             t.setPadding(8,8,8,8);
 
             ll.addView(borderll);
@@ -163,10 +168,10 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         return nestedll;
     }
 
-    private TextView makeTV(String cost, String quantity) {
+    private TextView makeTV(String cost) {
         TextView tv = new TextView(this);
         tv.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        tv.setText(cost + " " + quantity);
+        tv.setText(cost);
         tv.setTextSize(20);
         return tv;
     }
