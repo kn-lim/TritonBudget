@@ -67,6 +67,10 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         //Uses custom adapter to populate list view
         populateCOList();
 
+        total *= 100;
+        total = Math.round(total);
+        total /= 100;
+
         TextView display_total = (TextView)findViewById(R.id.total_cost);
         display_total.setText("Total:\t\t\t" + Double.toString(total));
 
@@ -148,31 +152,37 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         switch (id) {
             case R.id.nav_home:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
-                nextScreen = new Intent(this, HomeScreen.class);
-                nextScreen.putExtra("FROM", "History");
-                startActivity(nextScreen);
                 return true;
             case R.id.nav_history:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, History.class);
+                nextScreen.putExtra("FROM", "Home");
+                startActivity(nextScreen);
                 return false;
             case R.id.nav_statistics:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 nextScreen = new Intent(this, Statistics.class);
-                nextScreen.putExtra("FROM", "History");
+                nextScreen.putExtra("FROM", "Home");
                 startActivity(nextScreen);
                 return true;
             case R.id.nav_menus:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 nextScreen = new Intent(this, DiningHallSelection.class);
-                nextScreen.putExtra("FROM", "History");
+                nextScreen.putExtra("FROM", "Home");
                 startActivity(nextScreen);
                 return true;
-            /* Cases for future options
             case R.id.nav_settings:
-                return false;
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Settings.class);
+                nextScreen.putExtra("FROM", "Home");
+                startActivity(nextScreen);
+                return true;
             case R.id.nav_help:
-                return false:
-            */
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Help.class);
+                nextScreen.putExtra("FROM", "Home");
+                startActivity(nextScreen);
+                return true;
             default:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return false;

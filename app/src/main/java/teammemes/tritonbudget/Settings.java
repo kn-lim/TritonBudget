@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -95,8 +96,13 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String value= input.getText().toString();
-                        usr.setName(value);
-                        Toast.makeText(Settings.this, "Changed Name to " + value, Toast.LENGTH_LONG).show();
+                        if (value.length() > 0) {
+                            usr.setName(value);
+                            Toast.makeText(Settings.this, "Changed Name to " + value, Toast.LENGTH_LONG).show();
+                        }
+                        else {
+                            Toast.makeText(Settings.this, "You've entered nothing!!! Please try again", Toast.LENGTH_LONG).show();
+                        }
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -124,6 +130,11 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 builder.setView(deductView);
 
                 final EditText input = (EditText) deductView.findViewById(R.id.deduct_input);
+                // limit user input to $XXXX.xx
+                final int LENGTH = 7;
+                InputFilter[] FilterArray = new InputFilter[1];
+                FilterArray[0] = new InputFilter.LengthFilter(LENGTH);
+                input.setFilters(FilterArray);
 
                 //This TextChangedListener is used to stop the user from inputing more than two decimal points
                 input.addTextChangedListener(new TextWatcher() {
@@ -138,9 +149,11 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                         if (posDot <= 0) {
                             return;
                         }
+                        // dont need this already set limit of input above
+                        /*
                         if (temp.length() - posDot - 1 > 2) {
-                            s.delete(posDot + 3, s.length()-1);
-                        }
+                            s.delete(posDot + 2, s.length()-1);
+                        }*/
                     }
                 });
 
@@ -178,6 +191,11 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 builder.setView(deductView);
 
                 final EditText input = (EditText) deductView.findViewById(R.id.deduct_input);
+                // limit user input to XXXX.xx
+                final int LENGTH = 7;
+                InputFilter[] FilterArray = new InputFilter[1];
+                FilterArray[0] = new InputFilter.LengthFilter(LENGTH);
+                input.setFilters(FilterArray);
 
                 //This TextChangedListener is used to stop the user from inputing more than two decimal points
                 input.addTextChangedListener(new TextWatcher() {
@@ -192,9 +210,10 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                         if (posDot <= 0) {
                             return;
                         }
-                        if (temp.length() - posDot - 1 > 2) {
-                            s.delete(posDot + 3, s.length()-1);
-                        }
+                        // dont need this already set length of input above
+                        /*if (temp.length() - posDot - 1 > 2) {
+                            s.delete(posDot + 2, s.length()-1);
+                        }*/
                     }
                 });
 

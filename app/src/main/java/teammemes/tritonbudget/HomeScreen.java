@@ -12,7 +12,9 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.style.ForegroundColorSpan;
@@ -135,6 +137,12 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
 
                 final EditText input = (EditText) deductView.findViewById(R.id.deduct_input);
 
+                // limit user input to cannot
+                int length = Double.toString(usr.getBalance()).length();
+                InputFilter[] FilterArray = new InputFilter[1];
+                FilterArray[0] = new InputFilter.LengthFilter(length);
+                input.setFilters(FilterArray);
+
                 //This TextChangedListener is used to stop the user from inputing more than two decimal points
                 input.addTextChangedListener(new TextWatcher() {
                     //Two methods needed to create new TextWatcher
@@ -148,9 +156,10 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                         if (posDot <= 0) {
                             return;
                         }
-                        if (temp.length() - posDot - 1 > 2) {
-                            s.delete(posDot + 3, s.length()-1);
-                        }
+                        // dont need this, set length of input above
+                        /*if (temp.length() - posDot - 1 > 2) {
+                            s.delete(posDot + 2, s.length()-1);
+                        }*/
                     }
                 });
 
