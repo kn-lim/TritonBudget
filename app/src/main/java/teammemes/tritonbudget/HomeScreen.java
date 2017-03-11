@@ -36,9 +36,9 @@ import static android.graphics.Color.rgb;
 public class HomeScreen extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
+    final Context context = this;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
-    final Context context = this;
     private User usr;
     private TextView totBal;
     private TextView dailyRBal;
@@ -122,6 +122,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         deductbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("Deduction");
 
@@ -169,7 +170,13 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                         dialog.cancel();
                     }
                 });
+
                 builder.show();
+                TextView daily = (TextView)findViewById(R.id.HS_TextView_DailyBudgetValue);
+                double daysp=usr.getBalance()/(167- Calendar.getInstance().get(Calendar.DAY_OF_YEAR))*100;
+                daysp=Math.round(daysp);
+                daysp=daysp/100;
+                daily.setText("$"+Double.toString(daysp));
             }
         });
 

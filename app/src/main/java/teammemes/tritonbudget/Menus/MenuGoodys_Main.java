@@ -1,5 +1,3 @@
-
-
 /**
  * Created by Ziying on 3/8/17.
  */
@@ -74,17 +72,6 @@ public class MenuGoodys_Main extends AppCompatActivity implements NavigationView
         // Init top level data
         DS = new MenuDataSource(this);
 
-        //
-        /*
-        List<String> listDataHeader = new ArrayList<>();
-        String[] mItemHeaders = new String[4];
-
-        mItemHeaders[1] = "Breakfast Specials";
-        mItemHeaders[2] = "Latin";
-        mItemHeaders[3] = "Sides";
-
-        Collections.addAll(listDataHeader, mItemHeaders);
-        */
         List<String> listCategories;
         listCategories = DS.getCategoriesByLocation(dhname);
 

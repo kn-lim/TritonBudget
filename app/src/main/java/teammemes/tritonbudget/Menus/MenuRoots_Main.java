@@ -68,22 +68,6 @@ public class MenuRoots_Main extends AppCompatActivity implements NavigationView.
         // Init top level data
         DS = new MenuDataSource(this);
 
-        //
-        /*
-        List<String> listDataHeader = new ArrayList<>();
-        String[] mItemHeaders = new String[8];
-        //String[] mItemHeaders = getResources().getStringArray(R.array.items_array_expandable_level_one);
-
-        mItemHeaders[1] = "Root Sum";
-        mItemHeaders[2] = "Root Slab";
-        mItemHeaders[3] = "Field and Farm";
-        mItemHeaders[4] = "Soup and Chili";
-        mItemHeaders[5] = "Sides";
-        mItemHeaders[6] = "Smoothies";
-        mItemHeaders[7] = "Dessert";
-
-        Collections.addAll(listDataHeader, mItemHeaders);
-        */
         List<String> listCategories ;
         listCategories = DS.getCategoriesByLocation(dhname);
 
