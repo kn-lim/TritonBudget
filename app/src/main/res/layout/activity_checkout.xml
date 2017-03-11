@@ -42,18 +42,6 @@
 
         </ScrollView>
 
-        <android.support.design.widget.FloatingActionButton
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="New Button"
-            android:id="@+id/ConfirmPurchaseBtn"
-            android:src="@drawable/checkmark"
-            android:background="@drawable/circle"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="16dp"
-            android:layout_marginRight="16dp"/>
-
     </RelativeLayout>
 
 </RelativeLayout>

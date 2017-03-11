@@ -72,42 +72,13 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
 
         TextView display_total = (TextView)findViewById(R.id.total_cost);
         display_total.setText("Total:\t\t\t$" + double_to_string(total));
+    }
 
-        FloatingActionButton button = (FloatingActionButton) findViewById(R.id.ConfirmPurchaseBtn);
-        button.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent event) {
-                switch (event.getActionMasked()) {
-                    case MotionEvent.ACTION_DOWN:
-                        dX = view.getX() - event.getRawX();
-                        dY = view.getY() - event.getRawY();
-                        lastAction = MotionEvent.ACTION_DOWN;
-                        break;
-
-                    case MotionEvent.ACTION_MOVE:
-                        view.setY(event.getRawY() + dY);
-                        view.setX(event.getRawX() + dX);
-                        lastAction = MotionEvent.ACTION_MOVE;
-                        break;
-
-                    case MotionEvent.ACTION_UP:
-                        if (lastAction == MotionEvent.ACTION_DOWN || lastAction == 2) {
-                            if (change_balance(total)) {
-                                Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
-                                startActivity(intent);
-                                Toast.makeText(getApplicationContext(), "Purchased!", Toast.LENGTH_LONG).show();
-                            } else {
-                                Toast.makeText(getApplicationContext(), "You broke though.", Toast.LENGTH_LONG).show();
-                            }
-                        }
-                        break;
-
-                    default:
-                        return false;
-                }
-                return true;
-            }
-        });
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.checkout_menu, menu);
+        return true;
     }
 
     private void populateCOList() {
@@ -131,7 +102,7 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
             trans.add(new TranHistory(men.getId(), menuName, numItems, new Date(), men.getCost()*numItems));
 
             String cost = "$" + double_to_string(trans.get(i).getCost());
-            
+
             total += (trans.get(i).getCost());
             total *= 100;
             total = Math.round(total);
@@ -254,6 +225,18 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
     public boolean onOptionsItemSelected(MenuItem item) {
         if (mToggle.onOptionsItemSelected(item)) {
             return true;
+        }
+
+        int id = item.getItemId();
+
+        if (id == R.id.confirmBtn){
+            if (change_balance(total)) {
+                Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
+                startActivity(intent);
+                Toast.makeText(getApplicationContext(), "Purchased!", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(getApplicationContext(), "You broke though.", Toast.LENGTH_LONG).show();
+            }
         }
         return super.onOptionsItemSelected(item);
     }

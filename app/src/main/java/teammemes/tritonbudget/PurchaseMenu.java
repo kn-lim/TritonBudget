@@ -95,80 +95,7 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
         numberOfPurchase = new int[transactions.size()];
 
 
-        myFab = (FloatingActionButton) findViewById(R.id.myFAB);
-
         dateFormat = new SimpleDateFormat("MM/dd/yyyy");
-
-
-        myFab.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent event) {
-                switch (event.getActionMasked()) {
-                    /*case MotionEvent.ACTION_BUTTON_PRESS:
-                        lastAction = MotionEvent.ACTION_BUTTON_PRESS;
-                        break;
-                    case MotionEvent.ACTION_BUTTON_RELEASE:
-                        if (lastAction == MotionEvent.ACTION_BUTTON_PRESS) {
-                            ArrayList<String> trans = new ArrayList<String>();
-                            ArrayList<String> numofpur = new ArrayList<String>();
-                            for (int j = 0; j < transactions.size(); j++) {
-                                if (numberOfPurchase[j] != 0) {
-                                    Menu men = transactions.get(j);
-                                    //trans.add(new TranHistory(men.getId(),men.getName(),numberOfPurchase[j],new Date(),men.getCost()));
-                                    trans.add("" + men.getId());
-                                    numofpur.add(numberOfPurchase[j] + "");
-                                }
-                            }
-                            if (trans.size() == 0) {
-                                Toast.makeText(getApplicationContext(), "Please select item", Toast.LENGTH_LONG).show();
-                            } else {
-                                Intent checkout = new Intent(getApplicationContext(), Checkout.class);
-                                checkout.putStringArrayListExtra("Transactions", trans);
-                                checkout.putStringArrayListExtra("number", numofpur);
-                                startActivity(checkout);
-                            }
-                        }
-                        break;*/
-                    case MotionEvent.ACTION_DOWN:
-                        dX = view.getX() - event.getRawX();
-                        dY = view.getY() - event.getRawY();
-                        lastAction = MotionEvent.ACTION_DOWN;
-                        break;
-
-                    case MotionEvent.ACTION_MOVE:
-                        view.setY(event.getRawY() + dY);
-                        view.setX(event.getRawX() + dX);
-                        lastAction = MotionEvent.ACTION_MOVE;
-                        break;
-                    case MotionEvent.ACTION_UP:
-                        if (lastAction == 2 || lastAction == MotionEvent.ACTION_DOWN) {
-                            ArrayList<String> trans = new ArrayList<String>();
-                            ArrayList<String> numofpur = new ArrayList<String>();
-                            for (int j = 0; j < transactions.size(); j++) {
-                                if (numberOfPurchase[j] != 0) {
-                                    Menu men = transactions.get(j);
-                                    //trans.add(new TranHistory(men.getId(),men.getName(),numberOfPurchase[j],new Date(),men.getCost()));
-                                    trans.add("" + men.getId());
-                                    numofpur.add(numberOfPurchase[j] + "");
-                                }
-                            }
-                            if (trans.size() == 0) {
-                                Toast.makeText(getApplicationContext(), "Please select item", Toast.LENGTH_LONG).show();
-                            } else {
-                                Intent checkout = new Intent(getApplicationContext(), Checkout.class);
-                                checkout.putStringArrayListExtra("Transactions", trans);
-                                checkout.putStringArrayListExtra("number", numofpur);
-                                startActivity(checkout);
-                            }
-                        }
-                        break;
-
-                    default:
-                        return false;
-                }
-                return true;
-            }
-        });
 
         //Renders all of the transactions on the page
         renderMenu(transactions);
@@ -302,6 +229,29 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
         if (mToggle.onOptionsItemSelected(item)) {
             return true;
         }
+
+        int id = item.getItemId();
+
+        if (id == R.id.checkoutBtn){
+            ArrayList<String> trans = new ArrayList<String>();
+            ArrayList<String> numofpur = new ArrayList<String>();
+            for (int j = 0; j < transactions.size(); j++) {
+                if (numberOfPurchase[j] != 0) {
+                    Menu men = transactions.get(j);
+                    //trans.add(new TranHistory(men.getId(),men.getName(),numberOfPurchase[j],new Date(),men.getCost()));
+                    trans.add("" + men.getId());
+                    numofpur.add(numberOfPurchase[j] + "");
+                }
+            }
+            if (trans.size() == 0) {
+                Toast.makeText(getApplicationContext(), "Please select item", Toast.LENGTH_LONG).show();
+            } else {
+                Intent checkout = new Intent(getApplicationContext(), Checkout.class);
+                checkout.putStringArrayListExtra("Transactions", trans);
+                checkout.putStringArrayListExtra("number", numofpur);
+                startActivity(checkout);
+            }
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -314,6 +264,13 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.purchase_menu, menu);
+        return true;
     }
 
     // This method is used to react when the user presses one of the options in the drawer
