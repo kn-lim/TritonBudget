@@ -9,6 +9,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
@@ -70,7 +71,7 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         populateCOList();
 
         TextView display_total = (TextView)findViewById(R.id.total_cost);
-        display_total.setText("Total:\t\t\t" + Double.toString(total));
+        display_total.setText("Total:\t\t\t$" + double_to_string(total));
 
         FloatingActionButton button = (FloatingActionButton) findViewById(R.id.ConfirmPurchaseBtn);
         button.setOnTouchListener(new View.OnTouchListener() {
@@ -119,14 +120,32 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         for (int i = 0; i < transtring.size(); i++) {
             Menu men = data.getMenuById(Integer.parseInt(transtring.get(i)));
             trans.add(new TranHistory(men.getId(), men.getName(), Integer.parseInt(num.get(i)), new Date(), men.getCost()));
-            String cost = Double.toString(trans.get(i).getCost());
-            String quantity = Integer.toString(trans.get(i).getQuantity());
+
+            String cost = "$" + double_to_string(trans.get(i).getCost());
+            String quantity = "x" + Integer.toString(trans.get(i).getQuantity());
+
             total += (trans.get(i).getCost() * trans.get(i).getQuantity());
-            LinearLayout nestedll = makeLL();
-            ll.addView(nestedll);
-            TextView t = makeTV(trans.get(i).getName(), cost, quantity);
+
+
+            LinearLayout borderll = makeLL();
+            LinearLayout quantityll = makeLL();
+            quantityll.setBackgroundResource(0);
+            quantityll.setGravity(Gravity.RIGHT);
+
+            TextView item = new TextView(this);
+            item.setPadding(8, 8, 8, 8);
+            item.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            item.setTextSize(20);
+            String itemName = trans.get(i).getName();
+            item.setText(itemName);
+
+            TextView t = makeTV(cost, quantity);
             t.setPadding(8,8,8,8);
-            nestedll.addView(t);
+
+            ll.addView(borderll);
+            borderll.addView(item);
+            borderll.addView(quantityll);
+            quantityll.addView(t);
         }
 
     }
@@ -139,10 +158,10 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         return nestedll;
     }
 
-    private TextView makeTV(String name, String cost, String quantity) {
+    private TextView makeTV(String cost, String quantity) {
         TextView tv = new TextView(this);
         tv.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        tv.setText(name + "\t\t\t" + cost + "\t\t\t" + quantity);
+        tv.setText(cost + " " + quantity);
         tv.setTextSize(20);
         return tv;
     }
@@ -159,6 +178,17 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
             data.createTransaction(trans.get(i));
         }
         return true;
+    }
+
+    private String double_to_string(double number) {
+        //Gets the balance from the user
+        String str = "" + number;
+        int decimalIdx = str.indexOf('.');
+        //Edge case, where balance == $XXX.00, it wrongly displays one instance of 0. This fixes it.
+        if (decimalIdx + 1 == str.length() - 1) {
+            str = str + "0";
+        }
+        return str;
     }
 
     @Override
@@ -217,4 +247,5 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         }
         return super.onOptionsItemSelected(item);
     }
+
 }
