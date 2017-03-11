@@ -244,7 +244,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         cal.setTime((new Date()));
         for(int i=0;i<7;i++)
         {
-            cal.setTime(new Date(System.currentTimeMillis()-24L*60L*60L*1000L*i/2));
+            cal.setTime(new Date(System.currentTimeMillis()-24L*60L*60L*1000L*i));
             //cal.add(Calendar.DATE, -1);
             int month = cal.get(Calendar.MONTH)+1;
             int day = cal.get(Calendar.DAY_OF_MONTH);
