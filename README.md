@@ -1,7 +1,7 @@
 # Team Maximizing Efficiency, Minimizing Entropy Software
 ## Project Name:
 **Triton Budget**
-![TritonBudget](http://imgur.com/x0T4BsH "TritonBudget")
+![TritonBudget](https://i.imgur.com/x0T4BsH.png "TritonBudget")
 
 ## Team Members:
 **Kevin Lim**       - Project Manager
