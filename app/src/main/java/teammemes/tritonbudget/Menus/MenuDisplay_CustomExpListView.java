@@ -39,6 +39,7 @@ public class MenuDisplay_CustomExpListView extends ExpandableListView {
 
         widthMeasureSpec = MeasureSpec.makeMeasureSpec(width1-50, MeasureSpec.AT_MOST);
         heightMeasureSpec = MeasureSpec.makeMeasureSpec(CHILDSUB_HEIGHT, MeasureSpec.AT_MOST);
+
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 }
