@@ -116,7 +116,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
         /*Set Text for TextView Objects*/
         String text;
         SpannableString format;
-        for (int i = 0; i < 13; i++) {
+        for (int i = 0; i < 11; i++) {
             text = diningHalls[i];
             format = new SpannableString(text);
             format.setSpan(relsubsize, dnamelenghts[i], text.length(), 0);
