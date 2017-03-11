@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable-anydpi-v21/design_ic_visibility.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/drawable-anydpi-v21/design_ic_visibility.xml"
     }
 ]

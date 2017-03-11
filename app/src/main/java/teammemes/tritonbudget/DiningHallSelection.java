@@ -63,14 +63,11 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
 
         usr = User.getInstance(getApplicationContext());
 
-
         //Creates the toolbar to the one defined in nav_action
         mToolbar = (Toolbar) findViewById(R.id.nav_action);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Dining Hall Selection");
-
-
 
         //Create the Drawer layout and the toggle
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_dhselection);
@@ -325,13 +322,13 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
                 }
             }
         });
-       /* sixtyfournorth.setOnClickListener(new View.OnClickListener() {
+        sixtyfournorth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(source.equals("PURCHASE"))
                 {
                     Intent intent = new Intent(DiningHallSelection.this,PurchaseMenu.class);
-                    intent.putExtra("FROM","The Bistro");
+                    intent.putExtra("FROM","Sixty-Four North");
                     startActivity(intent);
                 }
                 else {
@@ -340,7 +337,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
                     startActivity(intent);
                 }
             }
-        });*/
+        });
     }//End of onCreate
 
     //This method is used to listen for the user clicking the menu button, and opens

@@ -25,6 +25,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import teammemes.tritonbudget.db.HistoryDataSource;
@@ -226,6 +227,10 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         dollars.setSpan(colorDol, 0, dollarStr.length(), 0);
         cents.setSpan(colorCents, 0, centStr.length(), 0);
         totBal.setText(TextUtils.concat(dollars, cents));
+        double daysp=usr.getBalance()/(167- Calendar.getInstance().get(Calendar.DAY_OF_YEAR))*100;
+        daysp=Math.round(daysp);
+        daysp=daysp/100;
+        dailyRBal.setText("$"+Double.toString(daysp));
     }
 
     //This method is used to listen for the user clicking the menu button, and opens

@@ -2,10 +2,8 @@ package teammemes.tritonbudget;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-
-import java.util.ArrayList;
-
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -18,10 +16,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.support.design.widget.FloatingActionButton;
+import android.widget.Toast;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 import teammemes.tritonbudget.Menus.Menu;
@@ -32,19 +31,18 @@ import static android.view.Gravity.CENTER;
 
 public class PurchaseMenu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,Serializable{
 
+    SimpleDateFormat dateFormat;
+    LinearLayout.LayoutParams layoutParams, textParams, btnParams, noWeight;
+    LinearLayout mainLayout;
+    FloatingActionButton myFab;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     private Toolbar mToolbar;
     private User usr;
     private MenuDataSource database;
-    SimpleDateFormat dateFormat;
-    LinearLayout.LayoutParams layoutParams, textParams, btnParams, noWeight;
-    LinearLayout mainLayout;
     private int[] numberOfPurchase;
     private List<Menu> transactions;
     private int i=0;
-    FloatingActionButton myFab;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,10 +105,16 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
                         numofpur.add(numberOfPurchase[j]+"");
                     }
                 }
-                Intent checkout = new Intent(getApplicationContext(),Checkout.class);
-                checkout.putStringArrayListExtra("Transactions",trans);
-                checkout.putStringArrayListExtra("number",numofpur);
-                startActivity(checkout);
+                if(trans.size()==0)
+                {
+                    Toast.makeText(getApplicationContext(),"Please select item",Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Intent checkout = new Intent(getApplicationContext(), Checkout.class);
+                    checkout.putStringArrayListExtra("Transactions", trans);
+                    checkout.putStringArrayListExtra("number", numofpur);
+                    startActivity(checkout);
+                }
             }
         });
 
@@ -281,12 +285,11 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
                 nextScreen.putExtra("FROM", "History");
                 startActivity(nextScreen);
                 return true;
-            /* Cases for future options
             case R.id.nav_settings:
                 return false;
             case R.id.nav_help:
-                return false:
-            */
+                return false;
+
             default:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return false;

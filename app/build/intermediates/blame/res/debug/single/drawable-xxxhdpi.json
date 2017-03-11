@@ -1,26 +1,26 @@
 [
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_feedback_black_24dp.png",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/drawable-xxxhdpi/ic_feedback_black_24dp.png"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_shopping_cart_black_24dp.png",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/drawable-xxxhdpi/ic_shopping_cart_black_24dp.png"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_home_black_24dp.png",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/drawable-xxxhdpi/ic_home_black_24dp.png"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_assessment_black_24dp.png",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/drawable-xxxhdpi/ic_assessment_black_24dp.png"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_settings_black_24dp.png",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/drawable-xxxhdpi/ic_settings_black_24dp.png"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_feedback_black_24dp.png",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/drawable-xxxhdpi/ic_feedback_black_24dp.png"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_shopping_cart_black_24dp.png",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/drawable-xxxhdpi/ic_shopping_cart_black_24dp.png"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_settings_black_24dp.png",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/drawable-xxxhdpi/ic_settings_black_24dp.png"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_assessment_black_24dp.png",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/drawable-xxxhdpi/ic_assessment_black_24dp.png"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_collections_bookmark_black_24dp.png",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/drawable-xxxhdpi/ic_collections_bookmark_black_24dp.png"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_collections_bookmark_black_24dp.png",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/drawable-xxxhdpi/ic_collections_bookmark_black_24dp.png"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_home_black_24dp.png",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/drawable-xxxhdpi/ic_home_black_24dp.png"
     }
 ]

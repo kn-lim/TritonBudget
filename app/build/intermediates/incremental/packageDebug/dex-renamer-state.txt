@@ -1,4 +1,4 @@
-#Thu Mar 09 11:44:02 PST 2017
-base.0=/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+#Fri Mar 10 16:25:09 PST 2017
+base.0=/Users/Danny/Desktop/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.0=/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+file.0=/Users/Danny/Desktop/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

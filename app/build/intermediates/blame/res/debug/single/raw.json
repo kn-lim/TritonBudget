@@ -1,10 +1,6 @@
 [
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/raw/ic_launcher_medium.png",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/raw/ic_launcher_medium.png"
-    },
-    {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/raw/menu.csv",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/raw/menu.csv"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/raw/menu.csv",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/raw/menu.csv"
     }
 ]
