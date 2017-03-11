@@ -3,6 +3,7 @@ package teammemes.tritonbudget;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -251,7 +252,13 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
             @Override
             public void onClick(View v) {
                 //startActivity(new Intent(Settings.this, NonTrackingDays.class));
-                //TODO: Send link to FB group "Free and For Sale"
+                try {
+                    Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.facebook.com/groups/UCSDfreeforsale/"));
+                    startActivity(intent);
+                } catch(Exception e) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com/groups/UCSDfreeforsale/")));
+                }
+
             }
         });
 
