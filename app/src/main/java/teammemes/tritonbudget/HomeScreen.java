@@ -239,6 +239,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         dollars.setSpan(colorDol, 0, dollarStr.length(), 0);
         cents.setSpan(colorCents, 0, centStr.length(), 0);
         dailyRBal.setText(TextUtils.concat(dollars, cents));
+        //dailyRBal.setText(daysp+"");
     }
 
     @Override

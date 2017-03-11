@@ -93,14 +93,42 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
         database = new MenuDataSource(this);
         transactions = database.getMenusByLocation(getIntent().getExtras().getString("FROM"));
         numberOfPurchase = new int[transactions.size()];
-        dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+
 
         myFab = (FloatingActionButton) findViewById(R.id.myFAB);
+
+        dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+
 
         myFab.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent event) {
                 switch (event.getActionMasked()) {
+                    /*case MotionEvent.ACTION_BUTTON_PRESS:
+                        lastAction = MotionEvent.ACTION_BUTTON_PRESS;
+                        break;
+                    case MotionEvent.ACTION_BUTTON_RELEASE:
+                        if (lastAction == MotionEvent.ACTION_BUTTON_PRESS) {
+                            ArrayList<String> trans = new ArrayList<String>();
+                            ArrayList<String> numofpur = new ArrayList<String>();
+                            for (int j = 0; j < transactions.size(); j++) {
+                                if (numberOfPurchase[j] != 0) {
+                                    Menu men = transactions.get(j);
+                                    //trans.add(new TranHistory(men.getId(),men.getName(),numberOfPurchase[j],new Date(),men.getCost()));
+                                    trans.add("" + men.getId());
+                                    numofpur.add(numberOfPurchase[j] + "");
+                                }
+                            }
+                            if (trans.size() == 0) {
+                                Toast.makeText(getApplicationContext(), "Please select item", Toast.LENGTH_LONG).show();
+                            } else {
+                                Intent checkout = new Intent(getApplicationContext(), Checkout.class);
+                                checkout.putStringArrayListExtra("Transactions", trans);
+                                checkout.putStringArrayListExtra("number", numofpur);
+                                startActivity(checkout);
+                            }
+                        }
+                        break;*/
                     case MotionEvent.ACTION_DOWN:
                         dX = view.getX() - event.getRawX();
                         dY = view.getY() - event.getRawY();
@@ -112,9 +140,8 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
                         view.setX(event.getRawX() + dX);
                         lastAction = MotionEvent.ACTION_MOVE;
                         break;
-
                     case MotionEvent.ACTION_UP:
-                        if (lastAction == MotionEvent.ACTION_DOWN) {
+                        if (lastAction == 2) {
                             ArrayList<String> trans = new ArrayList<String>();
                             ArrayList<String> numofpur = new ArrayList<String>();
                             for (int j = 0; j < transactions.size(); j++) {
