@@ -1,158 +1,164 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:2:1-132:12
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:2:1-126:12
 	package
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:3:5-37
-		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:3:5-37
+		INJECTED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:5:5-130:19
-MERGED from [com.android.support:design:25.1.0] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:transition:25.1.0] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/AndroidManifest.xml:25:5-20
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:5:5-124:19
+MERGED from [com.android.support:design:25.1.0] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:transition:25.1.0] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:8:9-41
 	android:supportsRtl
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:9:9-35
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:9:9-35
 	android:allowBackup
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:6:9-35
 	android:icon
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:7:9-43
 	android:theme
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:10:9-40
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:10:9-40
 activity#teammemes.tritonbudget.Splash
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:12:9-20:20
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:11:9-19:20
 	android:theme
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:14:13-47
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:13:13-47
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:13:13-35
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:12:13-35
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:15:13-19:29
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:14:13-18:29
 action#android.intent.action.MAIN
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:16:17-69
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:15:17-69
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:16:25-66
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:15:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:18:17-77
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:17:17-77
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:18:27-74
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:17:27-74
 activity#teammemes.tritonbudget.Enter_Info
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:22:9-26:20
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:20:9-26:20
+	android:theme
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:22:13-50
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:22:19-45
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:21:13-39
 intent-filter#android.intent.category.LAUNCHER
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:23:13-25:29
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:23:13-25:29
 activity#teammemes.tritonbudget.HomeScreen
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:28:9-32:20
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:27:9-31:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:28:19-45
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:27:19-45
 activity#teammemes.tritonbudget.Statistics
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:34:9-38:20
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:32:9-36:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:34:19-45
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:32:19-45
 activity#teammemes.tritonbudget.DiningHallSelection
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:40:9-57
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:37:9-41:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:40:19-54
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:37:19-54
 activity#teammemes.tritonbudget.History
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:42:9-45
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:42:9-46:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:42:19-42
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:42:19-42
 activity#teammemes.tritonbudget.PurchaseMenu
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:44:9-48:20
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:47:9-51:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:44:19-47
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:47:19-47
 activity#teammemes.tritonbudget.Checkout
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:50:9-54:20
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:52:9-56:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:50:19-43
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:52:19-43
 activity#teammemes.tritonbudget.Settings
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:56:9-60:20
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:57:9-61:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:56:19-43
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:57:19-43
 activity#teammemes.tritonbudget.Help
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:62:9-66:20
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:62:9-66:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:62:19-39
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:62:19-39
 activity#teammemes.tritonbudget.testClick
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:68:9-47
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:67:9-47
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:68:19-44
-activity#teammemes.tritonbudget.Menu64Degrees_Main
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:70:9-74:20
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:67:19-44
+activity#teammemes.tritonbudget.Menus.Menu64Degrees_Main
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:68:9-72:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:70:19-53
-activity#teammemes.tritonbudget.MenuOceanView_Main
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:76:9-80:20
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:68:19-59
+activity#teammemes.tritonbudget.Menus.MenuOceanView_Main
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:73:9-77:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:76:19-53
-activity#teammemes.tritonbudget.MenuBistro_Main
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:82:9-86:20
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:73:19-59
+activity#teammemes.tritonbudget.Menus.MenuBistro_Main
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:78:9-82:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:82:19-50
-activity#teammemes.tritonbudget.MenuCafeVentanas_Main
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:88:9-92:20
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:78:19-56
+activity#teammemes.tritonbudget.Menus.MenuCafeVentanas_Main
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:83:9-87:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:88:19-56
-activity#teammemes.tritonbudget.MenuCanyonVista_Main
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:94:9-98:20
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:83:19-62
+activity#teammemes.tritonbudget.Menus.MenuCanyonVista_Main
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:88:9-92:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:94:19-55
-activity#teammemes.tritonbudget.MenuClubMed_Main
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:100:9-104:20
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:88:19-61
+activity#teammemes.tritonbudget.Menus.MenuClubMed_Main
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:93:9-97:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:100:19-51
-activity#teammemes.tritonbudget.MenuFoodworx_Main
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:106:9-110:20
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:93:19-57
+activity#teammemes.tritonbudget.Menus.MenuFoodworx_Main
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:98:9-102:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:106:19-52
-activity#teammemes.tritonbudget.MenuGoodys_Main
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:112:9-116:20
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:98:19-58
+activity#teammemes.tritonbudget.Menus.MenuGoodys_Main
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:103:9-107:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:112:19-50
-activity#teammemes.tritonbudget.MenuPines_Main
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:118:9-122:20
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:103:19-56
+activity#teammemes.tritonbudget.Menus.MenuPines_Main
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:108:9-112:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:118:19-49
-activity#teammemes.tritonbudget.MenuRoots_Main
-ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:124:9-128:20
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:108:19-55
+activity#teammemes.tritonbudget.Menus.MenuRoots_Main
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:113:9-117:20
 	android:name
-		ADDED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml:124:19-49
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:113:19-55
+activity#teammemes.tritonbudget.NonTrackingDays
+ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:118:9-122:20
+	android:name
+		ADDED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml:118:19-50
 uses-sdk
-INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:design:25.1.0] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:recyclerview-v7:25.1.0] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.1.0] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.1.1] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/AndroidManifest.xml:21:5-23:58
+INJECTED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:25.1.0] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:25.1.0] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.1.0] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.1.1] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.1.0] /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.1.0] /Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Danny/Desktop/TritonBudget/app/src/main/AndroidManifest.xml

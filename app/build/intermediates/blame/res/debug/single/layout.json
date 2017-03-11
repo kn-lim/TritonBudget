@@ -1,334 +1,342 @@
 [
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_action_menu_item_layout.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_navigation_item_separator.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_expanded_menu_layout.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_navigation_menu_item.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_help.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/activity_help.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/dialog_deduction.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/dialog_deduction.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_home_screen.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/activity_home_screen.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/navigation_header.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/navigation_header.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/list_group.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/list_group.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_bottom_sheet_dialog.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/navigation_action.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/navigation_action.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_enter__info.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/activity_enter__info.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_menu_item_action_area.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_dialog_title_material.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_list_group.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/drawer_list_group.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_history.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/drawer_history.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_dining_hall_selection.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/activity_dining_hall_selection.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_navigation_menu.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_checkout.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/activity_checkout.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_list_menu_item_radio.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_list_menu_item_layout.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_activity_chooser_view.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_list_group.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/drawer_list_group.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_nontracking.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/activity_nontracking.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_list_item.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/drawer_list_item.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_navigation_item.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_popup_menu_header_item_layout.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_backend_demo.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/activity_backend_demo.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_statistics.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/activity_statistics.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_statistics.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/activity_statistics.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/select_dialog_item_material.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_layout_tab_icon.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_menu.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/activity_menu.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_activity_chooser_view.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_enter__info.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/activity_enter__info.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_navigation_item_subheader.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/content_checkout.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/content_checkout.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_splash.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/activity_splash.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/dialog_change_name.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/dialog_change_name.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_template_part_time.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/select_dialog_item_material.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_navigation_item_header.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_home_screen.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/activity_home_screen.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_menu_item_action_area.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_navigation_menu_item.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/list_group.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/list_group.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_navigation_item_subheader.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/notification_template_media_custom.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_template_media_custom.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_list_group_second.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/drawer_list_group_second.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_template_media.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_bottom_sheet_dialog.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_action_bar_up_container.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_search_view.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_navigation_item.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_dialog_title_material.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_layout_snackbar_include.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_title_material.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_layout_tab_text.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_menu.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/activity_menu.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_activity_chooser_view_list_item.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_template_part_time.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_screen_content_include.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_settings.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/drawer_settings.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_settings.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/drawer_settings.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_test_click.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/activity_test_click.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/content_checkout.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/content_checkout.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_backend_demo.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/activity_backend_demo.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_action_mode_bar.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_layout_snackbar.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_list_item.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/drawer_list_item.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_template_part_chronometer.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_dhselection.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/drawer_dhselection.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_statistics.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/drawer_statistics.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/notification_template_media_custom.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_template_media_custom.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_action_menu_layout.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_layout_tab_icon.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_history.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/drawer_history.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_navigation_item_separator.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_settings.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/activity_settings.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_test_click.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/activity_test_click.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_navigation_menu.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_purchase_menu.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/activity_purchase_menu.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_layout_snackbar_include.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/select_dialog_multichoice_material.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_checkout.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/drawer_checkout.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_home_screen.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/drawer_home_screen.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/content_menu_display_main.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/content_menu_display_main.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_dining_hall_selection.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/activity_dining_hall_selection.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_template_lines_media.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_list_menu_item_checkbox.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_screen_toolbar.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_navigation_item_header.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_screen_content_include.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_template_lines_media.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_title_material.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_alert_dialog_title_material.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_help.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/drawer_help.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_select_dialog_material.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_select_dialog_material.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_search_view.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/dialog_deduction.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/dialog_deduction.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_action_mode_close_item_material.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/dialog_credits.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/dialog_credits.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_settings.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/activity_settings.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_screen_simple.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_screen_toolbar.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_text_input_password_icon.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_text_input_password_icon.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_purchase_menu.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/drawer_purchase_menu.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_dhselection.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/drawer_dhselection.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_action_menu_layout.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/dialog_credits.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/dialog_credits.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_menu.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/drawer_menu.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_history.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/activity_history.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_help.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/drawer_help.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_statistics.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/drawer_statistics.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/list_item.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/list_item.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/list_item.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/list_item.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/navigation_action.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/navigation_action.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_splash.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/activity_splash.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_list_group_second.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/drawer_list_group_second.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_action_mode_bar.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_alert_dialog_material.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/dialog_change_name.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/dialog_change_name.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_layout_snackbar.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_alert_dialog_material.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_help.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/activity_help.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_menu_display_main.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/activity_menu_display_main.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_bottom_navigation_item.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_bottom_navigation_item.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/select_dialog_singlechoice_material.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_history.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/activity_history.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_bottom_navigation_item.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_bottom_navigation_item.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/navigation_header.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/navigation_header.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/content_menu_display_main.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/content_menu_display_main.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_screen_simple.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_action_bar_view_list_nav_layout.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/layout/design_layout_tab_text.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_popup_menu_item_layout.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_template_part_chronometer.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_action_bar_title_item.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/notification_template_media.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_checkout.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/activity_checkout.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_purchase_menu.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/src/main/res/layout/drawer_purchase_menu.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_list_menu_item_icon.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/drawer_home_screen.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/drawer_home_screen.xml"
     },
     {
-        "merged": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
-        "source": "/Users/knlim/Desktop/MyProjects/CSE110/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/layout/activity_purchase_menu.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/layout/activity_purchase_menu.xml"
     }
 ]
