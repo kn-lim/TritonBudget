@@ -9,23 +9,26 @@
     <LinearLayout
         android:id="@+id/HS_LLV_Container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#03a9f4">
 
         <LinearLayout
             android:id="@+id/HS_LLV_TopPortion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@drawable/border_set_top_bottom"
+            android:requiresFadingEdge="horizontal">
 
             <TextView
                 android:id="@+id/HS_TextView_TotalBalance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="-30dp"
+                android:layout_marginTop="20dp"
                 android:text="Total Balance"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textSize="30sp"
@@ -45,6 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_marginBottom="30dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -52,7 +56,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="10dp"
-                    android:textSize="14sp"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:textSize="24sp"
                     tools:text="$XX.XX" />
 
                 <TextView
@@ -85,18 +90,19 @@
                 android:fontFamily="sans-serif"
                 android:text="DEDUCT"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="@android:color/holo_blue_dark"
                 android:textSize="22sp" />
 
             <Button
                 android:id="@+id/HS_Button_Purchase"
                 android:layout_width="150dp"
                 android:layout_height="70dp"
+                android:layout_marginBottom="35dp"
                 android:layout_marginTop="35dp"
                 android:fontFamily="sans-serif"
                 android:text="PURCHASE"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="@android:color/holo_blue_dark"
                 android:textSize="22sp" />
         </LinearLayout>
 

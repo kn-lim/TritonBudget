@@ -15,4 +15,13 @@
     <item android:id="@+id/nav_menus"
         android:icon="@drawable/ic_shopping_cart_black_24dp"
         android:title="HDH Menus" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="Settings" />
+
+    <item
+        android:id="@+id/nav_help"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:title="Need Assistance?" />
 </menu>

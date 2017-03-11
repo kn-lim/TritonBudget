@@ -16,11 +16,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 import teammemes.tritonbudget.db.HistoryDataSource;
 
@@ -41,6 +44,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         setContentView(R.layout.drawer_statistics);
 
 
+
         usr = User.getInstance(getApplicationContext());
 
         //NAVIGATION DRAWER//
@@ -48,7 +52,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         mToolbar = (Toolbar) findViewById(R.id.nav_action);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        getSupportActionBar().setTitle("Statistics");
 
         //Create the Drawer layout and the toggle
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_statistics_layout);
@@ -84,10 +88,22 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         });
         TextView weekTotal = (TextView)findViewById(R.id.statistics_text_this_week_num);
         TextView average = (TextView)findViewById(R.id.statistic_text_average_num);
+        TextView weekLast = (TextView)findViewById(R.id.statistic_text_last_week_num);
         HistoryDataSource hist = new HistoryDataSource(getApplicationContext());
 
-        weekTotal.setText(Double.toString(hist.getThisWeekTotal()));
-        average.setText(Double.toString(hist.getThisWeekTotal()));
+        double weektotal=hist.getThisWeekTotal();
+        weektotal=weektotal*100;
+        weektotal=Math.round(weektotal);
+        weektotal=weektotal/100;
+        weekTotal.setText(Double.toString(weektotal));
+        double daily = 100*hist.getDailyAverage();
+        daily=Math.round(daily);
+        daily=daily/100;
+        average.setText(Double.toString(daily));
+        double lastweek=100*hist.getLastWeekTotal();
+        lastweek=Math.round(lastweek);
+        lastweek=lastweek/100;
+        weekLast.setText(Double.toString(lastweek));
 
         //For Last week, this week,
     }
@@ -144,12 +160,18 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
                 nextScreen.putExtra("FROM", "Statistics");
                 startActivity(nextScreen);
                 return true;
-            /* Cases for future options
             case R.id.nav_settings:
-                return false;
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Settings.class);
+                nextScreen.putExtra("FROM", "Statistics");
+                startActivity(nextScreen);
+                return true;
             case R.id.nav_help:
-                return false:
-            */
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Help.class);
+                nextScreen.putExtra("FROM", "Statistics");
+                startActivity(nextScreen);
+                return true;
             default:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return false;
@@ -164,6 +186,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         chart.setData(data);
         chart.setDescription("My Chart");
         chart.animateXY(2000, 2000);
+        chart.getXAxis().setAdjustXLabels(false);
         chart.invalidate();
     }
 
@@ -174,6 +197,8 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         chart.setData(data);
         chart.setDescription("My Chart");
         chart.animateXY(2000, 2000);
+        XAxis x = chart.getXAxis();
+        x.setAdjustXLabels(false);
         chart.invalidate();
     }
 
@@ -184,6 +209,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         ArrayList<BarEntry> valueSet1 = new ArrayList<>();
         for (int i = 0; i < data.length; i++) {
             BarEntry vl = new BarEntry((float) data[i], i);
+            valueSet1.add(vl);
         }
 
         BarDataSet barDataSet1 = new BarDataSet(valueSet1, "Brand 1");
@@ -203,6 +229,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         ArrayList<BarEntry> valueSet1 = new ArrayList<>();
         for (int i = 0; i < data.length; i++) {
             BarEntry vl = new BarEntry((float) data[i], i);
+            valueSet1.add(vl);
         }
 
         BarDataSet barDataSet1 = new BarDataSet(valueSet1, "Brand 1");
@@ -217,13 +244,17 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
 
     private ArrayList<String> getXAxisValues() {
         ArrayList<String> xAxis = new ArrayList<>();
-        xAxis.add("Sun");
-        xAxis.add("Mon");
-        xAxis.add("Tue");
-        xAxis.add("Wed");
-        xAxis.add("Thu");
-        xAxis.add("Fri");
-        xAxis.add("Sat");
+        Calendar cal = Calendar.getInstance();
+        cal.setTime((new Date()));
+        for(int i=0;i<7;i++)
+        {
+            cal.setTime(new Date(System.currentTimeMillis()-24L*60L*60L*1000L*i));
+            //cal.add(Calendar.DATE, -1);
+            int month = cal.get(Calendar.MONTH)+1;
+            int day = cal.get(Calendar.DAY_OF_MONTH);
+            String date = month + "." + day;
+            xAxis.add(date);
+        }
         return xAxis;
     }
 

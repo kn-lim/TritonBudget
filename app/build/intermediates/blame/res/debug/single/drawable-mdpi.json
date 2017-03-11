@@ -1,26 +1,26 @@
 [
     {
-        "merged": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_feedback_black_24dp.png",
-        "source": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\src\\main\\res\\drawable-mdpi\\ic_feedback_black_24dp.png"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_collections_bookmark_black_24dp.png",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/drawable-mdpi/ic_collections_bookmark_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_home_black_24dp.png",
-        "source": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\src\\main\\res\\drawable-mdpi\\ic_home_black_24dp.png"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_home_black_24dp.png",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/drawable-mdpi/ic_home_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_shopping_cart_black_24dp.png",
-        "source": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\src\\main\\res\\drawable-mdpi\\ic_shopping_cart_black_24dp.png"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_shopping_cart_black_24dp.png",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/drawable-mdpi/ic_shopping_cart_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_collections_bookmark_black_24dp.png",
-        "source": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\src\\main\\res\\drawable-mdpi\\ic_collections_bookmark_black_24dp.png"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_assessment_black_24dp.png",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/drawable-mdpi/ic_assessment_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_settings_black_24dp.png",
-        "source": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\src\\main\\res\\drawable-mdpi\\ic_settings_black_24dp.png"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_feedback_black_24dp.png",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/drawable-mdpi/ic_feedback_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_assessment_black_24dp.png",
-        "source": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\src\\main\\res\\drawable-mdpi\\ic_assessment_black_24dp.png"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_settings_black_24dp.png",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/drawable-mdpi/ic_settings_black_24dp.png"
     }
 ]

@@ -1,6 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\res\\merged\\debug\\menu\\navigation_menu.xml",
-        "source": "C:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\src\\main\\res\\menu\\navigation_menu.xml"
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/menu/navigation_menu.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/menu/navigation_menu.xml"
+    },
+    {
+        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/menu/history_menu.xml",
+        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/menu/history_menu.xml"
     }
 ]

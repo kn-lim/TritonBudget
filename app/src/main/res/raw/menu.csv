@@ -1,221 +1,66 @@
-Pines,Breakfast,Breakfast Special,Waffle,0.84,TRUE,FALSE,FALSE
-Pines,Breakfast,Standard Breakfast,Breakfast Burrito,3.95,TRUE,FALSE,FALSE
-Pines,Breakfast,Standard Breakfast,Breakfast Quesadilla,3.95,FALSE,FALSE,FALSE
-Pines,Breakfast,Standard Breakfast,Dietitian's Delight,3.95,FALSE,FALSE,FALSE
-Pines,Breakfast,Standard Breakfast,Tater Barrels,1.65,TRUE,FALSE,FALSE
-Pines,Breakfast,Breakfast A La Carte,Beans,1.65,FALSE,TRUE,TRUE
-Pines,Breakfast,Breakfast A La Carte,Biscuit,0.95,TRUE,FALSE,FALSE
-Pines,Breakfast,Breakfast A La Carte,Cage Free Scrambled Eggs ,1.25,TRUE,FALSE,TRUE
-Pines,Breakfast,Breakfast A La Carte,Fresh Tortillas,0.35,FALSE,FALSE,FALSE
-Pines,Breakfast,Breakfast A La Carte,Pork Sausage Links,0.95,FALSE,FALSE,TRUE
-Pines,Breakfast,Breakfast A La Carte,Sausage Gravy,0.5,FALSE,FALSE,FALSE
-Pines,Breakfast,Breakfast A La Carte,Scrambled Egg Whites,1.25,TRUE,FALSE,TRUE
-Pines,Breakfast,Breakfast A La Carte,Smoked bacon,0.85,FALSE,FALSE,TRUE
-Pines,Breakfast,Breakfast A La Carte,Tater Barrels,1.65,TRUE,FALSE,FALSE
-Pines,Breakfast,Breakfast A La Carte,Veggie Sausage,1.09,TRUE,FALSE,FALSE
-Pines,Breakfast,Breakfast A La Carte,Cereal with Milk,1.95,FALSE,FALSE,FALSE
-Pines,Breakfast,Breakfast A La Carte,Steelcut Oatmeal,1.95,TRUE,FALSE,FALSE
-Pines,Breakfast,Breakfast A La Carte,Whole Fruit,0.5,FALSE,TRUE,TRUE
-Pines,Lunch,Cantina Entrees,Carnitas Quesadilla,5.95,FALSE,FALSE,FALSE
-Pines,Lunch,Cantina Entrees,La Cantina Burrito,6.95,FALSE,FALSE,FALSE
-Pines,Lunch,Cantina Entrees,Pines Cantina Taco,2.95,FALSE,FALSE,FALSE
-Pines,Lunch,Cantina Entrees,Quesadilla,3.95,TRUE,FALSE,FALSE
-Pines,Lunch,Cantina Entrees,Taco Salad,6.65,FALSE,FALSE,FALSE
-Pines,Lunch,Cantina Entrees,Taquitos Supreme,5.95,FALSE,FALSE,FALSE
-Pines,Lunch,Cantina Sides,Aztec Pinto Beans,1.5,TRUE,FALSE,FALSE
-Pines,Lunch,Cantina Sides,Cilantro Rice,1.5,FALSE,TRUE,TRUE
-Pines,Lunch,Value 4 U,Crispy French Fries,1.75,FALSE,FALSE,FALSE
-Pines,Lunch,Value 4 U,Fried Chicken Fritters,4.5,FALSE,FALSE,FALSE
-Pines,Lunch,Pizza,Cheese Pizza,2.25,TRUE,FALSE,FALSE
-Pines,Lunch,Pizza,Specialty Pizza,2.75,FALSE,FALSE,FALSE
-Pines,Lunch,Trattoria,Mushroom Penne Gratin,4.95,TRUE,FALSE,FALSE
-Pines,Lunch,Sides,Emerald Sesame Greens,2,FALSE,TRUE,FALSE
-Pines,Lunch,Sides,Garlic Bread,0.55,TRUE,FALSE,FALSE
-Pines,Lunch,Chili,Vegetarian Chili,3.5,FALSE,TRUE,TRUE
-Pines,Lunch,Soup,Chickpea Lentil Soup,3.5,FALSE,FALSE,TRUE
-Pines,Lunch,BYO Deli,Hand Carved Turkey Sandwich,6.64,FALSE,FALSE,FALSE
-Pines,Dinner,Cantina Entrees,Carnitas Quesadilla,5.95,FALSE,FALSE,FALSE
-Pines,Dinner,Cantina Entrees,La Cantina Burrito,6.95,FALSE,FALSE,FALSE
-Pines,Dinner,Cantina Entrees,Pines Cantona Taco,2.95,FALSE,FALSE,FALSE
-Pines,Dinner,Cantina Entrees,Quesadilla,3.95,TRUE,FALSE,FALSE
-Pines,Dinner,Cantina Entrees,Taco Salad,6.65,FALSE,FALSE,FALSE
-Pines,Dinner,Cantina Entrees,Taquitos Supreme,5.95,FALSE,FALSE,FALSE
-Pines,Dinner,Cantina Sides,Aztec Pinto Beans,1.5,TRUE,FALSE,FALSE
-Pines,Dinner,Cantina Sides,Cilantro Rice,1.5,FALSE,TRUE,TRUE
-Pines,Dinner,Pizza,Cheese Pizza,2.25,TRUE,FALSE,FALSE
-Pines,Dinner,Pizza,Meat Lovers Pizza,2.75,FALSE,FALSE,FALSE
-Pines,Dinner,Trattoria,Mushroom Penne Gratin,4.95,TRUE,FALSE,FALSE
-Pines,Dinner,Trattoria,Spaghetti and Meatballs,4.95,FALSE,FALSE,FALSE
-Pines,Dinner,Sides,Emerald Sesame Greens,2,FALSE,TRUE,FALSE
-Pines,Dinner,Sides,Garlic Bread,0.55,TRUE,FALSE,FALSE
-Pines,Dinner,Sides,Roasted Vegetables,2,FALSE,TRUE,TRUE
-Pines,Dinner,Chilli,Vegetarian Chili,3.5,FALSE,TRUE,TRUE
-Pines,Dinner,Soup,Soup,3.5,FALSE,FALSE,TRUE
-Foodworx,Breakfast,Standard Breakfast,Belgian Waffles,2.95,TRUE,FALSE,FALSE
-Foodworx,Breakfast,Standard Breakfast,English Muffin Breakfast Sandwich,4.5,FALSE,FALSE,FALSE
-Foodworx,Breakfast,Standard Breakfast,Steelcut Oatmeal,2.95,TRUE,FALSE,FALSE
-Foodworx,Lunch,Deli,Grilled Cheese Sandwich,2.95,FALSE,FALSE,FALSE
-Foodworx,Lunch,Deli,Meat Sandwich,6.25,FALSE,FALSE,FALSE
-Foodworx,Lunch,Deli,Veggie Sandwich,6.25,FALSE,FALSE,FALSE
-Foodworx,Lunch,Picnic Basket,Specialty Salads,6.25,FALSE,FALSE,FALSE
-Foodworx,Lunch,Picnic Basket,Specialty Wraps,6.25,FALSE,FALSE,FALSE
-Foodworx,Lunch,Pizzeria,Specialty Pizza,5.25,FALSE,FALSE,FALSE
-Foodworx,Lunch,Pizzeria,Crispy French Fries,1.75,FALSE,FALSE,FALSE
-Foodworx,Lunch,Pizzeria,South of the Border,7.25,FALSE,FALSE,FALSE
-Foodworx,Dinner,Deli,Meat Sandwich,6.25,FALSE,FALSE,FALSE
-Foodworx,Dinner,Deli,Grilled Cheese Sandwich,2.95,FALSE,FALSE,FALSE
-Foodworx,Dinner,Deli,Veggie Sandwich,6.25,FALSE,FALSE,FALSE
-Foodworx,Dinner,Picnic Basket,Specialty Salads,6.25,FALSE,FALSE,FALSE
-Foodworx,Dinner,Picnic Basket,Specialty Wraps,6.25,FALSE,FALSE,FALSE
-Foodworx,Dinner,Pizzeria,BYO Personal Pizza,5.95,FALSE,FALSE,FALSE
-Canyon Vista,Breakfast,Value4u,Bean and Cheese Burrito,2.25,TRUE,FALSE,FALSE
-Canyon Vista,Breakfast,Breakfast Specials,Belgian Waffles,2.95,TRUE,FALSE,FALSE
-Canyon Vista,Breakfast,Breakfast Specials,Breakfast Burrito,3.95,TRUE,FALSE,FALSE
-Canyon Vista,Breakfast,Breakfast Specials,Breakfast Quesadilla,3.95,FALSE,FALSE,FALSE
-Canyon Vista,Breakfast,Breakfast Specials,Dietitian's Delight,3.95,FALSE,FALSE,FALSE
-Canyon Vista,Breakfast,Breakfast Specials,Egg and Vegetable Bowl,3.95,FALSE,FALSE,TRUE
-Canyon Vista,Breakfast,Breakfast Specials,Soyrizo Burrito,4.95,TRUE,FALSE,FALSE
-Canyon Vista,Breakfast,Breakfast Specials,Texas French Toast,3.75,TRUE,FALSE,FALSE
-Canyon Vista,Breakfast,Daily Hot Breakfast,Steelcut Oatmeal,1.95,TRUE,FALSE,FALSE
-Canyon Vista,Breakfast,Breakfast Sides,Beans,1.65,FALSE,TRUE,TRUE
-Canyon Vista,Breakfast,Breakfast Sides,Biscuit,0.95,TRUE,FALSE,FALSE
-Canyon Vista,Breakfast,Breakfast Sides,Cage Free Scrambled Eggs ,1.25,TRUE,FALSE,TRUE
-Canyon Vista,Breakfast,Breakfast Sides,Fresh Tortillas,0.35,FALSE,FALSE,FALSE
-Canyon Vista,Breakfast,Breakfast Sides,Hash Brown Potatoes,1.65,TRUE,FALSE,FALSE
-Canyon Vista,Breakfast,Breakfast Sides,Pork Sausage Links,0.95,FALSE,FALSE,TRUE
-Canyon Vista,Breakfast,Breakfast Sides,Sausage Gravy,0.5,FALSE,FALSE,FALSE
-Canyon Vista,Breakfast,Breakfast Sides,Scrambled Egg Whites,1.25,TRUE,FALSE,TRUE
-Canyon Vista,Breakfast,Breakfast Sides,Smoked bacon,0.85,FALSE,FALSE,TRUE
-Canyon Vista,Breakfast,Breakfast Sides,Tater Barrels,1.65,TRUE,FALSE,FALSE
-Canyon Vista,Breakfast,Breakfast Sides,Texas French Toast,2.25,TRUE,FALSE,FALSE
-Canyon Vista,Breakfast,Breakfast Sides,Veggie Sausage,1.09,TRUE,FALSE,FALSE
-Canyon Vista,Breakfast,Daily Cold Breakfast,Cereal with Milk,1.95,FALSE,FALSE,FALSE
-Canyon Vista,Breakfast,Daily Cold Breakfast,Cut Fresh Fruit,0.34,FALSE,TRUE,TRUE
-Canyon Vista,Breakfast,Daily Cold Breakfast,Whole Fruit,0.5,FALSE,TRUE,TRUE
-Canyon Vista,Lunch,Chopping Block,Grilled Turkey Rueben Sandwich,6.5,FALSE,FALSE,FALSE
-Canyon Vista,Lunch,Mediterranean,Specialty Banh Mi,7.25,FALSE,FALSE,FALSE
-Canyon Vista,Lunch,Canyon Noodles,Ravioli with Gorgonzola Cream Sauce,4.95,TRUE,FALSE,FALSE
-Canyon Vista,Lunch,Tecolote Grill,Chicken Breast Sandwich,5.25,FALSE,FALSE,FALSE
-Canyon Vista,Lunch,Tecolote Grill,Specialty Burger,5.25,TRUE,FALSE,FALSE
-Canyon Vista,Lunch,Tecolote Grill,Fried Chicken Fritters,4.5,FALSE,FALSE,FALSE
-Canyon Vista,Lunch,Grill Sides,Crispy French Fries,1.75,FALSE,FALSE,FALSE
-Canyon Vista,Lunch,Grill Sides,Homestyle Potato Chips,2,FALSE,FALSE,FALSE
-Canyon Vista,Lunch,Cliff Hanger Deli,Fresh Deli Station,6.75,FALSE,FALSE,FALSE
-Canyon Vista,Lunch,Pizza,Cheese Pizza,2.25,TRUE,FALSE,FALSE
-Canyon Vista,Lunch,Pizza,Margherita Pizza,2.75,TRUE,FALSE,FALSE
-Canyon Vista,Lunch,Salad Bar,Fresh Salad Bar,0.34,FALSE,FALSE,FALSE
-Canyon Vista,Lunch,Soup,Specialty Soup,3.5,FALSE,FALSE,FALSE
-Canyon Vista,Lunch,Value4u,Grilled Cheese Sandwich,2.25,TRUE,FALSE,FALSE
-Canyon Vista,Dinner,Chopping Block,Arroz con Pollo,4.95,FALSE,FALSE,TRUE
-Canyon Vista,Dinner,Chopping Block,Salmon Taipei,7.95,FALSE,FALSE,FALSE
-Canyon Vista,Dinner,Tecolote Grill,Chicken Breast Sandwich,5.25,FALSE,FALSE,FALSE
-Canyon Vista,Dinner,Tecolote Grill,Fried Chicken Fritters,4.5,FALSE,FALSE,FALSE
-Canyon Vista,Dinner,Tecolote Grill,Specialty Burger,5.25,TRUE,FALSE,FALSE
-Canyon Vista,Dinner,Grill Sides,Crispy French Fries,1.75,FALSE,FALSE,FALSE
-Canyon Vista,Dinner,Grill Sides,Homestyle Potato Chips,2,FALSE,FALSE,FALSE
-Canyon Vista,Dinner,Pizza,Artichoke and Feta Pizza,2.75,TRUE,FALSE,FALSE
-Canyon Vista,Dinner,Pizza,Cheese Pizza,2.25,TRUE,FALSE,FALSE
-Canyon Vista,Dinner,Soup,Old Fashioned Chicken Noodle,3.5,FALSE,FALSE,FALSE
-Canyon Vista,Dinner,Soup,Southwest Corn Chowder Soup,3.5,FALSE,FALSE,FALSE
-Canyon Vista,Dinner,Value4u,Grilled Cheese Sandwich,2.25,TRUE,FALSE,FALSE
-Cafe Ventanas,Breakfast,Breakfast Specials,Breakfast Burrito,3.95,TRUE,FALSE,FALSE
-Cafe Ventanas,Breakfast,Breakfast Specials,Breakfast Quesadilla,3.95,FALSE,FALSE,FALSE
-Cafe Ventanas,Breakfast,Breakfast Specials,Dietitian's Delight,3.95,FALSE,FALSE,FALSE
-Cafe Ventanas,Breakfast,Breakfast Specials,Egg and Vegetable Bowl,3.95,FALSE,FALSE,TRUE
-Cafe Ventanas,Breakfast,Breakfast Specials,Soyrizo Burrito,3.95,TRUE,FALSE,FALSE
-Cafe Ventanas,Breakfast,Daily Hot Breakfast,Beans,1.65,FALSE,TRUE,TRUE
-Cafe Ventanas,Breakfast,Daily Hot Breakfast,Biscuit,0.95,TRUE,FALSE,FALSE
-Cafe Ventanas,Breakfast,Daily Hot Breakfast,Cage Free Scrambled Eggs ,1.25,TRUE,FALSE,TRUE
-Cafe Ventanas,Breakfast,Daily Hot Breakfast,Fresh Tortillas,0.35,FALSE,FALSE,FALSE
-Cafe Ventanas,Breakfast,Daily Hot Breakfast,Hash Brown Potatoes,1.65,TRUE,FALSE,FALSE
-Cafe Ventanas,Breakfast,Daily Hot Breakfast,Pork Sausage Links,0.95,FALSE,FALSE,TRUE
-Cafe Ventanas,Breakfast,Daily Hot Breakfast,Sausage Gravy,0.5,FALSE,FALSE,FALSE
-Cafe Ventanas,Breakfast,Daily Hot Breakfast,Scrambled Egg Whites,1.25,TRUE,FALSE,TRUE
-Cafe Ventanas,Breakfast,Daily Hot Breakfast,Smoked bacon,0.85,FALSE,FALSE,TRUE
-Cafe Ventanas,Breakfast,Daily Hot Breakfast,Steelcut Oatmeal,1.95,TRUE,FALSE,FALSE
-Cafe Ventanas,Breakfast,Daily Hot Breakfast,Tater Barrels,1.65,TRUE,FALSE,FALSE
-Cafe Ventanas,Breakfast,Daily Hot Breakfast,Veggie Sausage,1.09,TRUE,FALSE,FALSE
-Cafe Ventanas,Breakfast,Cold Breakfast,Cereal with Milk,1.95,FALSE,TRUE,TRUE
-Cafe Ventanas,Breakfast,Cold Breakfast,Cut Fresh Fruit,0.34,FALSE,TRUE,TRUE
-Cafe Ventanas,Breakfast,Cold Breakfast,Whole Fruit,0.5,FALSE,TRUE,TRUE
-Cafe Ventanas,Breakfast,Value4u,Bean and Cheese Burrito,2.25,TRUE,FALSE,FALSE
-Cafe Ventanas,Lunch,City Dish Entrees,City Dish Roasted Chicken,4.75,FALSE,FALSE,FALSE
-Cafe Ventanas,Lunch,Deli,Fresh Deli Station,6.75,FALSE,FALSE,FALSE
-Cafe Ventanas,Lunch,Grill,Cheeseburger,4.95,FALSE,FALSE,FALSE
-Cafe Ventanas,Lunch,Grill,Specialty Burger,5.25,TRUE,FALSE,FALSE
-Cafe Ventanas,Lunch,Grill,Double Burger,6.25,FALSE,FALSE,FALSE
-Cafe Ventanas,Lunch,Grill,Double Cheeseburger,7.75,FALSE,FALSE,FALSE
-Cafe Ventanas,Lunch,Grill,Fried Chicken Fritters,4.5,FALSE,FALSE,FALSE
-Cafe Ventanas,Lunch,Grill,Hamburger,4.2,FALSE,FALSE,FALSE
-Cafe Ventanas,Lunch,Grill,Herbed Chicken Sandwich,5.25,FALSE,FALSE,FALSE
-Cafe Ventanas,Lunch,Grill Sides,Crispy French Fries,1.75,FALSE,FALSE,FALSE
-Cafe Ventanas,Lunch,Pizza Oven,Cheese Pizza,2.25,TRUE,FALSE,FALSE
-Cafe Ventanas,Lunch,Pizza Oven,Margherita Pizza,2.75,TRUE,FALSE,FALSE
-Cafe Ventanas,Lunch,Pizza Oven,Pepperoni Pizza,2.75,FALSE,FALSE,FALSE
-Cafe Ventanas,Lunch,Pasta,BYO Pasta Bar,3.25,TRUE,FALSE,FALSE
-Cafe Ventanas,Lunch,Pasta Sides,Garlic Bread,0.55,TRUE,FALSE,FALSE
-Cafe Ventanas,Lunch,Value4u,Grilled Cheese Sandwich,2.25,TRUE,FALSE,FALSE
-Cafe Ventanas,Dinner,City Dish Entrees,City Dish Roasted Chicken,4.75,FALSE,FALSE,FALSE
-Cafe Ventanas,Dinner,City Dish Entrees,Grilled Tri-Tip,6.75,FALSE,FALSE,FALSE
-Cafe Ventanas,Dinner,City Dish Entrees,Teriyaki Salmon,7.95,FALSE,FALSE,FALSE
-Cafe Ventanas,Dinner,Grill,Cheeseburger,4.95,FALSE,FALSE,FALSE
-Cafe Ventanas,Dinner,Grill,Specialty Burger,5.25,TRUE,FALSE,FALSE
-Cafe Ventanas,Dinner,Grill,Double Burger,6.25,FALSE,FALSE,FALSE
-Cafe Ventanas,Dinner,Grill,Double Cheeseburger,7.75,FALSE,FALSE,FALSE
-Cafe Ventanas,Dinner,Grill,Fried Chicken Fritters,4.5,FALSE,FALSE,FALSE
-Cafe Ventanas,Dinner,Grill,Hamburger,4.2,FALSE,FALSE,FALSE
-Cafe Ventanas,Dinner,Grill,Herbed Chicken Sandwich,5.25,FALSE,FALSE,FALSE
-Cafe Ventanas,Dinner,Grill Sides,Crispy French Fries,1.75,FALSE,FALSE,FALSE
-Cafe Ventanas,Dinner,Pizza Oven,Cheese Pizza,2.25,TRUE,FALSE,FALSE
-Cafe Ventanas,Dinner,Pizza Oven,Specialty Pizza,2.75,TRUE,FALSE,FALSE
-Cafe Ventanas,Dinner,Pasta,BYO Pasta Bar,3.25,TRUE,FALSE,FALSE
-Cafe Ventanas,Dinner,Pasta Sides,Garlic Bread,0.55,TRUE,FALSE,FALSE
-Cafe Ventanas,Dinner,Value4u,Grilled Cheese Sandwich,2.25,TRUE,FALSE,FALSE
-64 Degrees,Lunch,Burger Lounge,Specialty Burger,5.25,FALSE,FALSE,FALSE
-64 Degrees,Lunch,Burger Lounge,French Fries,1.75,FALSE,FALSE,FALSE
-64 Degrees,Lunch,Burger Lounge,Sweet Potato Fries,2.75,TRUE,FALSE,FALSE
-64 Degrees,Lunch,Burger Lounge,Buffalo Chicken Oozer,6.64,FALSE,FALSE,FALSE
-64 Degrees,Lunch,Wok,Pork Potstickers,3.75,FALSE,FALSE,FALSE
-64 Degrees,Lunch,Wok,Crunchy Orange Chicken,6.95,FALSE,FALSE,FALSE
-64 Degrees,Lunch,Wok,Spicy Dragon Shrimp,6.95,FALSE,FALSE,FALSE
-64 Degrees,Dinner,Burger Lounge,Gardein Burger,5.25,TRUE,FALSE,FALSE
-64 Degrees,Dinner,Burger Lounge,Specialty Burger,5.25,FALSE,FALSE,FALSE
-64 Degrees,Dinner,Burger Lounge,French Fries,1.75,FALSE,FALSE,FALSE
-64 Degrees,Dinner,Burger Lounge,Sweet Potato Fries,2.75,TRUE,FALSE,FALSE
-64 Degrees,Dinner,Burger Lounge,Buffalo Chicken Oozer,6.64,FALSE,FALSE,FALSE
-64 Degrees,Dinner,Wok,Pork Potstickers,3.75,FALSE,FALSE,FALSE
-64 Degrees,Dinner,Wok,Crunchy Orange Chicken,6.95,FALSE,FALSE,FALSE
-64 Degrees,Dinner,Wok,Spicy Dragon Shrimp,6.95,FALSE,FALSE,FALSE
-Oceanview Terrace,Lunch,Sliceria by Scholars,Cheese Pizza,3,TRUE,FALSE,FALSE
-Oceanview Terrace,Lunch,Sliceria by Scholars,Margherita Pizza,3.25,TRUE,FALSE,FALSE
-Oceanview Terrace,Lunch,Sliceria by Scholars,Pepperoni Pizza,4.25,FALSE,FALSE,FALSE
-Oceanview Terrace,Lunch,Sliceria by Scholars,Vegetarian Pizza,3.25,TRUE,FALSE,FALSE
-Oceanview Terrace,Lunch,Sliceria by Scholars,Mushroom and Turkey Sausage Pizza,4.25,FALSE,FALSE,FALSE
-Oceanview Terrace,Lunch,40/40/20,3rd Kitchen House Salad,6.5,TRUE,FALSE,FALSE
-Oceanview Terrace,Lunch,40/40/20,Fattoush Greek Salad,6.5,FALSE,TRUE,TRUE
-Oceanview Terrace,Lunch,40/40/20,Jalapeno Kale Caesar,6.5,TRUE,FALSE,FALSE
-Oceanview Terrace,Lunch,40/40/20,Power House,6.5,TRUE,FALSE,FALSE
-Oceanview Terrace,Lunch,40/40/20,Spicy Thai Salad,6.5,FALSE,TRUE,TRUE
-Oceanview Terrace,Lunch,40/40/20,Strawberry Spinach,6.5,TRUE,FALSE,FALSE
-Oceanview Terrace,Lunch,Scholars Pizza,Artichoke and Spinach,8.5,TRUE,FALSE,FALSE
-Oceanview Terrace,Lunch,Scholars Pizza,Cattleman,10.5,FALSE,FALSE,FALSE
-Oceanview Terrace,Lunch,Scholars Pizza,Chicken Artichoke,8.5,FALSE,FALSE,FALSE
-Oceanview Terrace,Lunch,Scholars Pizza,Margherita Pizza,7,TRUE,FALSE,FALSE
-Oceanview Terrace,Lunch,Scholars Pizza,Mushroom and Sausage,8.5,FALSE,FALSE,FALSE
-Oceanview Terrace,Lunch,Scholars Pizza,Southwest,8.5,FALSE,FALSE,FALSE
-Oceanview Terrace,Lunch,Scholars Pizza,Vegetarian,8.5,TRUE,FALSE,FALSE
-Oceanview Terrace,Dinner,Sliceria by Scholars,Cheese Pizza,3,TRUE,FALSE,FALSE
-Oceanview Terrace,Dinner,Sliceria by Scholars,Margherita Pizza,3.25,TRUE,FALSE,FALSE
-Oceanview Terrace,Dinner,Sliceria by Scholars,Pepperoni Pizza,4.25,FALSE,FALSE,FALSE
-Oceanview Terrace,Dinner,Sliceria by Scholars,Vegetarian Pizza,3.25,TRUE,FALSE,FALSE
-Oceanview Terrace,Dinner,Sliceria by Scholars,Mushroom and Turkey Sausage Pizza,4.25,FALSE,FALSE,FALSE
-Oceanview Terrace,Dinner,Scholars Pizza,Artichoke and Spinach,8.5,TRUE,FALSE,FALSE
-Oceanview Terrace,Dinner,Scholars Pizza,Cattleman,10.5,FALSE,FALSE,FALSE
-Oceanview Terrace,Dinner,Scholars Pizza,Chicken Artichoke,8.5,FALSE,FALSE,FALSE
-Oceanview Terrace,Dinner,Scholars Pizza,Margherita Pizza,7,TRUE,FALSE,FALSE
-Oceanview Terrace,Dinner,Scholars Pizza,Mushroom and Sausage,8.5,FALSE,FALSE,FALSE
-Oceanview Terrace,Dinner,Scholars Pizza,Southwest,8.5,FALSE,FALSE,FALSE
-Oceanview Terrace,Dinner,Scholars Pizza,Vegetarian,8.5,TRUE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Burger Lounge,Chipotle Black Bean Burger,5.25,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Burger Lounge,Gardein Burger,5.25,TRUE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Burger Lounge,Hamburger,5.25,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Burger Lounge,Herbed Chicken Sandwich,5.25,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Burger Lounge,Turkey Burger,5.25,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Burger Lounge,French Fries,1.75,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Burger Lounge,Sweet Potato Fries,2.75,TRUE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Burger Lounge,Buffalo Chicken Oozer,6.64,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Wok,Pork Potstickers,3.75,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Wok,Crunchy Orange Chicken,6.95,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Wok,Spicy Dragon Shrimp,6.95,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Vertically Crafted Deli,Baja (Fish-less) Taco,3,FALSE,TRUE,FALSE
+64 Degrees,Lunch And Dinner,Vertically Crafted Deli,Carne Asada Street Taco,3,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Vertically Crafted Deli,Grilled Chicken Taco,3,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Vertically Crafted Deli,Carnitas Street Taco,3,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Vertically Crafted Deli,Grilled Mahi Street Taco,3,FALSE,FALSE,FALSE
+64 Degrees,Lunch ,Vertically Crafted Deli,Fresh Deli Station,6.75,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Vertically Crafted Deli,Taco Trio,7,FALSE,FALSE,TRUE
+64 Degrees,Lunch And Dinner,Market 64,Vegetarian Chilli,3.5,FALSE,TRUE,TRUE
+64 Degrees,Lunch And Dinner,Market 64,Seafood Chowder,3.5,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Market 64,Old Fashioned Chicken Noodle,3.5,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Market 64,Chicken Tortilla Soup,3.5,FALSE,FALSE,TRUE
+64 Degrees,Lunch And Dinner,Market 64,Chickpea Lentil Soup,3.5,TRUE,FALSE,TRUE
+64 Degrees,Lunch And Dinner,Market 64,Broccoli Cheddar Soup,3.5,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Market 64,Potato w/ Bacon Soup,3.5,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Market 64,Buffalo Blue Chicken Salad,8.5,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Market 64,Roasted Herb Salmon Salad,8.5,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Market 64,Cobb Salad,8.5,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Cauliflower Mashed Potatoes,2,TRUE,FALSE,TRUE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Roasted Fingerling Potatoes,2,FALSE,TRUE,TRUE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Bacon Brussel Sprouts,2,FALSE,FALSE,TRUE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Oven Roasted Cauliflower,2,FALSE,TRUE,FALSE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Mac and Cheese,2,TRUE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Raisin Brussel Sprouts,2,FALSE,TRUE,TRUE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Roasted Beets,2,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,64D Goat Cheese Polenta,2,TRUE,FALSE,TRUE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Coconut Farro,2,FALSE,TRUE,FALSE
+64 Degrees,Dinner,Revelle Cuisine,Papaya Slaw,2,FALSE,FALSE,FALSE
+64 Degrees,Dinner,Revelle Cuisine,Risotto,2,TRUE,FALSE,TRUE
+64 Degrees,Dinner,Revelle Cuisine,Sauteed Broccolini,2,FALSE,TRUE,TRUE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,BBQ Baked Beans,2,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Roasted Butternut Squash Purse,2,TRUE,FALSE,TRUE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Seared Kale,2,TRUE,FALSE,TRUE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Broccoli Salad,2,TRUE,FALSE,TRUE
+64 Degrees,Dinner,Revelle Cuisine,Farro and Tuscan Kale Salad,2,FALSE,TRUE,FALSE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Cauliflower Salad,2,FALSE,TRUE,TRUE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,House Side Salad,2,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Watermelon Caprese Salad,2,FALSE,TRUE,TRUE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Black Rice Napa Cabbage Salad,2,FALSE,TRUE,TRUE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Apple Fennel Salad,2,FALSE,TRUE,TRUE
+64 Degrees,Lunch,Revelle Cuisine,Cholula Chicken,4.75,FALSE,TRUE,FALSE
+64 Degrees,Lunch,Revelle Cuisine,Tandoori Chicken,4.75,FALSE,FALSE,TRUE
+64 Degrees,Dinner,Revelle Cuisine,Rotisserie Chicken,4.75,FALSE,FALSE,TRUE
+64 Degrees,Dinner,Revelle Cuisine,Smoked Pork Belly,4.75,FALSE,FALSE,TRUE
+64 Degrees,Dinner,Revelle Cuisine,Garlic and Herb Chicken,4.75,FALSE,FALSE,FALSE
+64 Degrees,Lunch And Dinner,Revelle Cuisine,Seafood Veracruz,5.95,FALSE,FALSE,TRUE
+64 Degrees,Lunch,Revelle Cuisine,Soy Ginger Mahi Mahi,6.75,FALSE,FALSE,FALSE
+64 Degrees,Dinner,Revelle Cuisine,Smoked Tri Tip Churrasco,6.75,FALSE,FALSE,TRUE
+64 Degrees,Dinner,Revelle Cuisine,Grilled Salmon,7.95,TRUE,FALSE,FALSE
+64 Degrees,Dinner,Revelle Cuisine,Pork Porterhouse,7.95,FALSE,FALSE,FALSE
+64 Degrees,Dinner,Revelle Cuisine,Plank Salmon ,7.95,TRUE,FALSE,FALSE
+64 Degrees,Lunch,Revelle Cuisine,Korean BBQ Ribs,8.75,FALSE,FALSE,FALSE
+64 Degrees,Dinner,Revelle Cuisine,Grilled NY Steak Strip,8.95,FALSE,FALSE,FALSE
 The Bistro,all,Small Plates,Bistro Green Salad,6,FALSE,TRUE,TRUE
 The Bistro,all,Small Plates,Bistro Salad w/ Hoisin Chicken,9,FALSE,FALSE,FALSE
 The Bistro,all,Small Plates,Bistro Salad w/ Steak,9,FALSE,FALSE,TRUE
@@ -238,34 +83,78 @@ The Bistro,all,Entrees,Stir Fry Tofu Udon,11,FALSE,TRUE,FALSE
 The Bistro,all,Entrees,Tri Tip Ramen Soup Bowl,9,FALSE,FALSE,FALSE
 The Bistro,all,Entrees,Vegetable Ramen Soup Bowl,10,FALSE,FALSE,FALSE
 The Bistro,all,Sushi,California Roll,8,FALSE,FALSE,FALSE
-The Bistro,all,Sushi,Spicy Tuna Roll,8,FALSE,FALSE,FALSE
-The Bistro,all,Sushi,Vegetable Roll,8,FALSE,TRUE,FALSE
 The Bistro,all,Sushi,Crunchy Roll,11,FALSE,FALSE,FALSE
-The Bistro,all,Sushi,Rainbow Roll,11,FALSE,FALSE,FALSE
-The Bistro,all,Sushi,Tempura Roll,11,FALSE,FALSE,FALSE
-The Bistro,all,Sushi,The Surf Roll,11,FALSE,FALSE,FALSE
-The Bistro,all,Sushi,The Rising Sun Roll,13,FALSE,FALSE,FALSE
 The Bistro,all,Sushi,Dragon Roll,13,FALSE,FALSE,FALSE
+The Bistro,all,Sushi,Rainbow Roll,11,FALSE,FALSE,FALSE
+The Bistro,all,Sushi,Spicy Tuna Roll,8,FALSE,FALSE,FALSE
+The Bistro,all,Sushi,Tempura Roll,11,FALSE,FALSE,FALSE
+The Bistro,all,Sushi,The Rising Sun Roll,13,FALSE,FALSE,FALSE
+The Bistro,all,Sushi,The Surf Roll,11,FALSE,FALSE,FALSE
 The Bistro,all,Sushi,The Tower Roll,13,FALSE,FALSE,FALSE
+The Bistro,all,Sushi,Vegetable Roll,8,FALSE,TRUE,FALSE
 The Bistro,all,Desert,Green Tea Ice Cream,3,TRUE,FALSE,TRUE
-The Bistro,all,Desert,Thai Sweet Coconut Rice W/Mango,5,FALSE,TRUE,TRUE
 The Bistro,all,Desert,Lemongrass Ginger Brulee,5,TRUE,FALSE,TRUE
 The Bistro,all,Desert,Tempura Banana Split,6,FALSE,FALSE,FALSE
+The Bistro,all,Desert,Thai Sweet Coconut Rice W/Mango,5,FALSE,TRUE,TRUE
 Club Med,all,Breakfast Specials,Assorted Bagels,0.99,FALSE,FALSE,FALSE
-Club Med,all,Breakfast Specials,Specialty Meat Breakfast Bagel,4.5,FALSE,FALSE,FALSE
-Club Med,all,Breakfast Specials,Specialty Meat Breakfast Burrito,5.95,FALSE,FALSE,FALSE
-Club Med,all,Breakfast Specials,Specialty Meat Breakfast Quesadilla,5.25,FALSE,FALSE,FALSE
+Club Med,all,Breakfast Specials,Bacon Breakfast Bagel,4.5,FALSE,FALSE,FALSE
+Club Med,all,Breakfast Specials,Bacon Breakfast Burrito,5.95,FALSE,FALSE,FALSE
+Club Med,all,Breakfast Specials,Bacon Breakfast Quesadilla,5.25,FALSE,FALSE,FALSE
+Club Med,all,Breakfast Specials,Ham Breakfast Bagel,4.5,FALSE,FALSE,FALSE
+Club Med,all,Breakfast Specials,Ham Breakfast Burrito,5.95,FALSE,FALSE,FALSE
+Club Med,all,Breakfast Specials,Vag Sausage Breakfast Quesadilla,5.25,FALSE,FALSE,FALSE
+Club Med,all,Breakfast Specials,Veggi Sausage Breakfast Burrito,5.95,FALSE,FALSE,FALSE
+Club Med,all,Breakfast Specials,Ham Breakfast Quesadilla,5.25,FALSE,FALSE,FALSE
+Club Med,all,Breakfast Specials,Sausage Breakfast Bagel,4.5,FALSE,FALSE,FALSE
+Club Med,all,Breakfast Specials,Sausage Breakfast Burrito,5.95,FALSE,FALSE,FALSE
+Club Med,all,Breakfast Specials,Sausage Breakfast Quesadilla,5.25,FALSE,FALSE,FALSE
 Club Med,all,Breakfast Specials,Steelcut Oatmeal,1.75,FALSE,TRUE,FALSE
-Club Med,all,Flatbreads,Specialty Flatbread,5.25,FALSE,FALSE,FALSE
-Club Med,all,Signature Salads,Specialty Salads,6.75,FALSE,FALSE,FALSE
-Club Med,all,Turbo Sandwiches,Specialty Meat Turbo Sandwiches,7.25,FALSE,FALSE,FALSE
-Club Med,all,Turbo Sandwiches,Vegetarian Turbo Sandwich,7.25,TRUE,FALSE,FALSE
+Club Med,all,Breakfast Specials,Veg Sausage Breakfast Bagel,4.5,FALSE,FALSE,FALSE
+Club Med,all,Flatbreads,Buffalo Chicken Flatbread,5.25,FALSE,FALSE,FALSE
+Club Med,all,Flatbreads,Margarita,5.25,TRUE,FALSE,FALSE
+Club Med,all,Flatbreads,Meatlovers,5.25,FALSE,FALSE,FALSE
+Club Med,all,Flatbreads,Mediterranean Flatbread,5.25,FALSE,FALSE,FALSE
+Club Med,all,Flatbreads,Pepperoni,5.25,FALSE,FALSE,FALSE
+Club Med,all,Signature Salads,Fall Harvest Salad,6.75,FALSE,FALSE,FALSE
+Club Med,all,Signature Salads,Greek Salad,6.75,FALSE,FALSE,FALSE
+Club Med,all,Signature Salads,Green Toss Salad,6.75,TRUE,FALSE,FALSE
+Club Med,all,Signature Salads,Mandarin Salad,6.75,FALSE,FALSE,FALSE
+Club Med,all,Turbo Sandwiches,Bay of Pigs,7.25,FALSE,FALSE,FALSE
+Club Med,all,Turbo Sandwiches,California Caprese,7.25,TRUE,FALSE,FALSE
+Club Med,all,Turbo Sandwiches,Chicken Banh Mi,7.25,FALSE,FALSE,FALSE
+Club Med,all,Turbo Sandwiches,Chicken Cordon Bleu,7.25,FALSE,FALSE,FALSE
+Club Med,all,Turbo Sandwiches,City Slicker,7.25,FALSE,FALSE,FALSE
+Club Med,all,Turbo Sandwiches,Meatball Sub,7.25,FALSE,FALSE,FALSE
 Club Med,all,Turbo Sandwiches,Roasted Vegetable,7.25,TRUE,FALSE,FALSE
-Goodys,all,Breakfast Specials,Breakfast Bowl,7.25,FALSE,FALSE,FALSE
-Goodys,all,Breakfast Specials,Breakfast Burrito,7.25,FALSE,FALSE,FALSE
-Goodys,all,Latin,Bowl,7.25,FALSE,FALSE,FALSE
-Goodys,all,Latin,Burrito,7.25,FALSE,FALSE,FALSE
-Goodys,all,Latin,Salad,7.25,FALSE,FALSE,FALSE
+Club Med,all,Turbo Sandwiches,Santa Fe,7.25,FALSE,FALSE,FALSE
+Club Med,all,Turbo Sandwiches,South of the Border,7.25,FALSE,FALSE,FALSE
+Club Med,all,Turbo Sandwiches,Tuna Melt,7.25,FALSE,FALSE,FALSE
+Club Med,all,Turbo Sandwiches,Turkey Bacon Avocado,7.25,FALSE,FALSE,FALSE
+Goodys,all,Breakfast Specials,Bacon Breakfast Bowl,7.25,FALSE,FALSE,FALSE
+Goodys,all,Breakfast Specials,Bacon Breakfast Burrito,7.25,FALSE,FALSE,FALSE
+Goodys,all,Breakfast Specials,Breakfast Bowl w/ Egg Whites,7.25,TRUE,FALSE,TRUE
+Goodys,all,Breakfast Specials,Breakfast Bowl w/ Egg Whites,7.25,FALSE,FALSE,FALSE
+Goodys,all,Breakfast Specials,Breakfast Burrito w/ Egg Whites,7.25,FALSE,FALSE,FALSE
+Goodys,all,Breakfast Specials,Pork Machaca Breakfast Burrito,7.25,FALSE,FALSE,FALSE
+Goodys,all,Breakfast Specials,Standard Breakfast Burrito,7.25,FALSE,FALSE,FALSE
+Goodys,all,Breakfast Specials,Pork Machaca Breakfast Bowl,7.25,FALSE,FALSE,FALSE
+Goodys,all,Breakfast Specials,Sausage Breakfast Bowl,7.25,FALSE,FALSE,FALSE
+Goodys,all,Breakfast Specials,Sausage Breakfast Burrito,7.25,FALSE,FALSE,FALSE
+Goodys,all,Breakfast Specials,Soy Chorizo Breakfast Bowl,7.25,TRUE,FALSE,FALSE
+Goodys,all,Breakfast Specials,Soy Chorizo Breakfast Burrito,7.25,TRUE,FALSE,FALSE
+Goodys,all,Breakfast Specials,Standard Breakfast Bowl,7.25,FALSE,FALSE,FALSE
+Goodys,all,Latin,Achiote Chicken Bowl,7.25,FALSE,FALSE,FALSE
+Goodys,all,Latin,Achiote Chicken Burrito,7.25,FALSE,FALSE,FALSE
+Goodys,all,Latin,Achiote Chicken Salad,7.25,FALSE,FALSE,FALSE
+Goodys,all,Latin,Carne Asada Bowl,7.25,FALSE,FALSE,FALSE
+Goodys,all,Latin,Carne Asada Burrito,7.25,FALSE,FALSE,FALSE
+Goodys,all,Latin,Carne Asada Salad,7.25,FALSE,FALSE,FALSE
+Goodys,all,Latin,Carnitas Bowl,7.25,FALSE,FALSE,FALSE
+Goodys,all,Latin,Carnitas Burrito,7.25,FALSE,FALSE,FALSE
+Goodys,all,Latin,Carnitas Salad,7.25,FALSE,FALSE,FALSE
+Goodys,all,Latin,Tofu Fajita Bowl,7.25,TRUE,FALSE,FALSE
+Goodys,all,Latin,Tofu Fajita Burrito,7.25,TRUE,FALSE,FALSE
+Goodys,all,Latin,Tofu Fajita Salad,7.25,TRUE,FALSE,FALSE
 Goodys,all,Sides,Bunuelos Chips,2,FALSE,TRUE,FALSE
 Goodys,all,Sides,Carne Asada,4,FALSE,FALSE,TRUE
 Goodys,all,Sides,Chicken Achiote,3,FALSE,FALSE,TRUE
@@ -294,3 +183,398 @@ Roots,all,Smoothies,Strawberry Lemonade Chiller,3.5,FALSE,TRUE,TRUE
 Roots,all,Smoothies,The Redwood Smoothie,6,FALSE,TRUE,TRUE
 Roots,all,Smoothies,Tioga Pass Smoothie,6,FALSE,TRUE,TRUE
 Roots,all,Dessert,Tres Leches,5,FALSE,FALSE,FALSE
+Sixty-Four North,all,Appetizers,California Trio,9,TRUE,FALSE,FALSE
+Sixty-Four North,all,Appetizers,House Spring Salad,5,TRUE,FALSE,TRUE
+Sixty-Four North,all,Appetizers,Skillet Queso Fundido,9,TRUE,FALSE,TRUE
+Sixty-Four North,all,Appetizers,Toast,10,FALSE,FALSE,FALSE
+Sixty-Four North,all,Appetizers,Twin Poke,9,FALSE,FALSE,FALSE
+Sixty-Four North,all,Entrees,Chicken al Pastor,15,FALSE,FALSE,TRUE
+Sixty-Four North,all,Entrees,Chipotle Shrimp Linguini,14,FALSE,FALSE,FALSE
+Sixty-Four North,all,Entrees,Cioppino,14,FALSE,FALSE,FALSE
+Sixty-Four North,all,Entrees,Grilled Tri Tip Churrasco,16,FALSE,FALSE,TRUE
+Sixty-Four North,all,Entrees,Legumes Rotis,10,FALSE,TRUE,FALSE
+Sixty-Four North,all,Entrees,Lemongrass Salmon,16,FALSE,FALSE,TRUE
+Sixty-Four North,all,Entrees,Turkey and Cauliflower,12,FALSE,FALSE,FALSE
+Sixty-Four North,all,Entrees,Tuscan Kale Rice Bowl,10,TRUE,FALSE,FALSE
+Sixty-Four North,all,Chef Plat De Jour,Pork Chop,16,FALSE,FALSE,TRUE
+Sixty-Four North,all,Dessert,Coconut Cardamom Panna Cotta,7,FALSE,TRUE,TRUE
+Sixty-Four North,all,Dessert,Paviova,7,TRUE,FALSE,FALSE
+Sixty-Four North,all,Dessert,Pot de Creme,7,TRUE,FALSE,FALSE
+Sixty-Four North,all,Dessert,S'mores,7,TRUE,FALSE,FALSE
+The Bistro,all,Sunday Brunch,Bistro benedict,11,FALSE,FALSE,FALSE
+The Bistro,all,Sunday Brunch,Ricotta Cheese Pancake,8,TRUE,FALSE,FALSE
+The Bistro,all,Sunday Brunch,Bao Monte Cristo,11,FALSE,FALSE,FALSE
+The Bistro,all,Sunday Brunch,Tri Tip Taro Hash,11,FALSE,FALSE,FALSE
+The Bistro,all,Sunday Brunch,Garden Scramble,7,TRUE,FALSE,FALSE
+The Bistro,all,Sunday Brunch,Pork Belly Donburi,10,FALSE,FALSE,FALSE
+The Bistro,all,Sunday Brunch,Acai Bowl,9,TRUE,FALSE,FALSE
+The Bistro,all,Sunday Brunch,Seared Ahi and Noodle,11,FALSE,FALSE,FALSE
+The Bistro,all,Sunday Brunch,Sun God Sunrise,3,FALSE,FALSE,FALSE
+The Bistro,all,Sunday Brunch,San Diego Sunset,3,FALSE,FALSE,FALSE
+The Bistro,all,Sunday Brunch,Spiced Milk tea,3,FALSE,FALSE,FALSE
+The Bistro,all,Sunday Brunch,French Press Coffee,4,FALSE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Breakfast Specials,Egg and Vegetable Bowl,3.95,FALSE,FALSE,TRUE
+Cafe Ventanas,Breakfast,Breakfast Specials,Soyrizo Burrito,3.95,TRUE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Breakfast Specials,Breakfast Burrito,3.95,TRUE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Breakfast Specials,Breakfast Quesadilla,3.95,TRUE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Breakfast Specials,Ham Scramble Skillet,2.95,FALSE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Daily Hot Breakfast,Beans,1.65,FALSE,TRUE,TRUE
+Cafe Ventanas,Breakfast,Daily Hot Breakfast,Biscuit,0.95,TRUE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Daily Hot Breakfast,Cage Free Scrambled Eggs ,1.25,TRUE,FALSE,TRUE
+Cafe Ventanas,Breakfast,Daily Hot Breakfast,Fresh Tortillas,0.35,FALSE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Daily Hot Breakfast,Hash Brown Potatoes,1.65,TRUE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Daily Hot Breakfast,Pork Sausage Links,0.95,FALSE,FALSE,TRUE
+Cafe Ventanas,Breakfast,Daily Hot Breakfast,Sausage Gravy,0.5,FALSE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Daily Hot Breakfast,Scrambled Egg Whites,1.25,TRUE,FALSE,TRUE
+Cafe Ventanas,Breakfast,Daily Hot Breakfast,Smoked bacon,0.85,FALSE,FALSE,TRUE
+Cafe Ventanas,Breakfast,Daily Hot Breakfast,Steelcut Oatmeal,1.95,TRUE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Daily Hot Breakfast,Tater Barrels,1.65,TRUE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Daily Hot Breakfast,Veggie Sausage,1.09,TRUE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Cold Breakfast,Cereal with Milk,1.95,FALSE,TRUE,TRUE
+Cafe Ventanas,Breakfast,Cold Breakfast,Cut Fresh Fruit,0.34,FALSE,TRUE,TRUE
+Cafe Ventanas,Breakfast,Cold Breakfast,Whole Apple,0.5,FALSE,TRUE,TRUE
+Cafe Ventanas,Breakfast,Cold Breakfast,Whole Bannana,0.5,FALSE,TRUE,TRUE
+Cafe Ventanas,Breakfast,Cold Breakfast,Whole Orange,0.5,FALSE,TRUE,TRUE
+Cafe Ventanas,Breakfast,Cold Breakfast,Yogurt Bar,0.34,TRUE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Value4u,Bean and Cheese Burrito,2.25,TRUE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Value4u,Bacon Breakfast Burrito,2.25,FALSE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Value4u,Egg Ham & Cheese Sandwich,2.25,FALSE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Value4u,Egg Sausage & Cheese Sandwich,2.25,FALSE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Value4u,Egg Bacon & Cheese Sandwich,2.25,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Value4u,Grilled Cheese Sandwich,2.25,TRUE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Value4u,Hamburger,2.25,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch,Deli,Fresh Deli Station,6.75,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Pizza Oven,Cheese Pizza,2.25,TRUE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Pizza Oven,Margherita Pizza,2.75,TRUE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Pizza Oven,Pepperoni Pizza,2.75,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Pizza Oven,Sausage & Mushroom Pizza,2.75,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Pizza Oven,BBQ Chicken Pizza,2.75,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Pizza Oven,The Works Pizza,2.75,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Pizza Oven,Hawaiian Pizza,2.75,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Pizza Oven,Vegetarian Pizza,2.75,TRUE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Pizza Oven,Buffalo Chicken pizza,2.64,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Pasta,BYO Pasta Bar,3.25,TRUE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Pasta Sides,Garlic Bread,0.55,TRUE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,City Dish Entrees,City Dish Roasted Chicken,4.75,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,City Dish Entrees,Grilled Tri-Tip,6.75,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,City Dish Entrees,Teriyaki Salmon,7.95,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Grill,Cheeseburger,4.95,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Grill,Chipotle Black Bean Burger,5.25,TRUE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Grill,Double Burger,6.25,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Grill,Double Cheeseburger,7.75,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Grill,Fried Chicken Fritters,4.5,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Grill,Gardein Burger,5.25,TRUE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Grill,Grilled Turkey Burger,5.25,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Grill,Hamburger,4.2,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Grill,Herbed Chicken Sandwich,5.25,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Grill Sides,Crispy French Fries,1.75,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Windows of the World,Chop Chop Salmon Bowl,7.25,FALSE,FALSE,FALSE
+Cafe Ventanas,Dinner,Windows of the World,Grilled Chicken Bowl,7.25,FALSE,FALSE,TRUE
+Cafe Ventanas,Lunch And Dinner,Windows of the World,Mac Daddy Cheese Bowl,6.95,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Windows of the World,Baja Bacon Wrapped Hot Dog,4.25,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Windows of the World,Nacho Bar,5.95,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Windows of the World,Indian Chicken Kathi Roll,3.95,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch,Windows of the World,Pan Blasted Stir-fry,6.95,FALSE,FALSE,FALSE
+Cafe Ventanas,Dinner,Windows of the World,Ramen Soup Bowl,6.95,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Windows Sides,Jasmine Rice,1.5,FALSE,TRUE,TRUE
+Cafe Ventanas,Lunch And Dinner,Windows Sides,Steamed Brown Rice,1.5,FALSE,TRUE,TRUE
+Cafe Ventanas,Lunch And Dinner,Windows Sides,Vegetable Potsticker,3.95,TRUE,FALSE,TRUE
+Cafe Ventanas,Lunch And Dinner,Windows Sides,Basmati Rice,1.5,FALSE,TRUE,TRUE
+Cafe Ventanas,Lunch And Dinner,Windows Sides,Spicy Dahi,1.5,FALSE,TRUE,TRUE
+Cafe Ventanas,Lunch And Dinner,Windows Sides,Vegetarian Biryani,2,TRUE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Soup,Tomato Red Pepper Bisque Soup,3.5,TRUE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Soup,Tuscan Chicken soup,3.5,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Soup,Vegetarian Chilli,3.5,FALSE,TRUE,TRUE
+Cafe Ventanas,Lunch And Dinner,Soup,Chicken Tortilla Soup,3.5,FALSE,FALSE,TRUE
+Cafe Ventanas,Lunch And Dinner,Soup,Pasta Fagioli Soup,3.5,TRUE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Soup,Chickpea Lentil Soup,3.5,TRUE,FALSE,TRUE
+Cafe Ventanas,Lunch And Dinner,Soup,Old Fashioned Chicken Noodle,3.5,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Soup,Southwest Corn Chowder Soup,3.5,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Soup,Broccoli Cheddar Soup,3.5,FALSE,FALSE,FALSE
+Cafe Ventanas,Lunch And Dinner,Soup,Kale and Chourico Soup,3.5,FALSE,FALSE,TRUE
+Cafe Ventanas,Lunch And Dinner,Soup,Coconut Lentil Soup,3.5,TRUE,FALSE,TRUE
+Cafe Ventanas,Lunch And Dinner,Soup,Potato w/ Bacon Soup,3.5,FALSE,FALSE,FALSE
+Canyon Vista,Breakfast,Breakfast Specials,Belgian Waffles,2.95,TRUE,FALSE,FALSE
+Canyon Vista,Breakfast,Breakfast Specials,Breakfast Burrito,3.95,TRUE,FALSE,FALSE
+Canyon Vista,Breakfast,Breakfast Specials,Breakfast Quesadilla,3.95,FALSE,FALSE,FALSE
+Canyon Vista,Breakfast,Breakfast Specials,Dietitian's Delight,3.95,FALSE,FALSE,FALSE
+Canyon Vista,Breakfast,Breakfast Specials,Egg and Vegetable Bowl,3.95,FALSE,FALSE,TRUE
+Canyon Vista,Breakfast,Breakfast Specials,Soyrizo Burrito,4.95,TRUE,FALSE,FALSE
+Canyon Vista,Breakfast,Breakfast Specials,Texas French Toast,3.75,TRUE,FALSE,FALSE
+Canyon Vista,Breakfast,Daily Hot Breakfast,Steelcut Oatmeal,1.95,TRUE,FALSE,FALSE
+Canyon Vista,Breakfast,Breakfast Sides,Beans,1.65,FALSE,TRUE,TRUE
+Canyon Vista,Breakfast,Breakfast Sides,Biscuit,0.95,TRUE,FALSE,FALSE
+Canyon Vista,Breakfast,Breakfast Sides,Cage Free Scrambled Eggs ,1.25,TRUE,FALSE,TRUE
+Canyon Vista,Breakfast,Breakfast Sides,Fresh Tortillas,0.35,FALSE,FALSE,FALSE
+Canyon Vista,Breakfast,Breakfast Sides,Hash Brown Potatoes,1.65,TRUE,FALSE,FALSE
+Canyon Vista,Breakfast,Breakfast Sides,Pork Sausage Links,0.95,FALSE,FALSE,TRUE
+Canyon Vista,Breakfast,Breakfast Sides,Sausage Gravy,0.5,FALSE,FALSE,FALSE
+Canyon Vista,Breakfast,Breakfast Sides,Scrambled Egg Whites,1.25,TRUE,FALSE,TRUE
+Canyon Vista,Breakfast,Breakfast Sides,Smoked bacon,0.85,FALSE,FALSE,TRUE
+Canyon Vista,Breakfast,Breakfast Sides,Tater Barrels,1.65,TRUE,FALSE,FALSE
+Canyon Vista,Breakfast,Breakfast Sides,Texas French Toast,2.25,TRUE,FALSE,FALSE
+Canyon Vista,Breakfast,Breakfast Sides,Veggie Sausage,1.09,TRUE,FALSE,FALSE
+Canyon Vista,Breakfast,Daily Cold Breakfast,Cereal with Milk,1.95,FALSE,FALSE,FALSE
+Canyon Vista,Breakfast,Daily Cold Breakfast,Cut Fresh Fruit,0.34,FALSE,TRUE,TRUE
+Canyon Vista,Breakfast,Daily Cold Breakfast,Whole Apple,0.5,FALSE,TRUE,TRUE
+Canyon Vista,Breakfast,Daily Cold Breakfast,Whole Bannana,0.5,FALSE,TRUE,TRUE
+Canyon Vista,Breakfast,Daily Cold Breakfast,Whole Orange,0.5,FALSE,TRUE,TRUE
+Canyon Vista,Breakfast,Daily Cold Breakfast,Yogurt Bar,0.34,TRUE,FALSE,FALSE
+Canyon Vista,Lunch,Mediterranean,Chicken Banh Mi,7.25,FALSE,FALSE,FALSE
+Canyon Vista,Lunch,Mediterranean,Pork Banh Mi,7.25,FALSE,FALSE,FALSE
+Canyon Vista,Lunch,Mediterranean,Seared Tofu Banh Mi,7.25,FALSE,FALSE,FALSE
+Canyon Vista,Lunch,Mediterranean,Beef & Lamb Gyros Plate,6.95,FALSE,FALSE,FALSE
+Canyon Vista,Lunch,Mediterranean,Beef & Lamb Gyros Sandwich,6.95,FALSE,FALSE,FALSE
+Canyon Vista,Lunch,Mediterranean,Falafel Sandwich,6.95,TRUE,FALSE,FALSE
+Canyon Vista,Lunch,Canyon Noodles,Grilled Mahi Street Taco,3,FALSE,FALSE,FALSE
+Canyon Vista,Lunch,Canyon Noodles,Orange Chicken Rice Bowl,4.95,FALSE,FALSE,FALSE
+Canyon Vista,Lunch,Canyon Noodles,Seafood Veracruz,5.95,FALSE,FALSE,TRUE
+Canyon Vista,Lunch,Canyon Noodles,Ravioli with Gorgonzola Cream Sauce,4.95,TRUE,FALSE,FALSE
+Canyon Vista,Lunch,Canyon Noodles,Chicken Pasta Alfredo,4.95,FALSE,FALSE,FALSE
+Canyon Vista,Lunch,Canyon Noodles,Banh Pho Soup,6.95,FALSE,FALSE,FALSE
+Canyon Vista,Lunch,Canyon Noodles,Kapoon Noodles,6.95,FALSE,FALSE,FALSE
+Canyon Vista,Lunch,Canyon Noodles,Pho Kee,6.95,FALSE,FALSE,FALSE
+Canyon Vista,Lunch,Canyon Noodles,Udon Noodles,6.95,FALSE,FALSE,FALSE
+Canyon Vista,Lunch,Canyon Noodles,La Cantina Burrito,6.95,FALSE,FALSE,FALSE
+Canyon Vista,Lunch,Canyon Noodles,Ramen Soup Bowl,6.95,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Tecolote Grill,Chicken Breast Sandwich,5.25,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Tecolote Grill,Chipotle Black Bean Burger,5.25,TRUE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Tecolote Grill,Fried Chicken Fritters,4.5,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Tecolote Grill,Gardein Burger,5.25,TRUE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Tecolote Grill,Grilled Turkey Burger,5.25,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Grill Sides,Crispy French Fries,1.75,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Grill Sides,Homestyle Potato Chips,2,FALSE,FALSE,FALSE
+Canyon Vista,Lunch,Cliff Hanger Deli,Fresh Deli Station,6.75,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Pizza,Cheese Pizza,2.25,TRUE,FALSE,FALSE
+Canyon Vista,Lunch,Pizza,Margherita Pizza,2.75,TRUE,FALSE,FALSE
+Canyon Vista,Dinner,Pizza,Artichoke and Feta Pizza,2.75,TRUE,FALSE,FALSE
+Canyon Vista,all,Salad Bar,Fresh Salad Bar,0.34,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Soup,Old Fashioned Chicken Noodle,3.5,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Soup,Southwest Corn Chowder Soup,3.5,FALSE,FALSE,FALSE
+Canyon Vista,Breakfast,Value4u,Bean and Cheese Burrito,2.25,TRUE,FALSE,FALSE
+Canyon Vista,Breakfast,Value4u,Bacon Break Burrito,2.25,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Value4u,Grilled Cheese Sandwich,2.25,TRUE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Value4u,Hamburger no toppings,2.25,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Value4u,Corndog,2.25,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Value4u,Hot Dog,2.25,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Tecolote Grill Specials,Crispy Baja Fish Tacos,4.95,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Tecolote Grill Specials,Fish Sandwich,2.25,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Tecolote Grill Specials,Big Island Burger,8.25,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Tecolote Grill Specials,Barnyard Burger,8.25,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Tecolote Grill Specials,Grilled Turkey Rueben Sandwich,6.5,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Tecolote Grill Specials,Bacon Avo CheeseBurger,8.25,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Tecolote Grill Specials,Mushroom Swiss Burger,8.25,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Tecolote Grill Specials,Chili Cheese Burger,8.25,FALSE,FALSE,FALSE
+Canyon Vista,Lunch And Dinner,Tecolote Grill Specials,Texas Burger,8.25,FALSE,FALSE,FALSE
+Canyon Vista,Dinner,Chopping Block,Arroz con Pollo,4.95,FALSE,FALSE,TRUE
+Canyon Vista,Dinner,Chopping Block,Salmon Taipei,7.95,FALSE,FALSE,FALSE
+Canyon Vista,Dinner,Chopping Block,Carved Roast Turkey,5.95,FALSE,FALSE,TRUE
+Canyon Vista,Dinner,Chopping Block,Seared Chicken Picatta,4.95,FALSE,FALSE,TRUE
+Canyon Vista,Dinner,Chopping Block,Thai Chicken Rice Bowl,4.95,FALSE,FALSE,FALSE
+Canyon Vista,Dinner,Chopping Block,Fish and Chips,5.95,FALSE,FALSE,FALSE
+Canyon Vista,Dinner,Chopping Block,Tofu and Broccoli,4.95,TRUE,FALSE,FALSE
+Canyon Vista,Dinner,Chopping Block,Chicken Katsu,5.95,FALSE,FALSE,FALSE
+Canyon Vista,Dinner,Chopping Block,Herb Crusted Mahi Mahi,5.95,FALSE,FALSE,TRUE
+Canyon Vista,Dinner,Chopping Block,Grilled Chicken Veracruz,4.95,FALSE,FALSE,TRUE
+Canyon Vista,Dinner,Chopping Block,Roasted Strip Loin,5.95,FALSE,FALSE,TRUE
+Canyon Vista,Dinner,Chopping Block,Char Siu Pork,4.95,FALSE,FALSE,FALSE
+Canyon Vista,Dinner,Chopping Block,Roasted Eggplant Parmesan,4.95,TRUE,FALSE,FALSE
+Canyon Vista,Dinner,Chopping Block Sides,Mashed Potatoes,2,TRUE,FALSE,TRUE
+Canyon Vista,Dinner,Chopping Block Sides,Steamed Vegetables,2,FALSE,TRUE,TRUE
+Canyon Vista,Dinner,Chopping Block Sides,Lo Mein Noodle,1.5,FALSE,FALSE,FALSE
+Canyon Vista,Dinner,Chopping Block Sides,Soy Ginger Broccoli,2,FALSE,TRUE,FALSE
+Canyon Vista,Dinner,Chopping Block Sides,Cole Slaw,1.5,TRUE,FALSE,TRUE
+Canyon Vista,Dinner,Chopping Block Sides,Steamed Vegetables Mix,2,FALSE,TRUE,TRUE
+Canyon Vista,Dinner,Chopping Block Sides,Emerald Sesame Greens,2,FALSE,TRUE,FALSE
+Canyon Vista,Dinner,Chopping Block Sides,Pineaple Fried Rice,1.5,TRUE,FALSE,FALSE
+Canyon Vista,Dinner,Chopping Block Sides,Gobi Allo,2,FALSE,TRUE,TRUE
+Canyon Vista,Dinner,Chopping Block Sides,Buttered Parslied Carrots,2,TRUE,FALSE,TRUE
+Foodworx,Breakfast,Standard Breakfast,Belgian Waffles,2.95,TRUE,FALSE,FALSE
+Foodworx,Breakfast,Standard Breakfast,Build Your Own Bagel Bar,5.95,FALSE,FALSE,FALSE
+Foodworx,Breakfast,Standard Breakfast,English Muffin Bacon Breakfast Sandwich,4.5,FALSE,FALSE,FALSE
+Foodworx,Breakfast,Standard Breakfast,English Muffin Sausage Breakfast Sandwich,4.5,FALSE,FALSE,FALSE
+Foodworx,Breakfast,Standard Breakfast,English Muffin Veg Sausage Breakfast Sandwich,4.5,TRUE,FALSE,FALSE
+Foodworx,Breakfast,Standard Breakfast,Bacon Breakfast Burrito,5.95,FALSE,FALSE,FALSE
+Foodworx,Breakfast,Standard Breakfast,Sausage Breakfast Burrito,5.95,FALSE,FALSE,FALSE
+Foodworx,Breakfast,Standard Breakfast,Veggie Sausage Breakfast Burrito,5.95,TRUE,FALSE,FALSE
+Foodworx,Breakfast,Standard Breakfast,Steelcut Oatmeal,2.95,TRUE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Deli,Egg Salad Sandwich,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Deli,Grilled Cheese Sandwich,2.95,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Deli,Ham Sandwich,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Deli,Roast Beef Sandwich,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Deli,Tuna Sandwich,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Deli,Turkey Sandwich,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Deli,Veggie Sandwich,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Picnic Basket,Buffalo Blue Salad,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Picnic Basket,Caesar Chicken Salad,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Picnic Basket,California Wrap,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Picnic Basket,Chicken Caesar Wrap,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Picnic Basket,Cobb Salad,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Picnic Basket,Foodworx Chicken Wrap,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Picnic Basket,Mandarin Salad,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Picnic Basket,Sesame Chicken Wrap,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Picnic Basket,Southwest Cob Salad,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch And Dinner,Picnic Basket,Spring Bounty Salad,6.25,FALSE,FALSE,FALSE
+Foodworx,Lunch,Pizzeria,Caprese Personal Pizza,5.25,FALSE,FALSE,FALSE
+Foodworx,Lunch,Pizzeria,Crispy French Fries,1.75,FALSE,FALSE,FALSE
+Foodworx,Lunch,Pizzeria,Pepperoni Pizza,5.25,FALSE,FALSE,FALSE
+Foodworx,Lunch,Pizzeria,South of the Border,7.25,FALSE,FALSE,FALSE
+Foodworx,Lunch,Pizzeria,Vegetarian Pizza,5.25,FALSE,FALSE,FALSE
+Foodworx,Dinner,Pizzeria,BYO Personal Pizza,5.95,FALSE,FALSE,FALSE
+Foodworx,Lunch,Pizzeria,Carnitas Quesadilla,5.95,FALSE,FALSE,FALSE
+Foodworx,Lunch,Pizzeria,Cheddar Quesadilla,3.95,TRUE,FALSE,FALSE
+Foodworx,Dinner,Pizzeria,Chicken Quesadilla,4.95,FALSE,FALSE,FALSE
+Foodworx,Lunch and Dinner,Soups,Black Bean Adobo Soup,3.5,TRUE,FALSE,TRUE
+Foodworx,Lunch and Dinner,Soups,Chicken Enchilada Soup,3.5,FALSE,FALSE,FALSE
+Foodworx,Lunch and Dinner,Soups,Vegetarian Chili,3.5,FALSE,TRUE,TRUE
+Foodworx,Lunch and Dinner,Soups,Chicken Tortilla Soup,3.5,FALSE,FALSE,TRUE
+Foodworx,Lunch and Dinner,Soups,Pasta Fagioli Soup,3.5,TRUE,FALSE,FALSE
+Foodworx,Lunch and Dinner,Soups,Carrot and Ginger Soup,3.5,FALSE,TRUE,TRUE
+Foodworx,Lunch and Dinner,Soups,Poblano Chicken Corn Chowder,3.5,FALSE,FALSE,FALSE
+Foodworx,Lunch and Dinner,Soups,Old Fashioned Chicken Noodle,3.5,FALSE,FALSE,FALSE
+Foodworx,Lunch and Dinner,Soups,Southwest Corn Chowder Soup,3.5,FALSE,FALSE,FALSE
+Foodworx,Lunch and Dinner,Soups,Broccoli Cheddar Soup,3.5,FALSE,FALSE,FALSE
+Foodworx,Lunch and Dinner,Soups,Kale and Chourico Soup,3.5,FALSE,FALSE,TRUE
+Foodworx,Lunch and Dinner,Soups,Coconut Lentil Soup,3.5,TRUE,FALSE,FALSE
+Foodworx,Lunch and Dinner,Soups,Potato w/ Bacon Soup,3.5,FALSE,FALSE,FALSE
+Foodworx,Lunch and Dinner,Soups,Tomato Red Pepper Bisque Soup,3.5,TRUE,FALSE,FALSE
+Foodworx,Lunch and Dinner,Soups,Tuscan Chicken Soup,3.5,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch,40/40/20,3rd Kitchen House Salad,6.5,TRUE,FALSE,FALSE
+Oceanview Terrace,Lunch,40/40/21,Fattoush Greek Salad,6.5,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch,40/40/22,Jalapeno Kale Caesar,6.5,TRUE,FALSE,FALSE
+Oceanview Terrace,Lunch,40/40/23,Power House,6.5,TRUE,FALSE,FALSE
+Oceanview Terrace,Lunch,40/40/24,Spicy Thai Salad,6.5,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch,40/40/25,Strawberry Spinach,6.5,TRUE,FALSE,FALSE
+Oceanview Terrace,Lunch And Dinner,Scholars Pizza,Artichoke and Spinach,8.5,TRUE,FALSE,FALSE
+Oceanview Terrace,Lunch And Dinner,Scholars Pizza,Cattleman,10.5,FALSE,FALSE,FALSE
+Oceanview Terrace,Lunch And Dinner,Scholars Pizza,Chicken Artichoke,8.5,FALSE,FALSE,FALSE
+Oceanview Terrace,Lunch And Dinner,Scholars Pizza,Margherita Pizza,7,TRUE,FALSE,FALSE
+Oceanview Terrace,Lunch And Dinner,Scholars Pizza,Mushroom and Sausage,8.5,FALSE,FALSE,FALSE
+Oceanview Terrace,Lunch And Dinner,Scholars Pizza,Southwest,8.5,FALSE,FALSE,FALSE
+Oceanview Terrace,Lunch And Dinner,Scholars Pizza,Vegetarian,8.5,TRUE,FALSE,FALSE
+Oceanview Terrace,Lunch And Dinner,Sliceria by Scholars,Cheese Pizza,3,TRUE,FALSE,FALSE
+Oceanview Terrace,Lunch And Dinner,Sliceria by Scholars,Margherita Pizza,3.25,TRUE,FALSE,FALSE
+Oceanview Terrace,Lunch And Dinner,Sliceria by Scholars,Pepperoni Pizza,4.25,FALSE,FALSE,FALSE
+Oceanview Terrace,Lunch And Dinner,Sliceria by Scholars,Vegetarian Pizza,3.25,TRUE,FALSE,FALSE
+Oceanview Terrace,Lunch And Dinner,Sliceria by Scholars,Mushroom and Turkey Sausage Pizza,4.25,FALSE,FALSE,FALSE
+Oceanview Terrace,Lunch And Dinner,Sliceria by Scholars,Moroccan,4.25,FALSE,FALSE,FALSE
+Oceanview Terrace,Dinner,Sliceria by Scholars,Fire Roasted Torrey's Chicken Wings,10,FALSE,FALSE,TRUE
+Oceanview Terrace,Dinner,Sliceria by Scholars,Garlic Cuscinos (Pillows),2.95,TRUE,FALSE,FALSE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Arugula & Fennel Salad,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Indian Sweet Potato & Chickpea,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Lemon Basmati Rice,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Roasted Broccolini with Tomatoes,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Sauteed Edamame and Kale,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Spicy Lentil & Kale Stew,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Bengali Salmon,8.5,FALSE,FALSE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Kerala Chicken,6,FALSE,FALSE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Curried Potatoes,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Freekeh Green Beans,2,FALSE,TRUE,FALSE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Grilled Asparagus,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Nasi Goreng(Fried Rice),2,TRUE,FALSE,FALSE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Sauteed Squash w/ Bermuda Onions,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Tiger Salad,2,FALSE,TRUE,FALSE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Chicken Resep Ayam Balado,6,FALSE,FALSE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Swimming Rama,5,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Cazuela de Arroz con Rajas de Chile Poblano,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Escabeche Vegetable Salad,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Green Beans w/ Mushrooms & Almonds,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Millet Pilaf with Mushrooms and Poblano,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Patatas Bravas & Spicy Tomato Aioli,2,TRUE,FALSE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Sauteed Cauliflower and Kale,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Adobo Lamb Skewer,7,FALSE,FALSE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Pollo a la Brasa con Aji,6,FALSE,FALSE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Apple & Fennel Coleslaw,2,TRUE,FALSE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Egytian Style Edamame Spinach Fallafel,2,TRUE,FALSE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Lemon Couscous w/ Spinach and Scallions,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,OVT Herbed Roasted Red Potatoes,2,FALSE,TRUE,FALSE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Sauteed Asparagus with Red Onion,2,FALSE,TRUE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Berbere Beef Meatball,6,FALSE,FALSE,TRUE
+Oceanview Terrace,Lunch And Dinner,Spice Station ,Rotisserie Harissa Chicken,6,FALSE,FALSE,TRUE
+Pines,Breakfast,Breakfast Special,Soyrizo Burrito,3.95,TRUE,FALSE,FALSE
+Pines,Breakfast,Breakfast Special,Waffle,0.84,TRUE,FALSE,FALSE
+Pines,Breakfast,Breakfast Special,Ham Scramble Skillet,2.95,FALSE,FALSE,TRUE
+Pines,Breakfast,Standard Breakfast,Breakfast Burrito,3.95,TRUE,FALSE,FALSE
+Pines,Breakfast,Standard Breakfast,Breakfast Quesadilla,3.95,FALSE,FALSE,FALSE
+Pines,Breakfast,Standard Breakfast,Dietitian's Delight,3.95,FALSE,FALSE,FALSE
+Pines,Breakfast,Standard Breakfast,Tater Barrels,1.65,TRUE,FALSE,FALSE
+Pines,Breakfast,Breakfast A La Carte,Beans,1.65,FALSE,TRUE,TRUE
+Pines,Breakfast,Breakfast A La Carte,Biscuit,0.95,TRUE,FALSE,FALSE
+Pines,Breakfast,Breakfast A La Carte,Cage Free Scrambled Eggs ,1.25,TRUE,FALSE,TRUE
+Pines,Breakfast,Breakfast A La Carte,Fresh Tortillas,0.35,FALSE,FALSE,FALSE
+Pines,Breakfast,Breakfast A La Carte,Pork Sausage Links,0.95,FALSE,FALSE,TRUE
+Pines,Breakfast,Breakfast A La Carte,Sausage Gravy,0.5,FALSE,FALSE,FALSE
+Pines,Breakfast,Breakfast A La Carte,Scrambled Egg Whites,1.25,TRUE,FALSE,TRUE
+Pines,Breakfast,Breakfast A La Carte,Smoked bacon,0.85,FALSE,FALSE,TRUE
+Pines,Breakfast,Breakfast A La Carte,Tater Barrels,1.65,TRUE,FALSE,FALSE
+Pines,Breakfast,Breakfast A La Carte,Veggie Sausage,1.09,TRUE,FALSE,FALSE
+Pines,Breakfast,Breakfast A La Carte,Cereal with Milk,1.95,FALSE,FALSE,FALSE
+Pines,Breakfast,Breakfast A La Carte,Steelcut Oatmeal,1.95,TRUE,FALSE,FALSE
+Pines,Breakfast,Breakfast A La Carte,Whole Apple,0.5,FALSE,TRUE,TRUE
+Pines,Breakfast,Breakfast A La Carte,Whole Bannana,0.5,FALSE,TRUE,TRUE
+Pines,Breakfast,Breakfast A La Carte, Whole Orange,0.5,FALSE,TRUE,TRUE
+Pines,Lunch And Dinner,Cantina Entrees,Carnitas Quesadilla,5.95,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Cantina Entrees,La Cantina Burrito,6.95,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Cantina Entrees,Crispy Baja Fish Tacos,4.95,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Cantina Entrees,Pines Cantina Taco,2.95,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Cantina Entrees,Quesadilla,3.95,TRUE,FALSE,FALSE
+Pines,Lunch And Dinner,Cantina Entrees,Taco Salad,6.65,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Cantina Entrees,Taquitos Supreme,5.95,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Cantina Entrees,Arroz con Pollo,4.95,FALSE,FALSE,TRUE
+Pines,Lunch And Dinner,Cantina Entrees,Seafood Veracruz,5.95,FALSE,FALSE,TRUE
+Pines,Lunch And Dinner,Cantina Sides,Aztec Pinto Beans,1.5,TRUE,FALSE,FALSE
+Pines,Lunch And Dinner,Cantina Sides,Cilantro Rice,1.5,FALSE,TRUE,TRUE
+Pines,Lunch And Dinner,Cantina Sides,Spanish Rice,1.5,FALSE,TRUE,TRUE
+Pines,Lunch And Dinner,Cantina Sides,Mexican Zucchini and Corn,1.5,TRUE,FALSE,TRUE
+Pines,Breakfast,Value 4 U,Egg & Cheese Breakfast Burrito,2.25,FALSE,FALSE,FALSE
+Pines,Breakfast,Value 4 U,Egg Sausage & Cheese Sandwich,2.25,FALSE,FALSE,FALSE
+Pines,Breakfast,Value 4 U,Egg Bacon & Cheese Sandwich,2.25,FALSE,FALSE,FALSE
+Pines,Lunch,Value 4 U,Crispy French Fries,1.75,FALSE,FALSE,FALSE
+Pines,Lunch,Value 4 U,Grilled Cheese Sandwich,2.25,TRUE,FALSE,FALSE
+Pines,Lunch,Value 4 U,Fried Chicken Fritters,4.5,FALSE,FALSE,FALSE
+Pines,Lunch,Value 4 U,Hamburger,2.25,FALSE,FALSE,FALSE
+Pines,Lunch,Value 4 U,Mac & Cheese,2.25,TRUE,FALSE,FALSE
+Pines,Lunch And Dinner,Pizza,Cheese Pizza,2.25,TRUE,FALSE,FALSE
+Pines,Lunch And Dinner,Pizza,Meat Lovers Pizza,2.75,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Pizza,Pepperoni Pizza,2.75,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Pizza,Sausage & Mushroom Pizza,2.75,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Pizza,BBQ Chicken Pizza,2.75,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Pizza,Roasted Garlic White Pizza,2.75,TRUE,FALSE,FALSE
+Pines,Lunch And Dinner,Chili,Vegetarian Chili,3.5,FALSE,TRUE,TRUE
+Pines,Lunch,BYO Deli,Hand Carved Turkey Sandwich,6.64,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Trattoria,Mushroom Penne Gratin,4.95,TRUE,FALSE,FALSE
+Pines,Lunch And Dinner,Trattoria,Spaghetti and Meatballs,4.95,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Trattoria,Kamut Paella ,4.95,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Trattoria,Chicken Paramesan,4.95,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Trattoria,Rigatoni w/ Itaian Sausage,4.95,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Trattoria,Pasta Primavera,4.95,TRUE,FALSE,FALSE
+Pines,Lunch And Dinner,Trattoria,Meat Lovers' Lasagna,5.95,FALSE,FALSE,FALSE
+Pines,Lunch And Dinner,Sides,Emerald Sesame Greens,2,FALSE,TRUE,FALSE
+Pines,Lunch And Dinner,Sides,Garlic Bread,0.55,TRUE,FALSE,FALSE
+Pines,Lunch And Dinner,Sides,Roasted Cauliflower,2,FALSE,TRUE,TRUE
+Pines,Lunch And Dinner,Sides,Roasted Vegetables,2,FALSE,TRUE,TRUE
+Pines,Lunch And Dinner,Sides,Sauteed Vegetable Mix,2,FALSE,TRUE,TRUE
+Pines,Breakfast,Fruit Bar,Cut Fresh Fruit,0.34,FALSE,TRUE,TRUE
+Pines,Breakfast,Parfait Bar,Yogurt Bar,0.34,TRUE,FALSE,FALSE
+Pines,Lunch and Dinner,Salad Bar,Fresh Salad Bar,0.34,TRUE,FALSE,FALSE
+Pines,Lunch and Dinner,Stirfry,Choose Your Curry,6.95,FALSE,FALSE,FALSE
+Pines,Lunch and Dinner,Stirfry,Choose Your Noodle,6.95,FALSE,FALSE,FALSE
+Pines,Lunch and Dinner,Sushi,California Roll,6.95,FALSE,FALSE,FALSE
+Pines,Lunch and Dinner,Sushi,Crunchy Shrimp Philly Roll,6.95,FALSE,FALSE,FALSE
+Pines,Lunch and Dinner,Sushi,Spicy Krab Dynamite Roll,6.95,FALSE,FALSE,FALSE
+Pines,Lunch and Dinner,Sushi,Tofu and Avocado Roll,6.95,FALSE,TRUE,FALSE
+Pines,Lunch and Dinner,Soups,Black Bean Adobo Soup,3.5,TRUE,FALSE,TRUE
+Pines,Lunch and Dinner,Soups,Chicken Enchilada Soup,3.5,FALSE,FALSE,FALSE
+Pines,Lunch and Dinner,Soups,Vegetarian Chili,3.5,FALSE,TRUE,TRUE
+Pines,Lunch and Dinner,Soups,Chicken Tortilla Soup,3.5,FALSE,FALSE,TRUE
+Pines,Lunch and Dinner,Soups,Pasta Fagioli Soup,3.5,TRUE,FALSE,FALSE
+Pines,Lunch and Dinner,Soups,Carrot and Ginger Soup,3.5,FALSE,TRUE,TRUE
+Pines,Lunch and Dinner,Soups,Poblano Chicken Corn Chowder,3.5,FALSE,FALSE,FALSE
+Pines,Lunch and Dinner,Soups,Old Fashioned Chicken Noodle,3.5,FALSE,FALSE,FALSE
+Pines,Lunch and Dinner,Soups,Southwest Corn Chowder Soup,3.5,FALSE,FALSE,FALSE
+Pines,Lunch and Dinner,Soups,Broccoli Cheddar Soup,3.5,FALSE,FALSE,FALSE
+Pines,Lunch and Dinner,Soups,Kale and Chourico Soup,3.5,FALSE,FALSE,TRUE
+Pines,Lunch and Dinner,Soups,Coconut Lentil Soup,3.5,TRUE,FALSE,FALSE
+Pines,Lunch and Dinner,Soups,Potato w/ Bacon Soup,3.5,FALSE,FALSE,FALSE
+Pines,Lunch and Dinner,Soups,Tomato Red Pepper Bisque Soup,3.5,TRUE,FALSE,FALSE
+Pines,Lunch and Dinner,Soups,Tuscan Chicken Soup,3.5,FALSE,TRUE,TRUE

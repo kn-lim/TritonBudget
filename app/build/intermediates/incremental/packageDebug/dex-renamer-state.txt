@@ -1,7 +1,4 @@
-#Tue Mar 07 21:21:55 PST 2017
-base.0=C\:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_80d39256c69622acd116f7cbd0f30a2c03cfcf0c
-renamed.1=classes2.dex
+#Fri Mar 10 16:25:09 PST 2017
+base.0=/Users/Danny/Desktop/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.1=C\:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_173fec6484368b7e54e10c0ce1ddd8bad7b6fd2b\\classes.dex
-base.1=C\:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_173fec6484368b7e54e10c0ce1ddd8bad7b6fd2b
-file.0=C\:\\Users\\andyl\\Desktop\\AndroidStudio\\TritonBudget\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_80d39256c69622acd116f7cbd0f30a2c03cfcf0c\\classes.dex
+file.0=/Users/Danny/Desktop/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
