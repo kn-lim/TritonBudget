@@ -91,7 +91,7 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
                         break;
 
                     case MotionEvent.ACTION_UP:
-                        if (lastAction == MotionEvent.ACTION_DOWN) {
+                        if (lastAction == MotionEvent.ACTION_DOWN || lastAction == 2) {
                             if (change_balance(total)) {
                                 Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
                                 startActivity(intent);

@@ -10,9 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AbsListView;
 import android.widget.ExpandableListView;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -79,6 +77,7 @@ public class Menu64North_Main extends AppCompatActivity implements NavigationVie
         final ExpandableListView mExpandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Parent);
 
         /* Add IMG to top*/
+        /*
         ImageView img = new ImageView(this);
         img.setImageResource(R.mipmap.dh_64north);
         img.setScaleType(ImageView.ScaleType.FIT_CENTER);
@@ -86,6 +85,7 @@ public class Menu64North_Main extends AppCompatActivity implements NavigationVie
 
         ExpandableListView.LayoutParams layoutParams = new AbsListView.LayoutParams(900, 900);
         img.setLayoutParams(layoutParams);
+        */
         /*end add img to top*/
 
         if (mExpandableListView != null) {

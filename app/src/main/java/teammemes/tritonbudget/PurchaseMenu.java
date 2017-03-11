@@ -141,7 +141,7 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
                         lastAction = MotionEvent.ACTION_MOVE;
                         break;
                     case MotionEvent.ACTION_UP:
-                        if (lastAction == 2) {
+                        if (lastAction == 2 || lastAction == MotionEvent.ACTION_DOWN) {
                             ArrayList<String> trans = new ArrayList<String>();
                             ArrayList<String> numofpur = new ArrayList<String>();
                             for (int j = 0; j < transactions.size(); j++) {
