@@ -72,6 +72,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
         TextView addDD = (TextView) findViewById(R.id.settings_addDD);
         TextView test_load = (TextView) findViewById(R.id.settings_test_load);
         TextView credits = (TextView) findViewById(R.id.settings_credits);
+        TextView enterDays = (TextView) findViewById(R.id.settings_enterDays);
 
         //Listeners
         changeName.setOnClickListener(new View.OnClickListener() {
@@ -235,6 +236,13 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                     }
                 });
                 builder.show();
+            }
+        });
+
+        enterDays.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Settings.this, NonTrackingDays.class));
             }
         });
 
