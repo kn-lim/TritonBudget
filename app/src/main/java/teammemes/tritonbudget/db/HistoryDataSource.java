@@ -139,7 +139,7 @@ public class HistoryDataSource extends BaseDataSource{
             Calendar cal = Calendar.getInstance();
             cal.setTime(day);
             int dayOfYear = cal.get(Calendar.DAY_OF_YEAR);
-            if(0<=currDay-dayOfYear && currDay-dayOfYear<7)
+            if(0<=currDay-dayOfYear && currDay-dayOfYear<7&&histories.get(i).getCost()>0)
             {
                 cost[currDay-dayOfYear]+=histories.get(i).getCost();
             }
@@ -155,17 +155,19 @@ public class HistoryDataSource extends BaseDataSource{
             Calendar cal = Calendar.getInstance();
             cal.setTime(day);
             int dayOfYear = cal.get(Calendar.DAY_OF_YEAR);
-            if (0 <= currDay - dayOfYear && currDay - dayOfYear < 7) {
-                cost[0] += histories.get(i).getCost();
-            }
-            if (7 <= currDay - dayOfYear && currDay - dayOfYear < 14) {
-                cost[1] += histories.get(i).getCost();
-            }
-            if (14 <= currDay - dayOfYear && currDay - dayOfYear < 21) {
-                cost[2] += histories.get(i).getCost();
-            }
-            if (21 <= currDay - dayOfYear && currDay - dayOfYear < 28) {
-                cost[3] += histories.get(i).getCost();
+            if(histories.get(i).getCost()>0) {
+                if (0 <= currDay - dayOfYear && currDay - dayOfYear < 7) {
+                    cost[0] += histories.get(i).getCost();
+                }
+                if (7 <= currDay - dayOfYear && currDay - dayOfYear < 14) {
+                    cost[1] += histories.get(i).getCost();
+                }
+                if (14 <= currDay - dayOfYear && currDay - dayOfYear < 21) {
+                    cost[2] += histories.get(i).getCost();
+                }
+                if (21 <= currDay - dayOfYear && currDay - dayOfYear < 28) {
+                    cost[3] += histories.get(i).getCost();
+                }
             }
         }
         return cost;
@@ -182,7 +184,7 @@ public class HistoryDataSource extends BaseDataSource{
             cal.setTime(day);
             int currmon = cal.get(Calendar.MONTH);
             int currwek = Calendar.getInstance().get(Calendar.WEEK_OF_MONTH);
-            if(currmon==currMonth&&currWeek==currwek)
+            if(currmon==currMonth&&currWeek==currwek&&histories.get(i).getCost()>0)
             {
                 cost += histories.get(i).getCost();
             }
@@ -203,7 +205,7 @@ public class HistoryDataSource extends BaseDataSource{
             cal.setTime(day);
             int currmon = cal.get(Calendar.MONTH);
             int currwek = Calendar.getInstance().get(Calendar.WEEK_OF_MONTH);
-            if(currmon==currMonth&&currWeek==currwek)
+            if(currmon==currMonth&&currWeek==currwek&&histories.get(i).getCost()>0)
             {
                 cost += histories.get(i).getCost();
             }
