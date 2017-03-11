@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
@@ -104,10 +105,16 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
                         numofpur.add(numberOfPurchase[j]+"");
                     }
                 }
-                Intent checkout = new Intent(getApplicationContext(),Checkout.class);
-                checkout.putStringArrayListExtra("Transactions",trans);
-                checkout.putStringArrayListExtra("number",numofpur);
-                startActivity(checkout);
+                if(trans.size()==0)
+                {
+                    Toast.makeText(getApplicationContext(),"Please select item",Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Intent checkout = new Intent(getApplicationContext(), Checkout.class);
+                    checkout.putStringArrayListExtra("Transactions", trans);
+                    checkout.putStringArrayListExtra("number", numofpur);
+                    startActivity(checkout);
+                }
             }
         });
 
