@@ -10,17 +10,17 @@
         android:id="@+id/HS_LLV_Container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#03a9f4"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#03a9f4">
 
         <LinearLayout
             android:id="@+id/HS_LLV_TopPortion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/border_set_top_bottom"
             android:gravity="center"
             android:orientation="vertical"
+            android:background="@drawable/border_set_top_bottom"
             android:requiresFadingEdge="horizontal">
 
             <TextView
@@ -47,8 +47,8 @@
                 android:id="@+id/HS_LLH_DailyBudgetContainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
                 android:gravity="center"
+                android:layout_marginBottom="30dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -79,6 +79,7 @@
             android:id="@+id/HS_LLV_BottomPortion"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
             android:gravity="center"
             android:orientation="vertical">
 
