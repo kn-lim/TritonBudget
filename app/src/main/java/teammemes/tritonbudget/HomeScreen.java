@@ -182,11 +182,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
             }
         });
         /* TODO: ADD ON BUTTON LISTENERS*/
-        TextView daily = (TextView)findViewById(R.id.HS_TextView_DailyBudgetValue);
-        double daysp=usr.getBalance()/(167- Calendar.getInstance().get(Calendar.DAY_OF_YEAR))*100;
-        daysp=Math.round(daysp);
-        daysp=daysp/100;
-        daily.setText("$"+Double.toString(daysp));
+
     }
 
     /*
@@ -231,6 +227,10 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         dollars.setSpan(colorDol, 0, dollarStr.length(), 0);
         cents.setSpan(colorCents, 0, centStr.length(), 0);
         totBal.setText(TextUtils.concat(dollars, cents));
+        double daysp=usr.getBalance()/(167- Calendar.getInstance().get(Calendar.DAY_OF_YEAR))*100;
+        daysp=Math.round(daysp);
+        daysp=daysp/100;
+        dailyRBal.setText("$"+Double.toString(daysp));
     }
 
     //This method is used to listen for the user clicking the menu button, and opens
