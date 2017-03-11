@@ -99,12 +99,6 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         //Used for when database is working
         database = new HistoryDataSource(this);
         transactions = database.getAllTransaction();
-        Calendar oldDate = (Calendar) Calendar.getInstance().clone();
-        oldDate.add(Calendar.DATE, -8);
-        transactions.add(new TranHistory(1, "Week meal", 1, oldDate.getTime(), 8999));
-        oldDate.add(Calendar.MONTH, -1);
-        System.out.println(oldDate.getTime().toString());
-        transactions.add(new TranHistory(1, "Month meal", 1, oldDate.getTime(), 9001));
         dateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
         //Renders all of the transactions on the page
