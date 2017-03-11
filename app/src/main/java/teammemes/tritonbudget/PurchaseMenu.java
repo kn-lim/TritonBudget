@@ -172,25 +172,34 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
             name_display.setText(transactions.get(i).getName());
             name_display.setLayoutParams(textParams);
 
+            //Need another LinearLayout to justify the stuff
+            LinearLayout buttonsCost = new LinearLayout(this);
+            buttonsCost.setOrientation(LinearLayout.HORIZONTAL);
+            buttonsCost.setGravity(Gravity.RIGHT);
+
             TextView cost_display = new TextView(this);
             cost_display.setPaddingRelative(8,8,8,8);
             cost_display.setPadding(8,8,15,8);
-            cost_display.setText("$" + Double.toString(transactions.get(i).getCost()));
+            /*Formats the fucking string && adds extra 0 if need to*/
+            String item_cost = "$" + Double.toString(transactions.get(i).getCost());
+            int decimalIdx = item_cost.indexOf('.');
+            if (decimalIdx + 1 == item_cost.length() - 1) {
+                item_cost = item_cost + "0";
+            }
+            cost_display.setText(item_cost);
             cost_display.setLayoutParams(noWeight);
-            cost_display.setGravity(Gravity.RIGHT);     //Aligns it on the right
-
 
             Button plus = new Button(this);
             plus.setLayoutParams(btnParams);
             plus.setText("+");
             plus.setPadding(0,0,0,0);
 
-
             final TextView quantity = new TextView(this);
             quantity.setText("0");
             quantity.setLayoutParams(btnParams);
             quantity.setGravity(Gravity.CENTER);
             quantity.setId(i);
+
             Button minus = new Button(this);
             minus.setLayoutParams(btnParams);
             minus.setText("-");
@@ -217,10 +226,11 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
 
             //Adds the two displays to the transaction line
             TransactionBorder.addView(name_display);
-            TransactionBorder.addView(plus);
-            TransactionBorder.addView(quantity);
-            TransactionBorder.addView(minus);
-            TransactionBorder.addView(cost_display);
+            buttonsCost.addView(minus);
+            buttonsCost.addView(quantity);
+            buttonsCost.addView(plus);
+            buttonsCost.addView(cost_display);
+            TransactionBorder.addView(buttonsCost);
 
 
             //If it is the last transaction it creates the bottom border.
