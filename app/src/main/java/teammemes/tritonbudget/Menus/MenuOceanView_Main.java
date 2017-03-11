@@ -71,6 +71,19 @@ public class MenuOceanView_Main extends AppCompatActivity implements NavigationV
         // Init top level data
         DS = new MenuDataSource(this);
 
+        //
+        /*
+        List<String> listDataHeader = new ArrayList<>();
+        String[] mItemHeaders = new String[5];
+        //String[] mItemHeaders = getResources().getStringArray(R.array.items_array_expandable_level_one);
+
+        mItemHeaders[1] = "Spice Station";
+        mItemHeaders[2] = "Sliceria by Scholars";
+        mItemHeaders[3] = "40/40/20";
+        mItemHeaders[4] = "Scholars Pizza";
+
+        Collections.addAll(listDataHeader, mItemHeaders);
+        */
         List<String> listCategories ;
         listCategories = DS.getCategoriesByLocation(dhname);
 
@@ -80,6 +93,16 @@ public class MenuOceanView_Main extends AppCompatActivity implements NavigationV
             //MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listDataHeader, mListData_SecondLevel_Map);
             MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listCategories, DS,dhname);
             mExpandableListView.setAdapter(parentLevelAdapter);
+            // display only one expand item
+//            mExpandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+//                int previousGroup = -1;
+//                @Override
+//                public void onGroupExpand(int groupPosition) {
+//                    if (groupPosition != previousGroup)
+//                        mExpandableListView.collapseGroup(previousGroup);
+//                    previousGroup = groupPosition;
+//                }
+//            });
         }
     }
 

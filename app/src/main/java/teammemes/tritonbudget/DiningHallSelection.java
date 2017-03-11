@@ -17,7 +17,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import teammemes.tritonbudget.Menus.Menu64Degrees_Main;
-import teammemes.tritonbudget.Menus.Menu64North_Main;
 import teammemes.tritonbudget.Menus.MenuBistro_Main;
 import teammemes.tritonbudget.Menus.MenuCafeVentanas_Main;
 import teammemes.tritonbudget.Menus.MenuCanyonVista_Main;
@@ -47,12 +46,12 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
     final int GOODYS2 = 20;
     final int ROOTS = 6;
     final int SIXFOURNO = 9;
-    String  source;
     //Nav Drawers
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     private Toolbar mToolbar;
     private User usr;
+    String  source;
 
     public DiningHallSelection() {
     }
@@ -334,7 +333,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
                 }
                 else {
                     //Attempt to open another activity (Dining Hall Menu)
-                    Intent intent = new Intent(DiningHallSelection.this, Menu64North_Main.class);
+                    Intent intent = new Intent(DiningHallSelection.this, testClick.class);
                     startActivity(intent);
                 }
             }

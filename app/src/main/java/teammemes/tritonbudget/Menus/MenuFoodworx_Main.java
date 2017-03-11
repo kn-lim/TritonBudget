@@ -68,6 +68,21 @@ public class MenuFoodworx_Main extends AppCompatActivity implements NavigationVi
         // Init top level data
         DS = new MenuDataSource(this);
 
+        //
+        /*
+        List<String> listDataHeader = new ArrayList<>();
+        String[] mItemHeaders = new String[7];
+        //String[] mItemHeaders = getResources().getStringArray(R.array.items_array_expandable_level_one);
+
+        mItemHeaders[1] = "Standard Breakfast";
+        mItemHeaders[2] = "Deli";
+        mItemHeaders[3] = "Standard Grill";
+        mItemHeaders[4] = "Picnic Basket";
+        mItemHeaders[5] = "Pizzeria";
+        mItemHeaders[6] = "Soups";
+
+        Collections.addAll(listDataHeader, mItemHeaders);
+        */
         List<String> listCategories ;
         listCategories = DS.getCategoriesByLocation(dhname);
 
@@ -77,6 +92,16 @@ public class MenuFoodworx_Main extends AppCompatActivity implements NavigationVi
             //MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listDataHeader, mListData_SecondLevel_Map);
             MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listCategories, DS,dhname);
             mExpandableListView.setAdapter(parentLevelAdapter);
+            // display only one expand item
+//            mExpandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+//                int previousGroup = -1;
+//                @Override
+//                public void onGroupExpand(int groupPosition) {
+//                    if (groupPosition != previousGroup)
+//                        mExpandableListView.collapseGroup(previousGroup);
+//                    previousGroup = groupPosition;
+//                }
+//            });
         }
     }
 

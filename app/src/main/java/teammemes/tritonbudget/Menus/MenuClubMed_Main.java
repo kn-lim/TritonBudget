@@ -71,7 +71,18 @@ public class MenuClubMed_Main extends AppCompatActivity implements NavigationVie
 
         // Init top level data
         DS = new MenuDataSource(this);
+        /*
+        List<String> listDataHeader = new ArrayList<>();
+        String[] mItemHeaders = new String[6];
 
+        mItemHeaders[1] = "Breakfast Specials";
+        mItemHeaders[2] = "Flatbreads";
+        mItemHeaders[3] = "Signature Salads";
+        mItemHeaders[4] = "Turbo Salads";
+        mItemHeaders[5] = "Soups";
+
+        Collections.addAll(listDataHeader, mItemHeaders);
+        */
         List<String> listCategories;
         listCategories = DS.getCategoriesByLocation(dhname);
 

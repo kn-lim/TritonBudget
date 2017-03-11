@@ -76,12 +76,33 @@ public class MenuBistro_Main extends AppCompatActivity implements NavigationView
         List<String> listCategories ;
         listCategories = DS.getCategoriesByLocation(dhname);
 
+        //List<String> listDataHeader = new ArrayList<>();
+        /*String[] mItemHeaders = new String[5];
+        //String[] mItemHeaders = getResources().getStringArray(R.array.items_array_expandable_level_one);
+
+        mItemHeaders[1] = "Small Plates";
+        mItemHeaders[2] = "Entrees";
+        mItemHeaders[3] = "Sushi";
+        mItemHeaders[4] = "Dessert";
+
+        Collections.addAll(listDataHeader, mItemHeaders);
+        */
         final ExpandableListView mExpandableListView = (ExpandableListView) findViewById(R.id.expandableListView_Parent);
         if (mExpandableListView != null) {
 
             //MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listDataHeader, mListData_SecondLevel_Map);
             MenuDisplay_ParentLevelAdapter parentLevelAdapter = new MenuDisplay_ParentLevelAdapter(this, listCategories, DS,dhname);
             mExpandableListView.setAdapter(parentLevelAdapter);
+            // display only one expand item
+//            mExpandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+//                int previousGroup = -1;
+//                @Override
+//                public void onGroupExpand(int groupPosition) {
+//                    if (groupPosition != previousGroup)
+//                        mExpandableListView.collapseGroup(previousGroup);
+//                    previousGroup = groupPosition;
+//                }
+//            });
         }
     }
 
