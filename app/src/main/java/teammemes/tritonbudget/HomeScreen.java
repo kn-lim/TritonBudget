@@ -54,8 +54,6 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
 
         database = new HistoryDataSource(this);
 
-        /*User you=User.getInstance(getApplicationContext());
-        */
         usr = User.getInstance(getApplicationContext());
 
 
@@ -84,31 +82,6 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
 
         renderBalances();
 
-
-        /*End Format the total balance*/
-
-        /*
-        Format the Daily Remaining Budget
-        decimalIdx = dailyRemain.indexOf('.');
-        //Edge case, where balance == $XXX.00, it wrongly displays one instance of 0. This fixes it.
-        if (decimalIdx + 1 == usrtotBal.length() - 1) {
-            usrtotBal = usrtotBal + "0";
-        }
-        dollarStr = dailyRemain.substring(0, decimalIdx);
-        centStr = dailyRemain.substring(decimalIdx, dailyRemain.length());
-        dollars = new SpannableString(dollarStr);
-        cents = new SpannableString(centStr);
-        ftsize = new RelativeSizeSpan((float) 3.00);
-        ftsize2 = new RelativeSizeSpan((float) 1.75);
-        colorDol = new ForegroundColorSpan(Color.BLACK);
-        colorCents = new ForegroundColorSpan(Color.BLACK);
-        dollars.setSpan(ftsize, 0, dollarStr.length(), 0);
-        cents.setSpan(ftsize2, 0, centStr.length(), 0);
-        dollars.setSpan(colorDol, 0, dollarStr.length(), 0);
-        cents.setSpan(colorCents, 0, centStr.length(), 0);
-        dailyRBal.setText(TextUtils.concat(dollars, cents));
-        End Format the Daily Remaining Budget
-*/
 
         /*Colors the Button to Custom GOLD*/
         Button deductbtn = (Button) findViewById(R.id.HS_Button_Deduct);
@@ -238,10 +211,29 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         daysp=Math.round(daysp);
         daysp=daysp/100;
 
-        if (daysp < 0)
+        if (daysp < 0) {
             daysp = 0;
+        }
 
-        dailyRBal.setText("$"+Double.toString(daysp));
+        String dailyRemain = "$" + Double.toString(daysp);
+        decimalIdx = dailyRemain.indexOf('.');
+        //Edge case, where balance == $XXX.00, it wrongly displays one instance of 0. This fixes it.
+        if (decimalIdx + 1 == dailyRemain.length() - 1) {
+            dailyRemain = dailyRemain + "0";
+        }
+        dollarStr = dailyRemain.substring(0, decimalIdx);
+        centStr = dailyRemain.substring(decimalIdx, dailyRemain.length());
+        dollars = new SpannableString(dollarStr);
+        cents = new SpannableString(centStr);
+        ftsize = new RelativeSizeSpan((float) 2.00);
+        ftsize2 = new RelativeSizeSpan((float) 1.00);
+        colorDol = new ForegroundColorSpan(rgb(0, 188, 212));
+        colorCents = new ForegroundColorSpan(rgb(0, 188, 212));
+        dollars.setSpan(ftsize, 0, dollarStr.length(), 0);
+        cents.setSpan(ftsize2, 0, centStr.length(), 0);
+        dollars.setSpan(colorDol, 0, dollarStr.length(), 0);
+        cents.setSpan(colorCents, 0, centStr.length(), 0);
+        dailyRBal.setText(TextUtils.concat(dollars, cents));
     }
 
     @Override
