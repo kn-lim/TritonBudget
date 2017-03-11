@@ -91,12 +91,14 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
                         break;
 
                     case MotionEvent.ACTION_UP:
-                        if (change_balance(total)) {
-                            Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
-                            startActivity(intent);
-                            Toast.makeText(getApplicationContext(), "Purchased!", Toast.LENGTH_LONG).show();
-                        } else {
-                            Toast.makeText(getApplicationContext(), "You broke though.", Toast.LENGTH_LONG).show();
+                        if (lastAction == MotionEvent.ACTION_DOWN) {
+                            if (change_balance(total)) {
+                                Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
+                                startActivity(intent);
+                                Toast.makeText(getApplicationContext(), "Purchased!", Toast.LENGTH_LONG).show();
+                            } else {
+                                Toast.makeText(getApplicationContext(), "You broke though.", Toast.LENGTH_LONG).show();
+                            }
                         }
                         break;
 
@@ -153,7 +155,7 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
     private LinearLayout makeLL() {
         LinearLayout nestedll = new LinearLayout(this);
         nestedll.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        nestedll.setOrientation(LinearLayout.HORIZONTAL);
+        nestedll.setOrientation(LinearLayout.VERTICAL);
         nestedll.setBackgroundResource(R.drawable.border_set_top_bottom);
         return nestedll;
     }
