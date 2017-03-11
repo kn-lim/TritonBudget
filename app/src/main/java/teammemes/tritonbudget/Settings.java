@@ -3,13 +3,13 @@ package teammemes.tritonbudget;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -20,8 +20,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 import java.util.Date;
 
 import teammemes.tritonbudget.db.HistoryDataSource;
@@ -29,10 +27,10 @@ import teammemes.tritonbudget.db.TranHistory;
 
 public class Settings extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    final Context context = this;
     //Nav Drawers
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
-    final Context context = this;
     private Toolbar mToolbar;
     private User usr;
     private HistoryDataSource database;
@@ -96,9 +94,13 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String value= input.getText().toString();
-                        usr.setName(value);
-                        usrName.setText(usr.getName());
-                        Toast.makeText(Settings.this, "Changed Name to " + value, Toast.LENGTH_LONG).show();
+                        if (value.length() == 0 || value.length() > 25) {
+                            Toast.makeText(Settings.this, "Please up to 25 characters.\nName not saved.", Toast.LENGTH_LONG).show();
+                        } else {
+                            usr.setName(value);
+                            usrName.setText(usr.getName());
+                            Toast.makeText(Settings.this, "Changed Name to " + value, Toast.LENGTH_LONG).show();
+                        }
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -151,8 +153,12 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         double value = Double.parseDouble(input.getText().toString());
-                        usr.setBalance(value);
-                        Toast.makeText(Settings.this, "Changed Balance to $" + value, Toast.LENGTH_LONG).show();
+                        if (value > 9999.99 || value < 0) {
+                            Toast.makeText(Settings.this, "Please enter an amount $[0, 9999.99].\nBalance was not changed.", Toast.LENGTH_LONG).show();
+                        } else {
+                            usr.setBalance(value);
+                            Toast.makeText(Settings.this, "Changed Balance to $" + value, Toast.LENGTH_LONG).show();
+                        }
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
