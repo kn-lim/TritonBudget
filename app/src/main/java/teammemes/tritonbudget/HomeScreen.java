@@ -12,9 +12,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
-import android.text.InputFilter;
 import android.text.SpannableString;
-import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.style.ForegroundColorSpan;
@@ -137,12 +135,6 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
 
                 final EditText input = (EditText) deductView.findViewById(R.id.deduct_input);
 
-                // limit user input to cannot
-                int length = Double.toString(usr.getBalance()).length();
-                InputFilter[] FilterArray = new InputFilter[1];
-                FilterArray[0] = new InputFilter.LengthFilter(length);
-                input.setFilters(FilterArray);
-
                 //This TextChangedListener is used to stop the user from inputing more than two decimal points
                 input.addTextChangedListener(new TextWatcher() {
                     //Two methods needed to create new TextWatcher
@@ -156,10 +148,9 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                         if (posDot <= 0) {
                             return;
                         }
-                        // dont need this, set length of input above
-                        /*if (temp.length() - posDot - 1 > 2) {
-                            s.delete(posDot + 2, s.length()-1);
-                        }*/
+                        if (temp.length() - posDot - 1 > 2) {
+                            s.delete(posDot + 3,  posDot + 4);
+                        }
                     }
                 });
 
@@ -181,11 +172,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                 });
 
                 builder.show();
-                TextView daily = (TextView)findViewById(R.id.HS_TextView_DailyBudgetValue);
-                double daysp=usr.getBalance()/(167- Calendar.getInstance().get(Calendar.DAY_OF_YEAR))*100;
-                daysp=Math.round(daysp);
-                daysp=daysp/100;
-                daily.setText("$"+Double.toString(daysp));
+
             }
         });
 
@@ -243,10 +230,24 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         dollars.setSpan(colorDol, 0, dollarStr.length(), 0);
         cents.setSpan(colorCents, 0, centStr.length(), 0);
         totBal.setText(TextUtils.concat(dollars, cents));
-        double daysp=usr.getBalance()/(167- Calendar.getInstance().get(Calendar.DAY_OF_YEAR))*100;
+        HistoryDataSource hist = new HistoryDataSource(getApplicationContext());
+        double daysp = usr.getBalance() / (167- Calendar.getInstance().get(Calendar.DAY_OF_YEAR));
+
+        daysp= daysp - hist.getTransactionByWeek()[0] ;
+        daysp = daysp * 100;
         daysp=Math.round(daysp);
         daysp=daysp/100;
+
+        if (daysp < 0)
+            daysp = 0;
+
         dailyRBal.setText("$"+Double.toString(daysp));
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        renderBalances();
     }
 
     //This method is used to listen for the user clicking the menu button, and opens

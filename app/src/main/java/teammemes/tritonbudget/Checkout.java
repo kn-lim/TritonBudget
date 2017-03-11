@@ -67,10 +67,6 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         //Uses custom adapter to populate list view
         populateCOList();
 
-        total *= 100;
-        total = Math.round(total);
-        total /= 100;
-
         TextView display_total = (TextView)findViewById(R.id.total_cost);
         display_total.setText("Total:\t\t\t" + Double.toString(total));
 
@@ -92,6 +88,7 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
 
     private void populateCOList() {
         LinearLayout ll = (LinearLayout) findViewById(R.id.Checkout);
+        ll.setBackgroundResource(R.drawable.border_set_top_bottom);
 
         Intent it = getIntent();
         ArrayList<String> transtring = it.getStringArrayListExtra("Transactions");
@@ -107,6 +104,7 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
             LinearLayout nestedll = makeLL();
             ll.addView(nestedll);
             TextView t = makeTV(trans.get(i).getName(), cost, quantity);
+            t.setPadding(8,8,8,8);
             nestedll.addView(t);
         }
 
@@ -116,6 +114,7 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         LinearLayout nestedll = new LinearLayout(this);
         nestedll.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         nestedll.setOrientation(LinearLayout.HORIZONTAL);
+        nestedll.setBackgroundResource(R.drawable.border_set_top_bottom);
         return nestedll;
     }
 
@@ -123,7 +122,7 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         TextView tv = new TextView(this);
         tv.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         tv.setText(name + "\t\t\t" + cost + "\t\t\t" + quantity);
-        tv.setTextSize(17);
+        tv.setTextSize(20);
         return tv;
     }
 
@@ -152,37 +151,31 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         switch (id) {
             case R.id.nav_home:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, HomeScreen.class);
+                nextScreen.putExtra("FROM", "History");
+                startActivity(nextScreen);
                 return true;
             case R.id.nav_history:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
-                nextScreen = new Intent(this, History.class);
-                nextScreen.putExtra("FROM", "Home");
-                startActivity(nextScreen);
                 return false;
             case R.id.nav_statistics:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 nextScreen = new Intent(this, Statistics.class);
-                nextScreen.putExtra("FROM", "Home");
+                nextScreen.putExtra("FROM", "History");
                 startActivity(nextScreen);
                 return true;
             case R.id.nav_menus:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 nextScreen = new Intent(this, DiningHallSelection.class);
-                nextScreen.putExtra("FROM", "Home");
+                nextScreen.putExtra("FROM", "History");
                 startActivity(nextScreen);
                 return true;
+            /* Cases for future options
             case R.id.nav_settings:
-                mDrawerLayout.closeDrawer(GravityCompat.START);
-                nextScreen = new Intent(this, Settings.class);
-                nextScreen.putExtra("FROM", "Home");
-                startActivity(nextScreen);
-                return true;
+                return false;
             case R.id.nav_help:
-                mDrawerLayout.closeDrawer(GravityCompat.START);
-                nextScreen = new Intent(this, Help.class);
-                nextScreen.putExtra("FROM", "Home");
-                startActivity(nextScreen);
-                return true;
+                return false:
+            */
             default:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return false;
