@@ -30,7 +30,7 @@ public class Database extends SQLiteOpenHelper {
 
 
     public Database(Context context) {
-        super(context, DataBaseName, null,9); // 10 is just version of database for testing
+        super(context, DataBaseName, null,7); // 10 is just version of database for testing
         localContext = context;
     }
 
