@@ -8,9 +8,9 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -32,7 +32,9 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
     double total = 0;
     private DrawerLayout mDrawerLayout;
     private ArrayList<TranHistory> trans;
-
+    private float dX;
+    private float dY;
+    private int lastAction;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         User usr = User.getInstance(this);
@@ -71,17 +73,36 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         display_total.setText("Total:\t\t\t" + Double.toString(total));
 
         FloatingActionButton button = (FloatingActionButton) findViewById(R.id.ConfirmPurchaseBtn);
-        button.setOnClickListener(new View.OnClickListener() {
+        button.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                if (change_balance(total)) {
-                    Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
-                    startActivity(intent);
-                    Toast.makeText(getApplicationContext(), "purchase successfully!", Toast.LENGTH_LONG).show();
+            public boolean onTouch(View view, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        dX = view.getX() - event.getRawX();
+                        dY = view.getY() - event.getRawY();
+                        lastAction = MotionEvent.ACTION_DOWN;
+                        break;
+
+                    case MotionEvent.ACTION_MOVE:
+                        view.setY(event.getRawY() + dY);
+                        view.setX(event.getRawX() + dX);
+                        lastAction = MotionEvent.ACTION_MOVE;
+                        break;
+
+                    case MotionEvent.ACTION_UP:
+                        if (change_balance(total)) {
+                            Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
+                            startActivity(intent);
+                            Toast.makeText(getApplicationContext(), "Purchased!", Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "You broke though.", Toast.LENGTH_LONG).show();
+                        }
+                        break;
+
+                    default:
+                        return false;
                 }
-                else {
-                    Toast.makeText(getApplicationContext(), "not enough balance!", Toast.LENGTH_LONG).show();
-                }
+                return true;
             }
         });
     }
@@ -152,7 +173,7 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
             case R.id.nav_home:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 nextScreen = new Intent(this, HomeScreen.class);
-                nextScreen.putExtra("FROM", "History");
+                nextScreen.putExtra("FROM", "Checkout");
                 startActivity(nextScreen);
                 return true;
             case R.id.nav_history:
@@ -161,21 +182,28 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
             case R.id.nav_statistics:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 nextScreen = new Intent(this, Statistics.class);
-                nextScreen.putExtra("FROM", "History");
+                nextScreen.putExtra("FROM", "Checkout");
                 startActivity(nextScreen);
                 return true;
             case R.id.nav_menus:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 nextScreen = new Intent(this, DiningHallSelection.class);
-                nextScreen.putExtra("FROM", "History");
+                nextScreen.putExtra("FROM", "Checkout");
                 startActivity(nextScreen);
                 return true;
-            /* Cases for future options
             case R.id.nav_settings:
-                return false;
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Settings.class);
+                nextScreen.putExtra("FROM", "Checkout");
+                startActivity(nextScreen);
+                return true;
             case R.id.nav_help:
-                return false:
-            */
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Help.class);
+                nextScreen.putExtra("FROM", "Checkout");
+                startActivity(nextScreen);
+                return true;
+
             default:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return false;
