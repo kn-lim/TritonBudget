@@ -36,6 +36,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
     private Toolbar mToolbar;
     private User usr;
     private HistoryDataSource database;
+    private TextView usrName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +64,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
         navigationView.setNavigationItemSelectedListener(this);
 
         View navHeaderView= navigationView.getHeaderView(0);
-        TextView usrName = (TextView) navHeaderView.findViewById(R.id.header_name);
+        usrName = (TextView) navHeaderView.findViewById(R.id.header_name);
         usrName.setText(usr.getName());
 
         //Settings Options
@@ -96,6 +97,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                     public void onClick(DialogInterface dialog, int which) {
                         String value= input.getText().toString();
                         usr.setName(value);
+                        usrName.setText(usr.getName());
                         Toast.makeText(Settings.this, "Changed Name to " + value, Toast.LENGTH_LONG).show();
                     }
                 });
@@ -139,7 +141,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                             return;
                         }
                         if (temp.length() - posDot - 1 > 2) {
-                            s.delete(posDot + 3, s.length()-1);
+                            s.delete(posDot + 3,  posDot + 4);
                         }
                     }
                 });
@@ -193,7 +195,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                             return;
                         }
                         if (temp.length() - posDot - 1 > 2) {
-                            s.delete(posDot + 3, s.length()-1);
+                            s.delete(posDot + 3,  posDot + 4);
                         }
                     }
                 });

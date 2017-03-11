@@ -149,7 +149,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                             return;
                         }
                         if (temp.length() - posDot - 1 > 2) {
-                            s.delete(posDot + 3, s.length()-1);
+                            s.delete(posDot + 3,  posDot + 4);
                         }
                     }
                 });
@@ -172,11 +172,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                 });
 
                 builder.show();
-                TextView daily = (TextView)findViewById(R.id.HS_TextView_DailyBudgetValue);
-                double daysp=usr.getBalance()/(167- Calendar.getInstance().get(Calendar.DAY_OF_YEAR))*100;
-                daysp=Math.round(daysp);
-                daysp=daysp/100;
-                daily.setText("$"+Double.toString(daysp));
+
             }
         });
 
@@ -234,10 +230,24 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         dollars.setSpan(colorDol, 0, dollarStr.length(), 0);
         cents.setSpan(colorCents, 0, centStr.length(), 0);
         totBal.setText(TextUtils.concat(dollars, cents));
-        double daysp=usr.getBalance()/(167- Calendar.getInstance().get(Calendar.DAY_OF_YEAR))*100;
+        HistoryDataSource hist = new HistoryDataSource(getApplicationContext());
+        double daysp = usr.getBalance() / (167- Calendar.getInstance().get(Calendar.DAY_OF_YEAR));
+
+        daysp= daysp - hist.getTransactionByWeek()[0] ;
+        daysp = daysp * 100;
         daysp=Math.round(daysp);
         daysp=daysp/100;
+
+        if (daysp < 0)
+            daysp = 0;
+
         dailyRBal.setText("$"+Double.toString(daysp));
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        renderBalances();
     }
 
     //This method is used to listen for the user clicking the menu button, and opens
