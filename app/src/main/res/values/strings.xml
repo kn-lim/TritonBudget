@@ -3,7 +3,7 @@
     <string name="app_name">TritonBudget</string>
     <string name="dining_halls">Dining Halls</string>
     <string name="food_trucks_and_speciality_restaurants">
-        Food Trucks &amp; Speciality Restaurants
+        Speciality Restaurants
     </string>
     <string name="spinner_title">Choose a graph</string>
     <string-array name="item_arrays">
