@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/history_screen"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/history_screen">
-<android.support.design.widget.CoordinatorLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/myFAB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:elevation="40dp"
         android:layout_gravity="bottom|end"
         android:layout_marginTop="-20dp"
+        app:elevation="40dp"
         />
+
     <ScrollView
         android:id="@+id/History_Scrollview_Container"
         android:layout_width="match_parent"
@@ -25,56 +21,55 @@
 
 
         <LinearLayout
+            android:id="@+id/page"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/page"
             android:orientation="vertical">
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:text="Item Name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/textView3"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:text="-"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:text="0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView2"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:text="+"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button2"
                     android:layout_weight="1"
-                    style="@android:style/Widget.DeviceDefault.Button.Borderless.Small" />
+                    android:text="Item Name" />
 
-                <TextView
-                    android:text="Cost"
+                <Button
+                    android:id="@+id/button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/button2"
+                    style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="+" />
+
+                <TextView
                     android:id="@+id/textView"
-                    android:layout_weight="1" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cost" />
 
             </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
-</android.support.design.widget.CoordinatorLayout>
 
 </android.support.design.widget.CoordinatorLayout>
