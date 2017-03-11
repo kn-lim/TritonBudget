@@ -27,15 +27,14 @@ import teammemes.tritonbudget.db.TranHistory;
 
 public class Checkout extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     LinearLayout mainLayout;
+    Toolbar mToolbar;
+    ActionBarDrawerToggle mToggle;
     double total = 0;
     private DrawerLayout mDrawerLayout;
     private ArrayList<TranHistory> trans;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Toolbar mToolbar;
-        DrawerLayout mDrawerLayout;
-        ActionBarDrawerToggle mToggle;
         User usr = User.getInstance(this);
 
         super.onCreate(savedInstanceState);
@@ -68,6 +67,9 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         //Uses custom adapter to populate list view
         populateCOList();
 
+        TextView display_total = (TextView)findViewById(R.id.total_cost);
+        display_total.setText("Total:\t\t\t" + Double.toString(total));
+
         FloatingActionButton button = (FloatingActionButton) findViewById(R.id.ConfirmPurchaseBtn);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +88,7 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
 
     private void populateCOList() {
         LinearLayout ll = (LinearLayout) findViewById(R.id.Checkout);
+        ll.setBackgroundResource(R.drawable.border_set_top_bottom);
 
         Intent it = getIntent();
         ArrayList<String> transtring = it.getStringArrayListExtra("Transactions");
@@ -98,17 +101,28 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
             String cost = Double.toString(trans.get(i).getCost());
             String quantity = Integer.toString(trans.get(i).getQuantity());
             total += (trans.get(i).getCost() * trans.get(i).getQuantity());
+            LinearLayout nestedll = makeLL();
+            ll.addView(nestedll);
             TextView t = makeTV(trans.get(i).getName(), cost, quantity);
-            ll.addView(t);
+            t.setPadding(8,8,8,8);
+            nestedll.addView(t);
         }
 
     }
 
+    private LinearLayout makeLL() {
+        LinearLayout nestedll = new LinearLayout(this);
+        nestedll.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        nestedll.setOrientation(LinearLayout.HORIZONTAL);
+        nestedll.setBackgroundResource(R.drawable.border_set_top_bottom);
+        return nestedll;
+    }
+
     private TextView makeTV(String name, String cost, String quantity) {
         TextView tv = new TextView(this);
-        tv.setLayoutParams(new LinearLayoutCompat.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        tv.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         tv.setText(name + "\t\t\t" + cost + "\t\t\t" + quantity);
-        tv.setTextSize(17);
+        tv.setTextSize(20);
         return tv;
     }
 
@@ -126,6 +140,7 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         return true;
     }
 
+    @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Gets the id of the item that was selected
         int id = item.getItemId();
@@ -165,5 +180,13 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return false;
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (mToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
