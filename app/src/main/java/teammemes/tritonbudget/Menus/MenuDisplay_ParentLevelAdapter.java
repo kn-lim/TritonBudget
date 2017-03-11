@@ -57,7 +57,15 @@ public class MenuDisplay_ParentLevelAdapter extends BaseExpandableListAdapter {
             String mItemHeaders[]= new String[food.size()];
 
             for(int j = 0; j < food.size(); j++){
-                mItemHeaders[j] =food.get(j).getType()+":  "+food.get(j).getName()+" -- $"+Double.toString(food.get(j).getCost());
+                String mealtime;
+                if( food.get(j).getType().compareTo("Lunch And Dinner") == 0){
+                    mealtime = "Lunch+Dinner: ";
+                } else if( food.get(j).getType().compareTo("all") == 0 ){
+                    mealtime = "";
+                } else {
+                    mealtime = food.get(j).getType();
+                }
+                mItemHeaders[j] =mealtime+food.get(j).getName()+" || $"+Double.toString(food.get(j).getCost());
             }
 
             mListData_SecondLevel_Map.put(mListDataHeader.get(i), Arrays.asList(mItemHeaders));

@@ -120,7 +120,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".Menus.Menu64North_Main"></activity>
     </application>
 
 </manifest>
