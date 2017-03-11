@@ -73,6 +73,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
         TextView test_load = (TextView) findViewById(R.id.settings_test_load);
         TextView credits = (TextView) findViewById(R.id.settings_credits);
         TextView enterDays = (TextView) findViewById(R.id.settings_enterDays);
+        TextView buyandsell = (TextView) findViewById(R.id.settings_buyandsell);
 
         //Listeners
         changeName.setOnClickListener(new View.OnClickListener() {
@@ -243,6 +244,14 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Settings.this, NonTrackingDays.class));
+            }
+        });
+
+        buyandsell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //startActivity(new Intent(Settings.this, NonTrackingDays.class));
+                //TODO: Send link to FB group "Free and For Sale"
             }
         });
 
