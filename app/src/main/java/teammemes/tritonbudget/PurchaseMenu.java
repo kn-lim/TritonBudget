@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -44,6 +45,9 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
     private List<Menu> transactions;
     private int i=0;
 
+    private float dX;
+    private float dY;
+    private int lastAction;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,31 +94,52 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
         transactions = database.getMenusByLocation(getIntent().getExtras().getString("FROM"));
         numberOfPurchase = new int[transactions.size()];
         dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+
         myFab = (FloatingActionButton) findViewById(R.id.myFAB);
-        myFab.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                ArrayList<String> trans=new ArrayList<String>();
-                ArrayList<String> numofpur = new ArrayList<String>();
-                for(int j=0;j<transactions.size();j++)
-                {
-                    if(numberOfPurchase[j]!=0)
-                    {
-                        Menu men = transactions.get(j);
-                        //trans.add(new TranHistory(men.getId(),men.getName(),numberOfPurchase[j],new Date(),men.getCost()));
-                        trans.add(""+men.getId());
-                        numofpur.add(numberOfPurchase[j]+"");
-                    }
+
+        myFab.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        dX = view.getX() - event.getRawX();
+                        dY = view.getY() - event.getRawY();
+                        lastAction = MotionEvent.ACTION_DOWN;
+                        break;
+
+                    case MotionEvent.ACTION_MOVE:
+                        view.setY(event.getRawY() + dY);
+                        view.setX(event.getRawX() + dX);
+                        lastAction = MotionEvent.ACTION_MOVE;
+                        break;
+
+                    case MotionEvent.ACTION_UP:
+                        if (lastAction == MotionEvent.ACTION_DOWN) {
+                            ArrayList<String> trans = new ArrayList<String>();
+                            ArrayList<String> numofpur = new ArrayList<String>();
+                            for (int j = 0; j < transactions.size(); j++) {
+                                if (numberOfPurchase[j] != 0) {
+                                    Menu men = transactions.get(j);
+                                    //trans.add(new TranHistory(men.getId(),men.getName(),numberOfPurchase[j],new Date(),men.getCost()));
+                                    trans.add("" + men.getId());
+                                    numofpur.add(numberOfPurchase[j] + "");
+                                }
+                            }
+                            if (trans.size() == 0) {
+                                Toast.makeText(getApplicationContext(), "Please select item", Toast.LENGTH_LONG).show();
+                            } else {
+                                Intent checkout = new Intent(getApplicationContext(), Checkout.class);
+                                checkout.putStringArrayListExtra("Transactions", trans);
+                                checkout.putStringArrayListExtra("number", numofpur);
+                                startActivity(checkout);
+                            }
+                        }
+                        break;
+
+                    default:
+                        return false;
                 }
-                if(trans.size()==0)
-                {
-                    Toast.makeText(getApplicationContext(),"Please select item",Toast.LENGTH_LONG).show();
-                }
-                else {
-                    Intent checkout = new Intent(getApplicationContext(), Checkout.class);
-                    checkout.putStringArrayListExtra("Transactions", trans);
-                    checkout.putStringArrayListExtra("number", numofpur);
-                    startActivity(checkout);
-                }
+                return true;
             }
         });
 
