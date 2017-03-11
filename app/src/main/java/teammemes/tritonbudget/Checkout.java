@@ -127,6 +127,9 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
             String quantity = "x" + Integer.toString(trans.get(i).getQuantity());
 
             total += (trans.get(i).getCost() * trans.get(i).getQuantity());
+            total *= 100;
+            total = Math.round(total);
+            total /= 100;
 
 
             LinearLayout borderll = makeLL();
