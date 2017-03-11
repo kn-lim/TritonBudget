@@ -40,7 +40,7 @@ import static android.view.Gravity.CENTER;
 public class History extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     SimpleDateFormat dateFormat;
-    LinearLayout.LayoutParams layoutParams, textParams, btnParams;
+    LinearLayout.LayoutParams layoutParams, textParams, btnParams, costParams;
     LinearLayout mainLayout;
     List<TranHistory> transactions;
     Context context;
@@ -87,7 +87,8 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
 
         //The two sets of layout parameters that are used to make the transactions
         layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        textParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
+        textParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 0);
+        costParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
         btnParams = new LinearLayout.LayoutParams(200, ViewGroup.LayoutParams.MATCH_PARENT);  //was (200,100)
         btnParams.setMargins(0, 0, 0, 0); //was (0,0,0,40)
 
@@ -208,7 +209,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
             cost_display.setPadding(8, 8, 15, 8);
             cost_display.setText("$" + Double.toString(Math.abs(transactions.get(i).getCost())));
             cost_display.setTextSize(20);
-            cost_display.setLayoutParams(textParams);
+            cost_display.setLayoutParams(costParams);
             cost_display.setGravity(Gravity.RIGHT);     //Aligns it on the right
 
             //Changes the color depending on whether it was added or subtracted
