@@ -8,9 +8,10 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -32,7 +33,9 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
     double total = 0;
     private DrawerLayout mDrawerLayout;
     private ArrayList<TranHistory> trans;
-
+    private float dX;
+    private float dY;
+    private int lastAction;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         User usr = User.getInstance(this);
@@ -68,20 +71,41 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         populateCOList();
 
         TextView display_total = (TextView)findViewById(R.id.total_cost);
-        display_total.setText("Total:\t\t\t" + Double.toString(total));
+        display_total.setText("Total:\t\t\t$" + double_to_string(total));
 
         FloatingActionButton button = (FloatingActionButton) findViewById(R.id.ConfirmPurchaseBtn);
-        button.setOnClickListener(new View.OnClickListener() {
+        button.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                if (change_balance(total)) {
-                    Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
-                    startActivity(intent);
-                    Toast.makeText(getApplicationContext(), "purchase successfully!", Toast.LENGTH_LONG).show();
+            public boolean onTouch(View view, MotionEvent event) {
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        dX = view.getX() - event.getRawX();
+                        dY = view.getY() - event.getRawY();
+                        lastAction = MotionEvent.ACTION_DOWN;
+                        break;
+
+                    case MotionEvent.ACTION_MOVE:
+                        view.setY(event.getRawY() + dY);
+                        view.setX(event.getRawX() + dX);
+                        lastAction = MotionEvent.ACTION_MOVE;
+                        break;
+
+                    case MotionEvent.ACTION_UP:
+                        if (lastAction == MotionEvent.ACTION_DOWN) {
+                            if (change_balance(total)) {
+                                Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
+                                startActivity(intent);
+                                Toast.makeText(getApplicationContext(), "Purchased!", Toast.LENGTH_LONG).show();
+                            } else {
+                                Toast.makeText(getApplicationContext(), "You broke though.", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                        break;
+
+                    default:
+                        return false;
                 }
-                else {
-                    Toast.makeText(getApplicationContext(), "not enough balance!", Toast.LENGTH_LONG).show();
-                }
+                return true;
             }
         });
     }
@@ -98,14 +122,32 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         for (int i = 0; i < transtring.size(); i++) {
             Menu men = data.getMenuById(Integer.parseInt(transtring.get(i)));
             trans.add(new TranHistory(men.getId(), men.getName(), Integer.parseInt(num.get(i)), new Date(), men.getCost()));
-            String cost = Double.toString(trans.get(i).getCost());
-            String quantity = Integer.toString(trans.get(i).getQuantity());
+
+            String cost = "$" + double_to_string(trans.get(i).getCost());
+            String quantity = "x" + Integer.toString(trans.get(i).getQuantity());
+
             total += (trans.get(i).getCost() * trans.get(i).getQuantity());
-            LinearLayout nestedll = makeLL();
-            ll.addView(nestedll);
-            TextView t = makeTV(trans.get(i).getName(), cost, quantity);
+
+
+            LinearLayout borderll = makeLL();
+            LinearLayout quantityll = makeLL();
+            quantityll.setBackgroundResource(0);
+            quantityll.setGravity(Gravity.RIGHT);
+
+            TextView item = new TextView(this);
+            item.setPadding(8, 8, 8, 8);
+            item.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            item.setTextSize(20);
+            String itemName = trans.get(i).getName();
+            item.setText(itemName);
+
+            TextView t = makeTV(cost, quantity);
             t.setPadding(8,8,8,8);
-            nestedll.addView(t);
+
+            ll.addView(borderll);
+            borderll.addView(item);
+            borderll.addView(quantityll);
+            quantityll.addView(t);
         }
 
     }
@@ -113,15 +155,15 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
     private LinearLayout makeLL() {
         LinearLayout nestedll = new LinearLayout(this);
         nestedll.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        nestedll.setOrientation(LinearLayout.HORIZONTAL);
+        nestedll.setOrientation(LinearLayout.VERTICAL);
         nestedll.setBackgroundResource(R.drawable.border_set_top_bottom);
         return nestedll;
     }
 
-    private TextView makeTV(String name, String cost, String quantity) {
+    private TextView makeTV(String cost, String quantity) {
         TextView tv = new TextView(this);
         tv.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        tv.setText(name + "\t\t\t" + cost + "\t\t\t" + quantity);
+        tv.setText(cost + " " + quantity);
         tv.setTextSize(20);
         return tv;
     }
@@ -140,6 +182,17 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         return true;
     }
 
+    private String double_to_string(double number) {
+        //Gets the balance from the user
+        String str = "" + number;
+        int decimalIdx = str.indexOf('.');
+        //Edge case, where balance == $XXX.00, it wrongly displays one instance of 0. This fixes it.
+        if (decimalIdx + 1 == str.length() - 1) {
+            str = str + "0";
+        }
+        return str;
+    }
+
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Gets the id of the item that was selected
@@ -152,7 +205,7 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
             case R.id.nav_home:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 nextScreen = new Intent(this, HomeScreen.class);
-                nextScreen.putExtra("FROM", "History");
+                nextScreen.putExtra("FROM", "Checkout");
                 startActivity(nextScreen);
                 return true;
             case R.id.nav_history:
@@ -161,21 +214,28 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
             case R.id.nav_statistics:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 nextScreen = new Intent(this, Statistics.class);
-                nextScreen.putExtra("FROM", "History");
+                nextScreen.putExtra("FROM", "Checkout");
                 startActivity(nextScreen);
                 return true;
             case R.id.nav_menus:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 nextScreen = new Intent(this, DiningHallSelection.class);
-                nextScreen.putExtra("FROM", "History");
+                nextScreen.putExtra("FROM", "Checkout");
                 startActivity(nextScreen);
                 return true;
-            /* Cases for future options
             case R.id.nav_settings:
-                return false;
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Settings.class);
+                nextScreen.putExtra("FROM", "Checkout");
+                startActivity(nextScreen);
+                return true;
             case R.id.nav_help:
-                return false:
-            */
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Help.class);
+                nextScreen.putExtra("FROM", "Checkout");
+                startActivity(nextScreen);
+                return true;
+
             default:
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return false;
@@ -189,4 +249,5 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

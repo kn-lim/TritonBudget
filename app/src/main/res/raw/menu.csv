@@ -238,9 +238,9 @@ Cafe Ventanas,Breakfast,Cold Breakfast,Whole Orange,0.5,FALSE,TRUE,TRUE
 Cafe Ventanas,Breakfast,Cold Breakfast,Yogurt Bar,0.34,TRUE,FALSE,FALSE
 Cafe Ventanas,Breakfast,Value4u,Bean and Cheese Burrito,2.25,TRUE,FALSE,FALSE
 Cafe Ventanas,Breakfast,Value4u,Bacon Breakfast Burrito,2.25,FALSE,FALSE,FALSE
-Cafe Ventanas,Breakfast,Value4u,Egg, Ham & Cheese Sandwich,2.25,FALSE,FALSE,FALSE
-Cafe Ventanas,Breakfast,Value4u,Egg, Sausage & Cheese Sandwich,2.25,FALSE,FALSE,FALSE
-Cafe Ventanas,Breakfast,Value4u,Egg, Bacon & Cheese Sandwich,2.25,FALSE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Value4u,Egg Ham & Cheese Sandwich,2.25,FALSE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Value4u,Egg Sausage & Cheese Sandwich,2.25,FALSE,FALSE,FALSE
+Cafe Ventanas,Breakfast,Value4u,Egg Bacon & Cheese Sandwich,2.25,FALSE,FALSE,FALSE
 Cafe Ventanas,Lunch And Dinner,Value4u,Grilled Cheese Sandwich,2.25,TRUE,FALSE,FALSE
 Cafe Ventanas,Lunch And Dinner,Value4u,Hamburger,2.25,FALSE,FALSE,FALSE
 Cafe Ventanas,Lunch,Deli,Fresh Deli Station,6.75,FALSE,FALSE,FALSE
@@ -527,8 +527,8 @@ Pines,Lunch And Dinner,Cantina Sides,Cilantro Rice,1.5,FALSE,TRUE,TRUE
 Pines,Lunch And Dinner,Cantina Sides,Spanish Rice,1.5,FALSE,TRUE,TRUE
 Pines,Lunch And Dinner,Cantina Sides,Mexican Zucchini and Corn,1.5,TRUE,FALSE,TRUE
 Pines,Breakfast,Value 4 U,Egg & Cheese Breakfast Burrito,2.25,FALSE,FALSE,FALSE
-Pines,Breakfast,Value 4 U,Egg, Sausage & Cheese Sandwich,2.25,FALSE,FALSE,FALSE
-Pines,Breakfast,Value 4 U,Egg, Bacon & Cheese Sandwich,2.25,FALSE,FALSE,FALSE
+Pines,Breakfast,Value 4 U,Egg Sausage & Cheese Sandwich,2.25,FALSE,FALSE,FALSE
+Pines,Breakfast,Value 4 U,Egg Bacon & Cheese Sandwich,2.25,FALSE,FALSE,FALSE
 Pines,Lunch,Value 4 U,Crispy French Fries,1.75,FALSE,FALSE,FALSE
 Pines,Lunch,Value 4 U,Grilled Cheese Sandwich,2.25,TRUE,FALSE,FALSE
 Pines,Lunch,Value 4 U,Fried Chicken Fritters,4.5,FALSE,FALSE,FALSE
