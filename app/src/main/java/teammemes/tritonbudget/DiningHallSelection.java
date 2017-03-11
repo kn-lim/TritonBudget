@@ -322,13 +322,13 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
                 }
             }
         });
-       /* sixtyfournorth.setOnClickListener(new View.OnClickListener() {
+        sixtyfournorth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(source.equals("PURCHASE"))
                 {
                     Intent intent = new Intent(DiningHallSelection.this,PurchaseMenu.class);
-                    intent.putExtra("FROM","The Bistro");
+                    intent.putExtra("FROM","Sixty-Four North");
                     startActivity(intent);
                 }
                 else {
@@ -337,7 +337,7 @@ public class DiningHallSelection extends AppCompatActivity implements Navigation
                     startActivity(intent);
                 }
             }
-        });*/
+        });
     }//End of onCreate
 
     //This method is used to listen for the user clicking the menu button, and opens
