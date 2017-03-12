@@ -133,59 +133,45 @@ public class NonTrackingDays extends Activity {
     private void render_non_eating(final ArrayList<String> NED) {
         int transactionsShown = 0;
 
+        //Get the mainLayout where a bunch of horizontal layouts are going to be stored
         mainLayout = (LinearLayout) findViewById(R.id.NED_LLV_DATES);
         //Resets the mainLayout
         mainLayout.removeAllViews();
 
         //Goes through each of the dates and puts them on the page
         for (int i = NED.size() - 1; i >= 0; i--) {
-            //If this is a new date, it creates a new date display
+            //Get the STRING of the DATE to add into a textview
             String str_to_display = NED.get(i);
 
-            //If this is a new date, it creates a new date display
-            LinearLayout DateBorder = new LinearLayout(this);
-            DateBorder.setBackgroundResource(R.drawable.border_set_top);
-            DateBorder.setOrientation(LinearLayout.HORIZONTAL);
-            DateBorder.setLayoutParams(layoutParams);
+            //THIS IS THE "date_border" to have an edit button later on
+            final LinearLayout date_border = new LinearLayout(this);
+            date_border.setBackgroundResource(R.drawable.border_set_top);
+            date_border.setOrientation(LinearLayout.HORIZONTAL);
+            date_border.setLayoutParams(layoutParams);
 
-            //Creates the date_display and adds it to the page
+            //Creates the date_display textview and adds it to "date_border"
             TextView date_display = new TextView(this);
             date_display.setGravity(CENTER);
             date_display.setPaddingRelative(8, 8, 8, 8);
             date_display.setPadding(8, 8, 8, 8);
             date_display.setText(str_to_display);
             date_display.setTextSize(20);
-            date_display.setLayoutParams(layoutParams);
-            DateBorder.addView(date_display);
-            mainLayout.addView(DateBorder);
+            date_display.setLayoutParams(textParams);
 
+            //Add the textview to the date_border
+            date_border.addView(date_display);
 
-            //Creates the linear layout to hold the dates
-            final LinearLayout dateBorder = new LinearLayout(this);
-            dateBorder.setOrientation(LinearLayout.HORIZONTAL);
-            dateBorder.setLayoutParams(layoutParams);
-            dateBorder.setBackgroundResource(R.drawable.border_set_top);
-            dateBorder.setId(id++);
+            //add the date_border to the "main_layout"
+            mainLayout.addView(date_border);
 
-            //Creates the NED
-            TextView ned_date = new TextView(this);
-            ned_date.setPaddingRelative(8, 8, 8, 8);
-            ned_date.setPadding(8, 8, 8, 8);
-            ned_date.setText(NED.get(i));
-            ned_date.setTextSize(20);
-            ned_date.setLayoutParams(textParams);
-
-
-            //Adds the displays to the llv
-            dateBorder.addView(ned_date);
 
             //Creates the onLongClickListener for the transaction:
             //      If the transaction is held an edit button appears
-            dateBorder.setOnLongClickListener(new View.OnLongClickListener() {
+            date_border.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
                     //If the edit button is already visible do nothing
-                    if (dateBorder.getChildCount() == 2)
+                    if (date_border.getChildCount() == 2)
                         return false;
                     removeAllButtons();
 
@@ -208,22 +194,22 @@ public class NonTrackingDays extends Activity {
                             // Set up the buttons
                             //Removes the date
 
-                            String toChange = NED.get(dateBorder.getId());
+                            String toChange = NED.get(date_border.getId());
                             NED.remove(toChange);
                             usr.remove_days(toChange);
                             render_non_eating(NED);
                         }
                     });
-                    dateBorder.addView(edit);
+                    date_border.addView(edit);
                     return true;
                 }
             });
-            //If it is the last transaction it creates the bottom border.
+            //If it is the last one, create the bottom border.
             if (i == 0)
-                dateBorder.setBackgroundResource(R.drawable.border_set_top_bottom);
+                date_border.setBackgroundResource(R.drawable.border_set_top_bottom);
 
-            //Adds the transaction to the main page
-            mainLayout.addView(dateBorder);
+            //Adds the date to the main page
+            mainLayout.addView(date_border);
             transactionsShown++;
         }
     }
