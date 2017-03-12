@@ -44,6 +44,9 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
     public static final String ALPHABETICAL = "Alphabetical";
     public static final String PRICE_LOW_HIGH = "Price: Low - High";
     public static final String PRICE_HIGH_LOW = "Price: High - Low";
+    public static final String GLUTEN_FREE = "Gluten Free";
+    public static final String VEGAN = "Vegan";
+    public static final String VEGETERIAN = "Vegeterian";
     SimpleDateFormat dateFormat;
     LinearLayout.LayoutParams layoutParams, textParams, btnParams, noWeight;
     LinearLayout mainLayout;
@@ -57,7 +60,7 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
     private List<Menu> transactions;
     private int i=0;
 
-    String[] entries = {ALPHABETICAL, PRICE_LOW_HIGH, PRICE_HIGH_LOW};
+    String[] entries = {ALPHABETICAL, PRICE_LOW_HIGH, PRICE_HIGH_LOW, GLUTEN_FREE, VEGAN, VEGETERIAN};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,10 +135,10 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String request = parent.getItemAtPosition(position).toString();
-                sort_menu(transactions, request);
+
                 mainLayout.removeAllViews();
                 mainLayout.addView(sort_spinner);
-                display(transactions);
+                display(sort_menu(transactions, request));
             }
 
             @Override
@@ -154,39 +157,64 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
         return spinner;
     }
 
-
-
-    private void sort_menu(List<Menu> array, final String request) {
-        Collections.sort(array, new Comparator<Menu>() {
-            @Override
-            public int compare(Menu o1, Menu o2) {
-                int category_compare = o1.getCategory().compareTo(o2.getCategory());
-                if (category_compare == 0) {
-                    switch (request) {
-                        case ALPHABETICAL:
-                            return o1.getName().compareTo(o2.getName());
-                        case PRICE_LOW_HIGH:
-                            if (o1.getCost() < o2.getCost())
-                                return -1;
-                            else if (o1.getCost() == o2.getCost())
-                                return 0;
-                            else
-                                return 1;
-                        case PRICE_HIGH_LOW:
-                            if (o1.getCost() < o2.getCost())
-                                return 1;
-                            else if (o1.getCost() == o2.getCost())
-                                return 0;
-                            else
-                                return -1;
-                        default:
-                            return category_compare;
+    private List<Menu> sort_menu(List<Menu> array, final String request) {
+        switch (request) {
+            case GLUTEN_FREE:
+                List<Menu> gluten_list = new ArrayList<Menu>();
+                for (int i = 0; i < array.size() - 1; i++) {
+                    if (array.get(i).isGluten()) {
+                        gluten_list.add(array.get(i));
                     }
                 }
-
-                return category_compare;
-            }
-        });
+                return gluten_list;
+            case VEGAN:
+                List<Menu> vegan_list = new ArrayList<Menu>();
+                for (int i = 0; i < array.size() - 1; i++) {
+                    if (array.get(i).isVegan()) {
+                        vegan_list.add(array.get(i));
+                    }
+                }
+                return vegan_list;
+            case VEGETERIAN:
+                List<Menu> vegeterian_list = new ArrayList<Menu>();
+                for (int i = 0; i < array.size() - 1; i++) {
+                    if (array.get(i).isVegeterian()) {
+                        vegeterian_list.add(array.get(i));
+                    }
+                }
+                return vegeterian_list;
+            default:
+                Collections.sort(array, new Comparator<Menu>() {
+                    @Override
+                    public int compare(Menu o1, Menu o2) {
+                        int category_compare = o1.getCategory().compareTo(o2.getCategory());
+                        if (category_compare == 0) {
+                            switch (request) {
+                                case ALPHABETICAL:
+                                    return o1.getName().compareTo(o2.getName());
+                                case PRICE_LOW_HIGH:
+                                    if (o1.getCost() < o2.getCost())
+                                        return -1;
+                                    else if (o1.getCost() == o2.getCost())
+                                        return 0;
+                                    else
+                                        return 1;
+                                case PRICE_HIGH_LOW:
+                                    if (o1.getCost() < o2.getCost())
+                                        return 1;
+                                    else if (o1.getCost() == o2.getCost())
+                                        return 0;
+                                    else
+                                        return -1;
+                                default:
+                                    return category_compare;
+                            }
+                        }
+                        return category_compare;
+                    }
+                });
+                return array;
+        }
     }
 
     private void display(final List<Menu> transactions) {
