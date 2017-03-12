@@ -406,8 +406,16 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
                 startActivity(nextScreen);
                 return true;
             case R.id.nav_settings:
-                return false;
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Settings.class);
+                nextScreen.putExtra("FROM", "History");
+                startActivity(nextScreen);
+                return true;
             case R.id.nav_help:
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Help.class);
+                nextScreen.putExtra("FROM", "History");
+                startActivity(nextScreen);
                 return false;
 
             default:
