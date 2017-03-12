@@ -14,14 +14,23 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import teammemes.tritonbudget.Menus.Menu;
@@ -30,8 +39,11 @@ import teammemes.tritonbudget.db.MenuDataSource;
 import static android.view.Gravity.CENTER;
 
 
-public class PurchaseMenu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,Serializable{
+public class PurchaseMenu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,Serializable {
 
+    public static final String ALPHABETICAL = "Alphabetical";
+    public static final String PRICE_LOW_HIGH = "Price: Low - High";
+    public static final String PRICE_HIGH_LOW = "Price: High - Low";
     SimpleDateFormat dateFormat;
     LinearLayout.LayoutParams layoutParams, textParams, btnParams, noWeight;
     LinearLayout mainLayout;
@@ -45,9 +57,8 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
     private List<Menu> transactions;
     private int i=0;
 
-    private float dX;
-    private float dY;
-    private int lastAction;
+    String[] entries = {ALPHABETICAL, PRICE_LOW_HIGH, PRICE_HIGH_LOW};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,16 +122,78 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
      * If there are no transactions it adds a default message, however if there are
      * transactions it goes through each one putting them in the mainLayout.
      */
-    private void renderMenu(List<Menu> transactions) {
+    private void renderMenu(final List<Menu> transactions) {
         //Resets the mainLayout
         mainLayout.removeAllViews();
+        final Spinner sort_spinner =  make_sort_spinner();
+        mainLayout.addView(sort_spinner);
+        display(transactions);
+        sort_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String request = parent.getItemAtPosition(position).toString();
+                sort_menu(transactions, request);
+                mainLayout.removeAllViews();
+                mainLayout.addView(sort_spinner);
+                display(transactions);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+    }
+
+    private Spinner make_sort_spinner() {
+        Spinner spinner = new Spinner(this);
+        spinner.setLayoutParams(layoutParams);
+        spinner.setPrompt("Sort By");
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, entries);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        return spinner;
+    }
 
 
-        //Goes through each of the transactions and puts them on the page
+
+    private void sort_menu(List<Menu> array, final String request) {
+        Collections.sort(array, new Comparator<Menu>() {
+            @Override
+            public int compare(Menu o1, Menu o2) {
+                int category_compare = o1.getCategory().compareTo(o2.getCategory());
+                if (category_compare == 0) {
+                    switch (request) {
+                        case ALPHABETICAL:
+                            return o1.getName().compareTo(o2.getName());
+                        case PRICE_LOW_HIGH:
+                            if (o1.getCost() < o2.getCost())
+                                return -1;
+                            else if (o1.getCost() == o2.getCost())
+                                return 0;
+                            else
+                                return 1;
+                        case PRICE_HIGH_LOW:
+                            if (o1.getCost() < o2.getCost())
+                                return 1;
+                            else if (o1.getCost() == o2.getCost())
+                                return 0;
+                            else
+                                return -1;
+                        default:
+                            return category_compare;
+                    }
+                }
+
+                return category_compare;
+            }
+        });
+    }
+
+    private void display(final List<Menu> transactions) {
         String prevCategory = "";
-        for (i = transactions.size() - 1; i >= 0; i--){
+        for (i = 0; i < transactions.size() - 1; i++){
             //If this is a new date, it creates a new date display
-            if(!transactions.get(i).getCategory().equals(prevCategory)){
+            if (!transactions.get(i).getCategory().equals(prevCategory)) {
                 prevCategory = transactions.get(i).getCategory(); //Saves the date
 
                 LinearLayout DateBorder = new LinearLayout(this);
@@ -131,8 +204,8 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
                 //Creates the date_display and adds it to the page
                 TextView date_display = new TextView(this);
                 date_display.setGravity(CENTER);
-                date_display.setPaddingRelative(8,8,8,8);
-                date_display.setPadding(8,8,8,8);
+                date_display.setPaddingRelative(8, 8, 8, 8);
+                date_display.setPadding(8, 8, 8, 8);
                 date_display.setText(prevCategory);
                 date_display.setTextSize(20);
                 date_display.setLayoutParams(layoutParams);
