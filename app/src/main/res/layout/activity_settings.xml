@@ -64,6 +64,45 @@
                 android:textAlignment="viewStart"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_set_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/settings_enterDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:padding="5dp"
+                android:text="Enter Non-Eating Days"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_set_top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/settings_buyandsell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:padding="5dp"
+                android:text="Buy and Sell Dining Dollars"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
         </LinearLayout>
 
         <LinearLayout

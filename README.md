@@ -2,6 +2,8 @@
 ## Project Name:
 **Triton Budget**
 
+![TritonBudget](https://i.imgur.com/x0T4BsH.png "TritonBudget")
+
 ## Team Members:
 **Kevin Lim**       - Project Manager
 
@@ -24,7 +26,7 @@
 **Bao Pham**        - Algorithm Specialist
 
 ## Purpose:
-TO_BE_DETERMINED
+Used to keep track of Dining Dollars for the average UCSD student
 
 ## Libraries Used:
-TO_BE_DETERMINED
+[MPAndroidChart](https://github.com/PhilJay/MPAndroidChart "MPAndroidChart")

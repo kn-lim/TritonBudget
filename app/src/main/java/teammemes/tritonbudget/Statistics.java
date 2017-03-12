@@ -16,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
@@ -185,6 +186,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         chart.setData(data);
         chart.setDescription("My Chart");
         chart.animateXY(2000, 2000);
+        chart.getXAxis().setAdjustXLabels(false);
         chart.invalidate();
     }
 
@@ -195,6 +197,8 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         chart.setData(data);
         chart.setDescription("My Chart");
         chart.animateXY(2000, 2000);
+        XAxis x = chart.getXAxis();
+        x.setAdjustXLabels(false);
         chart.invalidate();
     }
 
