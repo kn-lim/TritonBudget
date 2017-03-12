@@ -7,6 +7,7 @@ import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -88,17 +89,48 @@ public class User {
         }
     }
 
-    public void remove_day(String str){
-        if(this.non_tracking_days.contains(str)) {
-            non_tracking_days.remove(str);
+    public boolean remove_days(String str){
+        boolean ret = non_tracking_days.remove(str);
+        if(ret) {
             SharedPreferences.Editor editor = prefs.edit();
             try {
                 Set<String> set = new HashSet<>();
-                editor.remove(str);
+                set.addAll(non_tracking_days);
+                editor.putStringSet("nontrdays", set);
                 editor.commit();
             } catch (Exception e) {
-                //does nothing
+                //Log.e("3", "error setting non_eating days");
             }
+        }
+        return ret;
+    }
+
+    public void update_non_eating_days(){
+        Calendar calendar = Calendar.getInstance();
+        int thisyear = calendar.get(Calendar.YEAR);
+        int thismonth = calendar.get(Calendar.MONTH);
+        int thisday = calendar.get(Calendar.DAY_OF_MONTH);
+        String today = thisyear+"/"+thismonth+"/"+thisday;
+        Collections.sort(non_tracking_days);
+        int i = 0;
+        for(;i<non_tracking_days.size(); i++){
+            int comparison_value = (non_tracking_days.get(i)).compareTo(today);
+            if(comparison_value>=0){ //Stop when non_tracking_days(i) is finally greater than today;
+                break;
+            }
+        } //remove from 0,inclusive to i, exclusive
+        for(int j=0; j<i; i++){
+            non_tracking_days.remove(j);
+        }
+        SharedPreferences.Editor editor = prefs.edit();
+        try{
+            //editor.clear(); //clear the preferences (hardreset)
+            Set<String> set = new HashSet<>();
+            set.addAll(non_tracking_days);
+            editor.putStringSet("nontrdays",set);
+            editor.commit();
+        } catch (Exception e) {
+        //Log.e("3", "error setting non_eating days");
         }
     }
 

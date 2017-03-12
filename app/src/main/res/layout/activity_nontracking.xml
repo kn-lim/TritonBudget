@@ -10,22 +10,27 @@
     tools:context=".NonTrackingDays">
 
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <DatePicker
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/datePicker" />
+            android:orientation="vertical" >
 
-        <TextView
-            android:text="Dates already accounted for:\n"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/NED_TV_LIST"
-            tools:text="Date already in list" />
-    </LinearLayout>
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/datePicker" />
+
+            <TextView
+                android:text="Dates already accounted for:\n"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/NED_TV_LIST"
+                tools:text="Date already in list" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
