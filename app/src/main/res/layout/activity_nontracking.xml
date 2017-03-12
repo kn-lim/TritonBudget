@@ -9,63 +9,23 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".NonTrackingDays">
 
+
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView1"
+        <DatePicker
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="24dp"
-            android:text="Click Below to Choose Date"
-            android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="70dp"
-            android:onClick="setDate"
-            android:text="click here"
-            android:textAlignment="viewStart" />
+            android:id="@+id/datePicker" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:text="Dates already accounted for:\n"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/button1"
-            android:layout_marginTop="66dp"
-            android:layout_toLeftOf="@+id/button1"
-            android:text="Date chose:"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/button1"
-            android:layout_below="@+id/textView2"
-            android:layout_marginTop="72dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            tools:text="date" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView3"
-            android:layout_marginTop="62dp"
-            android:text="In the list already:" />
+            android:id="@+id/NED_TV_LIST"
+            tools:text="Date already in list" />
     </LinearLayout>
 
 </RelativeLayout>

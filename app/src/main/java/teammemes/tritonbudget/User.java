@@ -82,8 +82,22 @@ public class User {
                 editor.putStringSet("nontrdays", set);
                 editor.commit();
             } catch (Exception e) {
-                Log.e("3", "error setting non_eating days");
+                //Log.e("3", "error setting non_eating days");
 
+            }
+        }
+    }
+
+    public void remove_day(String str){
+        if(this.non_tracking_days.contains(str)) {
+            non_tracking_days.remove(str);
+            SharedPreferences.Editor editor = prefs.edit();
+            try {
+                Set<String> set = new HashSet<>();
+                editor.remove(str);
+                editor.commit();
+            } catch (Exception e) {
+                //does nothing
             }
         }
     }
@@ -93,7 +107,6 @@ public class User {
     }
 
     public void setName(String name) {
-
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString("name", name);
         editor.commit();
