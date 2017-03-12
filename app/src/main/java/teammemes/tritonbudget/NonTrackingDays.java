@@ -1,36 +1,93 @@
 package teammemes.tritonbudget;
 
+import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.CalendarView;
+import android.view.View;
+import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
 
-public class NonTrackingDays extends AppCompatActivity {
-    ArrayList<String> noneatingdays = new ArrayList<String>();
-    private CalendarView calendar;
-    private TextView daysHeld;
+public class NonTrackingDays extends Activity {
+    ArrayList<String> noneatingdays = new ArrayList<>();
+    private DatePicker datePicker;
+    private Calendar calendar;
+    private TextView dateView;
+    private int year, month, day;
+    private User usr;
+    private DatePickerDialog.OnDateSetListener myDateListener = new
+            DatePickerDialog.OnDateSetListener() {
+                @Override
+                public void onDateSet(DatePicker arg0,
+                                      int arg1, int arg2, int arg3) {
+                    // TODO Auto-generated method stub
+                    // arg1 = year
+                    // arg2 = month
+                    // arg3 = day
+
+
+                    String date_noeat = arg1 + "/" + (arg2 + 1) + "/" + arg3;
+
+                    noneatingdays = usr.getNon_tracking_days();
+
+                    if (!noneatingdays.contains(date_noeat)) {
+                        usr.setNon_tracking_days(date_noeat);
+                        showDate(arg1, arg2 + 1, arg3);
+                    }
+                }
+
+            };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nontracking);
-        calendar = (CalendarView) findViewById(R.id.calendarView2);
-        calendar.setShowWeekNumber(false);
-        calendar.setFirstDayOfWeek(1);
-        daysHeld = (TextView) findViewById(R.id.NonTracking_TV);
-        calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                Toast.makeText(getApplicationContext(), "" + dayOfMonth, Toast.LENGTH_SHORT).show();// TODO Auto-generated method stub
-                String noeat = "" + month + "/" + dayOfMonth + "/" + year + "  ";
-                noneatingdays.add(noeat);
-                int noneatingamount = noneatingdays.size();
-                daysHeld.append(noneatingdays.get(noneatingamount - 1));
-            }
-        });
+
+        usr = User.getInstance(getApplicationContext());
+
+
+        dateView = (TextView) findViewById(R.id.textView3);
+        calendar = Calendar.getInstance();
+        year = calendar.get(Calendar.YEAR);
+
+        month = calendar.get(Calendar.MONTH);
+        day = calendar.get(Calendar.DAY_OF_MONTH);
+        //showDate(year, month+1, day);
+
+        TextView test = (TextView) findViewById(R.id.textView5);
+        noneatingdays = usr.getNon_tracking_days();
+        Collections.sort(noneatingdays);
+        for (int i = 0; i < noneatingdays.size() - 1; i++) {
+            test.append(noneatingdays.get(i) + " ");
+        }
+
+    }
+
+    @SuppressWarnings("deprecation")
+    public void setDate(View view) {
+        showDialog(999);
+        Toast.makeText(getApplicationContext(), "ca",
+                Toast.LENGTH_SHORT)
+                .show();
+    }
+
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        // TODO Auto-generated method stub
+        if (id == 999) {
+            return new DatePickerDialog(this,
+                    myDateListener, year, month, day);
+        }
+        return null;
+    }
+
+    private void showDate(int year, int month, int day) {
+        dateView.append(new StringBuilder().append(month).append("/")
+                .append(day).append("/").append(year));
     }
 }
