@@ -30,6 +30,12 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/NED_TV_LIST"
                 tools:text="Date already in list" />
+
+            <LinearLayout
+                android:id="@+id/NED_LLV_DATES"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></LinearLayout>
         </LinearLayout>
     </ScrollView>
 

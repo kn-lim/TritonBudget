@@ -111,6 +111,9 @@ public class User {
         int thismonth = calendar.get(Calendar.MONTH);
         int thisday = calendar.get(Calendar.DAY_OF_MONTH);
         String today = thisyear+"/"+thismonth+"/"+thisday;
+
+        non_tracking_days = this.getNon_tracking_days();
+
         Collections.sort(non_tracking_days);
         int i = 0;
         for(;i<non_tracking_days.size(); i++){
