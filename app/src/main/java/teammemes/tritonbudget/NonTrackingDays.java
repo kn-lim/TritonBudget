@@ -54,6 +54,12 @@ public class NonTrackingDays extends Activity {
         initmonth = calendar.get(Calendar.MONTH);
         initday = calendar.get(Calendar.DAY_OF_MONTH);
 
+        layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        textParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 0);
+        costParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
+        btnParams = new LinearLayout.LayoutParams(200, ViewGroup.LayoutParams.MATCH_PARENT);  //was (200,100)
+        btnParams.setMargins(0, 0, 0, 0); //was (0,0,0,40)
+
         /*
         TextView test = (TextView) findViewById(R.id.NED_TV_LIST);
         noneatingdays = usr.getNon_tracking_days();
@@ -62,7 +68,7 @@ public class NonTrackingDays extends Activity {
             test.append(" " + noneatingdays.get(i));
         }
         */
-
+        render_non_eating(usr.getNon_tracking_days());
         datePicker = (DatePicker) findViewById(R.id.datePicker);
         datePicker.init(inityear, initmonth, initday, new DatePicker.OnDateChangedListener() {
             @Override
@@ -205,11 +211,12 @@ public class NonTrackingDays extends Activity {
                 }
             });
             //If it is the last one, create the bottom border.
-            if (i == 0)
+            if (i == 0) {
                 date_border.setBackgroundResource(R.drawable.border_set_top_bottom);
 
-            //Adds the date to the main page
-            mainLayout.addView(date_border);
+                //Adds the date to the main page
+                //mainLayout.addView(date_border);
+            }
             transactionsShown++;
         }
     }
