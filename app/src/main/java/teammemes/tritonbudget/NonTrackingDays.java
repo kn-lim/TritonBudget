@@ -129,7 +129,9 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
                         Toast.makeText(getApplicationContext(), "Day already occurred!", Toast.LENGTH_SHORT).show();
                     } else if (monthOfYear == initmonth && dayOfMonth < initday) { //Same month, old day
                         Toast.makeText(getApplicationContext(), "Day already occurred!", Toast.LENGTH_SHORT).show();
-                    } else if (monthOfYear >= 5 && dayOfMonth > 16) { //June
+                    } else if (monthOfYear >5) { //June
+                        Toast.makeText(getApplicationContext(), "School is over!", Toast.LENGTH_SHORT).show();
+                    } else if (monthOfYear == 5 && dayOfMonth>16) { //June
                         Toast.makeText(getApplicationContext(), "School is over!", Toast.LENGTH_SHORT).show();
                     } else {
                     }
