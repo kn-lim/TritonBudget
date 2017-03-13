@@ -117,7 +117,7 @@ public class User {
                 set.addAll(non_tracking_days);
                 editor.putStringSet("nontrdays",set);
                 editor.commit();
-                //System.out.println("Updated!");
+                System.out.println("Updated!");
             } catch (Exception e) {
                 //Log.e("3", "error setting non_eating days");
             }
@@ -143,21 +143,19 @@ public class User {
                 break;
             }
         } //remove from 0,inclusive to i, exclusive
-        if(non_tracking_days.size()!=0) {
-            for (int j = 0; j < i; i++) {
-                non_tracking_days.remove(j);
-            }
-            SharedPreferences.Editor editor = prefs.edit();
-            try {
-                //editor.clear(); //clear the preferences (hardreset)
-                Set<String> set = new HashSet<>();
-                set.addAll(non_tracking_days);
-                editor.putStringSet("nontrdays", set);
-                editor.commit();
-                //System.out.println("Updated!");
-            } catch (Exception e) {
-                //Log.e("3", "error setting non_eating days");
-            }
+        for(int j=0; j<i; i++){
+            non_tracking_days.remove(j);
+        }
+        SharedPreferences.Editor editor = prefs.edit();
+        try{
+            //editor.clear(); //clear the preferences (hardreset)
+            Set<String> set = new HashSet<>();
+            set.addAll(non_tracking_days);
+            editor.putStringSet("nontrdays",set);
+            editor.commit();
+            System.out.println("Updated!");
+        } catch (Exception e) {
+            //Log.e("3", "error setting non_eating days");
         }
     }
 

@@ -1,5 +1,9 @@
 package teammemes.tritonbudget;
 
+import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -7,15 +11,18 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.TypedValue;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
-import android.widget.ImageView;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,18 +30,25 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 
+import teammemes.tritonbudget.db.HistoryDataSource;
+import teammemes.tritonbudget.db.TranHistory;
+
+import static android.R.attr.id;
 import static android.view.Gravity.CENTER;
 import static android.view.Gravity.RIGHT;
 
 public class NonTrackingDays extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     ArrayList<String> noneatingdays = new ArrayList<>();
-    int id = 100;
-    LinearLayout.LayoutParams layoutParams, textParams, btnParams, costParams;
-    LinearLayout mainLayout;
     private DatePicker datePicker;
     private Calendar calendar;
     private int inityear, initmonth, initday;
+    int id = 100;
+    LinearLayout.LayoutParams layoutParams, textParams, btnParams, costParams;
+    LinearLayout mainLayout;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     private Toolbar mToolbar;
@@ -42,6 +56,7 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
     private TextView usrName;
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_nontracking);
@@ -66,7 +81,7 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        View navHeaderView = navigationView.getHeaderView(0);
+        View navHeaderView= navigationView.getHeaderView(0);
         usrName = (TextView) navHeaderView.findViewById(R.id.header_name);
         usrName.setText(usr.getName());
 
@@ -113,14 +128,9 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
                         Toast.makeText(getApplicationContext(), "Day already occurred!", Toast.LENGTH_SHORT).show();
                     } else if (monthOfYear == initmonth && dayOfMonth < initday) { //Same month, old day
                         Toast.makeText(getApplicationContext(), "Day already occurred!", Toast.LENGTH_SHORT).show();
-                    } else if (monthOfYear == 5) { //June
-                        if(dayOfMonth>16) {
-                            Toast.makeText(getApplicationContext(), "School is over!", Toast.LENGTH_SHORT).show();
-                        }
-                    } else if (monthOfYear>5 && curryear>=inityear) {
+                    } else if (monthOfYear >= 5 && dayOfMonth > 16) { //June
                         Toast.makeText(getApplicationContext(), "School is over!", Toast.LENGTH_SHORT).show();
-                    } else{
-
+                    } else {
                     }
                 } else {
                     Toast.makeText(getApplicationContext(), "School is over!", Toast.LENGTH_SHORT).show();
@@ -214,17 +224,10 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
     }
 
     private void addToNonEating(int curryear, int monthOfYear, int dayOfMonth) {
-        String stryear = ""+curryear;
-        String strmo = ""+(monthOfYear+1);
-        String strday = ""+dayOfMonth;
-        if(monthOfYear<10) {
-            strmo = "0" + strmo;
-        }
+        String date_noeat = curryear + "/" + (monthOfYear + 1) + "/" + dayOfMonth;
         if (dayOfMonth < 10) {
-            strday = "0" + strday;
+            date_noeat = curryear + "/" + (monthOfYear + 1) + "/0" + dayOfMonth;
         }
-        String date_noeat = stryear+"/"+strmo+"/"+strday;
-
         noneatingdays = usr.getNon_tracking_days();
         if (!noneatingdays.contains(date_noeat)) {
             usr.setNon_tracking_days(date_noeat);
@@ -250,35 +253,22 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
 
             //THIS IS THE "date_border" to have an edit button later on
             final LinearLayout date_border = new LinearLayout(this);
-            //Actually contains the date stuff
-            final LinearLayout date_container = new LinearLayout(this);
-
-            //Date Border properties
             date_border.setBackgroundResource(R.drawable.border_set_top);
             date_border.setOrientation(LinearLayout.HORIZONTAL);
             date_border.setLayoutParams(layoutParams);
-            date_border.setPadding(4, 0, 0, 0);
-
-            //Date Container Properties
-            TypedValue outValue = new TypedValue();
-            this.getTheme().resolveAttribute(android.R.attr.selectableItemBackground, outValue, true);
-            date_container.setBackgroundResource(outValue.resourceId);
-            date_container.setOrientation(LinearLayout.HORIZONTAL);
-            date_container.setLayoutParams(layoutParams);
+            date_border.setPadding(4,0,0,0);
 
             //Creates the date_display textview and adds it to "date_border"
             final TextView date_display = new TextView(this);
             date_display.setGravity(CENTER);
             date_display.setPaddingRelative(8, 8, 8, 8);
-            date_display.setPadding(15, 15, 15, 15);
+            date_display.setPadding(15,15,15,15);
             date_display.setText(str_to_display);
             date_display.setTextSize(26);
             date_display.setLayoutParams(textParams);
 
-            //Add the textview to the date_container
-            date_container.addView(date_display);
-            //add the container to the border
-            date_border.addView(date_container);
+            //Add the textview to the date_border
+            date_border.addView(date_display);
             //add the date_border to the "main_layout"
             mainLayout.addView(date_border);
 
@@ -289,20 +279,20 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
             edit_container.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             edit_container.setWeightSum(1);
 
-            date_container.setOnLongClickListener(new View.OnLongClickListener() {
+            date_border.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
                     //If the edit button is already visible do nothing
-                    if (date_container.getChildCount() >= 2) {
-                        // System.out.println("hello");
-                        // System.out.print(date_border.getChildCount()>=3);
+                    if (date_border.getChildCount() >= 2) {
+                        System.out.println("hello");
+                        System.out.print(date_border.getChildCount()>=3);
                         return false;
                     }
                     removeAllButtons();
 
                     //Add another LLH to push the edit button to the right
                     edit_container.setGravity(RIGHT);
-                    date_container.addView(edit_container);
+                    date_border.addView(edit_container);
                     //Create the edit button
                     TextView edit = new TextView(v.getContext());
                     edit.setText("Delete");
@@ -327,16 +317,16 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
                             //NED IS THE ARRAYLIST
                             String toRemove = (String) date_display.getText();
 
-                            //System.out.println(toRemove);
+                            System.out.println(toRemove);
                             NED.remove(toRemove);
                             usr.remove_days(toRemove);
 
                             ArrayList<String> potato = usr.getNon_tracking_days();
-                            //System.out.println(potato.contains(toRemove));
+                            System.out.println(potato.contains(toRemove));
                             render_non_eating(NED);
                         }
                     });
-                    if (edit_container.getChildCount() < 1) {
+                    if(edit_container.getChildCount()<1) {
                         edit_container.addView(edit);
                     }
                     return true;
@@ -351,26 +341,15 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
             }
             transactionsShown++;
         }
-        if(transactionsShown==0){
-            ImageView meme = new ImageView(this);
-            meme.setImageResource(R.drawable.ramen);
-            meme.setAdjustViewBounds(true);
-            meme.setScaleType(ImageView.ScaleType.FIT_END);
-            meme.setPadding(0, 200, 0, 0);
-            meme.setAlpha((float) 0.75);
-            mainLayout.addView(meme);
-        }
     }
 
-    private void removeAllButtons() {
+    private void removeAllButtons(){
         int numTrans = mainLayout.getChildCount();
-        for (int j = 0; j < numTrans; j++) {
-            LinearLayout date_border = (LinearLayout) mainLayout.getChildAt(j);
-            LinearLayout date_container = (LinearLayout) date_border.getChildAt(0);
-            if (date_container.getChildCount() == 2) {
-                date_container.removeViewAt(1);
+        for (int j = 0; j < numTrans; j++){
+            LinearLayout tran = (LinearLayout) mainLayout.getChildAt(j);
+            if (tran.getChildCount() == 2){
+                tran.removeViewAt(1);
             }
         }
     }
-
 }
