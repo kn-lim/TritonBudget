@@ -162,7 +162,6 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                 startActivity(intent);
             }
         });
-        /* TODO: ADD ON BUTTON LISTENERS*/
 
     }
 
@@ -208,8 +207,13 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         dollars.setSpan(colorDol, 0, dollarStr.length(), 0);
         cents.setSpan(colorCents, 0, centStr.length(), 0);
         totBal.setText(TextUtils.concat(dollars, cents));
+
+        //UPDATE THE NON_TRACKING_DAYS
+        usr.update_non_eating_days();
+        //GETS NON_TRACKING_DAYS AMT
+        int num_non_tracking_days = usr.getNon_tracking_days().size();
         HistoryDataSource hist = new HistoryDataSource(getApplicationContext());
-        double daysp = usr.getBalance() / (167- Calendar.getInstance().get(Calendar.DAY_OF_YEAR));
+        double daysp = usr.getBalance() / ((167-num_non_tracking_days) - Calendar.getInstance().get(Calendar.DAY_OF_YEAR));
 
         daysp= daysp - hist.getTransactionByWeek()[0] ;
         daysp = daysp * 100;
@@ -220,8 +224,10 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
             daysp = 0;
         }
 
+        //THE CODE BELOW FORMATS DAILY REMAINING BUDGET VALUE
         String dailyRemain = "$" + Double.toString(daysp);
         decimalIdx = dailyRemain.indexOf('.');
+
         //Edge case, where balance == $XXX.00, it wrongly displays one instance of 0. This fixes it.
         if (decimalIdx + 1 == dailyRemain.length() - 1) {
             dailyRemain = dailyRemain + "0";
@@ -238,8 +244,8 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         cents.setSpan(ftsize2, 0, centStr.length(), 0);
         dollars.setSpan(colorDol, 0, dollarStr.length(), 0);
         cents.setSpan(colorCents, 0, centStr.length(), 0);
+
         dailyRBal.setText(TextUtils.concat(dollars, cents));
-        //dailyRBal.setText(daysp+"");
     }
 
     @Override
