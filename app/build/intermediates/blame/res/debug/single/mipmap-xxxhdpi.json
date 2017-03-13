@@ -1,6 +1,50 @@
 [
     {
-        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
-        "source": "/Users/Danny/Desktop/TritonBudget/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/dh_oceanview.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/mipmap-xxxhdpi/dh_oceanview.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/dh_foodworx.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/mipmap-xxxhdpi/dh_foodworx.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/dh_clubmed.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/mipmap-xxxhdpi/dh_clubmed.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/dh_64north.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/mipmap-xxxhdpi/dh_64north.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/dh_65degrees.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/mipmap-xxxhdpi/dh_65degrees.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/dh_bistro.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/mipmap-xxxhdpi/dh_bistro.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/dh_canyonvista.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/mipmap-xxxhdpi/dh_canyonvista.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/dh_pines.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/mipmap-xxxhdpi/dh_pines.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/dh_roots.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/mipmap-xxxhdpi/dh_roots.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/dh_goodys.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/mipmap-xxxhdpi/dh_goodys.png"
+    },
+    {
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/dh_cafeventanas.png",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/src/main/res/mipmap-xxxhdpi/dh_cafeventanas.png"
     }
 ]

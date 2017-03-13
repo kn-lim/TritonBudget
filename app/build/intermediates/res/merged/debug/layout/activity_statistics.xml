@@ -13,10 +13,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="1"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <Spinner
             android:id="@+id/spinner"
@@ -39,7 +39,7 @@
             android:id="@+id/statistic_text_this_week"
             android:layout_width="match_parent"
             android:layout_height="25dp"
-            android:text="this week:"
+            android:text="This week's spending:"
             android:textColor="@android:color/background_dark" />
 
         <TextView
@@ -51,7 +51,7 @@
             android:id="@+id/statistic_text_last_week"
             android:layout_width="match_parent"
             android:layout_height="25dp"
-            android:text="last week:"
+            android:text="Last week's spending:"
             android:textColor="@android:color/background_dark" />
 
         <TextView
@@ -63,7 +63,7 @@
             android:id="@+id/statistic_text_average"
             android:layout_width="match_parent"
             android:layout_height="25dp"
-            android:text="average per day this week:"
+            android:text="Average spending per day this week:"
             android:textColor="@android:color/background_dark" />
 
         <TextView

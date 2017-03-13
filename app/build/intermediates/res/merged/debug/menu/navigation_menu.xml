@@ -13,7 +13,7 @@
         android:icon="@drawable/ic_assessment_black_24dp"
         android:title="Statistics" />
     <item android:id="@+id/nav_menus"
-        android:icon="@drawable/ic_shopping_cart_black_24dp"
+        android:icon="@drawable/ic_cart"
         android:title="HDH Menus" />
     <item
         android:id="@+id/nav_settings"
