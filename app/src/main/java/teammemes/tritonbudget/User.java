@@ -117,7 +117,7 @@ public class User {
                 set.addAll(non_tracking_days);
                 editor.putStringSet("nontrdays",set);
                 editor.commit();
-                System.out.println("Updated!");
+                //System.out.println("Updated!");
             } catch (Exception e) {
                 //Log.e("3", "error setting non_eating days");
             }
@@ -153,7 +153,7 @@ public class User {
             set.addAll(non_tracking_days);
             editor.putStringSet("nontrdays",set);
             editor.commit();
-            System.out.println("Updated!");
+            //System.out.println("Updated!");
         } catch (Exception e) {
         //Log.e("3", "error setting non_eating days");
         }

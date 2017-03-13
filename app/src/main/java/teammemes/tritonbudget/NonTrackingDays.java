@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -27,6 +29,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.common.api.GoogleApiClient;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -37,9 +44,12 @@ import java.util.List;
 import teammemes.tritonbudget.db.HistoryDataSource;
 import teammemes.tritonbudget.db.TranHistory;
 
+import static android.R.attr.clickable;
 import static android.R.attr.id;
+import static android.R.attr.selectableItemBackground;
 import static android.view.Gravity.CENTER;
 import static android.view.Gravity.RIGHT;
+import static java.security.AccessController.getContext;
 
 public class NonTrackingDays extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     ArrayList<String> noneatingdays = new ArrayList<>();
@@ -54,6 +64,11 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
     private Toolbar mToolbar;
     private User usr;
     private TextView usrName;
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
     @Override
 
@@ -81,7 +96,7 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        View navHeaderView= navigationView.getHeaderView(0);
+        View navHeaderView = navigationView.getHeaderView(0);
         usrName = (TextView) navHeaderView.findViewById(R.id.header_name);
         usrName.setText(usr.getName());
 
@@ -137,6 +152,9 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
                 }
             }
         });
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     //This method is used to listen for the user clicking the menu button, and opens
@@ -253,22 +271,35 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
 
             //THIS IS THE "date_border" to have an edit button later on
             final LinearLayout date_border = new LinearLayout(this);
+            //Actually contains the date stuff
+            final LinearLayout date_container = new LinearLayout(this);
+
+            //Date Border properties
             date_border.setBackgroundResource(R.drawable.border_set_top);
             date_border.setOrientation(LinearLayout.HORIZONTAL);
             date_border.setLayoutParams(layoutParams);
-            date_border.setPadding(4,0,0,0);
+            date_border.setPadding(4, 0, 0, 0);
+
+            //Date Container Properties
+            TypedValue outValue = new TypedValue();
+            this.getTheme().resolveAttribute(android.R.attr.selectableItemBackground, outValue, true);
+            date_container.setBackgroundResource(outValue.resourceId);
+            date_container.setOrientation(LinearLayout.HORIZONTAL);
+            date_container.setLayoutParams(layoutParams);
 
             //Creates the date_display textview and adds it to "date_border"
             final TextView date_display = new TextView(this);
             date_display.setGravity(CENTER);
             date_display.setPaddingRelative(8, 8, 8, 8);
-            date_display.setPadding(15,15,15,15);
+            date_display.setPadding(15, 15, 15, 15);
             date_display.setText(str_to_display);
             date_display.setTextSize(26);
             date_display.setLayoutParams(textParams);
 
-            //Add the textview to the date_border
-            date_border.addView(date_display);
+            //Add the textview to the date_container
+            date_container.addView(date_display);
+            //add the container to the border
+            date_border.addView(date_container);
             //add the date_border to the "main_layout"
             mainLayout.addView(date_border);
 
@@ -279,20 +310,20 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
             edit_container.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             edit_container.setWeightSum(1);
 
-            date_border.setOnLongClickListener(new View.OnLongClickListener() {
+            date_container.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
                     //If the edit button is already visible do nothing
-                    if (date_border.getChildCount() >= 2) {
-                        System.out.println("hello");
-                        System.out.print(date_border.getChildCount()>=3);
+                    if (date_container.getChildCount() >= 2) {
+                        // System.out.println("hello");
+                        // System.out.print(date_border.getChildCount()>=3);
                         return false;
                     }
                     removeAllButtons();
 
                     //Add another LLH to push the edit button to the right
                     edit_container.setGravity(RIGHT);
-                    date_border.addView(edit_container);
+                    date_container.addView(edit_container);
                     //Create the edit button
                     TextView edit = new TextView(v.getContext());
                     edit.setText("Delete");
@@ -317,16 +348,16 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
                             //NED IS THE ARRAYLIST
                             String toRemove = (String) date_display.getText();
 
-                            System.out.println(toRemove);
+                            //System.out.println(toRemove);
                             NED.remove(toRemove);
                             usr.remove_days(toRemove);
 
                             ArrayList<String> potato = usr.getNon_tracking_days();
-                            System.out.println(potato.contains(toRemove));
+                            //System.out.println(potato.contains(toRemove));
                             render_non_eating(NED);
                         }
                     });
-                    if(edit_container.getChildCount()<1) {
+                    if (edit_container.getChildCount() < 1) {
                         edit_container.addView(edit);
                     }
                     return true;
@@ -343,13 +374,15 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
         }
     }
 
-    private void removeAllButtons(){
+    private void removeAllButtons() {
         int numTrans = mainLayout.getChildCount();
-        for (int j = 0; j < numTrans; j++){
-            LinearLayout tran = (LinearLayout) mainLayout.getChildAt(j);
-            if (tran.getChildCount() == 2){
-                tran.removeViewAt(1);
+        for (int j = 0; j < numTrans; j++) {
+            LinearLayout date_border = (LinearLayout) mainLayout.getChildAt(j);
+            LinearLayout date_container = (LinearLayout) date_border.getChildAt(0);
+            if (date_container.getChildCount() == 2) {
+                date_container.removeViewAt(1);
             }
         }
     }
+
 }
