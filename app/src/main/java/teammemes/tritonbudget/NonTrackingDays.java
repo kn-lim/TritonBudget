@@ -1,77 +1,46 @@
 package teammemes.tritonbudget;
 
-import android.app.Activity;
-import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.TypedValue;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
 
-import teammemes.tritonbudget.db.HistoryDataSource;
-import teammemes.tritonbudget.db.TranHistory;
-
-import static android.R.attr.clickable;
-import static android.R.attr.id;
-import static android.R.attr.selectableItemBackground;
 import static android.view.Gravity.CENTER;
 import static android.view.Gravity.RIGHT;
-import static java.security.AccessController.getContext;
 
 public class NonTrackingDays extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     ArrayList<String> noneatingdays = new ArrayList<>();
-    private DatePicker datePicker;
-    private Calendar calendar;
-    private int inityear, initmonth, initday;
     int id = 100;
     LinearLayout.LayoutParams layoutParams, textParams, btnParams, costParams;
     LinearLayout mainLayout;
+    private DatePicker datePicker;
+    private Calendar calendar;
+    private int inityear, initmonth, initday;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     private Toolbar mToolbar;
     private User usr;
     private TextView usrName;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_nontracking);
@@ -152,9 +121,6 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
                 }
             }
         });
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     //This method is used to listen for the user clicking the menu button, and opens
