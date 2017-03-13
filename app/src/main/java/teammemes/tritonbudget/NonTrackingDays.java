@@ -23,6 +23,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -340,6 +341,15 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
                 //mainLayout.addView(date_border);
             }
             transactionsShown++;
+        }
+        if (transactionsShown == 0) {
+            ImageView meme = new ImageView(this);
+            meme.setImageResource(R.drawable.ramen);
+            meme.setAdjustViewBounds(true);
+            meme.setScaleType(ImageView.ScaleType.FIT_END);
+            meme.setPadding(0, 200, 0, 0);
+            meme.setAlpha((float) 0.75);
+            mainLayout.addView(meme);
         }
     }
 
