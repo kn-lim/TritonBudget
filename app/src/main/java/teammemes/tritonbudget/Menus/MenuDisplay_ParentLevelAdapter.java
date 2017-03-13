@@ -59,13 +59,13 @@ public class MenuDisplay_ParentLevelAdapter extends BaseExpandableListAdapter {
             for(int j = 0; j < food.size(); j++){
                 String mealtime;
                 if( food.get(j).getType().compareTo("Lunch And Dinner") == 0){
-                    mealtime = "Lunch+Dinner: ";
+                    mealtime = "Lunch+Dinner";
                 } else if( food.get(j).getType().compareTo("all") == 0 ){
                     mealtime = "";
                 } else {
                     mealtime = food.get(j).getType();
                 }
-                mItemHeaders[j] =mealtime+food.get(j).getName()+" || $"+Double.toString(food.get(j).getCost());
+                mItemHeaders[j] = mealtime + ": " +food.get(j).getName()+" || $"+Double.toString(food.get(j).getCost());
             }
 
             mListData_SecondLevel_Map.put(mListDataHeader.get(i), Arrays.asList(mItemHeaders));

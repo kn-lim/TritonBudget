@@ -74,9 +74,12 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                //((TextView) parent.getChildAt(1)).setText("Sort by Month");
                 if (position == 0) {
+                    ((TextView) parent.getChildAt(0)).setText("Sorted by Week");
                     week();
                 } else {
+                    ((TextView) parent.getChildAt(0)).setText("Sorted by Month");
                     month();
                 }
             }
@@ -184,7 +187,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
 
         BarData data = new BarData(getXAxisValues(), getDataWeek());
         chart.setData(data);
-        chart.setDescription("My Chart");
+        chart.setDescription("");
         chart.animateXY(2000, 2000);
         chart.getXAxis().setAdjustXLabels(false);
         chart.invalidate();
@@ -195,7 +198,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
 
         BarData data = new BarData(getXAxisValuestwo(), getDataMonth());
         chart.setData(data);
-        chart.setDescription("My Chart");
+        chart.setDescription("");
         chart.animateXY(2000, 2000);
         XAxis x = chart.getXAxis();
         x.setAdjustXLabels(false);
@@ -212,7 +215,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
             valueSet1.add(vl);
         }
 
-        BarDataSet barDataSet1 = new BarDataSet(valueSet1, "Brand 1");
+        BarDataSet barDataSet1 = new BarDataSet(valueSet1, "Spending per Week");
         barDataSet1.setColor(Color.rgb(0, 0, 155));
 
 
@@ -232,7 +235,7 @@ public class Statistics extends AppCompatActivity implements NavigationView.OnNa
             valueSet1.add(vl);
         }
 
-        BarDataSet barDataSet1 = new BarDataSet(valueSet1, "Brand 1");
+        BarDataSet barDataSet1 = new BarDataSet(valueSet1, "Spending per Month");
         barDataSet1.setColor(Color.rgb(0, 0, 155));
 
 

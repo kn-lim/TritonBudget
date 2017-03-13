@@ -1,4 +1,7 @@
-#Fri Mar 10 16:25:09 PST 2017
-base.0=/Users/Danny/Desktop/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+#Sun Mar 12 21:05:48 PDT 2017
+base.0=/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_0bd2ba1414b0b7433418dfa2b090d7786d3ce27e
+renamed.1=classes2.dex
 renamed.0=classes.dex
-file.0=/Users/Danny/Desktop/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+file.1=/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_adb8b5d3e5bb1f22b9972107ec2862dd27f96464/classes.dex
+base.1=/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_adb8b5d3e5bb1f22b9972107ec2862dd27f96464
+file.0=/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_0bd2ba1414b0b7433418dfa2b090d7786d3ce27e/classes.dex

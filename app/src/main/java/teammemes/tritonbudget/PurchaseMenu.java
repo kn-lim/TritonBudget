@@ -14,14 +14,23 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import teammemes.tritonbudget.Menus.Menu;
@@ -30,8 +39,14 @@ import teammemes.tritonbudget.db.MenuDataSource;
 import static android.view.Gravity.CENTER;
 
 
-public class PurchaseMenu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,Serializable{
+public class PurchaseMenu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,Serializable {
 
+    public static final String ALPHABETICAL = "Alphabetical";
+    public static final String PRICE_LOW_HIGH = "Price: Low - High";
+    public static final String PRICE_HIGH_LOW = "Price: High - Low";
+    public static final String GLUTEN_FREE = "Gluten Free";
+    public static final String VEGAN = "Vegan";
+    public static final String VEGETERIAN = "Vegeterian";
     SimpleDateFormat dateFormat;
     LinearLayout.LayoutParams layoutParams, textParams, btnParams, noWeight;
     LinearLayout mainLayout;
@@ -45,9 +60,8 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
     private List<Menu> transactions;
     private int i=0;
 
-    private float dX;
-    private float dY;
-    private int lastAction;
+    String[] entries = {ALPHABETICAL, PRICE_LOW_HIGH, PRICE_HIGH_LOW, GLUTEN_FREE, VEGAN, VEGETERIAN};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,80 +109,7 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
         numberOfPurchase = new int[transactions.size()];
 
 
-        myFab = (FloatingActionButton) findViewById(R.id.myFAB);
-
         dateFormat = new SimpleDateFormat("MM/dd/yyyy");
-
-
-        myFab.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent event) {
-                switch (event.getActionMasked()) {
-                    /*case MotionEvent.ACTION_BUTTON_PRESS:
-                        lastAction = MotionEvent.ACTION_BUTTON_PRESS;
-                        break;
-                    case MotionEvent.ACTION_BUTTON_RELEASE:
-                        if (lastAction == MotionEvent.ACTION_BUTTON_PRESS) {
-                            ArrayList<String> trans = new ArrayList<String>();
-                            ArrayList<String> numofpur = new ArrayList<String>();
-                            for (int j = 0; j < transactions.size(); j++) {
-                                if (numberOfPurchase[j] != 0) {
-                                    Menu men = transactions.get(j);
-                                    //trans.add(new TranHistory(men.getId(),men.getName(),numberOfPurchase[j],new Date(),men.getCost()));
-                                    trans.add("" + men.getId());
-                                    numofpur.add(numberOfPurchase[j] + "");
-                                }
-                            }
-                            if (trans.size() == 0) {
-                                Toast.makeText(getApplicationContext(), "Please select item", Toast.LENGTH_LONG).show();
-                            } else {
-                                Intent checkout = new Intent(getApplicationContext(), Checkout.class);
-                                checkout.putStringArrayListExtra("Transactions", trans);
-                                checkout.putStringArrayListExtra("number", numofpur);
-                                startActivity(checkout);
-                            }
-                        }
-                        break;*/
-                    case MotionEvent.ACTION_DOWN:
-                        dX = view.getX() - event.getRawX();
-                        dY = view.getY() - event.getRawY();
-                        lastAction = MotionEvent.ACTION_DOWN;
-                        break;
-
-                    case MotionEvent.ACTION_MOVE:
-                        view.setY(event.getRawY() + dY);
-                        view.setX(event.getRawX() + dX);
-                        lastAction = MotionEvent.ACTION_MOVE;
-                        break;
-                    case MotionEvent.ACTION_UP:
-                        if (lastAction == 2) {
-                            ArrayList<String> trans = new ArrayList<String>();
-                            ArrayList<String> numofpur = new ArrayList<String>();
-                            for (int j = 0; j < transactions.size(); j++) {
-                                if (numberOfPurchase[j] != 0) {
-                                    Menu men = transactions.get(j);
-                                    //trans.add(new TranHistory(men.getId(),men.getName(),numberOfPurchase[j],new Date(),men.getCost()));
-                                    trans.add("" + men.getId());
-                                    numofpur.add(numberOfPurchase[j] + "");
-                                }
-                            }
-                            if (trans.size() == 0) {
-                                Toast.makeText(getApplicationContext(), "Please select item", Toast.LENGTH_LONG).show();
-                            } else {
-                                Intent checkout = new Intent(getApplicationContext(), Checkout.class);
-                                checkout.putStringArrayListExtra("Transactions", trans);
-                                checkout.putStringArrayListExtra("number", numofpur);
-                                startActivity(checkout);
-                            }
-                        }
-                        break;
-
-                    default:
-                        return false;
-                }
-                return true;
-            }
-        });
 
         //Renders all of the transactions on the page
         renderMenu(transactions);
@@ -184,16 +125,103 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
      * If there are no transactions it adds a default message, however if there are
      * transactions it goes through each one putting them in the mainLayout.
      */
-    private void renderMenu(List<Menu> transactions) {
+    private void renderMenu(final List<Menu> transactions) {
         //Resets the mainLayout
         mainLayout.removeAllViews();
+        final Spinner sort_spinner =  make_sort_spinner();
+        mainLayout.addView(sort_spinner);
+        display(transactions);
+        sort_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String request = parent.getItemAtPosition(position).toString();
 
+                mainLayout.removeAllViews();
+                mainLayout.addView(sort_spinner);
+                display(sort_menu(transactions, request));
+            }
 
-        //Goes through each of the transactions and puts them on the page
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+    }
+
+    private Spinner make_sort_spinner() {
+        Spinner spinner = new Spinner(this);
+        spinner.setLayoutParams(layoutParams);
+        spinner.setPrompt("Sort By");
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, entries);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        return spinner;
+    }
+
+    private List<Menu> sort_menu(List<Menu> array, final String request) {
+        switch (request) {
+            case GLUTEN_FREE:
+                List<Menu> gluten_list = new ArrayList<Menu>();
+                for (int i = 0; i < array.size() - 1; i++) {
+                    if (array.get(i).isGluten()) {
+                        gluten_list.add(array.get(i));
+                    }
+                }
+                return gluten_list;
+            case VEGAN:
+                List<Menu> vegan_list = new ArrayList<Menu>();
+                for (int i = 0; i < array.size() - 1; i++) {
+                    if (array.get(i).isVegan()) {
+                        vegan_list.add(array.get(i));
+                    }
+                }
+                return vegan_list;
+            case VEGETERIAN:
+                List<Menu> vegeterian_list = new ArrayList<Menu>();
+                for (int i = 0; i < array.size() - 1; i++) {
+                    if (array.get(i).isVegeterian()) {
+                        vegeterian_list.add(array.get(i));
+                    }
+                }
+                return vegeterian_list;
+            default:
+                Collections.sort(array, new Comparator<Menu>() {
+                    @Override
+                    public int compare(Menu o1, Menu o2) {
+                        int category_compare = o1.getCategory().compareTo(o2.getCategory());
+                        if (category_compare == 0) {
+                            switch (request) {
+                                case ALPHABETICAL:
+                                    return o1.getName().compareTo(o2.getName());
+                                case PRICE_LOW_HIGH:
+                                    if (o1.getCost() < o2.getCost())
+                                        return -1;
+                                    else if (o1.getCost() == o2.getCost())
+                                        return 0;
+                                    else
+                                        return 1;
+                                case PRICE_HIGH_LOW:
+                                    if (o1.getCost() < o2.getCost())
+                                        return 1;
+                                    else if (o1.getCost() == o2.getCost())
+                                        return 0;
+                                    else
+                                        return -1;
+                                default:
+                                    return category_compare;
+                            }
+                        }
+                        return category_compare;
+                    }
+                });
+                return array;
+        }
+    }
+
+    private void display(final List<Menu> transactions) {
         String prevCategory = "";
-        for (i = transactions.size() - 1; i >= 0; i--){
+        for (i = 0; i < transactions.size() - 1; i++){
             //If this is a new date, it creates a new date display
-            if(!transactions.get(i).getCategory().equals(prevCategory)){
+            if (!transactions.get(i).getCategory().equals(prevCategory)) {
                 prevCategory = transactions.get(i).getCategory(); //Saves the date
 
                 LinearLayout DateBorder = new LinearLayout(this);
@@ -204,8 +232,8 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
                 //Creates the date_display and adds it to the page
                 TextView date_display = new TextView(this);
                 date_display.setGravity(CENTER);
-                date_display.setPaddingRelative(8,8,8,8);
-                date_display.setPadding(8,8,8,8);
+                date_display.setPaddingRelative(8, 8, 8, 8);
+                date_display.setPadding(8, 8, 8, 8);
                 date_display.setText(prevCategory);
                 date_display.setTextSize(20);
                 date_display.setLayoutParams(layoutParams);
@@ -302,6 +330,29 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
         if (mToggle.onOptionsItemSelected(item)) {
             return true;
         }
+
+        int id = item.getItemId();
+
+        if (id == R.id.checkoutBtn){
+            ArrayList<String> trans = new ArrayList<String>();
+            ArrayList<String> numofpur = new ArrayList<String>();
+            for (int j = 0; j < transactions.size(); j++) {
+                if (numberOfPurchase[j] != 0) {
+                    Menu men = transactions.get(j);
+                    //trans.add(new TranHistory(men.getId(),men.getName(),numberOfPurchase[j],new Date(),men.getCost()));
+                    trans.add("" + men.getId());
+                    numofpur.add(numberOfPurchase[j] + "");
+                }
+            }
+            if (trans.size() == 0) {
+                Toast.makeText(getApplicationContext(), "Please select item", Toast.LENGTH_LONG).show();
+            } else {
+                Intent checkout = new Intent(getApplicationContext(), Checkout.class);
+                checkout.putStringArrayListExtra("Transactions", trans);
+                checkout.putStringArrayListExtra("number", numofpur);
+                startActivity(checkout);
+            }
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -314,6 +365,13 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.purchase_menu, menu);
+        return true;
     }
 
     // This method is used to react when the user presses one of the options in the drawer
@@ -348,8 +406,16 @@ public class PurchaseMenu extends AppCompatActivity implements NavigationView.On
                 startActivity(nextScreen);
                 return true;
             case R.id.nav_settings:
-                return false;
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Settings.class);
+                nextScreen.putExtra("FROM", "History");
+                startActivity(nextScreen);
+                return true;
             case R.id.nav_help:
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+                nextScreen = new Intent(this, Help.class);
+                nextScreen.putExtra("FROM", "History");
+                startActivity(nextScreen);
                 return false;
 
             default:

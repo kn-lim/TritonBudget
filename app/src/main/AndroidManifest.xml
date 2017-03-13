@@ -10,7 +10,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Splash"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,108 +20,129 @@
         </activity>
         <activity
             android:name=".Enter_Info"
-            android:theme="@style/EnterInfoTheme">
+            android:theme="@style/EnterInfoTheme"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeScreen">
+        <activity android:name=".HomeScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Statistics">
+        <activity android:name=".Statistics"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DiningHallSelection">
+        <activity android:name=".DiningHallSelection"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".History">
+        <activity android:name=".History"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PurchaseMenu">
+        <activity android:name=".PurchaseMenu"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Checkout">
+        <activity android:name=".Checkout"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Settings">
+        <activity android:name=".Settings"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Help">
+        <activity android:name=".Help"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".testClick" />
-        <activity android:name=".Menus.Menu64Degrees_Main">
+        <activity android:name=".Menus.Menu64Degrees_Main"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menus.MenuOceanView_Main">
+        <activity android:name=".Menus.MenuOceanView_Main"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menus.MenuBistro_Main">
+        <activity android:name=".Menus.MenuBistro_Main"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menus.MenuCafeVentanas_Main">
+        <activity android:name=".Menus.MenuCafeVentanas_Main"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menus.MenuCanyonVista_Main">
+        <activity android:name=".Menus.MenuCanyonVista_Main"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menus.MenuClubMed_Main">
+        <activity android:name=".Menus.MenuClubMed_Main"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menus.MenuFoodworx_Main">
+        <activity android:name=".Menus.MenuFoodworx_Main"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menus.MenuGoodys_Main">
+        <activity android:name=".Menus.MenuGoodys_Main"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menus.MenuPines_Main">
+        <activity android:name=".Menus.MenuPines_Main"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menus.MenuRoots_Main">
+        <activity android:name=".Menus.MenuRoots_Main"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NonTrackingDays">
+        <activity android:name=".NonTrackingDays"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menus.Menu64North_Main"></activity>
+        <activity android:name=".Menus.Menu64North_Main"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

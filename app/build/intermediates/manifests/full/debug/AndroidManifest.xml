@@ -16,6 +16,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="teammemes.tritonbudget.Splash"
+            android:screenOrientation="portrait"
             android:theme="@style/SplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,107 +26,149 @@
         </activity>
         <activity
             android:name="teammemes.tritonbudget.Enter_Info"
+            android:screenOrientation="portrait"
             android:theme="@style/EnterInfoTheme" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.HomeScreen" >
+        <activity
+            android:name="teammemes.tritonbudget.HomeScreen"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.Statistics" >
+        <activity
+            android:name="teammemes.tritonbudget.Statistics"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.DiningHallSelection" >
+        <activity
+            android:name="teammemes.tritonbudget.DiningHallSelection"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.History" >
+        <activity
+            android:name="teammemes.tritonbudget.History"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.PurchaseMenu" >
+        <activity
+            android:name="teammemes.tritonbudget.PurchaseMenu"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.Checkout" >
+        <activity
+            android:name="teammemes.tritonbudget.Checkout"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.Settings" >
+        <activity
+            android:name="teammemes.tritonbudget.Settings"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.Help" >
+        <activity
+            android:name="teammemes.tritonbudget.Help"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name="teammemes.tritonbudget.testClick" />
-        <activity android:name="teammemes.tritonbudget.Menus.Menu64Degrees_Main" >
+        <activity
+            android:name="teammemes.tritonbudget.Menus.Menu64Degrees_Main"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.Menus.MenuOceanView_Main" >
+        <activity
+            android:name="teammemes.tritonbudget.Menus.MenuOceanView_Main"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.Menus.MenuBistro_Main" >
+        <activity
+            android:name="teammemes.tritonbudget.Menus.MenuBistro_Main"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.Menus.MenuCafeVentanas_Main" >
+        <activity
+            android:name="teammemes.tritonbudget.Menus.MenuCafeVentanas_Main"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.Menus.MenuCanyonVista_Main" >
+        <activity
+            android:name="teammemes.tritonbudget.Menus.MenuCanyonVista_Main"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.Menus.MenuClubMed_Main" >
+        <activity
+            android:name="teammemes.tritonbudget.Menus.MenuClubMed_Main"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.Menus.MenuFoodworx_Main" >
+        <activity
+            android:name="teammemes.tritonbudget.Menus.MenuFoodworx_Main"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.Menus.MenuGoodys_Main" >
+        <activity
+            android:name="teammemes.tritonbudget.Menus.MenuGoodys_Main"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.Menus.MenuPines_Main" >
+        <activity
+            android:name="teammemes.tritonbudget.Menus.MenuPines_Main"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.Menus.MenuRoots_Main" >
+        <activity
+            android:name="teammemes.tritonbudget.Menus.MenuRoots_Main"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="teammemes.tritonbudget.NonTrackingDays" >
+        <activity
+            android:name="teammemes.tritonbudget.NonTrackingDays"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="teammemes.tritonbudget.Menus.Menu64North_Main"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

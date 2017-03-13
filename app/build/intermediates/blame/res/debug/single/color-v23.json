@@ -1,46 +1,46 @@
 [
     {
-        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
-        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_switch_thumb.xml"
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_switch_thumb.xml"
     },
     {
-        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
-        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_edittext.xml"
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
-        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_color_highlight_material.xml"
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_spinner.xml"
     },
     {
-        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
-        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_seek_thumb.xml"
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_switch_track.xml"
     },
     {
-        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
-        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_btn_checkable.xml"
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
-        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_btn_colored_text_material.xml"
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_default.xml"
     },
     {
-        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
-        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/color-v23/design_tint_password_toggle.xml"
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_edittext.xml"
     },
     {
-        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
-        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_switch_track.xml"
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_color_highlight_material.xml"
     },
     {
-        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
-        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/res/color-v23/design_tint_password_toggle.xml"
     },
     {
-        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
-        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_default.xml"
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_btn_checkable.xml"
     },
     {
-        "merged": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
-        "source": "/Users/Danny/Desktop/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_tint_spinner.xml"
+        "merged": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/home/anlum/AndroidStudioProjects/TritonBudget/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color-v23/abc_btn_colored_text_material.xml"
     }
 ]
