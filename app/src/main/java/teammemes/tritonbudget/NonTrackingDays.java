@@ -113,9 +113,14 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
                         Toast.makeText(getApplicationContext(), "Day already occurred!", Toast.LENGTH_SHORT).show();
                     } else if (monthOfYear == initmonth && dayOfMonth < initday) { //Same month, old day
                         Toast.makeText(getApplicationContext(), "Day already occurred!", Toast.LENGTH_SHORT).show();
-                    } else if (monthOfYear >= 5 && dayOfMonth > 16) { //June
+                    } else if (monthOfYear == 5) { //June
+                        if(dayOfMonth>16) {
+                            Toast.makeText(getApplicationContext(), "School is over!", Toast.LENGTH_SHORT).show();
+                        }
+                    } else if (monthOfYear>5 && curryear>=inityear) {
                         Toast.makeText(getApplicationContext(), "School is over!", Toast.LENGTH_SHORT).show();
-                    } else {
+                    } else{
+
                     }
                 } else {
                     Toast.makeText(getApplicationContext(), "School is over!", Toast.LENGTH_SHORT).show();
@@ -209,10 +214,17 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
     }
 
     private void addToNonEating(int curryear, int monthOfYear, int dayOfMonth) {
-        String date_noeat = curryear + "/" + (monthOfYear + 1) + "/" + dayOfMonth;
-        if (dayOfMonth < 10) {
-            date_noeat = curryear + "/" + (monthOfYear + 1) + "/0" + dayOfMonth;
+        String stryear = ""+curryear;
+        String strmo = ""+(monthOfYear+1);
+        String strday = ""+dayOfMonth;
+        if(monthOfYear<10) {
+            strmo = "0" + strmo;
         }
+        if (dayOfMonth < 10) {
+            strday = "0" + strday;
+        }
+        String date_noeat = stryear+"/"+strmo+"/"+strday;
+
         noneatingdays = usr.getNon_tracking_days();
         if (!noneatingdays.contains(date_noeat)) {
             usr.setNon_tracking_days(date_noeat);
