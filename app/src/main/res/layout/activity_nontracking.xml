@@ -3,10 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".NonTrackingDays">
 
 
@@ -17,13 +13,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:orientation="vertical">
 
-            <DatePicker
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/datePicker" />
+                android:layout_gravity="center_horizontal">
+
+                <DatePicker
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/datePicker" />
+            </LinearLayout>
 
             <TextView
                 android:text="Dates already accounted for:\n"
@@ -31,7 +33,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/NED_TV_LIST"
                 tools:text="Date already in list"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:paddingStart="4dp" />
 
             <LinearLayout
                 android:id="@+id/NED_LLV_DATES"

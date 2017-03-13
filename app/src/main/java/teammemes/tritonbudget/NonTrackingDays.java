@@ -157,12 +157,13 @@ public class NonTrackingDays extends Activity {
             date_border.setBackgroundResource(R.drawable.border_set_top);
             date_border.setOrientation(LinearLayout.HORIZONTAL);
             date_border.setLayoutParams(layoutParams);
+            date_border.setPadding(4,0,0,0);
 
             //Creates the date_display textview and adds it to "date_border"
             final TextView date_display = new TextView(this);
             date_display.setGravity(CENTER);
             date_display.setPaddingRelative(8, 8, 8, 8);
-            date_display.setPadding(8, 8, 8, 8);
+            date_display.setPadding(15,15,15,15);
             date_display.setText(str_to_display);
             date_display.setTextSize(26);
             date_display.setLayoutParams(textParams);
