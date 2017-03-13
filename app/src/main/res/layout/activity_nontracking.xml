@@ -17,7 +17,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:gravity="center">
 
             <DatePicker
                 android:layout_width="match_parent"
@@ -29,7 +30,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/NED_TV_LIST"
-                tools:text="Date already in list" />
+                tools:text="Date already in list"
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:id="@+id/NED_LLV_DATES"

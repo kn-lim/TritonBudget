@@ -30,6 +30,7 @@ import teammemes.tritonbudget.db.TranHistory;
 
 import static android.R.attr.id;
 import static android.view.Gravity.CENTER;
+import static android.view.Gravity.RIGHT;
 
 public class NonTrackingDays extends Activity {
     ArrayList<String> noneatingdays = new ArrayList<>();
@@ -57,7 +58,7 @@ public class NonTrackingDays extends Activity {
         layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         textParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 0);
         costParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
-        btnParams = new LinearLayout.LayoutParams(200, ViewGroup.LayoutParams.MATCH_PARENT);  //was (200,100)
+        btnParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);  //was (200,100)
         btnParams.setMargins(0, 0, 0, 0); //was (0,0,0,40)
 
         /*
@@ -163,34 +164,43 @@ public class NonTrackingDays extends Activity {
             date_display.setPaddingRelative(8, 8, 8, 8);
             date_display.setPadding(8, 8, 8, 8);
             date_display.setText(str_to_display);
-            date_display.setTextSize(20);
+            date_display.setTextSize(26);
             date_display.setLayoutParams(textParams);
 
             //Add the textview to the date_border
             date_border.addView(date_display);
-
             //add the date_border to the "main_layout"
             mainLayout.addView(date_border);
 
 
             //Creates the onLongClickListener for the transaction:
             //      If the transaction is held an edit button appears
+            final LinearLayout edit_container = new LinearLayout(this);
+            edit_container.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            edit_container.setWeightSum(1);
+
             date_border.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
                     //If the edit button is already visible do nothing
-                    if (date_border.getChildCount() == 2)
+                    if (date_border.getChildCount() >= 2) {
+                        System.out.println("hello");
+                        System.out.print(date_border.getChildCount()>=3);
                         return false;
+                    }
                     removeAllButtons();
 
+                    //Add another LLH to push the edit button to the right
+                    edit_container.setGravity(RIGHT);
+                    date_border.addView(edit_container);
                     //Create the edit button
                     TextView edit = new TextView(v.getContext());
-                    edit.setText("Edit");
+                    edit.setText("Delete");
                     edit.setBackgroundColor(Color.RED);
                     edit.setTextColor(Color.WHITE);
                     edit.setLayoutParams(btnParams);
                     edit.setPadding(0, 0, 0, 0);
-                    edit.setTextSize(20);
+                    edit.setTextSize(26);
                     edit.setGravity(Gravity.CENTER);
 
                     //Set the onClickListener for the button:
@@ -216,7 +226,9 @@ public class NonTrackingDays extends Activity {
                             render_non_eating(NED);
                         }
                     });
-                    date_border.addView(edit);
+                    if(edit_container.getChildCount()<1) {
+                        edit_container.addView(edit);
+                    }
                     return true;
                 }
             });
@@ -235,8 +247,8 @@ public class NonTrackingDays extends Activity {
         int numTrans = mainLayout.getChildCount();
         for (int j = 0; j < numTrans; j++){
             LinearLayout tran = (LinearLayout) mainLayout.getChildAt(j);
-            if (tran.getChildCount() == 3){
-                tran.removeViewAt(2);
+            if (tran.getChildCount() == 2){
+                tran.removeViewAt(1);
             }
         }
     }
