@@ -90,19 +90,40 @@ public class User {
     }
 
     public boolean remove_days(String str){
-        boolean ret = non_tracking_days.remove(str);
+        /*
+        this.non_tracking_days=this.getNon_tracking_days();
+        boolean ret = this.non_tracking_days.remove(str);
         if(ret) {
+            System.out.println(str+"inside user class remove_days");
+            this.update_non_eating_days();
+        }
+        return ret;
+        */
+        non_tracking_days = this.getNon_tracking_days();
+        Collections.sort(non_tracking_days);
+        if(non_tracking_days.contains(str)) {
+            int i = 0;
+            for (; i < non_tracking_days.size(); i++) {
+                int comparison_value = (non_tracking_days.get(i)).compareTo(str);
+                if(comparison_value==0){
+                    break;
+                }
+            }
+            non_tracking_days.remove(i);
             SharedPreferences.Editor editor = prefs.edit();
-            try {
+            try{
+                //editor.clear(); //clear the preferences (hardreset)
                 Set<String> set = new HashSet<>();
                 set.addAll(non_tracking_days);
-                editor.putStringSet("nontrdays", set);
+                editor.putStringSet("nontrdays",set);
                 editor.commit();
+                System.out.println("Updated!");
             } catch (Exception e) {
                 //Log.e("3", "error setting non_eating days");
             }
+            return true;
         }
-        return ret;
+        return false;
     }
 
     public void update_non_eating_days(){
@@ -132,6 +153,7 @@ public class User {
             set.addAll(non_tracking_days);
             editor.putStringSet("nontrdays",set);
             editor.commit();
+            System.out.println("Updated!");
         } catch (Exception e) {
         //Log.e("3", "error setting non_eating days");
         }

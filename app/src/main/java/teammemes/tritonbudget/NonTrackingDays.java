@@ -68,6 +68,7 @@ public class NonTrackingDays extends Activity {
             test.append(" " + noneatingdays.get(i));
         }
         */
+        //Collections.sort(usr.getNon_tracking_days());
         render_non_eating(usr.getNon_tracking_days());
         datePicker = (DatePicker) findViewById(R.id.datePicker);
         datePicker.init(inityear, initmonth, initday, new DatePicker.OnDateChangedListener() {
@@ -130,6 +131,7 @@ public class NonTrackingDays extends Activity {
         if (!noneatingdays.contains(date_noeat)) {
             usr.setNon_tracking_days(date_noeat);
             //showDate(curryear, monthOfYear + 1, dayOfMonth);
+            //Collections.sort(noneatingdays);
             render_non_eating(noneatingdays);
         } else {
             Toast.makeText(getApplicationContext(), "Already accounted for!", Toast.LENGTH_SHORT).show();
@@ -138,7 +140,7 @@ public class NonTrackingDays extends Activity {
 
     private void render_non_eating(final ArrayList<String> NED) {
         int transactionsShown = 0;
-
+        Collections.sort(NED);
         //Get the mainLayout where a bunch of horizontal layouts are going to be stored
         mainLayout = (LinearLayout) findViewById(R.id.NED_LLV_DATES);
         //Resets the mainLayout
@@ -156,7 +158,7 @@ public class NonTrackingDays extends Activity {
             date_border.setLayoutParams(layoutParams);
 
             //Creates the date_display textview and adds it to "date_border"
-            TextView date_display = new TextView(this);
+            final TextView date_display = new TextView(this);
             date_display.setGravity(CENTER);
             date_display.setPaddingRelative(8, 8, 8, 8);
             date_display.setPadding(8, 8, 8, 8);
@@ -200,9 +202,17 @@ public class NonTrackingDays extends Activity {
                             // Set up the buttons
                             //Removes the date
 
-                            String toChange = NED.get(date_border.getId());
-                            NED.remove(toChange);
-                            usr.remove_days(toChange);
+                            //This is fucking up
+
+                            //NED IS THE ARRAYLIST
+                            String toRemove = (String) date_display.getText();
+
+                            System.out.println(toRemove);
+                            NED.remove(toRemove);
+                            usr.remove_days(toRemove);
+
+                            ArrayList<String> potato = usr.getNon_tracking_days();
+                            System.out.println(potato.contains(toRemove));
                             render_non_eating(NED);
                         }
                     });
