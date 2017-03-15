@@ -204,7 +204,7 @@ public class HistoryDataSource extends BaseDataSource{
             Calendar cal = Calendar.getInstance();
             cal.setTime(day);
             int currmon = cal.get(Calendar.MONTH);
-            int currwek = Calendar.getInstance().get(Calendar.WEEK_OF_MONTH);
+            int currwek = cal.get(Calendar.WEEK_OF_MONTH);
             if(currmon==currMonth&&currWeek==currwek&&histories.get(i).getCost()>0)
             {
                 cost += histories.get(i).getCost();
