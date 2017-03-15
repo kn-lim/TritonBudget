@@ -19,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -192,6 +193,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("How Much Dining Dollars?");
 
+
                 LayoutInflater viewInflated = LayoutInflater.from(context);
                 View deductView = viewInflated.inflate(R.layout.dialog_deduction,null);
 
@@ -273,39 +275,65 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
             @Override
             public void onClick(View v) {
                 // Set up the input
-                List<TranHistory> trans = database.getAllTransaction();
-                for (int i = 0; i < trans.size(); i++){
-                    database.deleteTransaction(trans.get(i).getId());
-                }
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("Load Test Data");
 
-                Calendar start = Calendar.getInstance();
-                Calendar today = (Calendar) start.clone();
-                start.set(2017,0,1);
+                LinearLayout layout = new LinearLayout(context);
+                layout.setPadding(20,0,0,0);
+                TextView text = new TextView(context);
+                text.setText("Continue to load test data? May take a few seconds.");
+                text.setTextSize(20);
+                layout.addView(text);
+                builder.setView(layout);
 
-                Random rand = new Random();
-                int count = 0;
-                do{
-                    if (start.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY){
-                        start.add(Calendar.DATE, 2);
-                    }
-                    if (start.after(today)){
-                        break;
-                    }
+                builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                        List<TranHistory> trans = database.getAllTransaction();
+                        for (int i = 0; i < trans.size(); i++){
+                            database.deleteTransaction(trans.get(i).getId());
+                        }
 
-                    if (count < 3){
-                        double cost = rand.nextDouble();
-                        cost = Math.round(cost*1000)/100;
-                        TranHistory tran = new TranHistory(1, "Test Item",1,start.getTime(), cost);
-                        database.createTransaction(tran);
-                        count++;
-                    }
-                    else{
-                        count = 0;
-                        start.add(Calendar.DATE, 1);
-                    }
-                }while (true);
+                        Calendar start = Calendar.getInstance();
+                        Calendar today = (Calendar) start.clone();
+                        start.set(2017,0,1);
+                        Random rand = new Random();
+                        int count = 0;
+                        
+                        do{
+                            if (start.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY){
+                                start.add(Calendar.DATE, 2);
+                            }
+                            if (start.after(today)){
+                                break;
+                            }
 
-                Toast.makeText(context,"Loaded in test Data", Toast.LENGTH_LONG);
+                            if (count < 3){
+                                double cost = rand.nextDouble();
+                                cost = Math.round(cost*1000)/100;
+                                TranHistory tran = new TranHistory(1, "Test Item",1,start.getTime(), cost);
+                                database.createTransaction(tran);
+                                count++;
+                            }
+                            else{
+                                count = 0;
+                                start.add(Calendar.DATE, 1);
+                            }
+                        }while (true);
+                        Toast.makeText(context,"Loaded in test Data", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(context, HomeScreen.class);
+                        startActivity(intent);
+                    }
+                });
+
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                builder.show();
             }
         });
 
