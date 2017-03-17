@@ -74,7 +74,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".testClick" />
         <activity android:name=".Menus.Menu64Degrees_Main"
             android:screenOrientation="portrait">
             <intent-filter>
