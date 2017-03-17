@@ -227,10 +227,19 @@ public class NonTrackingDays extends AppCompatActivity implements NavigationView
     }
 
     private void addToNonEating(int curryear, int monthOfYear, int dayOfMonth) {
-        String date_noeat = curryear + "/" + (monthOfYear + 1) + "/" + dayOfMonth;
-        if (dayOfMonth < 10) {
-            date_noeat = curryear + "/" + (monthOfYear + 1) + "/0" + dayOfMonth;
+        monthOfYear+=1;
+        String str_year = ""+curryear;
+        String str_month = ""+monthOfYear;
+        String str_day = ""+dayOfMonth;
+
+        if(monthOfYear<10){
+            str_month = "0"+str_month;
         }
+        if(dayOfMonth<10){
+            str_day = "0"+str_day;
+        }
+        String date_noeat = str_year+"/"+str_month+"/"+str_day;
+
         noneatingdays = usr.getNon_tracking_days();
         if (!noneatingdays.contains(date_noeat)) {
             usr.setNon_tracking_days(date_noeat);

@@ -209,6 +209,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         totBal.setText(TextUtils.concat(dollars, cents));
 
         //UPDATE THE NON_TRACKING_DAYS
+        System.out.println("Hello from HS.java");
         usr.update_non_eating_days();
         //GETS NON_TRACKING_DAYS AMT
         int num_non_tracking_days = usr.getNon_tracking_days().size();
