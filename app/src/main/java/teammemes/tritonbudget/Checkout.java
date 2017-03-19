@@ -101,7 +101,7 @@ public class Checkout extends AppCompatActivity implements NavigationView.OnNavi
 
             trans.add(new TranHistory(men.getId(), menuName, numItems, new Date(), men.getCost()*numItems));
 
-            String cost = "$" + double_to_string(trans.get(i).getCost());
+            String cost = "$" + double_to_string(Math.round(trans.get(i).getCost()*100)/100);
 
             total += (trans.get(i).getCost());
             total *= 100;
