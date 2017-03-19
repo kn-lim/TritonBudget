@@ -106,10 +106,6 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String value= input.getText().toString();
-                        if (value.equals("")){
-                            Toast.makeText(context,"You did not enter a name. Please try again.",Toast.LENGTH_LONG).show();
-                            return;
-                        }
                         if (value.length() == 0 || value.length() > 25) {
                             Toast.makeText(Settings.this, "Please up to 25 characters.\nName not saved.", Toast.LENGTH_LONG).show();
                         } else {
@@ -172,11 +168,6 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String val = input.getText().toString();
-                        if (val.equals("")){
-                            Toast.makeText(context,"You did not input a new amount. Please try again.",Toast.LENGTH_LONG).show();
-                            return;
-                        }
                         double value = Double.parseDouble(input.getText().toString());
                         if (value > 9999.99 || value < 0) {
                             Toast.makeText(Settings.this, "Please enter an amount $[0, 9999.99].\nBalance was not changed.", Toast.LENGTH_LONG).show();
@@ -198,7 +189,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
 
         addDD.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(final View v) {
+            public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("How Much Dining Dollars?");
 
@@ -240,13 +231,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String val = input.getText().toString();
-                        if (val.equals("")){
-                            Toast.makeText(context,"You didn't input an amount you want to add. Please try again.",Toast.LENGTH_LONG).show();
-                            return;
-                        }
-
-                        double value = Double.parseDouble(val);
+                        double value = Double.parseDouble(input.getText().toString());
                         usr.setBalance(usr.getBalance() + value);
 
                         TranHistory transaction = new TranHistory(1,"Added Dining Dollars",1,new Date(), 0 - value);
@@ -315,7 +300,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                         start.set(2017,0,1);
                         Random rand = new Random();
                         int count = 0;
-
+                        
                         do{
                             if (start.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY){
                                 start.add(Calendar.DATE, 2);

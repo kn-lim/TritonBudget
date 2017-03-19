@@ -139,10 +139,6 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                         //Gets the input value and then deducts the balance and updates the balances
                         //on the Home Screen
                         String value= input.getText().toString();
-                        if (value.equals("")){
-                            Toast.makeText(context, "You did not enter an amount to deduct. Please try again.", Toast.LENGTH_LONG).show();
-                            return;
-                        }
                         deductBalance((double) Double.parseDouble(value));
                     }
                 });
