@@ -139,6 +139,10 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
                         //Gets the input value and then deducts the balance and updates the balances
                         //on the Home Screen
                         String value= input.getText().toString();
+                        if (value.equals("")){
+                            Toast.makeText(context, "You did not enter an amount to deduct. Please try again.", Toast.LENGTH_LONG).show();
+                            return;
+                        }
                         deductBalance((double) Double.parseDouble(value));
                     }
                 });
@@ -209,6 +213,7 @@ public class HomeScreen extends AppCompatActivity implements NavigationView.OnNa
         totBal.setText(TextUtils.concat(dollars, cents));
 
         //UPDATE THE NON_TRACKING_DAYS
+        System.out.println("Hello from HS.java");
         usr.update_non_eating_days();
         //GETS NON_TRACKING_DAYS AMT
         int num_non_tracking_days = usr.getNon_tracking_days().size();

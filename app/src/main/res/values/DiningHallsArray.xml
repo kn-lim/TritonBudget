@@ -11,9 +11,9 @@
 
         <item name="bistro">The Bistro\nThe Village East</item>
         <item name="clubmed">Club Med\nSchool of Medicine</item>
-        <item name="flavorsft">Flavors of the World\nVaries</item>
+        <!--<item name="flavorsft">Flavors of the World\nVaries</item>-->
         <item name="goodys">Goody\'s\nMarshall Activity Center</item>
-        <item name="goodysft">Goody\'s To-go Truck\nVaries</item>
+        <!--<item name="goodysft">Goody\'s To-go Truck\nVaries</item>-->
         <item name="roots">Roots\nMuir College</item>
         <item name="_64_north">64 North\nRevelle College</item>
     </string-array>

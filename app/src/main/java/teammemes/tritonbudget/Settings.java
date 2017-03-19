@@ -19,10 +19,16 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
+import java.util.Random;
 
 import teammemes.tritonbudget.db.HistoryDataSource;
 import teammemes.tritonbudget.db.TranHistory;
@@ -37,6 +43,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
     private User usr;
     private HistoryDataSource database;
     private TextView usrName;
+    SimpleDateFormat dateFormat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +52,7 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
         usr = User.getInstance(getApplicationContext());
 
         database = new HistoryDataSource(this);
+        dateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
         //Creates the toolbar to the one defined in nav_action
         mToolbar = (Toolbar) findViewById(R.id.nav_action);
@@ -98,6 +106,10 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String value= input.getText().toString();
+                        if (value.equals("")){
+                            Toast.makeText(context,"You did not enter a name. Please try again.",Toast.LENGTH_LONG).show();
+                            return;
+                        }
                         if (value.length() == 0 || value.length() > 25) {
                             Toast.makeText(Settings.this, "Please up to 25 characters.\nName not saved.", Toast.LENGTH_LONG).show();
                         } else {
@@ -160,6 +172,11 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        String val = input.getText().toString();
+                        if (val.equals("")){
+                            Toast.makeText(context,"You did not input a new amount. Please try again.",Toast.LENGTH_LONG).show();
+                            return;
+                        }
                         double value = Double.parseDouble(input.getText().toString());
                         if (value > 9999.99 || value < 0) {
                             Toast.makeText(Settings.this, "Please enter an amount $[0, 9999.99].\nBalance was not changed.", Toast.LENGTH_LONG).show();
@@ -181,9 +198,10 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
 
         addDD.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(final View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("How Much Dining Dollars?");
+
 
                 LayoutInflater viewInflated = LayoutInflater.from(context);
                 View deductView = viewInflated.inflate(R.layout.dialog_deduction,null);
@@ -222,7 +240,13 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
                 builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        double value = Double.parseDouble(input.getText().toString());
+                        String val = input.getText().toString();
+                        if (val.equals("")){
+                            Toast.makeText(context,"You didn't input an amount you want to add. Please try again.",Toast.LENGTH_LONG).show();
+                            return;
+                        }
+
+                        double value = Double.parseDouble(val);
                         usr.setBalance(usr.getBalance() + value);
 
                         TranHistory transaction = new TranHistory(1,"Added Dining Dollars",1,new Date(), 0 - value);
@@ -265,26 +289,59 @@ public class Settings extends AppCompatActivity implements NavigationView.OnNavi
         test_load.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("What's Your Name?");
-
-                LayoutInflater viewInflated = LayoutInflater.from(context);
-                View deductView = viewInflated.inflate(R.layout.dialog_change_name,null); //TODO: CHANGE THIS
-
                 // Set up the input
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("Load Test Data");
 
-                // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
-                builder.setView(deductView);
+                LinearLayout layout = new LinearLayout(context);
+                layout.setPadding(20,0,0,0);
+                TextView text = new TextView(context);
+                text.setText("Continue to load test data? May take a few seconds.");
+                text.setTextSize(20);
+                layout.addView(text);
+                builder.setView(layout);
 
-                final EditText input = (EditText) deductView.findViewById(R.id.changeName_input); //TODO: CHANGE THIS
-
-                // Set up the buttons
                 builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //TODO: CHANGE THIS
+                        dialog.cancel();
+                        List<TranHistory> trans = database.getAllTransaction();
+                        for (int i = 0; i < trans.size(); i++){
+                            database.deleteTransaction(trans.get(i).getId());
+                        }
+
+                        Calendar start = Calendar.getInstance();
+                        Calendar today = (Calendar) start.clone();
+                        start.set(2017,0,1);
+                        Random rand = new Random();
+                        int count = 0;
+
+                        do{
+                            if (start.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY){
+                                start.add(Calendar.DATE, 2);
+                            }
+                            if (start.after(today)){
+                                break;
+                            }
+
+                            if (count < 3){
+                                double cost = rand.nextDouble();
+                                cost = Math.round(cost*1000)/100;
+                                TranHistory tran = new TranHistory(1, "Test Item",1,start.getTime(), cost);
+                                database.createTransaction(tran);
+                                count++;
+                            }
+                            else{
+                                count = 0;
+                                start.add(Calendar.DATE, 1);
+                            }
+                        }while (true);
+                        Toast.makeText(context,"Loaded in test Data", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(context, HomeScreen.class);
+                        startActivity(intent);
                     }
                 });
+
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

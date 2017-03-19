@@ -278,6 +278,7 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                                     }
                                 }
                             });
+                            
 
                             // Set up the buttons
                             builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
@@ -285,6 +286,10 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
                                 public void onClick(DialogInterface dialog, int which) {
                                     //Gets the input value and then updates the transaction
                                     String value = input.getText().toString();
+                                    if (value.equals("")){
+                                        Toast.makeText(context,"You did not input an amount. Please try again.",Toast.LENGTH_LONG).show();
+                                        return;
+                                    }
                                     TranHistory toChange = historyHashMap.get(TransactionBorder.getId());
                                     double prevCost = toChange.getCost();
                                     double newCost;

@@ -63,100 +63,116 @@ public class User {
     public ArrayList<String> getNon_tracking_days() {
         try {
             Set<String> set = prefs.getStringSet("nontrdays", null);
-            non_tracking_days = new ArrayList<>(set);
-            // non_tracking_days = (ArrayList<String>) ObjectSerializer.deserialize(prefs.getString("nontrdays", ObjectSerializer.serialize(new ArrayList<String>())));
+            //non_tracking_days = new ArrayList<>(set);
+            this.non_tracking_days.clear();
+            this.non_tracking_days.addAll(set);
+            Collections.sort(this.non_tracking_days);
         } catch (Exception e) {
             Log.e("4", "error getting noneating days");
         }
-        return non_tracking_days;
+        return this.non_tracking_days;
     }
 
     public void setNon_tracking_days(String str) {
         if (!this.non_tracking_days.contains(str)) {
-            //Log.d("1","ytfvyt");
-            non_tracking_days.add(str);
+            this.non_tracking_days.add(str);
+            Collections.sort(non_tracking_days);
             SharedPreferences.Editor editor = prefs.edit();
             try {
-                // editor.putString("nontradays", ObjectSerializer.serialize(non_tracking_days));
                 Set<String> set = new HashSet<>();
-                set.addAll(non_tracking_days);
+                set.addAll(this.non_tracking_days);
                 editor.putStringSet("nontrdays", set);
                 editor.commit();
             } catch (Exception e) {
                 //Log.e("3", "error setting non_eating days");
-
             }
         }
     }
 
     public boolean remove_days(String str){
-        /*
-        this.non_tracking_days=this.getNon_tracking_days();
-        boolean ret = this.non_tracking_days.remove(str);
-        if(ret) {
-            System.out.println(str+"inside user class remove_days");
-            this.update_non_eating_days();
-        }
-        return ret;
-        */
-        non_tracking_days = this.getNon_tracking_days();
-        Collections.sort(non_tracking_days);
-        if(non_tracking_days.contains(str)) {
-            int i = 0;
-            for (; i < non_tracking_days.size(); i++) {
-                int comparison_value = (non_tracking_days.get(i)).compareTo(str);
-                if(comparison_value==0){
-                    break;
-                }
-            }
-            non_tracking_days.remove(i);
+        this.non_tracking_days = this.getNon_tracking_days();
+        if(this.non_tracking_days.contains(str)) {
+            //Remove from the arraylist
+            this.non_tracking_days.remove(str);
+            //Update the preferences
             SharedPreferences.Editor editor = prefs.edit();
             try{
                 //editor.clear(); //clear the preferences (hardreset)
                 Set<String> set = new HashSet<>();
                 set.addAll(non_tracking_days);
+                editor.remove("nontrdays");
                 editor.putStringSet("nontrdays",set);
                 editor.commit();
-                System.out.println("Updated!");
+                System.out.println("Updated! Removed: " + str);
+                return true;
             } catch (Exception e) {
                 //Log.e("3", "error setting non_eating days");
+                return false;
             }
-            return true;
         }
         return false;
     }
 
     public void update_non_eating_days(){
-        Calendar calendar = Calendar.getInstance();
-        int thisyear = calendar.get(Calendar.YEAR);
-        int thismonth = calendar.get(Calendar.MONTH);
-        int thisday = calendar.get(Calendar.DAY_OF_MONTH);
-        String today = thisyear+"/"+thismonth+"/"+thisday;
-
-        non_tracking_days = this.getNon_tracking_days();
-
-        Collections.sort(non_tracking_days);
-        int i = 0;
-        for(;i<non_tracking_days.size(); i++){
-            int comparison_value = (non_tracking_days.get(i)).compareTo(today);
-            if(comparison_value>=0){ //Stop when non_tracking_days(i) is finally greater than today;
-                break;
-            }
-        } //remove from 0,inclusive to i, exclusive
-        for(int j=0; j<i; i++){
-            non_tracking_days.remove(j);
+        //Get non_tracking_days from pref, should already be sorted
+        this.non_tracking_days = this.getNon_tracking_days();
+        if(this.non_tracking_days.size()==0){ //Update only iff there are non_tracking_days
+            return;
         }
+
+        //Get the current date
+        Calendar calendar = Calendar.getInstance();
+        int int_year = calendar.get(Calendar.YEAR);
+        int int_month = calendar.get(Calendar.MONTH)+1;
+        int int_day = calendar.get(Calendar.DAY_OF_MONTH);
+        //Formats the date to string
+        String str_year = "" + int_year;
+        String str_month = ""+int_month;
+        String str_day = "" + int_day;
+        if(int_month<10){
+            str_month = "0"+str_month;
+        }
+        if(int_day<10){
+            str_day = "0"+str_day;
+        }
+        String today = str_year+"/"+str_month+"/"+str_day;
+
+        /*Find the idx of where to update*/
+        //Hack: insert the current date to easier update
+        Boolean remove_today = false;
+        if(!this.non_tracking_days.contains(today) ){
+            this.non_tracking_days.add(today);
+            remove_today = true;
+            Collections.sort(this.non_tracking_days);
+            System.out.println("added today!");
+        }
+        //Start removing up until today;
+        while(this.non_tracking_days.size()>0){
+            //Stop when it is today
+            if(this.non_tracking_days.get(0).equals(today) ){
+                if(remove_today){ //Check to see if we need to remove today
+                    this.non_tracking_days.remove(0); //Remove if we added for the hack
+                    System.out.println("removed today!");
+                }
+                break;
+            } else {
+                this.non_tracking_days.remove(0);
+            }
+        }
+        //Commit the changes
         SharedPreferences.Editor editor = prefs.edit();
         try{
             //editor.clear(); //clear the preferences (hardreset)
             Set<String> set = new HashSet<>();
             set.addAll(non_tracking_days);
+            editor.remove("nontrdays");
             editor.putStringSet("nontrdays",set);
             editor.commit();
-            System.out.println("Updated!");
+            System.out.println("Updated up to " + today);
         } catch (Exception e) {
             //Log.e("3", "error setting non_eating days");
         }
+        return;
     }
 
     public String getName() {
